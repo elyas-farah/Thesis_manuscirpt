@@ -1,0 +1,70 @@
+\chapter{Theoretical Background}
+\label{sec:theory}
+
+\section{The general theory of relativity}
+\section{The Friedmann-Robertson-Lemaître-Walker metric} \label{sec:FLRW}
+\section{The cosmological model}
+\section{Weak gravitational Lensing}
+\section{The impact of baryonic feedback on the large-scale structure}
+\section{Fast radio bursts}
+{\color{red} describe how modelling the PDF is a hard thing to do}
+To forward model observations, we convolve the $DM-z$ represented by $P(DM|z)$ with measurement and systematic uncertainties, in addition to other observational effects. A catalog of detected FRBs is expected to have observed dispersion measure $DM_\text{obs}^i$, galactic coordinates, and redshifts for a subset of and observations $z^i$. We assume that each detected FRB was emitted at redshift $z^i$ where the difference between identified and unidentified host can be integrated in how $P(z^i)$ is modeled. Assume that we observe $N_{FRB}$ fast radio bursts signal. We express the observations as the probability of detecting an FRB $DM_\text{obs}$ given a set of estimated redshifts $\{z^i\}$, can be decomposed using the Bayes rule such that
+
+\begin{equation}
+P(DM_\text{obs}|\{z^i\}) \propto P(\{z^i\}|DM_\text{obs}) P(DM_\text{obs})    
+\end{equation}
+Furthermore, if we assume that each observation $z_i$ is independent of other observations we may use the Bayes rule to decompose $P(\{z^i\}|DM_\text{obs})$ such that
+\begin{equation} \label{eq:step2}
+    P(\{z^i\}|DM_\text{obs}) = \prod_{i}P(z^i|DM_\text{obs})
+\end{equation}
+Furthermore, the individual terms in \ref{eq:step2} could be derived using the joint probability distribution of the observed and the dispersion measure contribution from the large scale structure, namely $DM_\text{obs}$ and $DM$ such that
+\begin{equation}
+    \begin{split}
+    P(z^i|DM_\text{obs}) & \propto P(DM_\text{obs}|z^i) P(z^i) \\
+                    & = P(z^i) \int P(DM_\text{obs}, DM|z^i)dDM \\
+                    & = P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)dDM
+    \end{split}
+\end{equation}
+The final expression that relates the probability distribution function of an observation to other modelled terms is 
+\begin{equation} \label{eq:obs_prob}
+\begin{split}
+    P(DM_\text{obs}|\{z^i\}) \propto & \\
+    & P(DM_\text{obs}) \prod_{i}P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)dDM
+\end{split}
+\end{equation}
+
+Furthermore, to model each component of the resulting expression, we start with $P(DM_\text{obs})$. There are three components that contribute additively to $DM_\text{obs}$: the large scale structure contribution $DM_{\text{LSS}}$, the Milkyway contribution $DM_{\text{MW}}$, and the host galaxy contribution $DM_{\text{host}}$, and the observed dispersion measure is given as
+
+\begin{equation}
+    DM_\text{obs} = DM_{\text{LSS}} + DM_{\text{MW}} + DM_{\text{host}}
+\end{equation}
+For simplicity, we indicate to the contribution from the large-scale structure simply with $DM$ which is the same in Equation \ref{eq:obs_prob}. Consider the joint probability distribution $P(DM, DM_{\text{MW}},  DM_{\text{host}})$, this can be related to $P(DM_\text{obs}) = P(DM + DM_{\text{MW}} + DM_{\text{host}})$ via the constrained integral
+
+\begin{equation}
+\begin{split}
+    P(DM_\text{obs}) &= P(DM + DM_{\text{MW}} + DM_{\text{host}}) \\
+    & = \int_{\mathcal{C}} P(DM, DM_{\text{MW}},  DM_{\text{host}}) \text{ d}DM \text{ d}DM_{\text{MW}}
+    \text{ d}DM_{\text{obs}} \\ 
+    & = \int_{\mathcal{C}} P(DM)P(DM_{\text{MW}})  P(DM_{\text{host}}) \text{ d}DM \text{ d}DM_{\text{MW}}
+    \text{ d}DM_{\text{obs}} 
+\end{split}
+\end{equation}
+Where $\mathcal{C} = \{DM, DM_{\text{MW}},  DM_{\text{host}}; DM_{\text{obs}} = DM + DM_{\text{MW}} + DM_{\text{host}}\}$
+Similarly, I can model $P(DM_\text{obs}|z^i, DM)$ as 
+
+\begin{equation}
+    \begin{split}
+        P(DM_\text{obs}|z^i, DM)  &=  \int_{\mathcal{C}} P(DM|z^i, DM)P(DM_{\text{MW}}|z^i, DM)  \\ &P(DM_{\text{host}}|z^i, DM) \text{ d}DM \text{ d}DM_{\text{MW}}
+    \text{ d}DM_{\text{obs}}
+    \end{split}
+\end{equation}
+Each of the terms making up the integral could be further reduced 
+
+
+\begin{align}
+    P(DM|z^i, DM) & \propto P(DM|z^i) P(DM) \\
+    P(DM_{\text{MW}}|z^i, DM) & = P(DM_{\text{MW}}) \\
+    P(DM_{\text{host}}|z^i, DM) & \propto P(DM_{\text{host}}|z^i)P(DM|z^i)
+\end{align}
+
+Keeping in mind, that $DM_{\text{host}}$ that we use in \ref{eq:obs_prob} is flat since we do not have any information of the 

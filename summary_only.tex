@@ -1,0 +1,52 @@
+\documentclass[PhD, Submit, ngerman, UKenglish]{scrartcl}
+%------------------------------------------------------------------------------
+% Wrapper for producing summary of a PhD thesis when submitting
+% a Physics or Astronomy Institute in the University of Bonn.
+% The thesis stage for this document should be Submit.
+
+%------------------------------------------------------------------------------
+% twoside=true is suitable for printing, while twoside=false is probably better for PDF version.
+\usepackage[twoside=false]{ubonn-thesis}
+
+%------------------------------------------------------------------------------
+% Adjustments to standard biblatex style.
+% Pass the option showurl=false to shorten your bibliography by not including url fields.
+% \usepackage[backref=false]{ubonn-biblatex}
+
+%------------------------------------------------------------------------------
+% Useful definitions.
+% \usepackage{thesis_defs}
+
+%------------------------------------------------------------------------------
+% The following definitions are used to produce the title page.
+\newcommand{\thesistitle}{Title of the Thesis}
+\newcommand*{\thesisauthor}{Author's name}
+% Date when thesis was submitted.
+\newcommand*{\thesissubmit}{XX.YY.2025}
+
+%------------------------------------------------------------------------------
+% Give a list of directories where figures can be found. Do not leave
+% any spaces in the list and end the directory name with a /
+% \graphicspath{{figs/cover/}}
+
+%------------------------------------------------------------------------------
+% Define usual title macros.
+\title{\thesistitle}
+\author{\thesisauthor}
+\date{\thesissubmit}
+
+%------------------------------------------------------------------------------
+\begin{document}
+
+% Make title.
+\maketitle
+
+\section*{Summary}
+
+Add your summary here. It can be the Conclusion/Summary from your thesis.
+
+%------------------------------------------------------------------------------
+% Print bibliography if the summary includes references.
+% \printbibliography
+
+\end{document}
