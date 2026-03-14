@@ -5,8 +5,39 @@
 \babel@toc {UKenglish}{}\relax 
 \babel@toc {ngerman}{}\relax 
 \babel@toc {UKenglish}{}\relax 
+\babel@toc {UKenglish}{}\relax 
+\babel@toc {UKenglish}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {A}Useful information}{7}{appendix.A}%
-\contentsline {chapter}{\nonumberline List of Figures}{9}{chapter*.5}%
-\contentsline {chapter}{\nonumberline List of Tables}{11}{chapter*.6}%
+\contentsline {chapter}{\numberline {2}Theoretical Background}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The general theory of relativity}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}The Friedmann-Robertson-Lemaître-Walker metric}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}The cosmological model}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Weak gravitational Lensing}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The impact of baryonic feedback on the large-scale structure}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Fast radio bursts}{7}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Methodology}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Modelling the electron power spectrum}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The baryonification correction model}{11}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}The halo model}{11}{subsection.3.1.2}%
+\contentsline {subsubsection}{\nonumberline The Core Cosmology Library (CCL)}{11}{subsubsection*.6}%
+\contentsline {section}{\numberline {3.2}Simulating the dispersion measure signal}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}the Generator for Large Scale Structure (GLASS)}{11}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The electron angular power spectra}{11}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The cosmological covariance of the dispersion measure signal}{11}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}The systematic uncertainties}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Redshift uncertainty}{12}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Selection effects}{12}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Unlocalised hosts}{12}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Milkyway contribution}{12}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Host galaxy contribution}{12}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}The lensing of the Dispersion measure signal}{12}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Simulation-based inference}{12}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Approximate Baysian inference}{12}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Neural Posterior Estimator}{12}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}The Sequentual Neural Posterio Estimator}{12}{subsection.3.4.3}%
+\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{12}{subsubsection*.8}%
+\contentsline {subsection}{\numberline {3.4.4}Flow matching posterior estimator}{12}{subsection.3.4.4}%
+\contentsline {chapter}{\numberline {A}Useful information}{13}{appendix.A}%
+\contentsline {chapter}{\nonumberline List of Figures}{15}{chapter*.10}%
+\contentsline {chapter}{\nonumberline List of Tables}{17}{chapter*.11}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

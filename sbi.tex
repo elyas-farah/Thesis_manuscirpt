@@ -128,12 +128,12 @@
 
 % Draft version - add the word DRAFT on the cover pages.
 % Also add the date and time of compilation and turn on line numbers (if option is set).
-% \ifthenelse{\equal{\ThesisVersion}{Draft}}{%
-%   \usepackage{background}
-%   \backgroundsetup{contents=DRAFT, color=blue!30}
-%   \ifoot[\today{} \thistime]{\today{} \thistime}
-%   \ifthenelse{\boolean{ThesisLineno}}{\linenumbers}{}
-%  }
+\ifthenelse{\equal{\ThesisVersion}{}}{%
+  \usepackage{background}
+  \backgroundsetup{contents=DRAFT, color=blue!30}
+  \ifoot[\today{} \thistime]{\today{} \thistime}
+  \ifthenelse{\boolean{ThesisLineno}}{\linenumbers}{}
+ }
 
 %------------------------------------------------------------------------------
 \begin{document}
@@ -153,16 +153,24 @@
 \pagestyle{scrheadings}
 
 % Turn off DRAFT for the following pages.
-\ifthenelse{\equal{\ThesisVersion}{Draft}}{%
-  \backgroundsetup{contents={}}
-}{}
-
+% \ifthenelse{\equal{\ThesisVersion}{Draft}}{%
+%   \backgroundsetup{contents={}}
+% }{}
+\thesisabstract
 %------------------------------------------------------------------------------
 % Add your chapters here - don't forget to also add them to \includeonly above.
 \include{thesis_intro}
 % Use this command inside the file or change \include to \input
 % if you do not want the references on a separate page.
-\printbibliography[heading=subbibliography]
+% \printbibliography[heading=subbibliography]
+\include{theoretical_background}
+\include{methodology}
+
+
+
+
+
+
 
 %------------------------------------------------------------------------------
 \appendix
