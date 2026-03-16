@@ -2380,3 +2380,22 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib/standard_refs-biber.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="2">
+  </bcf:section>
+  <!-- SECTION 0 (cont.) -->
+  <bcf:section number="0">
+  </bcf:section>
+  <!-- SECTION 3 -->
+  <bcf:bibdata section="3">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/thesis_refs.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">bib/standard_refs-biber.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="3">
+    <bcf:citekey order="1" intorder="1">CosmoVerse2025</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Totsuji_Kihara_1969</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Davis_Huchra_Latham_Tonry_1982</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Davis_Peebles_1983</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Boggess_Mather_et al._1992</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Smoot_1999</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Bahcall_Spitzer_1982</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Riess_et al._1998</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Turner_2001</bcf:citekey>
