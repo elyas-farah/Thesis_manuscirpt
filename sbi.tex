@@ -14,7 +14,7 @@
 %------------------------------------------------------------------------------
 % twoside=true is suitable for printing, while twoside=false is probably better for PDF version.
 % Pass option refsection=none if you want the bibliography at the end of the thesis.
-\usepackage[twoside=true, astrobib]{ubonn-thesis}
+\usepackage[twoside=true, astrobib, refsection=none]{ubonn-thesis}
 
 %------------------------------------------------------------------------------
 % Adjustments to standard biblatex style.
@@ -105,11 +105,13 @@
 % A simple \include command just inserts a \clearpage before and after the file.
 % Note that \includeonly can be quite picky! Do not forget to put a
 % comma after the filename, otherwise it will simply be ignored!
-% \includeonly{%
-%   thesis_intro,
-%   thesis_appendix,
-%   thesis_acknowledge
-% }
+\includeonly{
+  thesis_intro,
+  theoretical_background,
+  methodology,
+  thesis_appendix,
+  thesis_acknowledge
+}
 
 %------------------------------------------------------------------------------
 % Give a list of directories where figures can be found. Do not leave
@@ -145,10 +147,10 @@
 
 %------------------------------------------------------------------------------
 % You can add your acknowledgements here.
-\include{thesis_acknowledge}
+% \include{thesis_acknowledge}
 
 \tableofcontents
-
+\thesisabstract
 \mainmatter
 \pagestyle{scrheadings}
 
@@ -177,14 +179,16 @@
 % \part*{Appendix}
 % Add your appendices here - don't forget to also add them to \includeonly above.
 \include{thesis_appendix}
-\printbibliography[heading=subbibliography]
+% \printbibliography[heading=subbibliography]
+% \printbibliography
+
 
 %------------------------------------------------------------------------------
 % Use biblatex for the bibliography.
 % Add bibliography to Table of Contents.
 % Use this command (and remove refsection environments)
 % to print all references at the end of the thesis.
-% \printbibliography[heading=bibintoc]
+\printbibliography[heading=bibintoc]
 
 %------------------------------------------------------------------------------
 % Include the following lines and comment out \printbibliography if
@@ -211,6 +215,6 @@
 
 %------------------------------------------------------------------------------
 % You could instead add your acknowledgements here.
-% \include{thesis_acknowledge}
+\include{thesis_acknowledge}
 
 \end{document}

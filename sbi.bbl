@@ -17,7 +17,7 @@
 \endgroup
 
 
-\refsection{2}
+\refsection{0}
   \datalist[entry]{nyt/global//global/global}
     \entry{Bahcall_Spitzer_1982}{article}{}
       \name{author}{2}{}{%
@@ -802,7 +802,7 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Astronomy &amp; Astrophysics}
+      \field{journaltitle}{Astronomy and Astrophysics}
       \field{month}{3}
       \field{number}{3}
       \field{title}{Cosmic Shear Analysis in 50 uncorrelated VLT Fields. implications for $\omega_0$, $\sigma_8$}
@@ -1245,6 +1245,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{latexwiki}
 \endrefsection
 \endinput
 
