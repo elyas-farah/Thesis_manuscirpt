@@ -14,9 +14,9 @@
 \contentsline {section}{\numberline {2.1}The general theory of relativity}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}The Friedmann-Robertson-Lemaître-Walker metric}{8}{section.2.2}%
 \contentsline {section}{\numberline {2.3}The cosmological model}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Weak gravitational Lensing}{8}{section.2.4}%
-\contentsline {section}{\numberline {2.5}The impact of baryonic feedback on the large-scale structure}{8}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Fast radio bursts}{8}{section.2.6}%
+\contentsline {section}{\numberline {2.4}Weak gravitational Lensing}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The impact of baryonic feedback on the large-scale structure}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Fast radio bursts}{9}{section.2.6}%
 \contentsline {chapter}{\numberline {3}Methodology}{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Modelling the electron power spectrum}{11}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}The baryonification correction model}{11}{subsection.3.1.1}%

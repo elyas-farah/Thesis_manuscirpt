@@ -323,6 +323,35 @@
       \verb 10.1086/171797
       \endverb
     \endentry
+    \entry{Carroll_2024}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a21efd7d6f43a778b4bd8bd5cf50c950}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Sean\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{fullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{fullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{bibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorbibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authornamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorfullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorfullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spacetime and geometry: An introduction to general relativity}
+      \field{year}{2024}
+    \endentry
     \entry{van2011effects}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=6f25147165854f3a40fadb708468b187}{%
@@ -1398,6 +1427,38 @@
       \verb 10.1093/mnras/stab2481
       \endverb
     \endentry
+    \entry{noether1983invariante}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8cc5824bd13361a82091c2c493168aa9}{%
+           family={Noether},
+           familyi={N\bibinitperiod},
+           given={Emmy},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8cc5824bd13361a82091c2c493168aa9}
+      \strng{fullhash}{8cc5824bd13361a82091c2c493168aa9}
+      \strng{fullhashraw}{8cc5824bd13361a82091c2c493168aa9}
+      \strng{bibnamehash}{8cc5824bd13361a82091c2c493168aa9}
+      \strng{authorbibnamehash}{8cc5824bd13361a82091c2c493168aa9}
+      \strng{authornamehash}{8cc5824bd13361a82091c2c493168aa9}
+      \strng{authorfullhash}{8cc5824bd13361a82091c2c493168aa9}
+      \strng{authorfullhashraw}{8cc5824bd13361a82091c2c493168aa9}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Gesammelte abhandlungen-collected papers}
+      \field{title}{Invariante variationsprobleme}
+      \field{year}{1983}
+      \field{pages}{231\bibrangedash 239}
+      \range{pages}{9}
+    \endentry
     \entry{Petroff_2019}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=1bc3af5da6507fa42c3f1ec8a292b3ca}{%
@@ -2354,7 +2415,6 @@
     \endentry
   \enddatalist
   \missing{latexwiki}
-  \missing{noether1983invariante}
 \endrefsection
 \endinput
 
