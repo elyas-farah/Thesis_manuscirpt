@@ -2418,7 +2418,9 @@
     <bcf:citekey order="37" intorder="1">Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a</bcf:citekey>
     <bcf:citekey order="38" intorder="1">Konietzka:2025kdr</bcf:citekey>
     <bcf:citekey order="39" intorder="1">torkamani2026baryonification</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">latexwiki</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">Dodelson_Schmidt_2026</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">noether1983invariante</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">latexwiki</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
