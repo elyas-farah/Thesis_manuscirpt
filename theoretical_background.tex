@@ -1,82 +1,205 @@
 \chapter{Theoretical Background} \label{chap:theory}
-This chapter is mainly based on 2 textbooks and 2 lectrue notes. The first book is \textbf{Modern Cosmology by} \citet{Dodelson_Schmidt_2026} and the second is \textbf{Spacetime and Geometry: An Introduction to General Relativity} by \citep{Carroll_2024}. The first lecture notes come from the Advanced Cosmology course given the the Summer semester 2024 by Prof. Dr. Cristiano Poriciani and Jun-Prof. Andrina Nicola, and the second lecture notes come from the Weak Lesning course by prof. Dr. Peter Schneider given in the In this chapeter, I will introduce the basics of the principles of cosmology, weak gravitational lensing, and fast radio bursts (FRBs).
+
+This chapter is mainly based on 2 textbooks and 2 lectrue notes. The first book is \textbf{Modern Cosmology by} \citet{Dodelson_Schmidt_2026} and the second is \textbf{Spacetime and Geometry: An Introduction to General Relativity} by \citet{Carroll_2024}. The first lecture notes come from the Advanced Cosmology course given the the Summer semester 2024 by Prof. Dr. Cristiano Poriciani and Jun-Prof. Andrina Nicola, and the second lecture notes come from the Weak Lesning course by prof. Dr. Peter Schneider given in the In this chapeter, I will introduce the basics of the principles of cosmology, weak gravitational lensing, and fast radio bursts (FRBs).
 
 
 
 \section{The general theory of relativity}\label{theory_sec:GR}
-The general theo ry of relativity introduces a geometric interpretation of gravity, resting on a set of geometric assumptions and principles evolved from the older classical Newtonian theory of gravity and relativity. The first of these is the \textbf{weak equivilance principle} which states that \textbf{' the inertial mass and gravitational mass of any object are equal'}. Einstein reformulated this statement to fir the language of the special theory of relativitty by stating that \textbf{'In small enough regions of spacetime, the laws of physics reduce to those of special relativity; it is impossible to detect the existence of a gravitational field by means of local experiments.'} The consequences of this principle is that freely falling frame of reference cannot recognize that freely falling test particles in the vicinity of the frame are being accelerated (or under the influence of gravity). The consequences of this principle invites the formulation of a geometric theory of gravity where gravity manifests itself as a curverture. 
+The general theory of relativity introduces a geometric interpretation of gravity, resting on a set of geometric assumptions and principles evolved from the older classical Newtonian theory of gravity and relativity. The first of these is the \textbf{weak equivilance principle} which states that \textbf{' the inertial mass and gravitational mass of any object are equal'}. Einstein reformulated this statement to fir the language of the special theory of relativity by stating that \textbf{'In small enough regions of spacetime, the laws of physics reduce to those of special relativity; it is impossible to detect the existence of a gravitational field by means of local experiments.'} The consequences of this principle is that freely falling frame of reference cannot recognize that freely falling test particles in the vicinity of the frame are being accelerated (or under the influence of gravity). The consequences of this principle invites the formulation of a geometric theory of gravity where gravity manifests itself as a curverture. 
 
-To have a mathematical theory where observation could be interpreted, Einstein used differentiable manifolds to describe the four dimensional spacetime. Differentialble manifolds allows a definitation physical quantities such as position and momentum along with a continuous derivative of these quntities on the manifolds. Having a differetiable quantity allows also to introduce conservation laws which are a direct results of symmetries in a particular problem \citep{noether1983invariante}. Therefore, to describe the motion of particles in a curved spacetime, the metric tensor is defined on a non-Riemanian manifold. The metric tensor is a solution for the Einstein field's equatio which is a second order differential quations on $\mathbb{R}^{4\times4}$. 
+To have a mathematical theory where observation could be interpreted, Einstein used differentiable manifolds to describe the four dimensional spacetime. Differentialble manifolds allows a definitation physical quantities such as position and momentum along with a continuous derivative of these quntities on the manifolds. Having a differetiable quantity allows also to introduce conservation laws which are a direct results of symmetries in a particular problem \citep{Noether_1983}. Therefore, to describe the motion of particles in a curved spacetime, the metric tensor is defined on a non-Riemanian manifold. The metric tensor is a solution for the Einstein field's equatio which is a second order differential quations on $\mathbb{R}^{4\times4}$. 
 
 The metric tensor $g_{\nu \mu}$ (in Einstein index notation) is a $4 \times 4$ symmetric tensor that describes the physical length of an infinitesimal line given a particular system of coordinates such that 
 
 \begin{equation}
 ds^2 = g_{\nu \mu} dx^{\nu} dx^{\mu},
 \end{equation}
-
 where $\{dx^\mu\}_{0, 1, 2, 3}$ is a basis for the contangent bundle of the manifold. In classical terms, $\{dx^\mu\}_{0, 1, 2, 3}$ is the differential along a coordinate axis $\{x^\mu\}_{0, 1, 2, 3}$ For a generalized space time, the path of a free particle is described by the geodesic equation. If the coordinates of a particle in spacetime $x^\mu$ is parameterized with an affine parameter $\lambda$, then the coordinates $x^{\mu} (\lambda)$ is constrained by an ordinary differential equation, namely the geodesic equation given as:
 
 \begin{equation}
     \frac{d^2x^\mu}{d\lambda^2} + \Gamma^\mu_{\rho\sigma} \frac{dx^\rho}{d\lambda} \frac{dx^\sigma}{d\lambda} = 0,
 \end{equation}
-
 where $\Gamma^\mu_{\rho\sigma}$ are the Christoffel symbols given in terms the metric tensor such that
 
 \begin{equation}
-    \Gamma^\sigma_{\mu\nu} = \frac{1}{2} g^{\sigma\rho} \left( \partial_\mu g_{\nu\rho} + \partial_\nu g_{\rho\mu} - \partial_\rho g_{\mu\nu} \right)    
+    \Gamma^\sigma_{\mu\nu} = \frac{1}{2} g^{\sigma\rho} \left( \partial_\mu g_{\nu\rho} + \partial_\nu g_{\rho\mu} - \partial_\rho g_{\mu\nu} \right)  .  
 \end{equation}
 
-For a collisionless and pressureless fluid, it is possible to define the energy-momentum tensor such that 
+In the Newtonian limit, the gravitational potential $\Phi$ is related to the mass density $\rho$ in  the following equation
+\begin{equation} \label{eq:potential}
+    \nabla^2 \Phi = 4\pi G \rho,
+\end{equation}
+with $G$ being the gravitaional constant. To formulate a theory which reduces to Eq. \ref{eq:potential}, we define the energy-momentum tensor $T_{\mu \nu}$ which is a a $4 \times 4$ symmetric tensor that describes the energy density and shear in the four-dimensional spacetime. Since the gravitational field manifest itself as curvature, the analogy to Eq. \ref{eq:potential} motivate a proportionality relationship between the second derivative of the metric tensor $g_{\mu \nu}$ and the stress-energy tensor $T_{\mu \nu}$ 
+\begin{equation}
+    \left[ \nabla^2 g \right]_{\mu\nu} \propto T_{\mu\nu}.
+\end{equation}
+A geometric qunatity that is composed of the second derivatives of the matrix tensor is the Ricci tensor $R_{\mu \nu}$ expressed in terms of the Christoffel symbols
+\begin{equation} \label{eq:Ricci}
+    R_{\mu\nu} = \partial_\lambda \Gamma^\lambda_{\nu\mu} 
+           - \partial_\nu \Gamma^\lambda_{\lambda\mu} 
+           + \Gamma^\lambda_{\lambda\rho}\,\Gamma^\rho_{\nu\mu} 
+           - \Gamma^\lambda_{\nu\rho}\,\Gamma^\rho_{\lambda\mu}.
+\end{equation}
+Meanwhile, the Ricci scale is defined as the contraction of the Ricci tensor
+\begin{equation} \label{eq:Ricci_scalar}
+    R = R^\mu_{\ \mu} = g^{\mu\nu} R_{\mu\nu}.
+\end{equation}
+
+Therefore, a possible relationship between the stress-energy tensor and the Ricci tensor is
+\begin{equation} \label{eq:EFE_guess}
+    R_{\mu\nu} = \kappa T_{\mu\nu},
+\end{equation}
+To find $\kappa$, the conservation of energy is invoked as  
+\begin{equation}
+    \nabla^\mu T_{\mu\nu} = 0,
+\end{equation}
+where $\nabla^\mu$ is the covariant derivative. Following Eq. \ref{eq:EFE_guess} and using Eq. \ref{eq:Ricci} and Eq. \ref{eq:Ricci_scalar}, the covariant derivative of the Ricci tensor is
+\begin{equation}
+    \nabla^\mu R_{\mu\nu} = \frac{1}{2} \nabla^\mu R g_{\mu\nu}.
+\end{equation}    
+Therfore, we can define another tensor $G_{\mu \nu}$ with a vinishing covariant derivative
+\begin{equation}
+    G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}.
+\end{equation}
+$G_{\mu\nu}$ is called the Einstein tensor, and the Einstein's field equation regardless
+\begin{equation} \label{eq:EFE}
+    G_{\mu\nu} = 8\pi G T_{\mu\nu}
+\end{equation}
+where I used $\kappa = 8\pi G$ which can be obtained by reducing Eq. \ref{eq:EFE} to the Newtonian limit in Eq. \ref{eq:potential}. Einstein modified Eq. \ref{eq:EFE} to account to a vaccum solution by adding a term to represent the vaccum enrgy $\Lambda g_{\mu \nu}$ where $\Lambda$ is called the cosmological constant, and the final equation becomes
+\begin{equation} \label{eq:EFE_full}
+    G_{\mu\nu} + \Lambda g_{\mu \nu} = 8\pi G T_{\mu\nu}
+\end{equation}
 
 
 
-\begin{itemize}
-    \item the metric tensor
-    \item the definition of momentum
-    \item energy-momentum conservation
-    \item the geodesic equation
-    \item weak field limit and the gravitational potential
-\end{itemize}
+Finally, the 4-velocity of a particle in general relativity is defined as 
+\begin{equation}
+    U^{\mu} = \frac{dx^{\mu}}{d\lambda},
+\end{equation} 
+Therfore, the 4-velocity would follow the normalization
+\begin{equation}
+    g_{\mu \nu}U^{\mu}U^{\nu} = -1
+\end{equation}
+
+and the 4-momentum for a particle of mass $m$ is defined as
+\begin{equation}
+    P^{\mu} = m U^{\mu}
+\end{equation}
+and the normalization of momentum is 
+\begin{equation}
+    g_{\mu \nu}P^{\mu}P^{\nu} = -m^2
+\end{equation}
+Notice that either of the previous normalization is invariant under coordinate transformation. We define the observed enrgy of a particle of 4-momentum $P^{\mu}$ with respect to an observer wiht 4-velocity $U^{\mu}$ such that it reduces to the special relativitstic limit if the particle has a vanishing spatial velocity and the observer 
+\begin{equation} \label{eq:energy}
+    E_{obs} = -g_{\mu \nu} U^{\mu} P^{\nu}.
+\end{equation}
 
 
 
 
-Axioms of general relativity, Manifolds, the metric tensor, The geodesic equation, the Einstein field equationb.
+The Einstein theory of general relativity can explain cosmological obserrvation such as cosmological redshift and the expansion of the universe where the expansion is driven by the energy content in the universe. Though the FLRW metric (explained in \ref{theory_sec:FLRW}) is phenomonologically motivated, the variation of the scale factor with conformal time $a$ is described by the Einstein's field equation. 
 
 
 
 
 \section{The Friedmann-Robertson-Lemaître-Walker metric} \label{theory_sec:FLRW}
+To descibe the entire universe using on metric tensor, requires educated simplificaitons and assumptions. The first guiding principle is the Copernican principle \citep{bondi2010cosmology} which states that \textbf{'we do not occupy a special place in space'}. The Copernican principle motivates the cosmological principle which states that 'the universe is homogenous and isotropic'. Early galaxy surveys have shown that the universe is only homogeneous on large scales, therefore, the full cosmological principle is stated as \textbf{'the universe is homogeneous and symmetric on large scales'}. An additional assumption that simplifies that narrows down the possible formula for a metric is Weyl's postulate which states that \textbf{'the world lines of the galaxies form a 3-sheaf of non-intersecting geodesics orthogonal to layers of spacelike hypersurfaces'}. Weyl's posutalete, coupled with the cosmological principle, allows a better definition on where homogeneity and isotropy applies, name that the universe is 'spatially homogeneous and isotropic'. Therefore, a maximally symmetric metric that follows both principles inserts
+\begin{equation}
+    ds^2 = -c^2 dt^2 + g_{ij} dx^i dx^j, 
+\end{equation}
+where $t$ is cosmic time. A two-dimensional schematic diagram of this metric is shown in \ref{theory_fig:world_lines}. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/cover/world_lines.png}
+    \caption{A schematic representation of spacetime that follows Weyl's postulate. The green lines labelled with letters are world lines, the path of freely falling objects in the spacetime (or geodesics). The redlines are spacelike hypersurfaces labelled with the same cosmic time $t_i$. These hypersuraces are homogeneous and isotropic.}
+    \label{theory_fig:world_lines}
+\end{figure}
+
+
+Using the tools of differntial geometry, a maximally symmetric metric that also accounts for a homogeneous expansion of the universe is 
+\begin{equation} \label{eq:flrw}
+    \mathrm{d}s^2 = -\mathrm{d}t^2 + a^2(t) \mathrm{d}s_3^2
+\end{equation}
+
+where $a(t)$ is the scale factor that couples the spatial part with time and the spetial part, $\mathrm{d}s_3^2$ represent a maximally symmetric space that takes the following form in hyperspherical coordinates
+\begin{equation}\label{eq:sphere3}
+    \mathrm{d}s_3^2 = \mathrm{d}\chi^2 + S_k(\chi)^2 \left( \mathrm{d}\theta^2 + \sin^2 \theta \, \mathrm{d}\phi^2 \right).
+\end{equation}
+the function $S_k(\chi)$ takes one of three forms by viture of the number $k$
+\begin{equation}
+S_k(\chi) = 
+\begin{cases} 
+    \frac{1}{\sqrt{k}} \sin(\sqrt{k} \chi) & \text{if } k > 0, \\
+    \chi & \text{if } k = 0, \\
+    \frac{1}{\sqrt{|k|}} \sinh(\sqrt{|k|} \chi) & \text{if } k < 0.
+\end{cases}
+\end{equation}
+The case when $k = 0$ represents a flat universe, where the spatial part reduces to the usual spherical coordinates.The coordinate $\chi$ could be understood by considering two space like points in spacetime, one with $\chi = 0$ and another with $\chi = \chi_c$ leading To
+
+\begin{equation}\label{eq:comoving}
+    S = a(t) \chi_c, 
+\end{equation}
+which means that the physical distance changes with time for a given $\chi_c$. We call $\chi_c$ the comoving distance. Taking the derivative with respect to cosmic time in Eq. \ref{eq:comoving}, we can retrieve the empirical law that \citet{Hubble_1929} discovered by recording the relationship between the distance to galaxy and the speed of the galaxy
+\begin{equation}
+   \frac{dS}{dt} = V = \frac{\dot{a}}{a} S,
+\end{equation}
+with $\dot{a} = da/dt$. We define the Hubble parameter at a cosmological time $t$ such that
+\begin{equation} \label{eq:hubble}
+    H(t) = \frac{\dot{a}}{a}.
+\end{equation}
+
+Another distance indicater is gravitional redshift, similar to doppler redshift, gravitational redshift is the modulation of light frequency as light travels across the universe. If a fudamental oberver at cosmic time $t_{0}$ emits a burst of light, then the energy of this light particle is given by  Eq. \ref{eq:energy}. If another fundamental observer observes this light at a later time $t$, the ratio between the two energies is defined as
+\begin{equation}
+    1 + z = \frac{E_e}{E_o},
+\end{equation}
+where $E_e$ and $E_o$ are the energy of light measured by the emitter and the observer respectively, and $z$ is called the cosmological redshift. $z$ is related to the wavelength of light in the limit where each of the emeitter and the observer are fundamental observers, meaning that their 4-velocity is $U^{\mu} = (1, 0, 0, 0)$. Therfore, the light energy could be expressed using Planck's law \citep{Planck1900b},  $E = h/\lambda$, with $h = 6.626 \times 10^{-34} \text{J·s}$ is Planck's constant, and $\lambda$ is the wavelength of light. The final relationship describing the modulation in the observed wavelength of light is 
+\begin{equation}
+    1 + z = \frac{a(t_o)}{a(t_e)} = \frac{\lambda_o}{\lambda_e}
+\end{equation} 
+with $\lambda_e$ and $\lambda_o$ are the light wavelength measured by the emitter and the observer respectively. This relationship could be exploited by quantifying the modulation of the wavelength and its relationship wo the scale factor. In a nutshell, a light emitted at a scale factor $a(t_e)$ travels through an expanding universe until measured by another observer at time $t_o > t_e$ correponding to $a(t_o) > a(t_e)$, therfore $\lambda_o > \lambda_e$, which explains why distant sources are redshifted. In practive, by measuring the sptrum of light of a distant galaxy and convolving it with a standard spectrum (the expected spectrum of galaxy in the nearby universe), it it possible to obtain at the redshift of the distant galaxy. If we choose $a = 1$ in the current epoch, the relationship between redshift and the scale factor reduces to
+\begin{equation}\label{eq:redshift}
+    a = \frac{1}{1 + z},
+\end{equation}
+where $z = 0$ refers to the current epoch. Since light move along a null geodesic, is possible to obtain the comocving distance to an emitter given the redshift that the emitter. Starting from Eq. \ref{eq:flrw} and Eq. \ref{eq:sphere3}, and working in a coordinate system with the light travelling along $\theta = 0 $ and $\phi = 0$, the null geodesic dictates that 
+\begin{equation}
+    cdt = a(t)d\chi
+\end{equation}
+which could be further aranged using Eq. \ref{eq:hubble} and Eq. \ref{eq:redshift} into
+\begin{equation}
+    \chi = \int_{1}^{z_e} \frac{c}{(1 + z)H(z)} dz
+\end{equation}
+
+
+Throughout this chapter, a question is lurking behind all the kinemetics of the universe that the FLRW metric proposes: how does the scale factor $a$ changes with cosmic time? In principle, this requires using the Einstein's field equation Eq. \ref{eq:EFE_full} along with assumptions about the form of the stress energy tensor $T^{\mu \nu}$. Assuming that the energgy density in the universe is that of a perfect fluid, solving the Einstein's field equation for $a$ yields 
+\begin{align*}
+    \frac{\ddot{a}}{a} &= -\frac{4\pi G}{3} \left( \rho + \frac{3p}{c^2} \right) + \frac{\Lambda c^2}{3} , \\
+    \frac{\dot{a}^2}{a^2} &= \frac{8\pi G}{3} \rho + \frac{\Lambda c^2}{3} - \frac{kc^2}{a^2} .
+\end{align*}
+with $p$ being the isotrpic pressure of the cosmic fluid and $\rho$ being the energy density. These equations are known as teh Friedmann equations, describing the evolution of the scale factor $a$ with respect to cosmic time $t$. To solve these equations, a relationship between the pressure p and the energy density is needed, known as the equation of state. The possible components that contribute to the energy density $\rho$ have been a process of trial and error starting de Sitter universe \citep{deSitter_1917} which is a universe with no matter up to the recently speculated model with dynamical dark energy \citep{adame2025desi}. In this thesis, we consider the $\Lambda CDM$ cosmoligcal model and describe its components in \ref{theory_sec:cosmo_model}.
+
+
+\section{The cosmoligcal model}\label{theory_sec:cosmo_model}
 
 
 
 
 \begin{itemize}
-    \item the cosmological principle.
-    \item The purturbed metric
-    \item guage transformation
-    \item 
-    \item gravitational redshift
-\end{itemize}
 
-
-\section{The cosmological model}\label{theory_sec:cosmo_model}
-
-\begin{itemize}
-    \item energy content
-    \item Planck
-    \item 
+    \item $\Lambda CDM$, each component and its equation of state.
+    \item Planck results.
+    \item The Einstein Boltzmann equation and linear theory.
     \item cosmological tensions
     \item The cosmological fluid the Einstein-Boltzmann Equation (fluid equation, the linear pertubation theory, the non-linear theory)
     \item matter power spectrum
-    \item angular power spectra
+    \item angular power spectra (introduce the limber and the non-limber integrals)
 \end{itemize}
-
-
 
 
 \section{Weak gravitational Lensing}\label{theory_sec:WL}
 \section{The impact of baryonic feedback on the large-scale structure}\label{theory_sec:BF}
+
+results from hydrodynamical simulations, cosmology analyses resutls. maybe cite Fabian's papeer
+
 \section{Fast radio bursts}\label{theory_sec:FRBs}
 {\color{red} describe how modelling the PDF is a hard thing to do}
 To forward model observations, we convolve the $DM-z$ represented by $P(DM|z)$ with measurement and systematic uncertainties, in addition to other observational effects. A catalog of detected FRBs is expected to have observed dispersion measure $DM_\text{obs}^i$, galactic coordinates, and redshifts for a subset of and observations $z^i$. We assume that each detected FRB was emitted at redshift $z^i$ where the difference between identified and unidentified host can be integrated in how $P(z^i)$ is modeled. Assume that we observe $N_{FRB}$ fast radio bursts signal. We express the observations as the probability of detecting an FRB $DM_\text{obs}$ given a set of estimated redshifts $\{z^i\}$, can be decomposed using the Bayes rule such that
@@ -88,7 +211,7 @@ Furthermore, if we assume that each observation $z_i$ is independent of other ob
 \begin{equation} \label{eq:step2}
     P(\{z^i\}|DM_\text{obs}) = \prod_{i}P(z^i|DM_\text{obs})
 \end{equation}
-Furthermore, the individual terms in \ref{eq:step2} could be derived using the joint probability distribution of the observed and the dispersion measure contribution from the large scale structure, namely $DM_\text{obs}$ and $DM$ such that
+Furthermore, the individual terms in Eq. \ref{eq:step2} could be derived using the joint probability distribution of the observed and the dispersion measure contribution from the large scale structure, namely $DM_\text{obs}$ and $DM$ such that
 \begin{equation}
     \begin{split}
     P(z^i|DM_\text{obs}) & \propto P(DM_\text{obs}|z^i) P(z^i) \\
@@ -109,7 +232,7 @@ Furthermore, to model each component of the resulting expression, we start with 
 \begin{equation}
     DM_\text{obs} = DM_{\text{LSS}} + DM_{\text{MW}} + DM_{\text{host}}
 \end{equation}
-For simplicity, we indicate to the contribution from the large-scale structure simply with $DM$ which is the same in Equation \ref{eq:obs_prob}. Consider the joint probability distribution $P(DM, DM_{\text{MW}},  DM_{\text{host}})$, this can be related to $P(DM_\text{obs}) = P(DM + DM_{\text{MW}} + DM_{\text{host}})$ via the constrained integral
+For simplicity, we indicate to the contribution from the large-scale structure simply with $DM$ which is the same in Equation Eq. \ref{eq:obs_prob}. Consider the joint probability distribution $P(DM, DM_{\text{MW}},  DM_{\text{host}})$, this can be related to $P(DM_\text{obs}) = P(DM + DM_{\text{MW}} + DM_{\text{host}})$ via the constrained integral
 
 \begin{equation}
 \begin{split}
@@ -138,4 +261,4 @@ Each of the terms making up the integral could be further reduced
     P(DM_{\text{host}}|z^i, DM) & \propto P(DM_{\text{host}}|z^i)P(DM|z^i)
 \end{align}
 
-Keeping in mind, that $DM_{\text{host}}$ that we use in \ref{eq:obs_prob} is flat since we do not have any information of the 
+Keeping in mind, that $DM_{\text{host}}$ that we use in Eq. \ref{eq:obs_prob} is flat since we do not have any information of the 

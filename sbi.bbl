@@ -19,6 +19,96 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
+    \entry{adame2025desi}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=ca082b326efdd4113e0acc1da37a642e}{%
+           family={Adame},
+           familyi={A\bibinitperiod},
+           given={AG},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4feef1103460c1fbe23560ecae987cb5}{%
+           family={Aguilar},
+           familyi={A\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1afb70f4636d301d395bf54278003b88}{%
+           family={Ahlen},
+           familyi={A\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31b84991feafee7018e6edb0d7f54323}{%
+           family={Alam},
+           familyi={A\bibinitperiod},
+           given={Se},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=622fc4e2cc5b61db28b1c0c306c35986}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={DM},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd023462f89cf1b539fb2ec136426b49}{%
+           family={Alvarez},
+           familyi={A\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f15048f99be6c919affb5bbfb2ffe19}{%
+           family={Alves},
+           familyi={A\bibinitperiod},
+           given={O},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0627a952454a03380e0341825ab78f8c}{%
+           family={Anand},
+           familyi={A\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=025ce8fd67fdd64082b8e37b299e8fef}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={U},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8c11f5b7241593eb8ec4bb0b546aed5}{%
+           family={Armengaud},
+           familyi={A\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{fullhash}{d414c5c644bb88d80c6bb31d37d2c120}
+      \strng{fullhashraw}{d414c5c644bb88d80c6bb31d37d2c120}
+      \strng{bibnamehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{authorbibnamehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{authornamehash}{6ae726e9116228760c7b4fada5324608}
+      \strng{authorfullhash}{d414c5c644bb88d80c6bb31d37d2c120}
+      \strng{authorfullhashraw}{d414c5c644bb88d80c6bb31d37d2c120}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Cosmology and Astroparticle Physics}
+      \field{number}{02}
+      \field{title}{DESI 2024 VI: cosmological constraints from the measurements of baryon acoustic oscillations}
+      \field{volume}{2025}
+      \field{year}{2025}
+      \field{pages}{021}
+      \range{pages}{1}
+    \endentry
     \entry{Alonso_2021}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=616de3263b076cfa5c29bf8927a1b333}{%
@@ -220,7 +310,7 @@
       \field{journaltitle}{The Astrophysical Journal Supplement Series}
       \field{month}{9}
       \field{number}{1}
-      \field{title}{First‐yearwilkinson microwave anisotropy probe(wmap) observations: Foreground emission}
+      \field{title}{First‐year Wilkinson Microwave Anisotropy Probe (WMAP) observations: Foreground emission}
       \field{volume}{148}
       \field{year}{2003}
       \field{pages}{97\bibrangedash 117}
@@ -322,6 +412,41 @@
       \verb{doi}
       \verb 10.1086/171797
       \endverb
+    \endentry
+    \entry{bondi2010cosmology}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9a8251710496aab97c226b3ad49d6501}{%
+           family={Bondi},
+           familyi={B\bibinitperiod},
+           given={Hermann},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b56fccd1d3ba5abf47e1a38d74af9d9}{%
+           family={Roxburgh},
+           familyi={R\bibinitperiod},
+           given={Ian\bibnamedelima W},
+           giveni={I\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{cf0ef5f227600562090c22ba67c806db}
+      \strng{fullhash}{cf0ef5f227600562090c22ba67c806db}
+      \strng{fullhashraw}{cf0ef5f227600562090c22ba67c806db}
+      \strng{bibnamehash}{cf0ef5f227600562090c22ba67c806db}
+      \strng{authorbibnamehash}{cf0ef5f227600562090c22ba67c806db}
+      \strng{authornamehash}{cf0ef5f227600562090c22ba67c806db}
+      \strng{authorfullhash}{cf0ef5f227600562090c22ba67c806db}
+      \strng{authorfullhashraw}{cf0ef5f227600562090c22ba67c806db}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cosmology}
+      \field{year}{2010}
     \endentry
     \entry{Carroll_2024}{book}{}{}
       \name{author}{1}{}{%
@@ -728,6 +853,41 @@
       \field{year}{1999}
       \verb{doi}
       \verb 10.1086/311947
+      \endverb
+    \endentry
+    \entry{Hubble_1929}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=095a52969f0b95a9824841c15cc59106}{%
+           family={Hubble},
+           familyi={H\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{095a52969f0b95a9824841c15cc59106}
+      \strng{fullhash}{095a52969f0b95a9824841c15cc59106}
+      \strng{fullhashraw}{095a52969f0b95a9824841c15cc59106}
+      \strng{bibnamehash}{095a52969f0b95a9824841c15cc59106}
+      \strng{authorbibnamehash}{095a52969f0b95a9824841c15cc59106}
+      \strng{authornamehash}{095a52969f0b95a9824841c15cc59106}
+      \strng{authorfullhash}{095a52969f0b95a9824841c15cc59106}
+      \strng{authorfullhashraw}{095a52969f0b95a9824841c15cc59106}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{A relation between distance and radial velocity among extra-galactic nebulae}
+      \field{volume}{15}
+      \field{year}{1929}
+      \field{pages}{168\bibrangedash 173}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.15.3.168
       \endverb
     \endentry
     \entry{Jain_Taylor_2003}{article}{}{}
@@ -1427,7 +1587,7 @@
       \verb 10.1093/mnras/stab2481
       \endverb
     \endentry
-    \entry{noether1983invariante}{article}{}{}
+    \entry{Noether_1983}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=8cc5824bd13361a82091c2c493168aa9}{%
            family={Noether},
@@ -1435,9 +1595,6 @@
            given={Emmy},
            giveni={E\bibinitperiod},
            givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
       }
       \strng{namehash}{8cc5824bd13361a82091c2c493168aa9}
       \strng{fullhash}{8cc5824bd13361a82091c2c493168aa9}
@@ -1453,11 +1610,14 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Gesammelte abhandlungen-collected papers}
-      \field{title}{Invariante variationsprobleme}
+      \field{journaltitle}{Springer Collected Works in Mathematics}
+      \field{title}{Invariante Variationsprobleme}
       \field{year}{1983}
       \field{pages}{231\bibrangedash 239}
       \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-3-642-39990-9_13
+      \endverb
     \endentry
     \entry{Petroff_2019}{article}{}{}
       \name{author}{3}{}{%
@@ -1497,7 +1657,7 @@
       \field{journaltitle}{The Astronomy and Astrophysics Review}
       \field{month}{5}
       \field{number}{1}
-      \field{title}{Fast radio                            bursts}
+      \field{title}{Fast radio bursts}
       \field{volume}{27}
       \field{year}{2019}
       \verb{doi}
@@ -1556,6 +1716,36 @@
       \verb{doi}
       \verb 10.1088/1475-7516/2025/10/017
       \endverb
+    \endentry
+    \entry{Planck1900b}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b70f9b82b1387fb65567789c543a0c4c}{%
+           family={Planck},
+           familyi={P\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b70f9b82b1387fb65567789c543a0c4c}
+      \strng{fullhash}{b70f9b82b1387fb65567789c543a0c4c}
+      \strng{fullhashraw}{b70f9b82b1387fb65567789c543a0c4c}
+      \strng{bibnamehash}{b70f9b82b1387fb65567789c543a0c4c}
+      \strng{authorbibnamehash}{b70f9b82b1387fb65567789c543a0c4c}
+      \strng{authornamehash}{b70f9b82b1387fb65567789c543a0c4c}
+      \strng{authorfullhash}{b70f9b82b1387fb65567789c543a0c4c}
+      \strng{authorfullhashraw}{b70f9b82b1387fb65567789c543a0c4c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Verhandlungen der Deutschen Physikalischen Gesellschaft}
+      \field{title}{Zur Theorie des Gesetzes der Energieverteilung im Normalspektrum}
+      \field{volume}{2}
+      \field{year}{1900}
+      \field{pages}{237\bibrangedash 245}
+      \range{pages}{9}
     \endentry
     \entry{Pope_2004}{article}{}{}
       \name{author}{1}{}{%
@@ -2035,10 +2225,12 @@
       \strng{authorfullhashraw}{f245b0bce0409b0e39ea29c0eb9d032b}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Gravitational lenses}
+      \field{year}{1992}
     \endentry
     \entry{Schneider_VanWaerbeke_Jain_Kruse_1998}{article}{}{}
       \name{author}{4}{ul=2}{%
@@ -2195,6 +2387,44 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.3847/1538-4357/ae2ff9
+      \endverb
+    \endentry
+    \entry{deSitter_1917}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=16fa8dc82c39e82a936142599c86ee4c}{%
+           family={Sitter},
+           familyi={S\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{16fa8dc82c39e82a936142599c86ee4c}
+      \strng{fullhash}{16fa8dc82c39e82a936142599c86ee4c}
+      \strng{fullhashraw}{16fa8dc82c39e82a936142599c86ee4c}
+      \strng{bibnamehash}{16fa8dc82c39e82a936142599c86ee4c}
+      \strng{authorbibnamehash}{16fa8dc82c39e82a936142599c86ee4c}
+      \strng{authornamehash}{16fa8dc82c39e82a936142599c86ee4c}
+      \strng{authorfullhash}{16fa8dc82c39e82a936142599c86ee4c}
+      \strng{authorfullhashraw}{16fa8dc82c39e82a936142599c86ee4c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{11}
+      \field{number}{1}
+      \field{title}{On Einstein’s theory of gravitation and its astronomical consequences. third paper.}
+      \field{volume}{78}
+      \field{year}{1917}
+      \field{pages}{3\bibrangedash 28}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1093/mnras/78.1.3
       \endverb
     \endentry
     \entry{Smoot_1999}{article}{}{}
