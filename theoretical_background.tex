@@ -129,9 +129,9 @@ the function $S_k(\chi)$ takes one of three forms by viture of the number $k$
 \begin{equation}
 S_k(\chi) = 
 \begin{cases} 
-    \frac{1}{\sqrt{k}} \sin(\sqrt{k} \chi) & \text{if } k > 0, \\
-    \chi & \text{if } k = 0, \\
-    \frac{1}{\sqrt{|k|}} \sinh(\sqrt{|k|} \chi) & \text{if } k < 0.
+    \frac{1}{\sqrt{k}} \sin(\sqrt{k} \chi) & \text{if } k > 0, \text{for a closed universe}\\
+    \chi & \text{if } k = 0, \text{for a flat universe}\\
+    \frac{1}{\sqrt{|k|}} \sinh(\sqrt{|k|} \chi) & \text{if } k < 0, \text{for an open universe}
 \end{cases}
 \end{equation}
 The case when $k = 0$ represents a flat universe, where the spatial part reduces to the usual spherical coordinates.The coordinate $\chi$ could be understood by considering two space like points in spacetime, one with $\chi = 0$ and another with $\chi = \chi_c$ leading To
@@ -166,27 +166,46 @@ where $z = 0$ refers to the current epoch. Since light move along a null geodesi
 \end{equation}
 which could be further aranged using Eq. \ref{eq:hubble} and Eq. \ref{eq:redshift} into
 \begin{equation}
-    \chi = \int_{1}^{z_e} \frac{c}{(1 + z)H(z)} dz
+    \chi = \int_{1}^{z_e} \frac{c}{H(z)} dz
 \end{equation}
 
 
 Throughout this chapter, a question is lurking behind all the kinemetics of the universe that the FLRW metric proposes: how does the scale factor $a$ changes with cosmic time? In principle, this requires using the Einstein's field equation Eq. \ref{eq:EFE_full} along with assumptions about the form of the stress energy tensor $T^{\mu \nu}$. Assuming that the energgy density in the universe is that of a perfect fluid, solving the Einstein's field equation for $a$ yields 
-\begin{align*}
-    \frac{\ddot{a}}{a} &= -\frac{4\pi G}{3} \left( \rho + \frac{3p}{c^2} \right) + \frac{\Lambda c^2}{3} , \\
-    \frac{\dot{a}^2}{a^2} &= \frac{8\pi G}{3} \rho + \frac{\Lambda c^2}{3} - \frac{kc^2}{a^2} .
-\end{align*}
-with $p$ being the isotrpic pressure of the cosmic fluid and $\rho$ being the energy density. These equations are known as teh Friedmann equations, describing the evolution of the scale factor $a$ with respect to cosmic time $t$. To solve these equations, a relationship between the pressure p and the energy density is needed, known as the equation of state. The possible components that contribute to the energy density $\rho$ have been a process of trial and error starting de Sitter universe \citep{deSitter_1917} which is a universe with no matter up to the recently speculated model with dynamical dark energy \citep{adame2025desi}. In this thesis, we consider the $\Lambda CDM$ cosmoligcal model and describe its components in \ref{theory_sec:cosmo_model}.
+\begin{subequations}
+\label{eq:Friedmann}
+\begin{align} 
+    \frac{\ddot{a}}{a} &= -\frac{4\pi G}{3} \left( \rho + \frac{3p}{c^2} \right) + \frac{\Lambda c^2}{3} \label{eq:Friedmann1} \\
+    \frac{\dot{a}^2}{a^2} &= \frac{8\pi G}{3} \rho + \frac{\Lambda c^2}{3} - \frac{kc^2}{a^2} \label{eq:Friedmann2}
+\end{align}
+\end{subequations}
+with $p$ being the isotrpic pressure of the cosmic fluid and $\rho$ being the energy density. These equations are known as teh Friedmann equations, describing the evolution of the scale factor $a$ with respect to cosmic time $t$. To solve these equations, a relationship between the pressure p and the energy density is needed, known as the equation of state. The possible components that contribute to the energy density $\rho$ have been a process of trial and error starting de Sitter universe \citep{deSitter_1917} which is a universe with no matter up to the recently speculated model with dynamical dark energy \citep{adame2025desi}. Eqs. \ref{eq:Friedmann} were derived with the assumption of a homogeneous and isotropic universe on all scales; this is not the case when studying the inhomegenoues universe with largre scale strucutre. Therefore, the physical qunatities in Eqs. \ref{eq:Friedmann} are only a functions of time (the total density $\rho(t)$ and the isotropic pressure $p(t)$).In \ref{theory_sec:cosmo_model}, I briefly present the case of inhomogeneous universe with perturbations 
+\begin{equation}
+    \frac{\rho(t, \mathbf{x}) - \bar{\rho}(t)}{\bar{\rho}(t)} << 1,
+\end{equation}
+where $\bar{\rho}(t)$ is the average energy density at a cosmic time $t$, and $\rho(t, \mathbf{x})$ is the density at a comoving position $\mathbf{x}$ and cosmic time $t$. In this thesis, we consider the $\Lambda$CDM cosmoligcal model and describe its components in \ref{theory_sec:cosmo_model}.
 
 
 \section{The cosmoligcal model}\label{theory_sec:cosmo_model}
-
-
+In this section, we consider the $\Lambda$CDM cosmoligcal model and explain its components. As noted by Eqs. \ref{eq:Friedmann}, the time evolution of the sacle factor $a$ depends on the energy density and its relation to the pressue, known as the equaiton of state. If we refere to the current day value of the Hubble parameter as $H_0$ and the current day value of the energy density $\rho_{0}$, Eq. \ref{eq:Friedmann2} can be written in the current epoch
+\begin{equation}
+    1 = \frac{8\pi G}{3H_0^2} \rho_0 + \frac{\Lambda c^2}{3H_0^2} - \frac{kc^2}{a_0^2 H_0^2} .
+\end{equation}
+We label the following dimensionless quantities 
+\begin{subequations} \label{eq:Omega_params}
+\begin{align}
+    \Omega_0 &= \frac{8\pi G}{3H_0^2} \rho_0 \label{eq:Omega_m}, \\
+    \Omega_{\Lambda} &= \frac{\Lambda c^2}{3H_0^2} \label{eq:Omega_L}, \\
+    \Omega_{k} &= -\frac{kc^2}{a_0^2 H_0^2} \label{eq:Omega_k}.
+\end{align}
+\end{subequations}
+Measurements from the cosmic microwave background has shown that we live in flat universe, measining that $ \Omega_{k} = 0$ (within error bounds).
 
 
 \begin{itemize}
 
     \item $\Lambda CDM$, each component and its equation of state.
     \item Planck results.
+    \item The pertubation, background split. 
     \item The Einstein Boltzmann equation and linear theory.
     \item cosmological tensions
     \item The cosmological fluid the Einstein-Boltzmann Equation (fluid equation, the linear pertubation theory, the non-linear theory)

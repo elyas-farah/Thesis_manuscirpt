@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  25 MAR 2026 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  26 MAR 2026 17:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1800,25 +1800,31 @@ LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 
 Underfull \vbox (badness 2165) has occurred while \output is active []
 
- [11{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [12] [13]) [14]
+ [11{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12] [13]
+Underfull \vbox (badness 8056) has occurred while \output is active []
+
+ [14]) [15]
 \openout2 = `methodology.aux'.
 
- (./methodology.tex
+ (./methodology.tex [16
+
+
+
+
+
+]
 chapter 3.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 11.28003pt on input line 12.
-[15
-
-
-
-
-
-]) [16]
+[17]) [18]
 \openout2 = `results.aux'.
 
  (./results.tex
 chapter 4.
-) [17
+) [19
 
 
 
@@ -1827,7 +1833,7 @@ chapter 4.
 ]
 \openout2 = `discussion.aux'.
 
- (./discussion.tex [18
+ (./discussion.tex [20
 
 
 
@@ -1835,10 +1841,10 @@ chapter 4.
 
 ]
 chapter 5.
-) [19]
+) [21]
 \openout2 = `thesis_appendix.aux'.
 
- (./thesis_appendix.tex [20
+ (./thesis_appendix.tex [22
 
 
 
@@ -1847,9 +1853,9 @@ chapter 5.
 ]
 chapter A.
 
-LaTeX Warning: Citation 'latexwiki' on page 21 undefined on input line 11.
+LaTeX Warning: Citation 'latexwiki' on page 23 undefined on input line 11.
 
-) [21] [22
+) [23] [24
 
 
 
@@ -1858,7 +1864,7 @@ LaTeX Warning: Citation 'latexwiki' on page 21 undefined on input line 11.
 chapter without number
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 195.
-[23]
+[25]
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 195.
  (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
@@ -1869,10 +1875,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [24]
+ [26]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 195.
- [25] [26
+ [27] [28
 
 
 ]
@@ -1884,10 +1890,10 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lof=\write5
 \openout5 = `sbi.lof'.
 
- [27
+ [29
 
 
-] [28
+] [30
 
 
 ]
@@ -1899,14 +1905,14 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lot=\write6
 \openout6 = `sbi.lot'.
 
- [29]
+ [31]
 \openout2 = `thesis_acknowledge.aux'.
 
- (./thesis_acknowledge.tex [30
+ (./thesis_acknowledge.tex [32
 
 
 
-]) [31] (./sbi.aux
+]) [33] (./sbi.aux
 Package cleveref Info: loaded `ngerman' language definitions on input line 12.
 Package cleveref Info: loaded `ngerman' language definitions on input line 16.
  (./thesis_intro.aux) (./theoretical_background.aux) (./methodology.aux) (./results.aux) (./discussion.aux) (./thesis_appendix.aux) (./thesis_acknowledge.aux))
@@ -1919,18 +1925,18 @@ Package logreq Info: Writing requests to 'sbi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43312 strings out of 467525
- 876355 string characters out of 5408440
- 1944670 words of memory out of 5000000
- 71277 multiletter control sequences out of 15000+600000
- 760733 words of font info for 309 fonts, out of 8000000 for 9000
+ 43343 strings out of 467525
+ 876821 string characters out of 5408440
+ 1945470 words of memory out of 5000000
+ 71292 multiletter control sequences out of 15000+600000
+ 762158 words of font info for 313 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,20n,147p,11252b,5038s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on sbi.pdf (35 pages, 420113 bytes).
+Output written on sbi.pdf (37 pages, 423921 bytes).
 PDF statistics:
- 735 PDF objects out of 1000 (max. 8388607)
- 660 compressed objects within 7 object streams
- 167 named destinations out of 1000 (max. 500000)
+ 765 PDF objects out of 1000 (max. 8388607)
+ 687 compressed objects within 7 object streams
+ 178 named destinations out of 1000 (max. 500000)
  53534 words of extra memory for PDF output out of 61914 (max. 10000000)
 
