@@ -1,13 +1,13 @@
 \chapter{Theoretical Background} \label{chap:theory}
 
-This chapter is mainly based on 2 textbooks and 2 lectrue notes. The first book is \textbf{Modern Cosmology by} \citet{Dodelson_Schmidt_2026} and the second is \textbf{Spacetime and Geometry: An Introduction to General Relativity} by \citet{Carroll_2024}. The first lecture notes come from the Advanced Cosmology course given the the Summer semester 2024 by Prof. Dr. Cristiano Poriciani and Jun-Prof. Andrina Nicola, and the second lecture notes come from the Weak Lesning course by prof. Dr. Peter Schneider given in the In this chapeter, I will introduce the basics of the principles of cosmology, weak gravitational lensing, and fast radio bursts (FRBs).
+This chapter is mainly based on 2 textbooks and 2 lecture notes. The first book is \textbf{Modern Cosmology by} \citet{Dodelson_Schmidt_2026} and the second is \textbf{Spacetime and Geometry: An Introduction to General Relativity} by \citet{Carroll_2024}. The first lecture notes come from the Advanced Cosmology course given in the Summer semester 2024 by Prof. Dr. Cristiano Poriciani and Jun-Prof. Andrina Nicola, and the second lecture notes come from the Weak Lensing course by Prof. Dr. Peter Schneider taught in the Summer semester 2024. In this chapter, I will introduce the basics of the principles of cosmology, weak gravitational lensing, and fast radio bursts (FRBs).
 
 
 
 \section{The general theory of relativity}\label{theory_sec:GR}
-The general theory of relativity introduces a geometric interpretation of gravity, resting on a set of geometric assumptions and principles evolved from the older classical Newtonian theory of gravity and relativity. The first of these is the \textbf{weak equivilance principle} which states that \textbf{' the inertial mass and gravitational mass of any object are equal'}. Einstein reformulated this statement to fir the language of the special theory of relativity by stating that \textbf{'In small enough regions of spacetime, the laws of physics reduce to those of special relativity; it is impossible to detect the existence of a gravitational field by means of local experiments.'} The consequences of this principle is that freely falling frame of reference cannot recognize that freely falling test particles in the vicinity of the frame are being accelerated (or under the influence of gravity). The consequences of this principle invites the formulation of a geometric theory of gravity where gravity manifests itself as a curverture. 
+The general theory of relativity introduces a geometric interpretation of gravity, resting on a set of geometric assumptions and principles evolved from the older classical Newtonian theory of gravity and relativity. The first of these is the \textbf{weak equivalence principle} which states that \textbf{' the inertial mass and gravitational mass of any object are equal'}. Einstein reformulated this statement to fit the language of the special theory of relativity by stating that \textbf{'In small enough regions of spacetime, the laws of physics reduce to those of special relativity; it is impossible to detect the existence of a gravitational field by means of local experiments.'} The consequences of this principle are that freely falling frame of reference cannot recognize that freely falling test particles in the vicinity of the frame are being accelerated (or under the influence of gravity). The consequences of this principle invites the formulation of a geometric theory of gravity where gravity manifests itself as curvature. 
 
-To have a mathematical theory where observation could be interpreted, Einstein used differentiable manifolds to describe the four dimensional spacetime. Differentialble manifolds allows a definitation physical quantities such as position and momentum along with a continuous derivative of these quntities on the manifolds. Having a differetiable quantity allows also to introduce conservation laws which are a direct results of symmetries in a particular problem \citep{Noether_1983}. Therefore, to describe the motion of particles in a curved spacetime, the metric tensor is defined on a non-Riemanian manifold. The metric tensor is a solution for the Einstein field's equatio which is a second order differential quations on $\mathbb{R}^{4\times4}$. 
+To have a mathematical theory where observation could be interpreted, Einstein used differentiable manifolds to describe the four dimensional spacetime. Differentiable manifolds allow a definition of physical quantities such as position and momentum along with a continuous derivative of these quantities on the manifolds. Having a differentiable quantity allows also to introduce conservation laws which are a direct results of symmetries in a particular problem \citep{Noether_1983}. Therefore, to describe the motion of particles in a curved spacetime, the metric tensor is defined on a non-Riemannian manifold. The metric tensor is a solution for the Einstein field equations which are second order differential equations on $\mathbb{R}^{4\times4}$. 
 
 The metric tensor $g_{\nu \mu}$ (in Einstein index notation) is a $4 \times 4$ symmetric tensor that describes the physical length of an infinitesimal line given a particular system of coordinates such that 
 
@@ -33,7 +33,7 @@ with $G$ being the gravitaional constant. To formulate a theory which reduces to
 \begin{equation}
     \left[ \nabla^2 g \right]_{\mu\nu} \propto T_{\mu\nu}.
 \end{equation}
-A geometric qunatity that is composed of the second derivatives of the matrix tensor is the Ricci tensor $R_{\mu \nu}$ expressed in terms of the Christoffel symbols
+A geometric quantity that is composed of the second derivatives of the metric tensor is the Ricci tensor $R_{\mu \nu}$ expressed in terms of the Christoffel symbols
 \begin{equation} \label{eq:Ricci}
     R_{\mu\nu} = \partial_\lambda \Gamma^\lambda_{\nu\mu} 
            - \partial_\nu \Gamma^\lambda_{\lambda\mu} 
@@ -57,7 +57,7 @@ where $\nabla^\mu$ is the covariant derivative. Following Eq. \ref{eq:EFE_guess}
 \begin{equation}
     \nabla^\mu R_{\mu\nu} = \frac{1}{2} \nabla^\mu R g_{\mu\nu}.
 \end{equation}    
-Therfore, we can define another tensor $G_{\mu \nu}$ with a vinishing covariant derivative
+Therefore, we can define another tensor $G_{\mu \nu}$ with a vanishing covariant derivative
 \begin{equation}
     G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}.
 \end{equation}
@@ -65,7 +65,7 @@ $G_{\mu\nu}$ is called the Einstein tensor, and the Einstein's field equation re
 \begin{equation} \label{eq:EFE}
     G_{\mu\nu} = 8\pi G T_{\mu\nu}
 \end{equation}
-where I used $\kappa = 8\pi G$ which can be obtained by reducing Eq. \ref{eq:EFE} to the Newtonian limit in Eq. \ref{eq:potential}. Einstein modified Eq. \ref{eq:EFE} to account to a vaccum solution by adding a term to represent the vaccum enrgy $\Lambda g_{\mu \nu}$ where $\Lambda$ is called the cosmological constant, and the final equation becomes
+where I used $\kappa = 8\pi G$ which can be obtained by reducing Eq. \ref{eq:EFE} to the Newtonian limit in Eq. \ref{eq:potential}. Einstein modified Eq. \ref{eq:EFE} to account for a vacuum solution by adding a term to represent the vacuum energy $\Lambda g_{\mu \nu}$ where $\Lambda$ is called the cosmological constant, and the final equation becomes
 \begin{equation} \label{eq:EFE_full}
     G_{\mu\nu} + \Lambda g_{\mu \nu} = 8\pi G T_{\mu\nu}
 \end{equation}
@@ -76,7 +76,7 @@ Finally, the 4-velocity of a particle in general relativity is defined as
 \begin{equation}
     U^{\mu} = \frac{dx^{\mu}}{d\lambda},
 \end{equation} 
-Therfore, the 4-velocity would follow the normalization
+Therefore, the 4-velocity would follow the normalization
 \begin{equation}
     g_{\mu \nu}U^{\mu}U^{\nu} = -1
 \end{equation}
@@ -89,7 +89,7 @@ and the normalization of momentum is
 \begin{equation}
     g_{\mu \nu}P^{\mu}P^{\nu} = -m^2
 \end{equation}
-Notice that either of the previous normalization is invariant under coordinate transformation. We define the observed enrgy of a particle of 4-momentum $P^{\mu}$ with respect to an observer wiht 4-velocity $U^{\mu}$ such that it reduces to the special relativitstic limit if the particle has a vanishing spatial velocity and the observer 
+Notice that either of the previous normalization is invariant under coordinate transformation. We define the observed energy of a particle of 4-momentum $P^{\mu}$ with respect to an observer with 4-velocity $U^{\mu}$ such that it reduces to the special relativistic limit if the particle has a vanishing spatial velocity and the observer 
 \begin{equation} \label{eq:energy}
     E_{obs} = -g_{\mu \nu} U^{\mu} P^{\nu}.
 \end{equation}
@@ -97,13 +97,13 @@ Notice that either of the previous normalization is invariant under coordinate t
 
 
 
-The Einstein theory of general relativity can explain cosmological obserrvation such as cosmological redshift and the expansion of the universe where the expansion is driven by the energy content in the universe. Though the FLRW metric (explained in \ref{theory_sec:FLRW}) is phenomonologically motivated, the variation of the scale factor with conformal time $a$ is described by the Einstein's field equation. 
+The Einstein theory of general relativity can explain cosmological observations such as cosmological redshift and the expansion of the universe where the expansion is driven by the energy content in the universe. Though the FLRW metric (explained in \ref{theory_sec:FLRW}) is phenomenologically motivated, the variation of the scale factor with conformal time $a$ is described by the Einstein's field equation. 
 
 
 
 
 \section{The Friedmann-Robertson-Lemaître-Walker metric} \label{theory_sec:FLRW}
-To descibe the entire universe using on metric tensor, requires educated simplificaitons and assumptions. The first guiding principle is the Copernican principle \citep{bondi2010cosmology} which states that \textbf{'we do not occupy a special place in space'}. The Copernican principle motivates the cosmological principle which states that 'the universe is homogenous and isotropic'. Early galaxy surveys have shown that the universe is only homogeneous on large scales, therefore, the full cosmological principle is stated as \textbf{'the universe is homogeneous and symmetric on large scales'}. An additional assumption that simplifies that narrows down the possible formula for a metric is Weyl's postulate which states that \textbf{'the world lines of the galaxies form a 3-sheaf of non-intersecting geodesics orthogonal to layers of spacelike hypersurfaces'}. Weyl's posutalete, coupled with the cosmological principle, allows a better definition on where homogeneity and isotropy applies, name that the universe is 'spatially homogeneous and isotropic'. Therefore, a maximally symmetric metric that follows both principles inserts
+To describe the entire universe using one metric tensor requires educated simplifications and assumptions. The first guiding principle is the Copernican principle \citep{bondi2010cosmology} which states that \textbf{'we do not occupy a special place in space'}. The Copernican principle motivates the cosmological principle which states that 'the universe is homogeneous and isotropic'. Early galaxy surveys have shown that the universe is only homogeneous on large scales, therefore, the full cosmological principle is stated as \textbf{'the universe is homogeneous and symmetric on large scales'}. An additional assumption that simplifies that narrows down the possible formula for a metric is Weyl's postulate which states that \textbf{'the world lines of the galaxies form a 3-sheaf of non-intersecting geodesics orthogonal to layers of spacelike hypersurfaces'}. Weyl's postulate, coupled with the cosmological principle, allows a better definition of where homogeneity and isotropy apply, namely that the universe is 'spatially homogeneous and isotropic'. Therefore, a maximally symmetric metric that follows both principles takes the form
 \begin{equation}
     ds^2 = -c^2 dt^2 + g_{ij} dx^i dx^j, 
 \end{equation}
@@ -116,16 +116,16 @@ where $t$ is cosmic time. A two-dimensional schematic diagram of this metric is 
 \end{figure}
 
 
-Using the tools of differntial geometry, a maximally symmetric metric that also accounts for a homogeneous expansion of the universe is 
+Using the tools of differential geometry, a maximally symmetric metric that also accounts for a homogeneous expansion of the universe is 
 \begin{equation} \label{eq:flrw}
-    \mathrm{d}s^2 = -\mathrm{d}t^2 + a^2(t) \mathrm{d}s_3^2
+    \mathrm{d}s^2 = -c\mathrm{d}t^2 + a^2(t) \mathrm{d}s_3^2
 \end{equation}
 
-where $a(t)$ is the scale factor that couples the spatial part with time and the spetial part, $\mathrm{d}s_3^2$ represent a maximally symmetric space that takes the following form in hyperspherical coordinates
+where $a(t)$ is the scale factor that couples the spatial part with time and the spatial part, $c$ is the speed of light, $\mathrm{d}s_3^2$ represent a volume element in a maximally symmetric space that takes the following form in hyperspherical coordinates
 \begin{equation}\label{eq:sphere3}
     \mathrm{d}s_3^2 = \mathrm{d}\chi^2 + S_k(\chi)^2 \left( \mathrm{d}\theta^2 + \sin^2 \theta \, \mathrm{d}\phi^2 \right).
 \end{equation}
-the function $S_k(\chi)$ takes one of three forms by viture of the number $k$
+the function $S_k(\chi)$ takes one of three forms by virtue of the number $k$
 \begin{equation}
 S_k(\chi) = 
 \begin{cases} 
@@ -137,40 +137,45 @@ S_k(\chi) =
 The case when $k = 0$ represents a flat universe, where the spatial part reduces to the usual spherical coordinates.The coordinate $\chi$ could be understood by considering two space like points in spacetime, one with $\chi = 0$ and another with $\chi = \chi_c$ leading To
 
 \begin{equation}\label{eq:comoving}
-    S = a(t) \chi_c, 
+    s = a(t) \chi_c, 
 \end{equation}
 which means that the physical distance changes with time for a given $\chi_c$. We call $\chi_c$ the comoving distance. Taking the derivative with respect to cosmic time in Eq. \ref{eq:comoving}, we can retrieve the empirical law that \citet{Hubble_1929} discovered by recording the relationship between the distance to galaxy and the speed of the galaxy
 \begin{equation}
-   \frac{dS}{dt} = V = \frac{\dot{a}}{a} S,
+   \frac{ds}{dt} = V = \frac{\dot{a}}{a} s,
 \end{equation}
 with $\dot{a} = da/dt$. We define the Hubble parameter at a cosmological time $t$ such that
 \begin{equation} \label{eq:hubble}
     H(t) = \frac{\dot{a}}{a}.
 \end{equation}
 
-Another distance indicater is gravitional redshift, similar to doppler redshift, gravitational redshift is the modulation of light frequency as light travels across the universe. If a fudamental oberver at cosmic time $t_{0}$ emits a burst of light, then the energy of this light particle is given by  Eq. \ref{eq:energy}. If another fundamental observer observes this light at a later time $t$, the ratio between the two energies is defined as
+Another distance indicator is gravitational redshift, similar to doppler redshift, gravitational redshift is the modulation of light frequency as light travels across the universe. If a fundamental observer at cosmic time $t_{0}$ emits a burst of light, then the energy of this light particle is given by  Eq. \ref{eq:energy}. If another fundamental observer observes this light at a later time $t$, the ratio between the two energies is defined as
 \begin{equation}
     1 + z = \frac{E_e}{E_o},
 \end{equation}
-where $E_e$ and $E_o$ are the energy of light measured by the emitter and the observer respectively, and $z$ is called the cosmological redshift. $z$ is related to the wavelength of light in the limit where each of the emeitter and the observer are fundamental observers, meaning that their 4-velocity is $U^{\mu} = (1, 0, 0, 0)$. Therfore, the light energy could be expressed using Planck's law \citep{Planck1900b},  $E = h/\lambda$, with $h = 6.626 \times 10^{-34} \text{J·s}$ is Planck's constant, and $\lambda$ is the wavelength of light. The final relationship describing the modulation in the observed wavelength of light is 
+where $E_e$ and $E_o$ are the energy of light measured by the emitter and the observer respectively, and $z$ is called the cosmological redshift. $z$ is related to the wavelength of light in the limit where each of the emitter and the observer are fundamental observers, meaning that their 4-velocity is $U^{\mu} = (1, 0, 0, 0)$. Therefore, the light energy could be expressed using Planck's law \citep{Planck1900b},  $E = h/\lambda$, with $h = 6.626 \times 10^{-34} \text{J·s}$ is Planck's constant, and $\lambda$ is the wavelength of light. The final relationship describing the modulation in the observed wavelength of light is 
 \begin{equation}
     1 + z = \frac{a(t_o)}{a(t_e)} = \frac{\lambda_o}{\lambda_e}
 \end{equation} 
-with $\lambda_e$ and $\lambda_o$ are the light wavelength measured by the emitter and the observer respectively. This relationship could be exploited by quantifying the modulation of the wavelength and its relationship wo the scale factor. In a nutshell, a light emitted at a scale factor $a(t_e)$ travels through an expanding universe until measured by another observer at time $t_o > t_e$ correponding to $a(t_o) > a(t_e)$, therfore $\lambda_o > \lambda_e$, which explains why distant sources are redshifted. In practive, by measuring the sptrum of light of a distant galaxy and convolving it with a standard spectrum (the expected spectrum of galaxy in the nearby universe), it it possible to obtain at the redshift of the distant galaxy. If we choose $a = 1$ in the current epoch, the relationship between redshift and the scale factor reduces to
+with $\lambda_e$ and $\lambda_o$ are the light wavelength measured by the emitter and the observer respectively. This relationship could be exploited by quantifying the modulation of the wavelength and its relationship to the scale factor. In a nutshell, a light emitted at a scale factor $a(t_e)$ travels through an expanding universe until measured by another observer at time $t_o > t_e$ corresponding to $a(t_o) > a(t_e)$, therefore $\lambda_o > \lambda_e$, which explains why distant sources are redshifted. In practice, by measuring the spectrum of light of a distant galaxy and convolving it with a standard spectrum (the expected spectrum of galaxy in the nearby universe), it is possible to obtain the redshift of the distant galaxy. If we choose $a = 1$ in the current epoch, the relationship between redshift and the scale factor reduces to
 \begin{equation}\label{eq:redshift}
     a = \frac{1}{1 + z},
 \end{equation}
-where $z = 0$ refers to the current epoch. Since light move along a null geodesic, is possible to obtain the comocving distance to an emitter given the redshift that the emitter. Starting from Eq. \ref{eq:flrw} and Eq. \ref{eq:sphere3}, and working in a coordinate system with the light travelling along $\theta = 0 $ and $\phi = 0$, the null geodesic dictates that 
+where $z = 0$ refers to the current epoch. Since light moves along a null geodesic, it is possible to obtain the comoving distance to an emitter given the redshift of the emitter. Starting from Eq. \ref{eq:flrw} and Eq. \ref{eq:sphere3}, and working in a coordinate system with the light travelling along $\theta = 0 $ and $\phi = 0$, the null geodesic dictates that 
 \begin{equation}
     cdt = a(t)d\chi
 \end{equation}
-which could be further aranged using Eq. \ref{eq:hubble} and Eq. \ref{eq:redshift} into
+which could be further arranged using Eq. \ref{eq:hubble} and Eq. \ref{eq:redshift} into
 \begin{equation}
     \chi = \int_{1}^{z_e} \frac{c}{H(z)} dz
 \end{equation}
+Another distnace scale of interest is the Hubble scale. The Hubble scale is the distance at which the recession velocity of a galaxy equals the speed of light. Using Hubble's law, the Hubble scale is given by
+\begin{equation}\label{eq:hubble_scale}
+    s_H = \frac{c}{H}.
+\end{equation}
+The Hubble scale is a distance scale that is used to define the size of the observable universe. It has a significant consequences on the growth of perturbations in the universe, as will be discussed in \ref{theory_sec:BF}.
 
 
-Throughout this chapter, a question is lurking behind all the kinemetics of the universe that the FLRW metric proposes: how does the scale factor $a$ changes with cosmic time? In principle, this requires using the Einstein's field equation Eq. \ref{eq:EFE_full} along with assumptions about the form of the stress energy tensor $T^{\mu \nu}$. Assuming that the energgy density in the universe is that of a perfect fluid, solving the Einstein's field equation for $a$ yields 
+Throughout this chapter, a question is lurking behind all the kinematics of the universe that the FLRW metric proposes: how does the scale factor $a$ change with cosmic time? In principle, this requires using the Einstein's field equation Eq. \ref{eq:EFE_full} along with assumptions about the form of the stress energy tensor $T^{\mu \nu}$. Assuming that the energy density in the universe is that of a perfect fluid, solving the Einstein's field equation for $a$ yields 
 \begin{subequations}
 \label{eq:Friedmann}
 \begin{align} 
@@ -178,38 +183,173 @@ Throughout this chapter, a question is lurking behind all the kinemetics of the 
     \frac{\dot{a}^2}{a^2} &= \frac{8\pi G}{3} \rho + \frac{\Lambda c^2}{3} - \frac{kc^2}{a^2} \label{eq:Friedmann2}
 \end{align}
 \end{subequations}
-with $p$ being the isotrpic pressure of the cosmic fluid and $\rho$ being the energy density. These equations are known as teh Friedmann equations, describing the evolution of the scale factor $a$ with respect to cosmic time $t$. To solve these equations, a relationship between the pressure p and the energy density is needed, known as the equation of state. The possible components that contribute to the energy density $\rho$ have been a process of trial and error starting de Sitter universe \citep{deSitter_1917} which is a universe with no matter up to the recently speculated model with dynamical dark energy \citep{adame2025desi}. Eqs. \ref{eq:Friedmann} were derived with the assumption of a homogeneous and isotropic universe on all scales; this is not the case when studying the inhomegenoues universe with largre scale strucutre. Therefore, the physical qunatities in Eqs. \ref{eq:Friedmann} are only a functions of time (the total density $\rho(t)$ and the isotropic pressure $p(t)$).In \ref{theory_sec:cosmo_model}, I briefly present the case of inhomogeneous universe with perturbations 
+with $p$ being the isotropic pressure of the cosmic fluid and $\rho$ being the density \footnote{Since energy and mass are equivalent up to the squared of the speed of light, we may refer to the different constituents of the universe as 'contributing to the energy budget of the universe'.}. These equations are known as the Friedmann equations, describing the evolution of the scale factor $a$ with respect to cosmic time $t$. To solve these equations, a relationship between the pressure p and the energy density is needed, known as the equation of state. The possible components that contribute to the energy density $\rho$ have been a process of trial and error starting de Sitter universe \citep{deSitter_1917} which is a universe with no matter up to the recently speculated model with dynamical dark energy \citep{adame2025desi}. Eqs. \ref{eq:Friedmann} were derived with the assumption of a homogeneous and isotropic universe on all scales; this is not the case when studying the inhomogeneous universe with large-scale structure. Therefore, the physical quantities in Eqs. \ref{eq:Friedmann} are only a functions of time (the total density $\rho(t)$ and the isotropic pressure $p(t)$).In \ref{theory_sec:cosmo_model}, I briefly present the case of inhomogeneous universe with perturbations 
 \begin{equation}
     \frac{\rho(t, \mathbf{x}) - \bar{\rho}(t)}{\bar{\rho}(t)} << 1,
 \end{equation}
-where $\bar{\rho}(t)$ is the average energy density at a cosmic time $t$, and $\rho(t, \mathbf{x})$ is the density at a comoving position $\mathbf{x}$ and cosmic time $t$. In this thesis, we consider the $\Lambda$CDM cosmoligcal model and describe its components in \ref{theory_sec:cosmo_model}.
+where $\bar{\rho}(t)$ is the average density at a cosmic time $t$, and $\rho(t, \mathbf{x})$ is the density at a comoving position $\mathbf{x}$ and cosmic time $t$. In this thesis, we consider the $\Lambda$CDM cosmological model and describe its components in \ref{theory_sec:cosmo_model}.
 
 
-\section{The cosmoligcal model}\label{theory_sec:cosmo_model}
-In this section, we consider the $\Lambda$CDM cosmoligcal model and explain its components. As noted by Eqs. \ref{eq:Friedmann}, the time evolution of the sacle factor $a$ depends on the energy density and its relation to the pressue, known as the equaiton of state. If we refere to the current day value of the Hubble parameter as $H_0$ and the current day value of the energy density $\rho_{0}$, Eq. \ref{eq:Friedmann2} can be written in the current epoch
+\section{The cosmological model}\label{theory_sec:cosmo_model}
+In this section, we consider the $\Lambda$CDM cosmological model and explain its components. As noted by Eqs. \ref{eq:Friedmann}, the time evolution of the scale factor $a$ depends on the density and its relation to the pressure, known as the equation of state. If we refer to the current day value of the Hubble parameter as $H_0$ and the current day value of the density $\rho_{0}$, Eq. \ref{eq:Friedmann2} can be written in the current epoch
 \begin{equation}
-    1 = \frac{8\pi G}{3H_0^2} \rho_0 + \frac{\Lambda c^2}{3H_0^2} - \frac{kc^2}{a_0^2 H_0^2} .
+    1 = \frac{8\pi G}{3H_0^2} \rho_0 + \frac{\Lambda c^2}{3H_0^2} - \frac{kc^2}{H_0^2} .
 \end{equation}
-We label the following dimensionless quantities 
+Notice that the quantitiy $\frac{3H_0^2}{8\pi G}$ has the dimensionality of a density, and we call it the critical density $\rho_{cr}$. It is possible to express the density fractions of the different components in terms of the current day value of the component's density and the critical density.
 \begin{subequations} \label{eq:Omega_params}
 \begin{align}
-    \Omega_0 &= \frac{8\pi G}{3H_0^2} \rho_0 \label{eq:Omega_m}, \\
+    \Omega_0 &= \frac{\rho_0}{\rho_{cr}}  \label{eq:Omega_m}, \\
     \Omega_{\Lambda} &= \frac{\Lambda c^2}{3H_0^2} \label{eq:Omega_L}, \\
-    \Omega_{k} &= -\frac{kc^2}{a_0^2 H_0^2} \label{eq:Omega_k}.
+    \Omega_{k} &= -\frac{kc^2}{H_0^2} \label{eq:Omega_k}.
 \end{align}
 \end{subequations}
-Measurements from the cosmic microwave background has shown that we live in flat universe, measining that $ \Omega_{k} = 0$ (within error bounds).
+We list below the constituents of the $\Lambda$CDM model of cosmology. It is common to express the density of a constituent as a fraction of the critical density, such that the sum of these fractions equals 1. In practice, the density fraction of a constituent $X$ in the current epoch $\Omega_X$ is expressed as
+\begin{equation}
+    \Omega_X = \frac{\rho_{0, X}}{\rho_{cr}},
+\end{equation}
+with $\rho_{0, X}$ being the density of a constituent $X$ at the current epoch.
 
+Measurements from the cosmic microwave background has shown that we live in a flat universe \citep{Smoot_1999}, meaning that $ \Omega_{k} = 0$ (within error bounds). \textbf{For the rest of this work, I assume a flat universe}. The two remaining components are the density fraction $\Omega_0$ and the fraction $\Omega_{\Lambda}$. The mechanism of how these components were formed into existence will be omitted from this thesis. It is worth noting that the Hubble parameter $H_0$ is conventionally given in term of a dimensionless number $h$ such that 
+\begin{equation}
+    H_0 = 100 \, h \, \mathrm{km} \, \mathrm{s}^{-1} \, \mathrm{Mpc}^{-1},
+\end{equation}
+and many other quantities are expressed in terms of $h$; for example, the density ratios $\Omega_X$ could be given as $\Omega_X h^2$. Measurements of the CMB with the Planck satellite \citep{aghanim2020planck} reported a result of 
+
+
+\begin{equation*}
+    H_0 = 67.66 \pm 0.42 \mathrm{km} \, \mathrm{s}^{-1} \, \mathrm{Mpc}^{-1},
+\end{equation*}
+
+meanwhile measurements using supernovae from the SH0ES collaboration report a value of
+
+\begin{equation*}
+    H_0 = 73.04 \pm 1.04 \mathrm{km} \, \mathrm{s}^{-1} \, \mathrm{Mpc}^{-1}
+\end{equation*}
+
+\citep{riess2022comprehensive}. The discrepancy of $H_0$ measurements between the early universe with the CMB and late universe measurements with supernovae is called the Hubble tension \citep{verde2024tale}. 
+
+The equation of state of each component in the $\Lambda$CDM model differs between the early universe with large energy scales and the late universe with very low energy scales. We list below each component and its role in the cosmic evolution of the universe. In general, the equation of state $p_X(\rho_X)$ expresses the relationship between pressure $p_X$ and density $\rho_X$ of a constituent $X$. Motivated by dimensional analysis \footnote{Dimensional analysis is the method of comparing the units of two physical quantities to conclude the relationship between them up to a proportionality constant.}, we can conclude that the pressure and density are related
+\begin{equation}
+    p_X = w \rho_X c^2. 
+\end{equation}
+
+The relationship between the scale factor $a$ and the density $\rho_X$ could be found by invoking the first law of thermodynamics and solving the following ordinary differential equation,
+\begin{equation} \label{eq:adiabatic}
+    \mathrm{d}(\rho_X c^2 a^3) = -p_X \, \mathrm{d}(a^3) .
+\end{equation}
+
+In total, the $\Lambda$CDM universe contains the following constituents:
+\begin{itemize}
+    \item \textbf{Radiation:} Radiation is mostly composed of freely propagating relativistic particles: photons and neutrinos. Photons have been propagating in the universe since recombination. Recombination is the epoch when free electrons combine with nuclei to form neutral atoms, after which the photon mean free path becomes effectively infinite and photons decouple from matter; these photons are observed today as the cosmic microwave background (CMB) radiation. CMB anisotropies contain a wealth of information about the density fractions of the other components of the Universe and its spatial curvature. The temperature of the photon background scales as $T_{r} \propto a^{-1}$. With equation of state
+    \begin{equation}
+        p_r = \frac{1}{3} \rho_{r} c^2
+    \end{equation}
+    and the radiation energy density scales as $\rho_{r} \propto a^{-4}$.
+    \begin{equation}
+        \rho_{r} = \rho_{r,0} a^{-4}
+    \end{equation}
+    In addition to photon, neutrinos contribute to the radiation budget in the universe. At early times, neutrinos are in equilibrium with other particles such as electrons and photons, however, as the universe expands and the temperature drops, electrons no longer interact with neutrinos, therefore, neutrinos decouple from the rest of the components in the universe in a process known as freeze-out. The density of neutrinos scales to the scale factor in a similar way to photons, however, the present day temperature of neutrinos is different from that of photons  
+
+
+    \item \textbf{Baryonic matter:} Baryonic matter is composed of the particles that make up the standard model of particle physics. The particles that make up this component interact with light and with itself through long range pressure. In the early universe, baryonic matter is coupled to photons through absorption, emission, and scattering processes. Due to the expansion of the universe, the absorption cross-section approaches zero, therefore, the photons emitted from recombining electrons with nuclei have less energy than needed to ionize a similar atom, leaving the photon free. The process of forming neutral atoms by combining free electrons with nuclei is called recombination. This process continues until all the atoms are neutral, and then, photons propagate freely in the universe, with a very low probability of interacting with Baryons. After an epoch of structure formation (with the universe being transparent), neutral gas clouds in dark matter halos collapse under gravity to form stars and trigger fusion reactions \footnote{A fusion reaction is a nuclear reaction when two low mass atoms combine to form a heavier atom, emitting an amount of energy.}. Photons emitted from stars reionize the medium around stars, and baryons interact again with photons \citep{Draine_2011}. The fraction of baryonic matter in the universe is measured to be $ \Omega_{b} h^2 = 0.0225 \pm 0.0003$. In the early universe, the equation of state of baryonic matter is derived with relativistic consideration, however, after recombination, the short range pressure of baryons is negligible and the equation of state for baryons is that of dark matter on large scales. On small scale, baryonic processes in the late universe are highly non-linear and cumbersome to model which impose a limitation on the modelling of the cosmic shear signal. \textbf{This is the exact problem that this thesis is trying to tackle}.
+    \item \textbf{Dark matter:} Dark matter is matter that does not interact with light, however, its effect is observed gravitationally. Recent results from different cosmological probes including CMB, galaxy clustering and weak lensing favour a cold dark matter component, meaning that the temperature of dark matter is much less than its mass. As a consequence, dark matter could be modelled as a pressureless fluid on large scale (on small scales, the fluid approximation breaks down). Using this simple picture of cold dark matter (CDM), it is possible to solve the fluid equation of dark matter to linear order and obtain a good approximation of the linear density evolution with cosmic time (I show this derivation below). The equation of state of dark matter, therefore, is simply $p = 0$. By solving Eq. \ref{eq:adiabatic} for dark matter, the density of dark matter depends on the scale factor $a$ such that
+    \begin{equation}
+        \rho_c = \rho_{c, 0} a^{-3}
+    \end{equation}
+    The present day value of the dark matter density fraction is measured to be $\Omega_m h^2 = 0.1431 \pm 0.0025$ by the Planck collaboration \citep{aghanim2020planck}. Dark matter is the main driver of matter clustering in the universe since dark matter can form virialized region of space called dark matter halos which accretes baryons and leads to galaxy formation as a consequence \citep{Wechsler_Tinker_2018}. 
+    \item \textbf{Dark energy:} dark energy is a term coined by Michael S. Turner \citep{Turner_2001} to describe the contribution to the energy budget that is not in a form of particles. From Eqs. \ref{eq:Omega_params}, dark energy is the component with density fraction $\Omega_\Lambda$. Early on, this component was considered to be smooth and homogeneous, meaning that its corresponding density $\rho_\Lambda = \Omega_\Lambda \rho_{cr}$ only varies with cosmic time. In its simplest form, the dark energy pressure is related to the dark energy density as follows
+    \begin{equation}
+        p_\Lambda = w_\Lambda \rho_\Lambda c^2
+    \end{equation}
+    with the simplest case $w_\Lambda = -1$. The equation of state of dark energy is highly debated with many modification suggested to explain tensions in cosmology such as the Hubble tension \citep{verde2024tale}. In this work, we assume an equation of state of dark energy with $w_\Lambda = -1$. The Planck collaboration \citep{aghanim2020planck} reported that $\Omega_\Lambda = 0.6889 \pm 0.0056$.
+\end{itemize}
+
+Figure \ref{theory_fig:energy_budget} shows a schematic representation of the components discussed above. In general, the matter density fraction $\Omega_m$ is the sum of the baryonic matter density fraction $\Omega_b$ and the dark matter density fraction $\Omega_c$. The total energy budget of the universe is the sum of the matter density fraction $\Omega_m$, the dark energy density fraction $\Omega_\Lambda$, and the radiation density fraction $\Omega_r$. Since the radiation density fraction is negligible in the current epoch, we have $\Omega_m + \Omega_\Lambda \approx 1$. With that, the evolution of the expansion rate of the universe in terms of the scale factor $a$ is given by
+\begin{equation}
+    H^2 (a) = H_0^2 \left[ \Omega_r a^{-4} + \Omega_m a^{-3} + \Omega_\Lambda \right], 
+\end{equation}
+where the different additive terms dominate the evolution at different epochs. In particular, dark energy is the dominant component in the current epoch. To constrain the equation of state of dark energy, cosmic shear stands as a powerful probe of late structure formation since it is an integrated qunatity that includes signficant contribution from the late evolution of the universe, and therefore sensitive to dark energy. The basic principles of cosmic shear and its relationship to the matter density field are explained in \ref{theory_sec:cosmic_shear}. This thesis focuses on using FRBs to constain baryonic feedback on the large scale structure and therefore improve the modelling of cosmic shear on small scales, which in turn improves the constraining power of cosmic shear on dark energy.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/cover/planck2018_energy_budget.png}
+    \caption{A schematic representation of density fractions of the different components in the $\Lambda$CDM model. The density fractions are measured by the Planck collaboration \citep{aghanim2020planck} using measurements of the CMB anisotropies.}
+    \label{theory_fig:energy_budget}
+\end{figure}
+
+So far, I have only introduced the universe as a homogeneous entity, ignoring the fact the universe is inhomogeneous on small scales. As a physical system, the initial conditions of the universe are scale-dependent Gaussian perturbations which grow to be highly non-linear (and non-Gaussian) large perturbations (large relative to the mean density of the universe). Since the initial perturbations were generated via a stochastic process, the resultant perturbations are called random fields. In particular, the matter density field $\rho_m (\mathbf{x}, t)$ is the random field that describes the matter density at a comoving position $\mathbf{x}$ and cosmic time $t$. For simplicity, the matter perturbations are often expressed in terms of the matter density contrast $\delta_m$ such that
+\begin{equation}
+    \delta_m (\mathbf{x}, t) = \frac{\rho_m (\mathbf{x}, t) - \bar{\rho}_m(t)}{\bar{\rho}_m(t)},
+\end{equation}
+where $\bar{\rho}_m(t)$ is the average matter density at a cosmic time $t$. In addition, similar definitions apply to any other density field such as the baryonic density contrast or the electron density contrast, which will be important in the study of FRBs. By construction, any density contrast field is a random field with a mean of zero i.e. $\langle \delta_m \rangle = 0$. Higher order statistics of a random field also encode information about the random field. This thesis only uses the two-point statistics of the matter density contrast and its Fourier space counterpart, namely the power spectrum. We discuss these statistics below. Since dark matter is the dominant component of matter in the universe, it is the component responsible for the observed structure in the universe. In addition, the pressure induced by baryonic processes is negligible on large scales, meaning that the evolution of matter density contrast on large scales is well approximated by the evolution of dark matter density contrast. Therefore, the evolution of matter density contrast $\delta_m$ is well approximated by the evolution of dark matter density contrast $\delta_c$. I present below the Einstein-Boltzmann equation that describes the phase-space evolution of a particle species in the universe.
+
+
+
+\section{The Boltzmann equation \& the linear perturbation theory} \label{}
+This section is partly based on a review on the effective field theory of large scale structure (EFTofLSS) by Tobias Baldauf \citep{Baldauf_EFTLSS_2020}. The Boltzmann equation describes the evolution of the phase-space distribution function of a particle species in the universe. This function is labelled as $f(\mathbf{x}, \mathbf{p}, t)$, where $\mathbf{x}$ is the position, $\mathbf{p}$ is the momentum, and $t$ is the cosmic time. Different observables could be obtained from the distribution function $f$ including the density $\rho(\mathbf{x}, t)$ and the velocity field $\mathbf{v}(\mathbf{x}, t)$. The Boltzmann equation for a collisionless and pressureless dark matter
+
+\begin{equation} \label{eq:Boltzmann}
+\begin{split}
+    \frac{\mathrm{d}f}{\mathrm{d}t} &= \frac{\partial f}{\partial t} + \frac{\mathrm{d}\mathbf{x}}{\mathrm{d}t} \cdot \frac{\partial f}{\partial \mathbf{x}} + \frac{\mathrm{d}\mathbf{p}}{\mathrm{d}t} \frac{\partial f}{\partial \mathbf{p}}  \\
+    &= \frac{\partial f}{\partial t} + \frac{\mathbf{p}}{ma} \cdot \frac{\partial f}{\partial \mathbf{x}} - am\nabla\phi \cdot \frac{\partial f}{\partial \mathbf{p}} = 0,
+\end{split}
+\end{equation}
+with $m$ being the mass of the dark matter particle. If dark matter behaves as a fluid, the density and the bulk velocity of the fluid could be obtained by taking the first two moments of the distribution function $f$ such that 
+\begin{align} 
+    \rho_m(\mathbf{x}, t) &= \frac{m}{a^3} \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t), \label{eq:rho} \\
+    v_i(\mathbf{x}, t) &= \int \mathrm{d}^3p \, \frac{p_i}{am} f(\mathbf{x}, \mathbf{p}, t) \Bigg/ \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t), \label{eq:vi} \\
+    \sigma_{ij}(\mathbf{x}, t) &= \int \mathrm{d}^3p \, \frac{p_i}{am} \frac{p_j}{am} f(\mathbf{x}, \mathbf{p}, t) \Bigg/ \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t) - v_i(\mathbf{x}) v_j(\mathbf{x}). \label{eq:sigma}
+\end{align}
+with $\sigma_{ij}(\mathbf{x}, t)$ representing the velocity dispersion tensor. The distribution function $f$ has higher order moments, however, the anisotropic stress tensor is second order in momentum, therefore, it can be postulated that it is negligible at linear order and at early times where the velocity dispersion is small\footnote{The usual practice in standard perturbation theory is to truncate the Boltzmann hierarchy even for higher order perturbations}. In this thesis, I am only interested in the evolution of the matter density contrast. Using Eq. \ref{eq:Boltzmann}, the evolution of the matter density contrast and the bulk velocity are governed by the continuity and the Euler equations. The equations up to linear order are as follows
+\begin{subequations} \label{eq:continuity_euler}
+\begin{align}
+    \frac{\partial \delta_m}{\partial \tau} + \frac{1}{a} \nabla \cdot \mathbf{v} & = 0, \\
+    \frac{\partial \mathbf{v}}{\partial \tau} + \frac{1}{a} (\mathbf{v} \cdot \nabla) \mathbf{v} &= -\frac{1}{a} \nabla \phi,
+\end{align}
+\end{subequations}
+with $\tau$ being the conformal time defined as $\mathrm{d}\tau = \mathrm{d}t/a$. Eqs. \ref{eq:continuity_euler} show that at a linear order the matter density contrast is coupled to the velocity field, and the velocity field is coupled to the gravitational field $\phi$. The growth of structure is, therefore, sourced by gravity. 
+
+To solve the equations in real space is a cumbersome task, therefore, we take the following steps in order to obtain the evolution of the matter density contrast.
+\begin{itemize}
+    \item Apply the Fourier transform to Eqs. \ref{eq:continuity_euler} to obtain the equations in Fourier space. The operator $\nabla$ reduces to a multiplication by $i\mathbf{k}$, with $\mathbf{k}$ being the Fourier space wavevector.
+    \item The velocity field is a vector field, therefore, it can be decomposed into a curl-free component and a divergence-free component. The curl-free component is called the velocity divergence $\theta$ and is defined as $\theta = \nabla \cdot \mathbf{v}$, while the divergence-free component is called the vorticity $\omega$ and is defined as $\omega = \nabla \times \mathbf{v}$. At linear order, the vorticity decays with time, therefore, it can be neglected at linear order.
+    \item The peculiar gravitational potential $\phi$ can be related to the matter density contrast by the relationship known as the Poisson equation such that
+    \begin{equation}
+    \nabla^2 \phi = \frac{3}{2}\Omega_{\mathrm{m}}H_0^2\frac{\delta_m}{a}.
+    \end{equation}
+\end{itemize}
+With these steps, the equation that governs the eveolution of the matter denstiy field at a linear level is a second order ordinary differential equation with respect to the conformal time $\tau$ such that
+\begin{equation}\label{eq:}
+    \frac{\mathrm{d}^2 \delta_m}{\mathrm{d}\tau^2} + \mathcal{H} \frac{\mathrm{d} \delta_m}{\mathrm{d}\tau} - \frac{3}{2}\Omega_{\mathrm{m}}H_0^2\frac{\delta_m}{a} = 0,
+\end{equation}with $\mathcal{H} = aH$ being the conformal Hubble parameter. A solution for the matter density contrast $\delta$\footnote{$\delta$ refers to the matter density contrast $\delta_m$ hereafter, and the subsript is omitted for ease of writing.} at linear order in Fourier space as follows
+\begin{equation}\label{eq:linear_solution}
+    \delta(\mathbf{k}, t) = D_+(\tau)\delta_{+,0}(\mathbf{k}),
+\end{equation}
+where $\delta_{+,0}$ is the initial conditions of the matter density contrast, and $D_+(\tau)$ is the growth factor whose exact expression depends on the cosmological model considered. For an Einstein-de Sitter universe, which is a universe with $\Omega_m = 1$ and $\Omega_\Lambda = 0$, the growth factor is simply $D_+(\tau) = a(\tau)$. The importance of the result \ref{eq:linear_solution} lies in two observations: the first is that the growth of each Fourier mode of the matter density contrast is independent from other modes (modes of different length scales are not coupled), and the second is that the time evolution of the matter density contrast is separable from its spatial dependence. 
+
+The solution to Eqs. \ref{eq:continuity_euler} is given assuming that the universe is way into matter dominated epoch, where the impact of radiation is negligible. In the early universe, the radiation component is dominant and initiates pressure that only acts on sacles smaller that the horizon scale, defined in Eq. \ref{eq:hubble_scale}, since pressure is a causal process that can only propagate at a speed less than the speed of light. Therefore, $\delta_{+,0}(\mathbf{k})$ should encode all the physics of the early universe including the impact of radiation on the matter density contrast and the initial conditions. In practice, comparing the evolved density field with observaiton will not give a conclusive answer on whether the theory presented here is correct or not, since the current universe is one realisaiton of the stochastic process that generated the initial conditions, therefore, estimating the statistical properties of the observed matter density field and comparing it with the theoretical prediction is the way to test the theory. In the next section, I present the power spectrum as a statistic that encodes the statistical properties of the matter density field.
+
+At early times, the amplitude of the matter density contrast is small, therefore, the linear solution in Eq. \ref{eq:linear_solution} is a good approximation to the evolution of the matter density contrast. As time goes on, the amplitude of the matter density contrast grows and the linear approximation breaks down. Furthermore, for regions in the universe where the average density within this specfic region is large compared to the average density of the universe, dark matter paricles collapse under the influence of gravity and virialised regions of space form. These virialised regions are called dark matter halos.  The appendix include an explanation of the toy model for the collapse. {\color{red} add the number of the appendix}. Baryons fall in the deep potential well of the dark matter halo and accretes to form galaxies, meaning that galaxies traces the position of dark matter halos, and in turn dark matter.
+
+
+\section{The matter power spectrum and dark matter tracers} \label{theory_sec:statistics}
+Since $\delta_{0}(\mathbf{k})$ is a Gaussian random field, its statistical properties are completely determined by its mean and variance. The mean of $\delta_{0}(\mathbf{k})$ is zero by construction, therefore, the variance is the only quantity that encodes the statistical properties of $\delta_{0}(\mathbf{k})$. The variance of $\delta_{0}(\mathbf{k})$ is called the power spectrum and is defined as
+\begin{equation}
+    \langle \delta_{0}(\mathbf{k}) \delta_{0}^*(\mathbf{k}') \rangle = (2\pi)^3 P(k) \delta_D(\mathbf{k} - \mathbf{k}'),
+\end{equation}
+where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is only a function of the magnitude of the Fourier space wavevector $k = |\mathbf{k}|$ due to the statistical isotropy of the universe. Fig. \ref{} shows the matter power spectrum obtain using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic} with varying fraction of baryonic matter $\Omega_b$ and varying Hubble parameter $H_0$ at redshift $z = 0$.
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{}
+%     \caption{A plot of the matter power spectrum at redshift $z = 0$ with varying fraction of baryonic matter $\Omega_b$ and varying Hubble parameter $H_0$. The power spectrum is obtained using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic}. Notice the the power specturm peaks at a scale equivalent to the Hubble scale at the matter-radiation equality. Furthermore, the wiggles in the power spectrum are due to the sound waves that popagates in the baryon-phton fluid due the contrasting force of the fluids's pressure and gravity.}
+%     \label{}
+% \end{figure}
+
+Though the matter power spectrum is a powerful statistic that encodes the statistical properties of the matter density field, it is not directly observable. In order to relate the matter field to obervables, it is important to understand the physical mechanisms by which the observables are related to the matter field. For galaxies, galaxy formation theories suggest that baryonic matter falls into the potential well of  
 
 \begin{itemize}
-
-    \item $\Lambda CDM$, each component and its equation of state.
-    \item Planck results.
-    \item The pertubation, background split. 
-    \item The Einstein Boltzmann equation and linear theory.
-    \item cosmological tensions
-    \item The cosmological fluid the Einstein-Boltzmann Equation (fluid equation, the linear pertubation theory, the non-linear theory)
-    \item matter power spectrum
+    \item tracers and how they relate to the matter field with a focus on electrons.
+    \item non-linear evolution and the halo model and how it is used to model the matter power spectrum on non-linear scales
     \item angular power spectra (introduce the limber and the non-limber integrals)
 \end{itemize}
 
@@ -217,7 +357,7 @@ Measurements from the cosmic microwave background has shown that we live in flat
 \section{Weak gravitational Lensing}\label{theory_sec:WL}
 \section{The impact of baryonic feedback on the large-scale structure}\label{theory_sec:BF}
 
-results from hydrodynamical simulations, cosmology analyses resutls. maybe cite Fabian's papeer
+results from hydrodynamical simulations, cosmology analyses resutls. show the power spectrum supression. Speak about how different scenarios of baryonic feedback lead to different levels of power spectrum suppression. Show how the power spectrum suppression leads to a bias in cosmological parameters if not modelled correctly.
 
 \section{Fast radio bursts}\label{theory_sec:FRBs}
 {\color{red} describe how modelling the PDF is a hard thing to do}

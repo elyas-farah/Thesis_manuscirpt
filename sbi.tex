@@ -14,14 +14,14 @@
 %------------------------------------------------------------------------------
 % twoside=true is suitable for printing, while twoside=false is probably better for PDF version.
 % Pass option refsection=none if you want the bibliography at the end of the thesis.
-\usepackage[twoside=true, astrobib, refsection=none]{ubonn-thesis}
+\usepackage[twoside=false, astrobib, refsection=none]{ubonn-thesis}
 
 %------------------------------------------------------------------------------
 % Adjustments to standard biblatex style.
 % Change option to backref=false when your thesis is ready to turn off back-referencing.
 % Pass the option showurl=false to shorten your bibliography by not including url fields.
 % Astronomy theses usually set block=none. block=ragged is the default.
-\usepackage[backref=true, block=none]{ubonn-biblatex}
+\usepackage[backref=false, block=none]{ubonn-biblatex}
 
 %------------------------------------------------------------------------------
 % Glossary package
@@ -84,8 +84,8 @@
 % Date of thesis examination (PhD).
 \newcommand*{\thesispromotion}{XX.YY.2025}
 % Month and year of the final printed version of the thesis.
-\newcommand*{\thesismonth}{MMM}
-\newcommand*{\thesisyear}{2025}
+\newcommand*{\thesismonth}{May}
+\newcommand*{\thesisyear}{2026}
 % \newcommand*{\thesisnumber}{BONN-IR-2025-XXX}
 % Dedication
 % \newcommand*{\thesisdedication}{}
@@ -144,7 +144,6 @@
 
 % Make cover and title pages.
 \makethesistitle
-
 \pagestyle{scrplain}
 
 %------------------------------------------------------------------------------

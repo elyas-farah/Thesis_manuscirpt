@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  26 MAR 2026 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  30 MAR 2026 02:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -216,15 +216,15 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              on input line 304.
 \UBNcoveroffset=\skip66
 
-ubonn-thesis: set twoside option true.
+ubonn-thesis: set twoside option false.
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 12
 (typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
 (typearea)              \textwidth      = 448.13095pt
 (typearea)              DIV departure   = -14%
-(typearea)              \evensidemargin = 27.31467pt
-(typearea)              \oddsidemargin  = -22.47766pt
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
 (typearea)             \paperheight     = 845.04694pt
 (typearea)              \textheight     = 609.40027pt
 (typearea)              \topmargin      = -1.84941pt
@@ -234,25 +234,6 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
 (typearea)              on input line 318.
-ubonn_thesis: apply BCOR correction of 5mm.
-Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 12
-(typearea)             BCOR = 14.22636pt
-(typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 437.46118pt
-(typearea)              DIV departure   = -11%
-(typearea)              \evensidemargin = 24.9436pt
-(typearea)              \oddsidemargin  = -9.43683pt
-(typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 609.40027pt
-(typearea)              \topmargin      = -1.84941pt
-(typearea)              \headheight     = 17.0pt
-(typearea)              \headsep        = 20.40001pt
-(typearea)              \topskip        = 11.0pt
-(typearea)              \footskip       = 47.6pt
-(typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 318.
-ubonn-thesis: centre cover/title page.
 ubonn-thesis: setting fonts for pdflatex.
 (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
@@ -1177,7 +1158,7 @@ Class scrbook Warning: Mapping of
 \figwidth=\skip116
 
 Package typearea Warning: Bad type area settings!
-(typearea)                The detected line width is about 19%
+(typearea)                The detected line width is about 22%
 (typearea)                larger than the heuristically estimated maximum
 (typearea)                limit of typographical good line width.
 (typearea)                You should e.g. decrease DIV, increase fontsize
@@ -1185,12 +1166,12 @@ Package typearea Warning: Bad type area settings!
 
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 12
-(typearea)             BCOR = 14.22636pt
+(typearea)             BCOR = 0.0pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 437.46118pt
-(typearea)              DIV departure   = -19%
-(typearea)              \evensidemargin = 24.9436pt
-(typearea)              \oddsidemargin  = -9.43683pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -22%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
 (typearea)             \paperheight     = 845.04694pt
 (typearea)              \textheight     = 609.40027pt
 (typearea)              \topmargin      = -1.84941pt
@@ -1205,7 +1186,7 @@ Package: ubonn-biblatex 2025/12/12 Version 13.0.0 University of Bonn biblatex st
 
 ubonn-biblatex: block set to none
 ubonn-biblatex: maxbibnames set to 5
-ubonn-biblatex: turning backref on
+ubonn-biblatex: backref is off
 ubonn-biblatex: setting option date=year.
 ) (./thesis_defs.sty
 ubonn-thesis: using siunitx version 3
@@ -1420,15 +1401,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'sbi.bbl' found.
- (./sbi.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                latexwiki
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./sbi.bbl)
 Package biblatex Info: Reference section=0 on input line 143.
 Package biblatex Info: Reference segment=0 on input line 143.
 
@@ -1566,76 +1539,75 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 146.
 
 
 
-
 {/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}]
 Package cleveref Info: loaded `ngerman' language definitions on input line 146.
  [2
 
 ]
 Document sbi, Info: Draft/submission version of a Masterthesis
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 154.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 153.
 (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 10.29301pt on input line 154.
+(Font)              scaled to size 10.29301pt on input line 153.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `qhv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 10.29301pt on input line 154.
+(Font)              scaled to size 10.29301pt on input line 153.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 19.49565pt on input line 154.
+(Font)              scaled to size 19.49565pt on input line 153.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 11.4pt on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 11.4pt on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 11.4pt on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 11.4pt on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 11.4pt on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 11.4pt on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 11.4pt on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 20.74pt on input line 154.
+(Font)              scaled to size 20.74pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 16.1pt on input line 154.
+(Font)              scaled to size 16.1pt on input line 153.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 11.4pt on input line 154.
-Package tocbasic Info: character protrusion at toc deactivated on input line 154.
+(Font)              scaled to size 11.4pt on input line 153.
+Package tocbasic Info: character protrusion at toc deactivated on input line 153.
  (./sbi.toc
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
 Package cleveref Info: loaded `ngerman' language definitions on input line 6.
@@ -1696,43 +1668,36 @@ LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
 
  [4] [1
 
-
 ]
 \openout2 = `thesis_intro.aux'.
 
- (./thesis_intro.tex [2
-
-
-
-]
+ (./thesis_intro.tex
 chapter 1.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 13.53603pt on input line 4.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 23.38725pt on input line 4.
-[3] [4] [5]) [6]
+[2
+
+
+
+] [3] [4]) [5]
 \openout2 = `theoretical_background.aux'.
 
  (./theoretical_background.tex
 chapter 2.
-[7
+[6
 
 
 
 
 
-{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-<figs/cover/world_lines.png, id=278, 978.65625pt x 736.7525pt>
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [7] [8]
+<figs/cover/world_lines.png, id=277, 978.65625pt x 736.7525pt>
 File: figs/cover/world_lines.png Graphic file (type png)
 <use figs/cover/world_lines.png>
 Package pdftex.def Info: figs/cover/world_lines.png  used on input line 113.
-(pdftex.def)             Requested size: 218.73059pt x 164.66045pt.
+(pdftex.def)             Requested size: 224.06548pt x 168.67381pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 114.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
@@ -1787,44 +1752,92 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 132.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.1pt on input line 132.
-
-Underfull \vbox (badness 3000) has occurred while \output is active []
-
- [10 <./figs/cover/world_lines.png>]
+ [9 <./figs/cover/world_lines.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 155.
  (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 155.
+ [10{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 9.0pt on input line 186.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.6pt on input line 186.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 186.
+ [11] [12]
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 9.0pt on input line 231.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 6.6pt on input line 231.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 5.5pt on input line 231.
+ [13] [14]
 
-Underfull \vbox (badness 2165) has occurred while \output is active []
+LaTeX Warning: Reference `theory_sec:cosmic_shear' on page 15 undefined on input line 271.
 
- [11{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<figs/cover/planck2018_energy_budget.png, id=385, 515.2851pt x 582.0144pt>
+File: figs/cover/planck2018_energy_budget.png Graphic file (type png)
+<use figs/cover/planck2018_energy_budget.png>
+Package pdftex.def Info: figs/cover/planck2018_energy_budget.png  used on input line 274.
+(pdftex.def)             Requested size: 224.06548pt x 253.07654pt.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 10.0pt on input line 275.
+LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
+(Font)              scaled to size 7.3pt on input line 275.
 
- [12] [13]
-Underfull \vbox (badness 8056) has occurred while \output is active []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [14]) [15]
+[15] [16 <./figs/cover/planck2018_energy_budget.png>] [17] [18] [19] [20]) [21]
 \openout2 = `methodology.aux'.
 
- (./methodology.tex [16
-
-
-
-
-
-]
+ (./methodology.tex
 chapter 3.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 11.28003pt on input line 12.
-[17]) [18]
+[22
+
+
+
+
+
+]) [23]
 \openout2 = `results.aux'.
 
  (./results.tex
 chapter 4.
-) [19
+) [24
 
 
 
@@ -1833,29 +1846,21 @@ chapter 4.
 ]
 \openout2 = `discussion.aux'.
 
- (./discussion.tex [20
+ (./discussion.tex
+chapter 5.
+) [25
 
 
 
 
 
 ]
-chapter 5.
-) [21]
 \openout2 = `thesis_appendix.aux'.
 
- (./thesis_appendix.tex [22
-
-
-
-
-
-]
+ (./thesis_appendix.tex
 chapter A.
+) [26
 
-LaTeX Warning: Citation 'latexwiki' on page 23 undefined on input line 11.
-
-) [23] [24
 
 
 
@@ -1863,26 +1868,32 @@ LaTeX Warning: Citation 'latexwiki' on page 23 undefined on input line 11.
 ]
 chapter without number
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 195.
-[25]
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 195.
- (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+(Font)              scaled to size 10.95pt on input line 194.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 194.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/ntxtlf/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 194.
+(/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 10.95pt on input line 195.
+(Font)              scaled to size 10.95pt on input line 194.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [26]
+ [27
+
+
+
+
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [28]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 195.
- [27] [28
-
-
-]
-Package tocbasic Info: character protrusion at lof deactivated on input line 213.
+(Font)              scaled to size 10.95pt on input line 194.
+ [29]
+Package tocbasic Info: character protrusion at lof deactivated on input line 212.
  (./sbi.lof
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
 Package cleveref Info: loaded `ngerman' language definitions on input line 6.
@@ -1890,14 +1901,13 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lof=\write5
 \openout5 = `sbi.lof'.
 
- [29
+ [30
 
 
-] [30
 
 
 ]
-Package tocbasic Info: character protrusion at lot deactivated on input line 214.
+Package tocbasic Info: character protrusion at lot deactivated on input line 213.
  (./sbi.lot
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
 Package cleveref Info: loaded `ngerman' language definitions on input line 6.
@@ -1905,14 +1915,17 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lot=\write6
 \openout6 = `sbi.lot'.
 
- [31]
+ [31
+
+
+]
 \openout2 = `thesis_acknowledge.aux'.
 
- (./thesis_acknowledge.tex [32
+ (./thesis_acknowledge.tex) [32
 
 
 
-]) [33] (./sbi.aux
+] (./sbi.aux
 Package cleveref Info: loaded `ngerman' language definitions on input line 12.
 Package cleveref Info: loaded `ngerman' language definitions on input line 16.
  (./thesis_intro.aux) (./theoretical_background.aux) (./methodology.aux) (./results.aux) (./discussion.aux) (./thesis_appendix.aux) (./thesis_acknowledge.aux))
@@ -1920,23 +1933,27 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 16.
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'sbi.run.xml'.
 \openout1 = `sbi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43343 strings out of 467525
- 876821 string characters out of 5408440
- 1945470 words of memory out of 5000000
- 71292 multiletter control sequences out of 15000+600000
- 762158 words of font info for 313 fonts, out of 8000000 for 9000
+ 43495 strings out of 467525
+ 879540 string characters out of 5408440
+ 1947361 words of memory out of 5000000
+ 71372 multiletter control sequences out of 15000+600000
+ 786985 words of font info for 358 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,20n,147p,11252b,5038s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,20n,147p,11252b,5036s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on sbi.pdf (37 pages, 424029 bytes).
+Output written on sbi.pdf (36 pages, 615918 bytes).
 PDF statistics:
- 765 PDF objects out of 1000 (max. 8388607)
- 687 compressed objects within 7 object streams
- 178 named destinations out of 1000 (max. 500000)
- 53534 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 808 PDF objects out of 1000 (max. 8388607)
+ 726 compressed objects within 8 object streams
+ 214 named destinations out of 1000 (max. 500000)
+ 63283 words of extra memory for PDF output out of 74296 (max. 10000000)
 
