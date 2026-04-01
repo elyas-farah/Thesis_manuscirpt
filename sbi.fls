@@ -565,6 +565,7 @@ OUTPUT theoretical_background.aux
 INPUT ./theoretical_background.tex
 INPUT ./theoretical_background.tex
 INPUT theoretical_background.tex
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
@@ -620,6 +621,8 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/ts1
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/vf/public/newtx/ntxbmi.vf
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/NewTXBMI.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1.tfm
@@ -669,6 +672,17 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/ne
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/vf/public/newtx/ntxmi7.vf
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/NewTXMI7.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT ./figs/cover/galaxy_foramtion.png
+INPUT ./figs/cover/galaxy_foramtion.png
+INPUT ./figs/cover/galaxy_foramtion.png
+INPUT ./figs/cover/galaxy_foramtion.png
+INPUT ./figs/cover/galaxy_foramtion.png
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/vf/public/newtx/ntx-Bold-tlf-ot1.vf
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/txbmiaX.tfm
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-ot1r.tfm
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/vf/public/newtx/ntxsy5.vf
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT ./methodology.tex
 INPUT ./methodology.tex
 OUTPUT methodology.aux
@@ -694,7 +708,6 @@ OUTPUT thesis_appendix.aux
 INPUT ./thesis_appendix.tex
 INPUT ./thesis_appendix.tex
 INPUT thesis_appendix.tex
-INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-sc-t1.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/newtx/t1ntxtt.fd
@@ -740,6 +753,7 @@ INPUT ./thesis_acknowledge.aux
 INPUT thesis_acknowledge.aux
 INPUT sbi.run.xml
 OUTPUT sbi.run.xml
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  30 MAR 2026 02:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  1 APR 2026 03:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1686,6 +1686,8 @@ LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 
  (./theoretical_background.tex
 chapter 2.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 10.95pt on input line 3.
 [6
 
 
@@ -1693,7 +1695,7 @@ chapter 2.
 
 
 {/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [7] [8]
-<figs/cover/world_lines.png, id=277, 978.65625pt x 736.7525pt>
+<figs/cover/world_lines.png, id=278, 978.65625pt x 736.7525pt>
 File: figs/cover/world_lines.png Graphic file (type png)
 <use figs/cover/world_lines.png>
 Package pdftex.def Info: figs/cover/world_lines.png  used on input line 113.
@@ -1761,83 +1763,94 @@ LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 155.
  [10{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 9.0pt on input line 186.
+(Font)              scaled to size 9.0pt on input line 171.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 186.
+(Font)              scaled to size 6.6pt on input line 171.
  [11] [12]
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 9.0pt on input line 231.
+(Font)              scaled to size 9.0pt on input line 233.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 6.6pt on input line 231.
+(Font)              scaled to size 6.6pt on input line 233.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 5.5pt on input line 231.
+(Font)              scaled to size 5.5pt on input line 233.
  [13] [14]
 
-LaTeX Warning: Reference `theory_sec:cosmic_shear' on page 15 undefined on input line 271.
+LaTeX Warning: Reference `theory_sec:cosmic_shear' on page 15 undefined on input line 273.
 
-<figs/cover/planck2018_energy_budget.png, id=385, 515.2851pt x 582.0144pt>
+<figs/cover/planck2018_energy_budget.png, id=390, 515.2851pt x 582.0144pt>
 File: figs/cover/planck2018_energy_budget.png Graphic file (type png)
 <use figs/cover/planck2018_energy_budget.png>
-Package pdftex.def Info: figs/cover/planck2018_energy_budget.png  used on input line 274.
+Package pdftex.def Info: figs/cover/planck2018_energy_budget.png  used on input line 276.
 (pdftex.def)             Requested size: 224.06548pt x 253.07654pt.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 10.0pt on input line 275.
+(Font)              scaled to size 10.0pt on input line 277.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 7.3pt on input line 275.
+(Font)              scaled to size 7.3pt on input line 277.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15] [16 <./figs/cover/planck2018_energy_budget.png>] [17] [18] [19] [20]) [21]
+[15] [16 <./figs/cover/planck2018_energy_budget.png>] [17] [18]
+<figs/cover/galaxy_foramtion.png, id=443, 1490.56876pt x 539.01375pt>
+File: figs/cover/galaxy_foramtion.png Graphic file (type png)
+<use figs/cover/galaxy_foramtion.png>
+Package pdftex.def Info: figs/cover/galaxy_foramtion.png  used on input line 353.
+(pdftex.def)             Requested size: 358.50612pt x 129.63734pt.
+ [19 <./figs/cover/galaxy_foramtion.png>]
+Overfull \hbox (6.021pt too wide) detected at line 390
+[][][][]\LMS/ntxsy/m/n/10.95 h\OML/ntxmi/m/it/10.95 ^^N[]\LMS/ntxsy/m/n/10.95 ¹\OT1/minntx/b/n/10.95 x\LMS/ntxsy/m/n/10.95 ºi \U/ntxmia/m/it/10.95 = [] = [][] \OT1/minntx/m/n/10.95 d\OML/ntxmi/m/it/10.95 M n\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º [] \OT1/minntx/m/n/10.95 d[]\OML/ntxmi/m/it/10.95 x[] W[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M; \LMS/ntxsy/m/n/10.95 j\OT1/minntx/b/n/10.95 x \LMS/ntxsy/m/n/10.95 ^^@ \OT1/minntx/b/n/10.95 x[]\LMS/ntxsy/m/n/10.95 jº \U/ntxmia/m/it/10.95 = [][] \OT1/minntx/m/n/10.95 d\OML/ntxmi/m/it/10.95 M W[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 n\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º \OML/ntxmi/m/it/10.95 :
+ []
+
+[20] [21] [22] [23]) [24]
 \openout2 = `methodology.aux'.
 
  (./methodology.tex
 chapter 3.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 12.
-[22
+(Font)              scaled to size 11.28003pt on input line 16.
+[25
 
 
 
 
 
-]) [23]
+]) [26]
 \openout2 = `results.aux'.
 
  (./results.tex
 chapter 4.
-) [24
+) [27
 
 
 
@@ -1848,7 +1861,7 @@ chapter 4.
 
  (./discussion.tex
 chapter 5.
-) [25
+) [28
 
 
 
@@ -1859,7 +1872,7 @@ chapter 5.
 
  (./thesis_appendix.tex
 chapter A.
-) [26
+) [29
 
 
 
@@ -1867,8 +1880,6 @@ chapter A.
 
 ]
 chapter without number
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 194.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 194.
 Package microtype Info: Character `029' is missing
@@ -1884,15 +1895,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [27
+ [30
 
 
 
 
-{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [28]
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [31]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 194.
- [29]
+ [32] [33]
 Package tocbasic Info: character protrusion at lof deactivated on input line 212.
  (./sbi.lof
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
@@ -1901,7 +1912,7 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lof=\write5
 \openout5 = `sbi.lof'.
 
- [30
+ [34
 
 
 
@@ -1915,13 +1926,13 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lot=\write6
 \openout6 = `sbi.lot'.
 
- [31
+ [35
 
 
 ]
 \openout2 = `thesis_acknowledge.aux'.
 
- (./thesis_acknowledge.tex) [32
+ (./thesis_acknowledge.tex) [36
 
 
 
@@ -1942,18 +1953,18 @@ Package logreq Info: Writing requests to 'sbi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43495 strings out of 467525
- 879540 string characters out of 5408440
- 1947361 words of memory out of 5000000
- 71372 multiletter control sequences out of 15000+600000
- 786985 words of font info for 358 fonts, out of 8000000 for 9000
+ 43594 strings out of 467525
+ 882107 string characters out of 5408440
+ 1949931 words of memory out of 5000000
+ 71426 multiletter control sequences out of 15000+600000
+ 789757 words of font info for 370 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,20n,147p,11252b,5036s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on sbi.pdf (36 pages, 615918 bytes).
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on sbi.pdf (40 pages, 1313323 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 726 compressed objects within 8 object streams
- 214 named destinations out of 1000 (max. 500000)
- 63283 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 897 PDF objects out of 1000 (max. 8388607)
+ 804 compressed objects within 9 object streams
+ 240 named destinations out of 1000 (max. 500000)
+ 63288 words of extra memory for PDF output out of 74296 (max. 10000000)
 

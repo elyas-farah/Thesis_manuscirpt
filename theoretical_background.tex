@@ -1,6 +1,6 @@
 \chapter{Theoretical Background} \label{chap:theory}
 
-This chapter is mainly based on 2 textbooks and 2 lecture notes. The first book is \textbf{Modern Cosmology by} \citet{Dodelson_Schmidt_2026} and the second is \textbf{Spacetime and Geometry: An Introduction to General Relativity} by \citet{Carroll_2024}. The first lecture notes come from the Advanced Cosmology course given in the Summer semester 2024 by Prof. Dr. Cristiano Poriciani and Jun-Prof. Andrina Nicola, and the second lecture notes come from the Weak Lensing course by Prof. Dr. Peter Schneider taught in the Summer semester 2024. In this chapter, I will introduce the basics of the principles of cosmology, weak gravitational lensing, and fast radio bursts (FRBs).
+This chapter is mainly based on 2 textbooks and 1 lecture notes. The first book is \textit{Modern Cosmology by} \citet{Dodelson_Schmidt_2026} and the second is \textit{Spacetime and Geometry: An Introduction to General Relativity} by \citet{Carroll_2024}. The first lecture notes comes from the \textit{Advanced Topics in Cosmology} course given in the Summer semester 2024 by Prof. Dr. Cristiano Poriciani and Jun-Prof. Andrina Nicola. In this chapter, I will introduce the principles of cosmology, cosmic shear, and fast radio bursts (FRBs).
 
 
 
@@ -152,7 +152,7 @@ Another distance indicator is gravitational redshift, similar to doppler redshif
 \begin{equation}
     1 + z = \frac{E_e}{E_o},
 \end{equation}
-where $E_e$ and $E_o$ are the energy of light measured by the emitter and the observer respectively, and $z$ is called the cosmological redshift. $z$ is related to the wavelength of light in the limit where each of the emitter and the observer are fundamental observers, meaning that their 4-velocity is $U^{\mu} = (1, 0, 0, 0)$. Therefore, the light energy could be expressed using Planck's law \citep{Planck1900b},  $E = h/\lambda$, with $h = 6.626 \times 10^{-34} \text{J·s}$ is Planck's constant, and $\lambda$ is the wavelength of light. The final relationship describing the modulation in the observed wavelength of light is 
+where $E_e$ and $E_o$ are the energy of light measured by the emitter and the observer respectively, and \textbf{$z$ is called the cosmological redshift}. $z$ is related to the wavelength of light in the limit where each of the emitter and the observer are fundamental observers, meaning that their 4-velocity is $U^{\mu} = (1, 0, 0, 0)$. Therefore, the light energy could be expressed using Planck's law \citep{Planck1900b},  $E = h/\lambda$, with $h = 6.626 \times 10^{-34} \text{J·s}$ is Planck's constant, and $\lambda$ is the wavelength of light. The final relationship describing the modulation in the observed wavelength of light is 
 \begin{equation}
     1 + z = \frac{a(t_o)}{a(t_e)} = \frac{\lambda_o}{\lambda_e}
 \end{equation} 
@@ -165,9 +165,11 @@ where $z = 0$ refers to the current epoch. Since light moves along a null geodes
     cdt = a(t)d\chi
 \end{equation}
 which could be further arranged using Eq. \ref{eq:hubble} and Eq. \ref{eq:redshift} into
-\begin{equation}
-    \chi = \int_{1}^{z_e} \frac{c}{H(z)} dz
+\begin{equation} \label{eq:comoving_distance}
+    \chi = \int_{1}^{z_e} \frac{c}{H(z)} dz.
 \end{equation}
+From the perspective of Eq. \ref{eq:redshift}, the cosmological redshift can be used as proxy of time where larger value of redshfit conrreponds to smaller value of the scale factor $a$. Meanwhile from the perspective of Eq. \ref{eq:comoving_distance}, the cosmolgoical redshift is proxy for distance where sources of larger redshift correspond to larger distance. In a cosmological galaxy survey, measuring distances from the Earth towards galaxies is not a trivial task, however, the cosmological redshift can be measured by measuring the deviation the electromagnetic spectrum of a galaxy from the expected spectrum of a galaxy at redshift $z = 0$ \footnote{Of course, the process of measuring redshifts is cumbersome in practice, and this statemetn is meant to explain the basic principle behind measring the cosmological redshift.}. 
+
 Another distnace scale of interest is the Hubble scale. The Hubble scale is the distance at which the recession velocity of a galaxy equals the speed of light. Using Hubble's law, the Hubble scale is given by
 \begin{equation}\label{eq:hubble_scale}
     s_H = \frac{c}{H}.
@@ -220,13 +222,13 @@ and many other quantities are expressed in terms of $h$; for example, the densit
     H_0 = 67.66 \pm 0.42 \mathrm{km} \, \mathrm{s}^{-1} \, \mathrm{Mpc}^{-1},
 \end{equation*}
 
-meanwhile measurements using supernovae from the SH0ES collaboration report a value of
+meanwhile measurements using supernovae from the SH0ES collaboration \citep{riess2022comprehensive} report a value of
 
 \begin{equation*}
-    H_0 = 73.04 \pm 1.04 \mathrm{km} \, \mathrm{s}^{-1} \, \mathrm{Mpc}^{-1}
+    H_0 = 73.04 \pm 1.04 \mathrm{km} \, \mathrm{s}^{-1} \, \mathrm{Mpc}^{-1}.
 \end{equation*}
 
-\citep{riess2022comprehensive}. The discrepancy of $H_0$ measurements between the early universe with the CMB and late universe measurements with supernovae is called the Hubble tension \citep{verde2024tale}. 
+ The discrepancy of $H_0$ measurements between the early universe with the CMB and late universe measurements with supernovae is called the Hubble tension \citep{verde2024tale}. 
 
 The equation of state of each component in the $\Lambda$CDM model differs between the early universe with large energy scales and the late universe with very low energy scales. We list below each component and its role in the cosmic evolution of the universe. In general, the equation of state $p_X(\rho_X)$ expresses the relationship between pressure $p_X$ and density $\rho_X$ of a constituent $X$. Motivated by dimensional analysis \footnote{Dimensional analysis is the method of comparing the units of two physical quantities to conclude the relationship between them up to a proportionality constant.}, we can conclude that the pressure and density are related
 \begin{equation}
@@ -333,7 +335,7 @@ At early times, the amplitude of the matter density contrast is small, therefore
 
 \section{The matter power spectrum and dark matter tracers} \label{theory_sec:statistics}
 Since $\delta_{0}(\mathbf{k})$ is a Gaussian random field, its statistical properties are completely determined by its mean and variance. The mean of $\delta_{0}(\mathbf{k})$ is zero by construction, therefore, the variance is the only quantity that encodes the statistical properties of $\delta_{0}(\mathbf{k})$. The variance of $\delta_{0}(\mathbf{k})$ is called the power spectrum and is defined as
-\begin{equation}
+\begin{equation} \label{eq:power_spectrum}
     \langle \delta_{0}(\mathbf{k}) \delta_{0}^*(\mathbf{k}') \rangle = (2\pi)^3 P(k) \delta_D(\mathbf{k} - \mathbf{k}'),
 \end{equation}
 where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is only a function of the magnitude of the Fourier space wavevector $k = |\mathbf{k}|$ due to the statistical isotropy of the universe. Fig. \ref{} shows the matter power spectrum obtain using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic} with varying fraction of baryonic matter $\Omega_b$ and varying Hubble parameter $H_0$ at redshift $z = 0$.
@@ -345,21 +347,115 @@ where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is 
 %     \label{}
 % \end{figure}
 
-Though the matter power spectrum is a powerful statistic that encodes the statistical properties of the matter density field, it is not directly observable. In order to relate the matter field to obervables, it is important to understand the physical mechanisms by which the observables are related to the matter field. For galaxies, galaxy formation theories suggest that baryonic matter falls into the potential well of  
+Though the matter power spectrum is a powerful statistic that encodes the statistical properties of the matter density field, it is not directly observable. In order to relate the matter field to obervables, it is important to understand the physical mechanisms by which the observables are related to the matter field. For galaxies, galaxy formation theories suggest that baryonic matter falls into the potential well of a dark matter halo and accretes to form a galaxy. Fig. \ref{theory_fig:galaxy_formation} illustrastes a snapshot of hydrodynamical simualtion with a dark matter halo hosting a galaxy. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/cover/galaxy_foramtion.png}
+    \caption{A 2D plot from the IllustrisTNG simulation \citep{pillepich2018simulating}, adopted from \citet{crain2023hydrodynamical}. It is a snapshot of hydrodynamical simulation showing how a 'danser than average' region of dark matter hosts a galaxy (stars make up the 'skeleton' of a galaxy).}
+    \label{theory_fig:galaxy_formation}
+\end{figure}
 
+The detailed mechanism of how this happens is highly non-linear and complicated. In addition, running comprehensive galaxy formation simulations is computationally expernsive in order to cover the large parameter space of galaxy formation physics \citep{somerville2015physical}. Therefore, it is common to use a phenomenological model to relate the galaxy field to the matter field. The simplest model is the linear bias model which assumes that the galaxy number density contrast $\delta_g$ is linearly related to the matter density contrast $\delta$ such that
+\begin{equation}
+    \delta_g (\mathbf{x}, t) = b(t) \delta(\mathbf{x}, t),
+\end{equation}
+with $b$ being the linear bias parameter. The linear bias model is a good approximation on large scales, however, on small scales, the relationship between the galaxy field and the matter field is highly non-linear and the linear bias model breaks down \citep{desjacques2018large}. Notice that the galaxy number density contrast is only dependent on the local matter density field and does not depend on the environment surrounding the galaxy. This approximation breaks down on small scales where th environment of a galaxy can have a significant impact of the galaxy formation process. Galaxies are called 'biased tracers of dark matter' since they trace the underlying matter field.
+
+It is possible to use the same formalism of galaxy bias to relate the matter density contrast with other tracers of dark matter such as dark matter halos. In practice, the bias of dark matter halos is related to the underlzing matter field via the following relationship
+\begin{equation}\label{eq:halo_bias}
+    \delta_h (\mathbf{x}, t) = b_h(t) \delta(\mathbf{x}, t),
+\end{equation}
+with $b_h$ being the dark matter halo bias parameter. Owing to Eq. \ref{eq:halo_bias}, the halo power psectrum can be expressed in terms of the matter power spectrum defined in Eq. \ref{eq:power_spectrum} such that 
+\begin{equation}
+    P_{hh} (k, t) = b_{h}^2 (t) P_{mm} (k, t)
+\end{equation}
+
+
+For dark matter halos, it is possible to go bayond a linear bias model by fitting an empirical model of halo bias to the results of an N-body gravitional simulation. In this thesis, I use the fitting formula of \citet{tinker2010large} to model the halo bias. In this recipe, the halo bias is a function of the halo mass and its redshift $b_h (M, z)$. As a consequence, the halo power spectrum is related to the matter power spectrum with the relationship
+\begin{equation} \label{eq:halo_spectrum}
+    P_{\mathrm{hh}}(M_1, M_2, k) = b(M_1) b(M_2) P_{\mathrm{mm}}^{\mathrm{lin}}(k) [1 + \beta^{\mathrm{nl}}(M_1, M_2, k)]
+\end{equation}
+
+In the next section, I present the halo model, a non-pertubative approximation to obtain the non-linear power spectrum of matter or a tracer of matter. In particular, this thesis is concerned with the electron power spectrum in order to model the cosmological contribution of the dispersion measure of fast radio bursts.
+
+\section{The halo model \& the electron power spectrum}
+The details in this section are based on a review of the halo model by \citet{asgari2023halo}. The halo model assumes that matter in the universe are entirely contained in dark matter halos. Therfore, any cosmological field $\delta_{\mathrm{u}}$ at a comoving coordinate $\mathbf{x}$ can be expressed in terms of the halo denisty profile $W_{\mathrm{u},i}$ such that \footnote{notice that the time dependency is omitted for ease of writing.}
+\begin{equation}
+    \delta_{\mathrm{u}}(\mathbf{x}) = \sum_{i} N_i \, W_{\mathrm{u},i}\!\left(\left|\mathbf{x} - \mathbf{x}_i\right|\right),
+\end{equation}
+where the sum runs over all volume elements and $N_i = \{0, 1\}$ determines whether there is a halo centre in that volume element. $W_{\mathrm{u},i}$ could express the halo density profile for any comp onent that traces halos such as electrons. In N-body simulations, the halo profile $W_{\mathrm{u},i}$ of a particular dark matter halo $i$ difffers from one halo to another as a funciton of the halo mass $M$. To express this scatter, the halo-mass distribution function is introduced. The halo mass distrinution function $n(M)$ is defined as the number of dark matter halos with $M_i \in [M, M + \mathrm{d} M]$ is $n(M)\mathrm{d}M$. Averaging over all possible halo-masses, the expectation value of a field becomes
+
+\begin{equation}
+    \langle \delta_{\mathrm{u}}(\mathbf{x}) \rangle = \left\langle \sum_{i} N_i \, W_{\mathrm{u}}(M_i, |\mathbf{x} - \mathbf{x}_i|) \right\rangle = \int_0^{\infty} \mathrm{d}M \, n(M) \int \mathrm{d}^3x' \, W_{\mathrm{u}}(M, |\mathbf{x} - \mathbf{x}'|) = \int_0^{\infty} \mathrm{d}M \, W_{\mathrm{u}}(M) n(M) \, .
+\end{equation}
+
+where $W_\mathrm{u}(M, \mathbf{x})$ can be split into two multiplicative component: $W_u (M)$ which encodes the amplitud eof the halo profile and $U_\mathrm{u}(M, \mathbf{x})$ whichc encodes information about the shape of the profile, andd the mass-dependent halo profile can be written as
+\begin{equation}
+W_{\mathrm{u}}(M, x) = W_{\mathrm{u}}(M) U_{\mathrm{u}}(M, x),
+\end{equation}
+with $W_{\mathrm{u}}(M)$ appearing in the last equality, and $U_{\mathrm{u}}(M, x)$ is regourously defined as 
+\begin{equation} \label{eq:halo_profile}
+    \int \mathrm{d}^3x \, U_{\mathrm{u}}(M, x) = 1 \, .
+\end{equation}
+The physical intuition behind the function $W_{\mathrm{u}}(M, x)$ can be understood by going to Fourier space. First, Eq. \ref{eq:halo_profile} indicates that the Fourier space counterpart of the function $U_{\mathrm{u}}(M, x)$, namely $\hat{U}_{\mathrm{u}}(M, k)$ has the property $\hat{U}_{\mathrm{u}}(M, k \to 0) = 1$ which implies that $\hat{W}_{\mathrm{u}}(M, k \to 0) = \hat{W}_{\mathrm{u}}(M)$. THis result is understood that at large scales, dark matter halos act as point masses (similar to a Dirac-delta function) which translates to a constant in Fourier space.
+
+With this formalism in place, the ingredients of the halo model allows an esitmation for the power spectrum of a species $\mathrm{u}$ (in the case of this thesis, the halo model formalism will be applied to obtain a prediction of the electron density in the universe). Using the definition of the pwoer spectrum in Eq. \ref{eq:power_spectrum}, the power spectrum of the field $\delta_u$ as described inthe halo model is
+\begin{equation}
+    \langle \hat{\delta}_{\mathrm{u}}(\mathbf{k}) \hat{\delta}_{\mathrm{u}}^*(\mathbf{k}') \rangle = \left\langle \sum_{i,j} e^{-i\mathbf{k}\cdot\mathbf{x}_i} \, e^{i\mathbf{k}'\cdot\mathbf{x}_j} \, N_i \, N_j \, \hat{W}_{\mathrm{u},i}(M,k) \, \hat{W}_{\mathrm{u},j}(M,k') \right\rangle.
+\end{equation}
+The sum can be further divided into two contributions:
 \begin{itemize}
-    \item tracers and how they relate to the matter field with a focus on electrons.
-    \item non-linear evolution and the halo model and how it is used to model the matter power spectrum on non-linear scales
-    \item angular power spectra (introduce the limber and the non-limber integrals)
+    \item a contribution with $i = j$ which is the power restultant from the correlation of dark matter particles within one dark matter halo given by 
+    \begin{equation}
+        P_{\mathrm{uu}}^{\mathrm{1h}}(k) = \int_0^{\infty} \hat{W}_{\mathrm{u}}(M,k) \, \hat{W}_{\mathrm{u}}(M,k) \, n(M) \, \mathrm{d}M \, ,
+    \end{equation}
+    and this contribution is termed as \textbf{the one-halo term}.
+    \item a contrubution with $i \neq j$ whcih is the power resultant from the correlation of dark matter particles in two different halos given as
+    \begin{equation}
+        P_{\mathrm{uu}}^{\mathrm{2h}}(k) = \int_0^{\infty} \int_0^{\infty} \mathrm{d}M_1 \, \mathrm{d}M_2 \, P_{\mathrm{hh}}(M_1, M_2, k) \, \hat{W}_{\mathrm{u}}(M_1, k) \, \hat{W}_{\mathrm{u}}(M_2, k) \, n(M_1) \, n(M_2),
+    \end{equation}
+    and this contribution is termed as \textbf{the two-halo contribution}. $P_{hh}$ is the halo power spectrum defined in Eq. \ref{eq:halo_spectrum}.
 \end{itemize}
+The non-linear power spetrum wihtin the halo model of a species $\mathrm{u}$ is given by 
+\begin{equation}
+    P_{uu}(k) =  P_{\mathrm{uu}}^{\mathrm{1h}}(k) + P_{\mathrm{uu}}^{\mathrm{2h}}(k)
+\end{equation}
+Fig. \ref{} shows an example of the non-linear power specrutm with the different contributions from the one-halo and the two-halo terms. Since $P_{\mathrm{uu}}^{\mathrm{1h}}$ describes the \textbf{inter-halo} clustering of a species $\mathrm{u}$, it dominates the power spctrum on small scales. Meanwhile, 
 
 
-\section{Weak gravitational Lensing}\label{theory_sec:WL}
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{}
+%     \caption{A plot showing the linear power spectrum, the one-halo, the two-halo, and the non-linear power spectrum. }
+%     \label{}
+% \end{figure}
+
+Naturally, the halo-model is a recipe for obtainting an approximnation of the non-linear pwoer spectrum. By knowing the halo profile of a spcies $\mathrm{u}$, it is possible to obtain the non-linear power spectrum of this species. In this thesis, we use the halo model to obatin a theoretical prediction of the electron power spectrum. Section \ref{meth_sec:pee} describes the procedure of obtaining the electron power spectrum using the baryonfication correction model, and section \ref{theory_sec:BF} describes how electron profiles are obtained usinga model for baryonic feedback. 
+
+Nonetheless, the halo model has its shortcoming \citep{10.1093/mnras/stab082}. The power spectrum estimation via the halo model agrees with the power specrtum estimation from N-body gravitional simualtions on very large and very small scales. Meanwhile, it fails on intermediate scales, the scales where the transition from the two- to the one-halo term. However, for the use case specific to this thesis, the halo model is useful since it is able to model the small scales which are mostly impacted by baryoinic feedback accurately.
+
+
+\section{Weak gravitational Lensing \& cosmic shear}\label{theory_sec:WL}
+This section is based on the lecture notes of the \textit{Gravitational Lensing} cousrse taught by Prof. Dr. Peter Schneider at the University of Bonn.
+
+Gravitational lensing, in the language of general relativity, is the modification of light (null) geodesics by virtue of the existance of massive objects. In the language of special relativity, it is the bening of light by virtute of the gravitional force of a massive object on a photon. As a result, the image of a bright object (galaxy or a quasar for example) gets magnified and sheared as compared to a situation where there are no lensing effects. In this thesis, I am only interested with the weak field limit of the gravitional lensing where only shear effects are observable.
+
+
+
+
 \section{The impact of baryonic feedback on the large-scale structure}\label{theory_sec:BF}
 
 results from hydrodynamical simulations, cosmology analyses resutls. show the power spectrum supression. Speak about how different scenarios of baryonic feedback lead to different levels of power spectrum suppression. Show how the power spectrum suppression leads to a bias in cosmological parameters if not modelled correctly.
 
 \section{Fast radio bursts}\label{theory_sec:FRBs}
+\begin{itemize}
+    \item show the relationship between the ispersion measure and the time of arrival.
+    \item Speak about hte collaborations to find FRBs.
+    \item 
+\end{itemize}
+
+
 {\color{red} describe how modelling the PDF is a hard thing to do}
 To forward model observations, we convolve the $DM-z$ represented by $P(DM|z)$ with measurement and systematic uncertainties, in addition to other observational effects. A catalog of detected FRBs is expected to have observed dispersion measure $DM_\text{obs}^i$, galactic coordinates, and redshifts for a subset of and observations $z^i$. We assume that each detected FRB was emitted at redshift $z^i$ where the difference between identified and unidentified host can be integrated in how $P(z^i)$ is modeled. Assume that we observe $N_{FRB}$ fast radio bursts signal. We express the observations as the probability of detecting an FRB $DM_\text{obs}$ given a set of estimated redshifts $\{z^i\}$, can be decomposed using the Bayes rule such that
 
@@ -418,6 +514,6 @@ Each of the terms making up the integral could be further reduced
     P(DM|z^i, DM) & \propto P(DM|z^i) P(DM) \\
     P(DM_{\text{MW}}|z^i, DM) & = P(DM_{\text{MW}}) \\
     P(DM_{\text{host}}|z^i, DM) & \propto P(DM_{\text{host}}|z^i)P(DM|z^i)
-\end{align}
+\end{align} 
 
 Keeping in mind, that $DM_{\text{host}}$ that we use in Eq. \ref{eq:obs_prob} is flat since we do not have any information of the 

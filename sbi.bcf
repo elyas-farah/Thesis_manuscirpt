@@ -2441,7 +2441,18 @@
     <bcf:citekey order="60" intorder="1">aghanim2020planck</bcf:citekey>
     <bcf:citekey order="61" intorder="1">Baldauf_EFTLSS_2020</bcf:citekey>
     <bcf:citekey order="62" intorder="1">lesgourgues2011cosmic</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">aghanim2020planck</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">pillepich2018simulating</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">crain2023hydrodynamical</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">pillepich2018simulating</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">crain2023hydrodynamical</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">somerville2015physical</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">desjacques2018large</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">tinker2010large</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">asgari2023halo</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">10.1093/mnras/stab082</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">aghanim2020planck</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">pillepich2018simulating</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">crain2023hydrodynamical</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -15,40 +15,40 @@
 \contentsline {section}{\numberline {2.2}The Friedmann-Robertson-Lemaître-Walker metric}{9}{section.2.2}%
 \contentsline {section}{\numberline {2.3}The cosmological model}{12}{section.2.3}%
 \contentsline {section}{\numberline {2.4}The Boltzmann equation \& the linear perturbation theory}{16}{section.2.4}%
-\contentsline {section}{\numberline {2.5}The matter power spectrum and dark matter tracers}{18}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Weak gravitational Lensing}{19}{section.2.6}%
-\contentsline {section}{\numberline {2.7}The impact of baryonic feedback on the large-scale structure}{19}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Fast radio bursts}{19}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Methodology}{22}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Modelling the electron power spectrum}{22}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}The baryonification correction model}{22}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}The halo model}{22}{subsection.3.1.2}%
-\contentsline {subsubsection}{\nonumberline The Core Cosmology Library (CCL)}{22}{subsubsection*.4}%
-\contentsline {section}{\numberline {3.2}Simulating the dispersion measure signal}{22}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}The Generator for Large Scale Structure (GLASS)}{22}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}The electron angular power spectrum}{22}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}The cosmological covariance of the dispersion measure signal}{22}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}The systematic uncertainties}{22}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Redshift uncertainty}{23}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Selection effects}{23}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Unlocalised hosts}{23}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Milkyway contribution}{23}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Host galaxy contribution}{23}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}The lensing of the Dispersion measure signal}{23}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}Simulation-based inference}{23}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Approximate Baysian inference}{23}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Neural Posterior Estimator}{23}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}The Sequentual Neural Posterio Estimator}{23}{subsection.3.4.3}%
-\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{23}{subsubsection*.5}%
-\contentsline {subsection}{\numberline {3.4.4}Flow matching posterior estimator}{23}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Data Compression}{23}{subsection.3.4.5}%
-\contentsline {subsubsection}{\nonumberline Numerical derivative stability}{23}{subsubsection*.6}%
-\contentsline {subsubsection}{\nonumberline The Sensitivity of compressed statistics to model parameters}{23}{subsubsection*.7}%
-\contentsline {chapter}{\numberline {4}Results}{24}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{25}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Useful information}{26}{appendix.A}%
+\contentsline {section}{\numberline {2.5}The matter power spectrum and dark matter tracers}{19}{section.2.5}%
+\contentsline {section}{\numberline {2.6}The halo model \& the electron power spectrum}{20}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Weak gravitational Lensing \& cosmic shear}{22}{section.2.7}%
+\contentsline {section}{\numberline {2.8}The impact of baryonic feedback on the large-scale structure}{22}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Fast radio bursts}{22}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Methodology}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Modelling the electron power spectrum}{25}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The baryonification correction model}{25}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}The halo model}{25}{subsection.3.1.2}%
+\contentsline {subsubsection}{\nonumberline The Core Cosmology Library (CCL)}{25}{subsubsection*.5}%
+\contentsline {section}{\numberline {3.2}Simulating the dispersion measure signal}{25}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The Generator for Large Scale Structure (GLASS)}{25}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The electron angular power spectrum}{26}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The cosmological covariance of the dispersion measure signal}{26}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}The systematic uncertainties}{26}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Redshift uncertainty}{26}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Selection effects}{26}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Unlocalised hosts}{26}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Milkyway contribution}{26}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Host galaxy contribution}{26}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Simulation-based inference}{26}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Approximate Baysian inference}{26}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Neural Posterior Estimator}{26}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}The Sequentual Neural Posterio Estimator}{26}{subsection.3.4.3}%
+\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{26}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {3.4.4}Flow matching posterior estimator}{26}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Data Compression}{26}{subsection.3.4.5}%
+\contentsline {subsubsection}{\nonumberline Numerical derivative stability}{26}{subsubsection*.7}%
+\contentsline {subsubsection}{\nonumberline The Sensitivity of compressed statistics to model parameters}{26}{subsubsection*.8}%
+\contentsline {chapter}{\numberline {4}Results}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{28}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Useful information}{29}{appendix.A}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\nonumberline Bibliography}{27}{chapter*.8}%
-\contentsline {chapter}{\nonumberline List of Figures}{30}{chapter*.9}%
-\contentsline {chapter}{\nonumberline List of Tables}{31}{chapter*.10}%
+\contentsline {chapter}{\nonumberline Bibliography}{30}{chapter*.9}%
+\contentsline {chapter}{\nonumberline List of Figures}{34}{chapter*.10}%
+\contentsline {chapter}{\nonumberline List of Tables}{35}{chapter*.11}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
