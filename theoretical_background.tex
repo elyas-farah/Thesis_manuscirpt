@@ -63,9 +63,9 @@ Therefore, we can define another tensor $G_{\mu \nu}$ with a vanishing covariant
 \end{equation}
 $G_{\mu\nu}$ is called the Einstein tensor, and the Einstein's field equation regardless
 \begin{equation} \label{eq:EFE}
-    G_{\mu\nu} = 8\pi G T_{\mu\nu}
+    G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
 \end{equation}
-where I used $\kappa = 8\pi G$ which can be obtained by reducing Eq. \ref{eq:EFE} to the Newtonian limit in Eq. \ref{eq:potential}. Einstein modified Eq. \ref{eq:EFE} to account for a vacuum solution by adding a term to represent the vacuum energy $\Lambda g_{\mu \nu}$ where $\Lambda$ is called the cosmological constant, and the final equation becomes
+where I used $\kappa = 8\pi G/c^4$ which can be obtained by reducing Eq. \ref{eq:EFE} to the Newtonian limit in Eq. \ref{eq:potential}. Einstein modified Eq. \ref{eq:EFE} to account for a vacuum solution by adding a term to represent the vacuum energy $\Lambda g_{\mu \nu}$ where $\Lambda$ is called the cosmological constant, and the final equation becomes
 \begin{equation} \label{eq:EFE_full}
     G_{\mu\nu} + \Lambda g_{\mu \nu} = 8\pi G T_{\mu\nu}
 \end{equation}
@@ -118,7 +118,7 @@ where $t$ is cosmic time. A two-dimensional schematic diagram of this metric is 
 
 Using the tools of differential geometry, a maximally symmetric metric that also accounts for a homogeneous expansion of the universe is 
 \begin{equation} \label{eq:flrw}
-    \mathrm{d}s^2 = -c\mathrm{d}t^2 + a^2(t) \mathrm{d}s_3^2
+    \mathrm{d}s^2 = -c^2\mathrm{d}t^2 + a^2(t) \mathrm{d}s_3^2
 \end{equation}
 
 where $a(t)$ is the scale factor that couples the spatial part with time and the spatial part, $c$ is the speed of light, $\mathrm{d}s_3^2$ represent a volume element in a maximally symmetric space that takes the following form in hyperspherical coordinates
@@ -333,8 +333,12 @@ The solution to Eqs. \ref{eq:continuity_euler} is given assuming that the univer
 At early times, the amplitude of the matter density contrast is small, therefore, the linear solution in Eq. \ref{eq:linear_solution} is a good approximation to the evolution of the matter density contrast. As time goes on, the amplitude of the matter density contrast grows and the linear approximation breaks down. Furthermore, for regions in the universe where the average density within this specfic region is large compared to the average density of the universe, dark matter paricles collapse under the influence of gravity and virialised regions of space form. These virialised regions are called dark matter halos.  The appendix include an explanation of the toy model for the collapse. {\color{red} add the number of the appendix}. Baryons fall in the deep potential well of the dark matter halo and accretes to form galaxies, meaning that galaxies traces the position of dark matter halos, and in turn dark matter.
 
 
-\section{The matter power spectrum and dark matter tracers} \label{theory_sec:statistics}
-Since $\delta_{0}(\mathbf{k})$ is a Gaussian random field, its statistical properties are completely determined by its mean and variance. The mean of $\delta_{0}(\mathbf{k})$ is zero by construction, therefore, the variance is the only quantity that encodes the statistical properties of $\delta_{0}(\mathbf{k})$. The variance of $\delta_{0}(\mathbf{k})$ is called the power spectrum and is defined as
+\section{The 2-point correlation function and the power spectrum} \label{theory_sec:statistics}
+Since $\delta_{0}(\mathbf{k})$ is a Gaussian random field, its statistical properties are completely determined by its mean and variance. Starting from $\delta_{0}(\mathbf{k})$, the matter density contrast in real space reads
+\begin{equation} \label{eq:fourier}
+    \delta(\mathbf{x}) = \frac{1}{2\pi}\int \delta(\mathbf{k}) e^{i\mathbf{k}.\mathbf{x}} \mathrm{d} \mathbf{k}.
+\end{equation}
+The mean of $\delta_{0}(\mathbf{k})$ is zero by construction, therefore, the variance is the only quantity that encodes the statistical properties of $\delta_{0}(\mathbf{k})$. The variance of $\delta_{0}(\mathbf{k})$ is called the power spectrum and is defined as
 \begin{equation} \label{eq:power_spectrum}
     \langle \delta_{0}(\mathbf{k}) \delta_{0}^*(\mathbf{k}') \rangle = (2\pi)^3 P(k) \delta_D(\mathbf{k} - \mathbf{k}'),
 \end{equation}
@@ -347,6 +351,7 @@ where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is 
 %     \label{}
 % \end{figure}
 
+\subsection{Dark matter tracers}
 Though the matter power spectrum is a powerful statistic that encodes the statistical properties of the matter density field, it is not directly observable. In order to relate the matter field to obervables, it is important to understand the physical mechanisms by which the observables are related to the matter field. For galaxies, galaxy formation theories suggest that baryonic matter falls into the potential well of a dark matter halo and accretes to form a galaxy. Fig. \ref{theory_fig:galaxy_formation} illustrastes a snapshot of hydrodynamical simualtion with a dark matter halo hosting a galaxy. 
 \begin{figure}[h!]
     \centering
@@ -377,6 +382,21 @@ For dark matter halos, it is possible to go bayond a linear bias model by fittin
 \end{equation}
 
 In the next section, I present the halo model, a non-pertubative approximation to obtain the non-linear power spectrum of matter or a tracer of matter. In particular, this thesis is concerned with the electron power spectrum in order to model the cosmological contribution of the dispersion measure of fast radio bursts.
+\subsection{The angular power specrtum}
+The definition of the power spectrum in Eq. \ref{eq:power_spectrum} assumes that the observed field is sampled in three-dimensional space, therefore, the density field in real space can be written in using the Fourier space exponent as in EQ. \ref{eq:fourier} which represent a full orthogonal basis. WHen observing cosmological fields on the sky, a different othogonal basis is needed to decompose the cosmological field since the values measured live on the unit spehre and not on a flat geometry. For this purpose, the a cosmological field $f$ in the direction $\boldsymbol{\theta}$ can be written in terms of the spherical harmonic functions $Y_{\boldsymbol{\ell}}(\boldsymbol{\theta})$, where $\boldsymbol{\ell}$ is the Fourier space counterpart of $\boldsymbol{\theta}$. Therefore, if $f_{\boldsymbol{\ell}}$ is the spherical harmonic coeficients and $\boldsymbol{\ell} = (\ell, m)$\footnote{more on the spherical harmonics can be found in the appendix} for a moment $m$ and a multipole $\ell$, the spherical harmonic transform and its inverse are given as
+\begin{equation}
+    f(\boldsymbol{\theta}) = \sum_{\ell m} Y_{\ell m}(\boldsymbol{\theta}) \, f_{\ell m} \quad \leftrightarrow \quad f_{\ell m} = \int d\boldsymbol{\theta} \, f(\boldsymbol{\theta}) \, Y_{\ell m}^*(\boldsymbol{\theta}),
+\end{equation}
+
+The angular power spectrum $C_\ell$ is then defined in terms of the spherical harmonic coefficients 
+\begin{equation}
+    \langle \hat{f}(\ell m) \hat{f}(\ell' m')\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{\ell}
+\end{equation}
+where $\delta$ here is the Kronecker delta. Notice how the power spectrum is not dependent on $m$ by virtue of the cosmological principle. 
+
+The angular power specrtrum of a cosmological field can be obtained from the power spectrum of the same cosmological field or an integral of it. I show how to get the angular power spectrum from the electron power spectrum in \ref{theory_sec:FRBs}.
+ 
+
 
 \section{The halo model \& the electron power spectrum}
 The details in this section are based on a review of the halo model by \citet{asgari2023halo}. The halo model assumes that matter in the universe are entirely contained in dark matter halos. Therfore, any cosmological field $\delta_{\mathrm{u}}$ at a comoving coordinate $\mathbf{x}$ can be expressed in terms of the halo denisty profile $W_{\mathrm{u},i}$ such that \footnote{notice that the time dependency is omitted for ease of writing.}
@@ -439,7 +459,86 @@ Nonetheless, the halo model has its shortcoming \citep{10.1093/mnras/stab082}. T
 \section{Weak gravitational Lensing \& cosmic shear}\label{theory_sec:WL}
 This section is based on the lecture notes of the \textit{Gravitational Lensing} cousrse taught by Prof. Dr. Peter Schneider at the University of Bonn.
 
-Gravitational lensing, in the language of general relativity, is the modification of light (null) geodesics by virtue of the existance of massive objects. In the language of special relativity, it is the bening of light by virtute of the gravitional force of a massive object on a photon. As a result, the image of a bright object (galaxy or a quasar for example) gets magnified and sheared as compared to a situation where there are no lensing effects. In this thesis, I am only interested with the weak field limit of the gravitional lensing where only shear effects are observable.
+Gravitational lensing, in the language of general relativity, is the modification of light (null) geodesics by virtue of the existance of massive objects. In the language of special relativity, it is the bening of light by virtute of the gravitional force of a massive object on a photon. As a result, the image of a bright object (galaxy or a quasar for example) gets magnified and sheared as compared to a situation where there are no lensing effects. In this thesis, I am only interested with the weak field limit of the gravitional lensing where only shear effects are observable. Fig. \ref{theory_fig:lensing} shows a schematic representation of shearing and magnification effects. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/cover/shear.png}
+    \caption{A schematic representation of the imapct of gravitational lensing on a source with a circular shape (blue). Lensing has two main effect: shearing (red) and magnification (green). In the weak field limit, the magnificaiton effects are negligible and shearing effects dominate.}
+    \label{theory_fig:lensing}
+\end{figure}
+
+
+
+In the weak field limit, the shearing effects of gravitational lensing are dominant over the magnification effects. Since the matter density contrast in the present epoch is of order $\delta \approx 1$, it is possible to invoke the weak field approximation to study the shearing effects of distant galaxies' images by the large scale stucture. This effect is called \textbf{cosmic shear}. 
+
+
+
+
+To understand the lensing of a galaxy image, the shape of a galaxy, or the ellipticity, is represented as a spin-2 field with two components\footnote{The image of a galaxy has an eliptical shape, therefore, it is possible to describe the shape with two principal components representing the minor axis and the major axis.} on the unit sphere. 
+
+In this section, the symbole $\boldsymbol{\theta}$ is used to indicate a solid angle where $\boldsymbol{\theta} = \theta_1 + i\theta_2$ in the source plane. Fig. \ref{theory_fig:angle} shows how In practice,$\boldsymbol{\theta}$ is related to a displacement vector $\boldsymbol{\zeta}$ via the relation
+\begin{equation}
+    \boldsymbol{\zeta} = \chi \boldsymbol{\theta}.
+\end{equation}
+This is clear from Fig. \ref{theory_fig:angle}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/cover/lensing_angle.png}
+    \caption{A schematic representation showing how the angle $\boldsymbol{\theta}$ is related }
+    \label{theory_fig:angle}
+\end{figure}
+
+The source galaxy shape $\mathrm{\alpha}$ is observed with a lensed shape $\mathrm{\beta}$ via a transformation $\mathcal{A}$ such that
+\begin{equation}
+    \mathrm{\beta} = \mathcal{A} \mathrm{\alpha},
+\end{equation}
+with $\mathcal{A}$ beging a $2 \times 2$ matrix. $\mathcal{A}$ can be written in terms of two components: the shear $\gamma$ and the convergence $\kappa$ such that
+\begin{equation}
+    \mathcal{A} = \begin{pmatrix} 1 - \kappa - \gamma_1 & -\gamma_2 \\ -\gamma_2 & 1 - \kappa + \gamma_1 \end{pmatrix}.
+\end{equation}
+where $\gamma = \gamma_1 + i \gamma_2$ in the the plain of complex numbers. Each of the convergence and the shear has both a geometric and a physical meaning. The trace of the $\mathcal{A}$ is $\text{tr}(\mathcal{A}) = 2(1 - \kappa)$, meaning that the magnification effects are controlled by the quatity $\kappa$. Meanwhile, $\gamma$ is the qunatity that controls the shearing of an image. In this formalism, THe convergence $\kappa$ is actullay a field, since it is related to the matter denstiy contrast $\delta$ via the relationship 
+\begin{align}
+\kappa(\boldsymbol{\theta}) &= \int \mathrm{d}\chi \, p_\chi(\chi) \, \kappa(\boldsymbol{\theta}, \chi) \notag \\
+&= \frac{3H_0^2 \Omega_{\mathrm{m}}}{2c^2} \int_0^{\chi_{\mathrm{h}}} \mathrm{d}\chi \, g(\chi) \, f_K(\chi) \, \frac{\delta\!\left(f_K(\chi)\boldsymbol{\theta}, \chi\right)}{a(\chi)} \, ,
+\end{align}
+where $\chi$ is the comoving distance, $f_K (\chi) = \chi$ for a flat universe, and $g(\chi)$ is a geometric factor. Furthermore, $p_\chi(\chi)$ is the source distribution i.e. the probability of findingg a galaxy at cosmoving distance $\chi$.
+
+The shear in turn, is a spin-2 field which is related to the convergence via the relationship
+\begin{align} \label{eq:gamma_kappa}
+\gamma(\boldsymbol{\theta}) &= \frac{1}{\pi} \int_{\mathbb{R}^2} \mathrm{d}^2\theta' \, \mathcal{D}(\boldsymbol{\theta} - \boldsymbol{\theta}') \, \kappa(\boldsymbol{\theta}') \, , \quad \text{with} \notag \\
+\mathcal{D}(\boldsymbol{\theta}) &\equiv -\frac{\theta_1^2 - \theta_2^2 + 2\mathrm{i}\theta_1\theta_2}{|\boldsymbol{\theta}|^4} = \frac{-1}{(\theta_1 - \mathrm{i}\theta_2)^2} \, .
+\end{align}
+
+
+As can be seen from Eq. \ref{eq:gamma_kappa}, the shear is a convolution of $\kappa$ with the kernel $\mathcal{D}$, or in other words $\mathcal{D}$ is the shear generated by a point mass (if $\kappa$ is a delta function then the shear is equal to $\mathcal{D}$ after the integral). This relation can be inverted to find that
+
+\begin{align}
+\kappa(\boldsymbol{\theta}) - \kappa_0 &= \frac{1}{\pi} \int_{\mathbb{R}^2} \mathrm{d}^2\theta' \, \mathcal{D}^*(\boldsymbol{\theta} - \boldsymbol{\theta}') \, \gamma(\boldsymbol{\theta}') \notag \\
+&= \frac{1}{\pi} \int_{\mathbb{R}^2} \mathrm{d}^2\theta' \, \mathcal{R}\mathrm{e} \left[ \mathcal{D}^*(\boldsymbol{\theta} - \boldsymbol{\theta}') \, \gamma(\boldsymbol{\theta}') \right] \, ,
+\end{align}
+where $\kappa_0$ is a constant that arises since $\mathcal{D}$ is not defined at $\boldsymbol{\theta} = 0$. In simple words, shear and convergence are complementary quantities. Since the convergence is related to the matter density along a certain direction $\boldsymbol{\theta}$, so as the shear. Therefore, if the impact of shearing on galaxy images is studied, it is possible to constrain the matter density in the universe.
+
+To relate the shear to the shape of galaxy there is one important assumptions. Galaxies in the universe are randomly oriented, however by virtue of the cosmological principles, the expectation value of galaxy shapes should be zero. If $\epsilon_s$ is the intrinsic shape of galaxy, therefore
+\begin{equation}
+    \langle \epsilon_s \rangle = 0
+\end{equation}
+However, the observed shape of a galaxy $\epsilon$ is subject to lensing effects. In the weak field limit, the expectation value of the observed galaxy shapes is an unbiased estimator of the shear, meaning 
+\begin{equation} \label{eq:shape_shear}
+    \langle \epsilon \rangle = \gamma.
+\end{equation}
+This is an extremely important result which signals the possibility of constraining the matter distribution in the universe via cosmic shear. To use cosmic shear to infere the cosmological parameter, the relationship between the matter power spectrum and the convegence power spectrum is used. This relation is given in the Limber approximation 
+\begin{equation}\label{eq:convergence_ps}
+    P_{\kappa \kappa} (\ell) = \frac{9H_0^4 \Omega_{\mathrm{m}}^2}{4c^4} \int_0^{\chi_{\mathrm{h}}} \mathrm{d}\chi \, \frac{g^2(\chi)}{a^2(\chi)} \, P \!\left(\frac{\ell}{f_K(\chi)}, \chi\right),
+\end{equation}
+where $P = P(k, \chi)$ is the matter power spectrum at scale $k$ and cosmocving distance $\chi$. Furthermore, the shear power spectrum and the convergence power spectrum are the same, and by virture of Eq. \ref{eq:shape_shear}, the same as the galaxy shapes power spectrum,
+\begin{equation}
+    P_{\kappa \kappa} = P_{\gamma \gamma} = P_{\epsilon \epsilon}
+\end{equation}
+
+Eq. \ref{eq:convergence_ps} shows that any approximation to obtain a theoretical prediction of the matter power spectrum $P(k, \chi)$ will also influence the shear power spectrum $P_{\gamma \gamma}$. One of the main assumptions in this calculation is that structure growth in the late universe is only gravitionally driven. However, baryonic feedback on the large scales structure can influence the distributino of matter in the unvierse on different scales \citep{van2011effects}. In section \ref{theory_sec:BF}, I discuss how baryonic feedback influences the power spectrum. 
+
 
 
 
