@@ -29,12 +29,12 @@
            given={AG},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=4feef1103460c1fbe23560ecae987cb5}{%
+        {{un=1,uniquepart=given,hash=4feef1103460c1fbe23560ecae987cb5}{%
            family={Aguilar},
            familyi={A\bibinitperiod},
            given={J},
            giveni={J\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=1afb70f4636d301d395bf54278003b88}{%
            family={Ahlen},
            familyi={A\bibinitperiod},
@@ -1145,6 +1145,134 @@
       \verb 10.1086/311947
       \endverb
     \endentry
+    \entry{huang2019modelling}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=159f36887b567a6193089b1030dc7f27}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hung-Jin},
+           giveni={H\bibinithyphendelim J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=539704f504b322f786e2dc615855aeb7}{%
+           family={Eifler},
+           familyi={E\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=781ea9c7e7dcd266f15a4438055b985a}{%
+           family={Mandelbaum},
+           familyi={M\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3698fbc1727820bb2fd421387b59c1b}{%
+           family={Dodelson},
+           familyi={D\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{4f1cfcec123889a90614b4857b324230}
+      \strng{fullhash}{74a84cbdd518071f074026f997536fe9}
+      \strng{fullhashraw}{74a84cbdd518071f074026f997536fe9}
+      \strng{bibnamehash}{74a84cbdd518071f074026f997536fe9}
+      \strng{authorbibnamehash}{74a84cbdd518071f074026f997536fe9}
+      \strng{authornamehash}{4f1cfcec123889a90614b4857b324230}
+      \strng{authorfullhash}{74a84cbdd518071f074026f997536fe9}
+      \strng{authorfullhashraw}{74a84cbdd518071f074026f997536fe9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{number}{2}
+      \field{title}{Modelling baryonic physics in future weak lensing surveys}
+      \field{volume}{488}
+      \field{year}{2019}
+      \field{pages}{1652\bibrangedash 1678}
+      \range{pages}{27}
+    \endentry
+    \entry{huang2020impact}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=1,uniquepart=given,hash=3f8efa2bb1fe42f93eb72c94c9e0d266}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Shuiyao},
+           giveni={S\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=17cd387bbd090daec0a47e492985fda8}{%
+           family={Katz},
+           familyi={K\bibinitperiod},
+           given={Neal},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33b54170e576154437896dfd71ed1706}{%
+           family={Davé},
+           familyi={D\bibinitperiod},
+           given={Romeel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f31728c779db2754bd6c91971a75bc7d}{%
+           family={Oppenheimer},
+           familyi={O\bibinitperiod},
+           given={Benjamin\bibnamedelima D},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65e286d610af1c6170489dbe9a0cbba1}{%
+           family={Weinberg},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima H},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd383eb1ca4ee482c6d649d7fb2b7463}{%
+           family={Fardal},
+           familyi={F\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=173f4fe78e4661d6e508f075e06b7d50}{%
+           family={Kollmeier},
+           familyi={K\bibinitperiod},
+           given={Juna\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27732944acf4c7392c6917cf72b424c9}{%
+           family={Peeples},
+           familyi={P\bibinitperiod},
+           given={Molly\bibnamedelima S},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{d711308875619285af2d8aef45dc37bd}
+      \strng{fullhash}{b2ccf7f68fda9511dadc02c29521a470}
+      \strng{fullhashraw}{b2ccf7f68fda9511dadc02c29521a470}
+      \strng{bibnamehash}{d711308875619285af2d8aef45dc37bd}
+      \strng{authorbibnamehash}{d711308875619285af2d8aef45dc37bd}
+      \strng{authornamehash}{d711308875619285af2d8aef45dc37bd}
+      \strng{authorfullhash}{b2ccf7f68fda9511dadc02c29521a470}
+      \strng{authorfullhashraw}{b2ccf7f68fda9511dadc02c29521a470}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{number}{1}
+      \field{title}{The impact of wind scalings on stellar growth and the baryon cycle in cosmological simulations}
+      \field{volume}{493}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 28}
+      \range{pages}{28}
+    \endentry
     \entry{Hubble_1929}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=095a52969f0b95a9824841c15cc59106}{%
@@ -1179,6 +1307,46 @@
       \verb{doi}
       \verb 10.1073/pnas.15.3.168
       \endverb
+    \endentry
+    \entry{ishibashi2012active}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7926a10037a79965855be4609a4dcf78}{%
+           family={Ishibashi},
+           familyi={I\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b9be215732688abb02cf630aec54a82}{%
+           family={Fabian},
+           familyi={F\bibinitperiod},
+           given={AC},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Blackwell Science Ltd Oxford, UK}%
+      }
+      \strng{namehash}{338e046064af5acfb9b8e335b53f957a}
+      \strng{fullhash}{338e046064af5acfb9b8e335b53f957a}
+      \strng{fullhashraw}{338e046064af5acfb9b8e335b53f957a}
+      \strng{bibnamehash}{338e046064af5acfb9b8e335b53f957a}
+      \strng{authorbibnamehash}{338e046064af5acfb9b8e335b53f957a}
+      \strng{authornamehash}{338e046064af5acfb9b8e335b53f957a}
+      \strng{authorfullhash}{338e046064af5acfb9b8e335b53f957a}
+      \strng{authorfullhashraw}{338e046064af5acfb9b8e335b53f957a}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{number}{4}
+      \field{title}{Active galactic nucleus feedback and triggering of star formation in galaxies}
+      \field{volume}{427}
+      \field{year}{2012}
+      \field{pages}{2998\bibrangedash 3005}
+      \range{pages}{8}
     \endentry
     \entry{Jain_Taylor_2003}{article}{}{}
       \name{author}{2}{}{%
@@ -1570,6 +1738,96 @@
       \field{title}{The cosmic linear anisotropy solving system (CLASS) I: Overview}
       \field{year}{2011}
     \endentry
+    \entry{liu2025measurements}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=ee7f6da8058b8881ac76104a92e13e6d}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={R\bibnamedelima Henry},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a5cf20202c27e73408bd9f1ce188ce5}{%
+           family={Ferraro},
+           familyi={F\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a9563d665af9a2d52b8b6ea052e4e535}{%
+           family={Schaan},
+           familyi={S\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9239c770ac5bb7101d8d425d6712295b}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Rongpu},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=a2003b4e36bdcf44a2e09f42bc46a3e8}{%
+           family={Aguilar},
+           familyi={A\bibinitperiod},
+           given={Jessica\bibnamedelima Nicole},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=e70ecd17970a7ef74a3c22f8b45524ab}{%
+           family={Ahlen},
+           familyi={A\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76aacf4f3858b51999570dd1b5a4e5f0}{%
+           family={Battaglia},
+           familyi={B\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2eba8ba62ca937627bdc5ab4c533050f}{%
+           family={Bianchi},
+           familyi={B\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d423f545c47a8c65a465fcd5649bcbbc}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28144ed750e2dcd1bebf085dec98e322}{%
+           family={Claybaugh},
+           familyi={C\bibinitperiod},
+           given={Todd},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{9bbdec2fae095d13e70ce82df8d652a7}
+      \strng{fullhash}{f1e3c4e901425498299966ce24c5a817}
+      \strng{fullhashraw}{f1e3c4e901425498299966ce24c5a817}
+      \strng{bibnamehash}{9bbdec2fae095d13e70ce82df8d652a7}
+      \strng{authorbibnamehash}{9bbdec2fae095d13e70ce82df8d652a7}
+      \strng{authornamehash}{9bbdec2fae095d13e70ce82df8d652a7}
+      \strng{authorfullhash}{f1e3c4e901425498299966ce24c5a817}
+      \strng{authorfullhashraw}{f1e3c4e901425498299966ce24c5a817}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review D}
+      \field{number}{8}
+      \field{title}{Measurements of the thermal Sunyaev-Zel’dovich effect with ACT and DESI luminous red galaxies}
+      \field{volume}{112}
+      \field{year}{2025}
+      \field{pages}{083561}
+      \range{pages}{1}
+    \endentry
     \entry{Lorimer_Bailes_McLaughlin_Narkevic_Crawford_2007}{article}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=859a8fc5c728f68c05d89179c322831a}{%
@@ -1827,6 +2085,70 @@
       \verb 10.1093/mnras/staf113
       \endverb
     \endentry
+    \entry{martin2025stirring}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e885304859cd29d2d0e464ef1198c323}{%
+           family={Martin-Alvarez},
+           familyi={M\bibinithyphendelim A\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=882bd7a64abc512a6a51905bcef95e95}{%
+           family={Iršič},
+           familyi={I\bibinitperiod},
+           given={Vid},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48146ceeb04b66774c21e3c08e55a25d}{%
+           family={Koudmani},
+           familyi={K\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a619cef16c5d55f8d45a4bac6e51146f}{%
+           family={Bourne},
+           familyi={B\bibinitperiod},
+           given={Martin\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e27f5eb575dfff8e1a713ed224621de9}{%
+           family={Bigwood},
+           familyi={B\bibinitperiod},
+           given={Leah},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=157bed0fadff6650cb3f8f42b202c23e}{%
+           family={Sijacki},
+           familyi={S\bibinitperiod},
+           given={Debora},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{8b428ca75dbdd1abf8fbec82e8634c5e}
+      \strng{fullhash}{1fbca5fc8059374bfb69d50d2a44d4f2}
+      \strng{fullhashraw}{1fbca5fc8059374bfb69d50d2a44d4f2}
+      \strng{bibnamehash}{8b428ca75dbdd1abf8fbec82e8634c5e}
+      \strng{authorbibnamehash}{8b428ca75dbdd1abf8fbec82e8634c5e}
+      \strng{authornamehash}{8b428ca75dbdd1abf8fbec82e8634c5e}
+      \strng{authorfullhash}{1fbca5fc8059374bfb69d50d2a44d4f2}
+      \strng{authorfullhashraw}{1fbca5fc8059374bfb69d50d2a44d4f2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{number}{2}
+      \field{title}{Stirring the cosmic pot: how black hole feedback shapes the matter power spectrum in the fable simulations}
+      \field{volume}{539}
+      \field{year}{2025}
+      \field{pages}{1738\bibrangedash 1755}
+      \range{pages}{18}
+    \endentry
     \entry{10.1093/mnras/stab082}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=5510bcf69bab5e099ab58e83ab27567a}{%
@@ -1862,8 +2184,10 @@
       \strng{authornamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authorfullhash}{5123506542509cdec9b3cb16dcfe07b9}
       \strng{authorfullhashraw}{5123506542509cdec9b3cb16dcfe07b9}
+      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1890,6 +2214,60 @@
       \verb{url}
       \verb https://doi.org/10.1093/mnras/stab082
       \endverb
+    \endentry
+    \entry{mead2021hmcode}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=ba46f1ba73e7eed4b24aa090ebd41f02}{%
+           family={Mead},
+           familyi={M\bibinitperiod},
+           given={Alexander\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d25e108fa8f8e998a441e598c5c3db09}{%
+           family={Brieden},
+           familyi={B\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88db394aac1d9008cf04df2252576be1}{%
+           family={Tröster},
+           familyi={T\bibinitperiod},
+           given={Tilman},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=547f50bc09e412063e60ef05fa6befd4}{%
+           family={Heymans},
+           familyi={H\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{e479c32c36d1a279551315d2f689c171}
+      \strng{fullhash}{309fd29b3dea380dbcbe6915bd12465f}
+      \strng{fullhashraw}{309fd29b3dea380dbcbe6915bd12465f}
+      \strng{bibnamehash}{309fd29b3dea380dbcbe6915bd12465f}
+      \strng{authorbibnamehash}{309fd29b3dea380dbcbe6915bd12465f}
+      \strng{authornamehash}{e479c32c36d1a279551315d2f689c171}
+      \strng{authorfullhash}{309fd29b3dea380dbcbe6915bd12465f}
+      \strng{authorfullhashraw}{309fd29b3dea380dbcbe6915bd12465f}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{number}{1}
+      \field{title}{hmcode-2020: improved modelling of non-linear cosmological power spectra with baryonic feedback}
+      \field{volume}{502}
+      \field{year}{2021}
+      \field{pages}{1401\bibrangedash 1422}
+      \range{pages}{22}
     \endentry
     \entry{Moreira_2021}{article}{}{}
       \name{author}{8}{}{%
@@ -3059,6 +3437,42 @@
       \field{year}{2015}
       \field{pages}{51\bibrangedash 113}
       \range{pages}{63}
+    \endentry
+    \entry{sunyaev1972observations}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=311a8d6482967758916f03936c9e4cff}{%
+           family={Sunyaev},
+           familyi={S\bibinitperiod},
+           given={RA},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa1c4ad8d063a93779bed0bd13a26e19}{%
+           family={Zeldovich},
+           familyi={Z\bibinitperiod},
+           given={Ya\bibnamedelima B},
+           giveni={Y\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \strng{fullhash}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \strng{fullhashraw}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \strng{bibnamehash}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \strng{authorbibnamehash}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \strng{authornamehash}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \strng{authorfullhash}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \strng{authorfullhashraw}{7a9761da34dab44a4c4d2fbb2b4b11d1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comments on Astrophysics and Space Physics, Vol. 4, p. 173}
+      \field{title}{The observations of relic radiation as a test of the nature of X-ray radiation from the clusters of galaxies}
+      \field{volume}{4}
+      \field{year}{1972}
+      \field{pages}{173}
+      \range{pages}{1}
     \endentry
     \entry{Takahashi_2024}{article}{}{}
       \name{author}{1}{}{%

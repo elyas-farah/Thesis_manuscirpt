@@ -540,12 +540,35 @@ where $P = P(k, \chi)$ is the matter power spectrum at scale $k$ and cosmocving 
 Eq. \ref{eq:convergence_ps} shows that any approximation to obtain a theoretical prediction of the matter power spectrum $P(k, \chi)$ will also influence the shear power spectrum $P_{\gamma \gamma}$. One of the main assumptions in this calculation is that structure growth in the late universe is only gravitionally driven. However, baryonic feedback on the large scales structure can influence the distributino of matter in the unvierse on different scales \citep{van2011effects}. In section \ref{theory_sec:BF}, I discuss how baryonic feedback influences the power spectrum. 
 
 
-
-
-
 \section{The impact of baryonic feedback on the large-scale structure}\label{theory_sec:BF}
+This section is a qualitative discussion of baryonic feedback on the large sacles structure. It is mainly based on \citet{van2011effects}, one of the first papers to compare and contrast the impact of baryonic feedback on the matter power spectrum. Baryonic feedback are the set of baryonic physics processes that impact the distribution of matter \citep{Rudd_Zentner_Kravtsov_2008}. The real impact of these processes on the matte distributino in the universe is realised by analyzing hydrodynamical simulations. I list below of the feedback mechanism.
 
-results from hydrodynamical simulations, cosmology analyses resutls. show the power spectrum supression. Speak about how different scenarios of baryonic feedback lead to different levels of power spectrum suppression. Show how the power spectrum suppression leads to a bias in cosmological parameters if not modelled correctly.
+\begin{itemize}
+    \item \textbf{Active galactic nuclei (AGN) feedback:} AGN feedback originates when gas accretes on a black hole at the center of galaxy and falls into the black hole \citep{ishibashi2012active}. The blackhole then injects energy back into the gas that is accreting, warming up the gas and results in hot jets that can be observed up to scales of $\sim 1 \text{Mpc}$. When gas gets pushed ouside the perimeter of a galaxy, it creates a potential well that matter follows, reducing the clustering of matter inside a galaxy. Therefore, the impact of AGN feedback is manifested as supression of power at scales of order $k \sim 10 \text{h.Mpc}^{-1}$ compared to a scenario where only gravity influences structure fomation in the unvierse \citep{martin2025stirring}. 
+    \item \textbf{Supernova feedback:} supernova feedback is a sudden collapse large-mass stars under the influence of gravity, leading to the release of energies in form of photons and charged particles on the order of $\sim 10^{51} \text{erg}$\footnote{1 Joul = $10^7$ erg} \citep{huang2020impact}. The energy reeleased warms up the gas within a galaxy and and enriches the interstellar medium and the circumgalactic medium with heavy metals that formed throughout the life time of the star. The exact impact on the matter power spectrum is not known a priori since each scenario of supernova feedback leads to different results and affect a range of (small) scales, and there is not reason to believe one scenario over the other. Nonetheles, by studying the different possible scenario, the supernova feedback on cosmological scales leads to $\sim 1-10 \% $ suppression in the matter power spectrum on scales between $k \sim 1-10 \text{h.Mpc}^{-1}$ \citep{van2011effects}.
+    \item \text{Star formation feedback:} Due to multiple cooling mechanisms the gas in galaxy collapses under the influence of gravity to form stars. Star formation leads to increase of power up to $\sim 10\%$ on scales $k \gtrsim 10 \text{h.Mpc}^{-1}$ \citep{van2011effects}.
+\end{itemize}
+
+Fig. \ref{theory_fig:baryonic_feedback} shows a plot comparing the ratio of the power spectrum of dark matter only scenario $P^{\text{DMO}}_{\delta}$ to the matter power spectrum in different hydrodynamical simualtions $P^{\text{hydro}}_{\delta}$. Each of the given hydrodynamical simulations has different implmentation of small scale physics and is parameterized by a set of nuisance paremters of no particular cosmological. Using astrophysical observations, it is not possible to probe one of these scenarios over the other. Therefore, to mitigate the impact of baryonic feedback on the large scale structure, multiple statistical tools have been introduced, as discussed in the introduction. Other analytical approches involved parametrizing baryonic feedback with analytical models calibrated on hydrodynamical simulations \citep{mead2021hmcode, Schneider_Teyssier_2015}. These models have two shortcomings. First, the hydrodynamical simulation used for calibration is not guarenteed to agree with the true scenario of baryonic feedback in the universe. Second, the parameters that goven baryonic feedback have uniform and wide prior range, meaning that the constraining power of cosmological data will be absorbed by these nuisance parameters, leaving the cosmological parameters with no constraining power \citep{Schneider_Kovač_etal._2025}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/cover/baryonic_feedback.png}
+    \caption{A plot adopted from \citet{huang2019modelling} showing the supression of the power spcctrum for different hydrodynamical simulations with different models for baryonic feedback. For simulations where supernova feedback and AGN feedback are present, the power is superessed on the scales where the gas pressure from these two feedback mechanism influences matter distribution. The ratio rises for larger for smaller scales since gas cooling leads to star formation, boosting the power on small scales.}
+    \label{theory_fig:baryonic_feedback}
+\end{figure}
+
+To obtain tight priors on the baryonic feedback parameter, it is possible to use probes of gas distribution in the Universe which in turns traces the baryonic matter distribution. This can be done by observing the kinematic Sunyaev–Zeldovich (kSZ) effect from CMB maps \citep{sunyaev1972observations, liu2025measurements} or the X-ray observation of galaxy clusters . the kSZ is the inverse scattering of CMB photons when interracting with free energetic free electrons due to their bulk motion. This effect is observed as a secondary anisotropy in the observed maps of CMB. It is possible to relate the observed anisotropy $\Delta T_{\mathrm{kSZ}}$ due to kSZ with the electron number density along the line of sight 
+\begin{equation}\label{eq:kSZ}
+    \frac{\Delta T_{\mathrm{kSZ}}}{T_{\mathrm{CMB}}} = \frac{\sigma_{\mathrm{T}}}{c} \int_{\mathrm{los}} \mathrm{d}l \, e^{-\tau} n_{\mathrm{e}} \, v_{\mathrm{p}},
+\end{equation}
+where $T_{\mathrm{CMB}} = 2.725 \text{K}$ the blackbody temprature of the CMB, $\sigma_{\mathrm{T}}$ the Thomson cross-section, $\tau$ the optical depth, $l$ is the co-moving distance along the line of sight, and $v_{\mathrm{p}}$ is the peculiar velocity of gas. Eq. \ref{eq:kSZ} indicates that it is possible to proble the distribution of baryons in the universe by extracting the secondary anisotropies in the CMB that are caused by the kSZ effect. Combining the measurements of kSZ with constraints on the hot gas mass fraction from X-ray observations of galaxy clusters can impose constraints constraints on the baryonic feedback parameters. These constraints can be used as priors in a comsological analysis of cosmic shear data yielding tighter constraints on the comsological parameter as compared to 
+
+
+
+
+
+
 
 \section{Fast radio bursts}\label{theory_sec:FRBs}
 \begin{itemize}

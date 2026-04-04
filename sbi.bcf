@@ -2451,9 +2451,24 @@
     <bcf:citekey order="70" intorder="1">asgari2023halo</bcf:citekey>
     <bcf:citekey order="71" intorder="1">10.1093/mnras/stab082</bcf:citekey>
     <bcf:citekey order="72" intorder="1">van2011effects</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">aghanim2020planck</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">pillepich2018simulating</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">crain2023hydrodynamical</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">van2011effects</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Rudd_Zentner_Kravtsov_2008</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">ishibashi2012active</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">martin2025stirring</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">huang2020impact</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">van2011effects</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">van2011effects</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">mead2021hmcode</bcf:citekey>
+    <bcf:citekey order="80" intorder="2">Schneider_Teyssier_2015</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">Schneider_Kovač_etal._2025</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">huang2019modelling</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">huang2019modelling</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">sunyaev1972observations</bcf:citekey>
+    <bcf:citekey order="84" intorder="2">liu2025measurements</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">aghanim2020planck</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">pillepich2018simulating</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">crain2023hydrodynamical</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">huang2019modelling</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

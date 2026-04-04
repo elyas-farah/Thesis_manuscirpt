@@ -16,6 +16,7 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces A 2D plot from the IllustrisTNG simulation \citep {pillepich2018simulating}, adopted from \citet {crain2023hydrodynamical}. It is a snapshot of hydrodynamical simulation showing how a 'danser than average' region of dark matter hosts a galaxy (stars make up the 'skeleton' of a galaxy).}}{19}{figure.caption.4}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces A schematic representation of the imapct of gravitational lensing on a source with a circular shape (blue). Lensing has two main effect: shearing (red) and magnification (green). In the weak field limit, the magnificaiton effects are negligible and shearing effects dominate.}}{23}{figure.caption.5}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces A schematic representation showing how the angle $\boldsymbol {\theta }$ is related }}{24}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces A plot adopted from \citet {huang2019modelling} showing the supression of the power spcctrum for different hydrodynamical simulations with different models for baryonic feedback. For simulations where supernova feedback and AGN feedback are present, the power is superessed on the scales where the gas pressure from these two feedback mechanism influences matter distribution. The ratio rises for larger for smaller scales since gas cooling leads to star formation, boosting the power on small scales.}}{27}{figure.caption.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
