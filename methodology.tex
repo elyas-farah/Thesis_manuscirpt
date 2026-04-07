@@ -32,15 +32,42 @@ mention the reason behind the choice of 30 shells.
 \subsection{The electron angular power spectrum}
 \subsection{The cosmological covariance of the dispersion measure signal}
 
-\section{The systematic uncertainties} \label{meth_sec:uncertainties}
-{\color{red} It is important here to mention how this is modelled on the level of the simulation and the level of covariance.}
+
+\section{Simulating the systematic uncertainties}
+
+\subsection{Milkyway contribution}
+\subsection{Host contribution}
 
 \subsection{Redshift uncertainty}
+I simulate the imapct of redshift uncertainty by assuming that a redshift measuremnet $z_i$ is sampled from a Gaussian distribution with mean $z_i$ and standard deviation $\sigma_i = \eta z_i$, where $\eta_i$ is a number between $0$ and $1$. To propagate the error on the cosmological covariance, consider that $(z_i, z_j)  \sim \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma)$, with $\mathcal{N}$ is the normal distribution and
+\begin{equation}
+    \Sigma = \begin{bmatrix}
+    \sigma_i^2 & 0 \\
+    0 & \sigma_j^2 
+    \end{bmatrix}
+\end{equation}
+To propagate the error, I calcualte the expectation value $\langle \hat{C}_{ij} \rangle$, given as
+\begin{equation}
+    \langle \hat{C}_{ij} \rangle = \int \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma) \, \, C_{ij} \, \,dz_i \, \, dz_j
+\end{equation}
+With Taylor's expansion around $(\hat{z}_i, \hat{z}_j)$ and setting $\Delta_{ij} = (z_i, z_j) - (\hat{z}_i, \hat{z}_j)$, the covariance matrix can be written
+\begin{equation}
+    \langle \hat{C}_{ij} \rangle = \int \mathcal{N} \, \, \left(\hat{C}_{ij} + \nabla C_{ij}|_{(\hat{z_i}, \hat{z_j})} \Delta_{ij} + \frac{1}{2} \Delta_{ij}^{T} \nabla^2 C_{ij}|_{(\hat{z_i}, \hat{z_j})}\Delta_{ij} + .....\right)\, \,dz_i \, \, dz_j.
+\end{equation}
+Since the Gaussian distribution has vanaishing moments for moment larger than third order, the expression is simplified into
+\begin{equation}
+    \langle \hat{C}_{ij} \rangle = \hat{C}_{ij} + \frac{1}{2} \, \, \sigma_{i}^2 \, \, \partial^2_{ii} \, C_{ij}|_{(\hat{z_i}, \hat{z_j})} \, \, + \frac{1}{2} \, \, \sigma_{j}^2 \, \, \partial^2_{jj} \, C_{ij}|_{(\hat{z_i}, \hat{z_j})}.
+\end{equation}
+Therefore, it is possible to account for the error in the covariance due to redshift uncertainty using the second derivative of the covariance with respect to redshift $z$.
+
+I show the impact of redshift uncertainty on the scatter in the DM-$z$ relation in chapter \ref{chap:results}.
+
+
 \subsection{Selection effects}
 \subsection{Unlocalised hosts}
 
-\subsection{Milkyway contribution}
-\subsection{Host galaxy contribution}
+
+
 
 \section{Simulation-based inference} \label{meth_sec:sbi}
 \subsection{Approximate Baysian inference}

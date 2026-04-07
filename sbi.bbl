@@ -215,8 +215,10 @@
       \strng{authornamehash}{616de3263b076cfa5c29bf8927a1b333}
       \strng{authorfullhash}{616de3263b076cfa5c29bf8927a1b333}
       \strng{authorfullhashraw}{616de3263b076cfa5c29bf8927a1b333}
+      \field{extraname}{1}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -230,6 +232,42 @@
       \verb{doi}
       \verb 10.1103/physrevd.103.123544
       \endverb
+    \endentry
+    \entry{alonso2021linear}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=616de3263b076cfa5c29bf8927a1b333}{%
+           family={Alonso},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{616de3263b076cfa5c29bf8927a1b333}
+      \strng{fullhash}{616de3263b076cfa5c29bf8927a1b333}
+      \strng{fullhashraw}{616de3263b076cfa5c29bf8927a1b333}
+      \strng{bibnamehash}{616de3263b076cfa5c29bf8927a1b333}
+      \strng{authorbibnamehash}{616de3263b076cfa5c29bf8927a1b333}
+      \strng{authornamehash}{616de3263b076cfa5c29bf8927a1b333}
+      \strng{authorfullhash}{616de3263b076cfa5c29bf8927a1b333}
+      \strng{authorfullhashraw}{616de3263b076cfa5c29bf8927a1b333}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review D}
+      \field{number}{12}
+      \field{title}{Linear anisotropies in dispersion-measure-based cosmological observables}
+      \field{volume}{103}
+      \field{year}{2021}
+      \field{pages}{123544}
+      \range{pages}{1}
     \endentry
     \entry{asgari2023halo}{article}{}{}
       \name{author}{3}{}{%
@@ -620,6 +658,52 @@
       \field{labeltitlesource}{title}
       \field{title}{Cosmology}
       \field{year}{2010}
+    \endentry
+    \entry{carlstrom2002cosmology}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=563311b66e4d9dcaf25e7c5ebd49ac78}{%
+           family={Carlstrom},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dba72a53885edf9d48f48a5023b68ad0}{%
+           family={Holder},
+           familyi={H\bibinitperiod},
+           given={Gilbert\bibnamedelima P},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f30973e0d12706b01a0dcd45399a05d9}{%
+           family={Reese},
+           familyi={R\bibinitperiod},
+           given={Erik\bibnamedelima D},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Annual Reviews 4139 El Camino Way, PO Box 10139, Palo Alto, CA 94303-0139, USA}%
+      }
+      \strng{namehash}{d32344992b871cf649ffa9f5eb60ce43}
+      \strng{fullhash}{d32344992b871cf649ffa9f5eb60ce43}
+      \strng{fullhashraw}{d32344992b871cf649ffa9f5eb60ce43}
+      \strng{bibnamehash}{d32344992b871cf649ffa9f5eb60ce43}
+      \strng{authorbibnamehash}{d32344992b871cf649ffa9f5eb60ce43}
+      \strng{authornamehash}{d32344992b871cf649ffa9f5eb60ce43}
+      \strng{authorfullhash}{d32344992b871cf649ffa9f5eb60ce43}
+      \strng{authorfullhashraw}{d32344992b871cf649ffa9f5eb60ce43}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Astronomy and Astrophysics}
+      \field{number}{1}
+      \field{title}{Cosmology with the Sunyaev-Zel’dovich effect}
+      \field{volume}{40}
+      \field{year}{2002}
+      \field{pages}{643\bibrangedash 680}
+      \range{pages}{38}
     \endentry
     \entry{Carroll_2024}{book}{}{}
       \name{author}{1}{}{%
@@ -1105,6 +1189,51 @@
       \verb{doi}
       \verb 10.1093/mnras/stv2000
       \endverb
+    \endentry
+    \entry{garcia2025search}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=1cdf138beec182af59a577672e6c7fdc}{%
+           family={García},
+           familyi={G\bibinitperiod},
+           given={Luz\bibnamedelima Ángela},
+           giveni={L\bibinitperiod\bibinitdelim Á\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2d6bcca1b63da8ac504eae4739725c22}{%
+           family={Piratova-Moreno},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ec3d718d834f53a46903d43c9d7ae8b}{%
+           family={González-Alarcón},
+           familyi={G\bibinithyphendelim A\bibinitperiod},
+           given={Felipe},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e06e0b4eadc5082c3bcb9a87997a0cd2}{%
+           family={Rangel},
+           familyi={R\bibinitperiod},
+           given={Jhonier},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{132f4866666e367ee8ac49da78b9943f}
+      \strng{fullhash}{36d21e02d3bde61350a49fac9dda5cb7}
+      \strng{fullhashraw}{36d21e02d3bde61350a49fac9dda5cb7}
+      \strng{bibnamehash}{36d21e02d3bde61350a49fac9dda5cb7}
+      \strng{authorbibnamehash}{36d21e02d3bde61350a49fac9dda5cb7}
+      \strng{authornamehash}{132f4866666e367ee8ac49da78b9943f}
+      \strng{authorfullhash}{36d21e02d3bde61350a49fac9dda5cb7}
+      \strng{authorfullhashraw}{36d21e02d3bde61350a49fac9dda5cb7}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2511.08960}
+      \field{title}{Search for host galaxies of unlocalized Fast Radio Bursts in the SDSS IV catalog}
+      \field{year}{2025}
     \endentry
     \entry{Hu_Tegmark_1999}{article}{}{}
       \name{author}{2}{}{%
@@ -2269,6 +2398,50 @@
       \field{pages}{1401\bibrangedash 1422}
       \range{pages}{22}
     \endentry
+    \entry{RevModPhys.81.1405}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8ab6ba1fbac1546a3d9ffd38ac359895}{%
+           family={Meiksin},
+           familyi={M\bibinitperiod},
+           given={Avery\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \strng{fullhash}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \strng{fullhashraw}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \strng{bibnamehash}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \strng{authorbibnamehash}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \strng{authornamehash}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \strng{authorfullhash}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \strng{authorfullhashraw}{8ab6ba1fbac1546a3d9ffd38ac359895}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{4}
+      \field{journaltitle}{Rev. Mod. Phys.}
+      \field{month}{10}
+      \field{title}{The physics of the intergalactic medium}
+      \field{volume}{81}
+      \field{year}{2009}
+      \field{pages}{1405\bibrangedash 1469}
+      \range{pages}{65}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.81.1405
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.81.1405
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.81.1405
+      \endverb
+    \endentry
     \entry{Moreira_2021}{article}{}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=09c2fdaaa23eaa82e136c7118c151809}{%
@@ -2629,6 +2802,59 @@
       \verb 10.1063/1.1848323
       \endverb
     \endentry
+    \entry{10.1093/mnras/stad1645}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=feee8b9f7a9954fe55e6a43b89890eab}{%
+           family={Reischke},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=436bb173d4e5f18abbaa529d256b1083}{%
+           family={Hagstotz},
+           familyi={H\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{482ad7d616b6b199df7e87bcecd3001d}
+      \strng{fullhash}{482ad7d616b6b199df7e87bcecd3001d}
+      \strng{fullhashraw}{482ad7d616b6b199df7e87bcecd3001d}
+      \strng{bibnamehash}{482ad7d616b6b199df7e87bcecd3001d}
+      \strng{authorbibnamehash}{482ad7d616b6b199df7e87bcecd3001d}
+      \strng{authornamehash}{482ad7d616b6b199df7e87bcecd3001d}
+      \strng{authorfullhash}{482ad7d616b6b199df7e87bcecd3001d}
+      \strng{authorfullhashraw}{482ad7d616b6b199df7e87bcecd3001d}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The dispersion of fast radio bursts (FRBs) is a measure of the large-scale electron distribution. It enables measurements of cosmological parameters, especially of the expansion rate and the cosmic baryon fraction. The number of events is expected to increase dramatically over the coming years, and of particular interest are bursts with identified host galaxy and therefore redshift information. In this paper, we explore the covariance matrix of the dispersion measure (DM) of FRBs induced by the large-scale structure, as bursts from a similar direction on the sky are correlated by long-wavelength modes of the electron distribution. We derive analytical expressions for the covariance matrix and examine the impact on parameter estimation from the FRB DM–redshift relation. The covariance also contains additional information that is missed by analysing the events individually. For future samples containing over ∼300 FRBs with host identification over the full sky, the covariance needs to be taken into account for unbiased inference, and the effect increases dramatically for smaller patches of the sky. Also, forecasts must consider these effects as they would yield too optimistic parameter constraints. Our procedure can also be applied to the DM of the afterglow of gamma-ray bursts.}
+      \field{issn}{0035-8711}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{07}
+      \field{number}{2}
+      \field{title}{Cosmological covariance of fast radio burst dispersions}
+      \field{volume}{524}
+      \field{year}{2023}
+      \field{pages}{2237\bibrangedash 2243}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1093/mnras/stad1645
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/mnras/article-pdf/524/2/2237/50905391/stad1645.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/mnras/stad1645
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/mnras/stad1645
+      \endverb
+    \endentry
     \entry{Reischke:2025srr}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=feee8b9f7a9954fe55e6a43b89890eab}{%
@@ -2652,6 +2878,7 @@
       \strng{authornamehash}{482ad7d616b6b199df7e87bcecd3001d}
       \strng{authorfullhash}{482ad7d616b6b199df7e87bcecd3001d}
       \strng{authorfullhashraw}{482ad7d616b6b199df7e87bcecd3001d}
+      \field{extraname}{2}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}

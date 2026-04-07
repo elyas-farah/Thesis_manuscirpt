@@ -16,7 +16,7 @@ ds^2 = g_{\nu \mu} dx^{\nu} dx^{\mu},
 \end{equation}
 where $\{dx^\mu\}_{0, 1, 2, 3}$ is a basis for the contangent bundle of the manifold. In classical terms, $\{dx^\mu\}_{0, 1, 2, 3}$ is the differential along a coordinate axis $\{x^\mu\}_{0, 1, 2, 3}$ For a generalized space time, the path of a free particle is described by the geodesic equation. If the coordinates of a particle in spacetime $x^\mu$ is parameterized with an affine parameter $\lambda$, then the coordinates $x^{\mu} (\lambda)$ is constrained by an ordinary differential equation, namely the geodesic equation given as:
 
-\begin{equation}
+\begin{equation} \label{eq:geodesic}
     \frac{d^2x^\mu}{d\lambda^2} + \Gamma^\mu_{\rho\sigma} \frac{dx^\rho}{d\lambda} \frac{dx^\sigma}{d\lambda} = 0,
 \end{equation}
 where $\Gamma^\mu_{\rho\sigma}$ are the Christoffel symbols given in terms the metric tensor such that
@@ -73,7 +73,7 @@ where I used $\kappa = 8\pi G/c^4$ which can be obtained by reducing Eq. \ref{eq
 
 
 Finally, the 4-velocity of a particle in general relativity is defined as 
-\begin{equation}
+\begin{equation} \label{eq:4-velocity}
     U^{\mu} = \frac{dx^{\mu}}{d\lambda},
 \end{equation} 
 Therefore, the 4-velocity would follow the normalization
@@ -86,7 +86,7 @@ and the 4-momentum for a particle of mass $m$ is defined as
     P^{\mu} = m U^{\mu}
 \end{equation}
 and the normalization of momentum is 
-\begin{equation}
+\begin{equation} \label{eq:momentum_noermal}
     g_{\mu \nu}P^{\mu}P^{\nu} = -m^2
 \end{equation}
 Notice that either of the previous normalization is invariant under coordinate transformation. We define the observed energy of a particle of 4-momentum $P^{\mu}$ with respect to an observer with 4-velocity $U^{\mu}$ such that it reduces to the special relativistic limit if the particle has a vanishing spatial velocity and the observer 
@@ -134,7 +134,12 @@ S_k(\chi) =
     \frac{1}{\sqrt{|k|}} \sinh(\sqrt{|k|} \chi) & \text{if } k < 0, \text{for an open universe}
 \end{cases}
 \end{equation}
-The case when $k = 0$ represents a flat universe, where the spatial part reduces to the usual spherical coordinates.The coordinate $\chi$ could be understood by considering two space like points in spacetime, one with $\chi = 0$ and another with $\chi = \chi_c$ leading To
+The case when $k = 0$ represents a flat universe, where the spatial part reduces to the usual spherical coordinates. The flat FLRW metric reads
+\begin{equation} \label{eq:FLRW}
+    \mathrm{d}s^2 = -c^2\mathrm{d}t^2 + a^2(t) \left[ \mathrm{d}\chi^2 + \chi^2 \left( \mathrm{d}\theta^2 + \sin^2 \theta \, \mathrm{d}\phi^2 \right)\right]
+\end{equation}
+
+The coordinate $\chi$ could be understood by considering two space like points in spacetime, one with $\chi = 0$ and another with $\chi = \chi_c$ leading To
 
 \begin{equation}\label{eq:comoving}
     s = a(t) \chi_c, 
@@ -153,14 +158,14 @@ Another distance indicator is gravitational redshift, similar to doppler redshif
     1 + z = \frac{E_e}{E_o},
 \end{equation}
 where $E_e$ and $E_o$ are the energy of light measured by the emitter and the observer respectively, and \textbf{$z$ is called the cosmological redshift}. $z$ is related to the wavelength of light in the limit where each of the emitter and the observer are fundamental observers, meaning that their 4-velocity is $U^{\mu} = (1, 0, 0, 0)$. Therefore, the light energy could be expressed using Planck's law \citep{Planck1900b},  $E = h/\lambda$, with $h = 6.626 \times 10^{-34} \text{J·s}$ is Planck's constant, and $\lambda$ is the wavelength of light. The final relationship describing the modulation in the observed wavelength of light is 
-\begin{equation}
+\begin{equation} \label{eq:redshift_freq}
     1 + z = \frac{a(t_o)}{a(t_e)} = \frac{\lambda_o}{\lambda_e}
 \end{equation} 
 with $\lambda_e$ and $\lambda_o$ are the light wavelength measured by the emitter and the observer respectively. This relationship could be exploited by quantifying the modulation of the wavelength and its relationship to the scale factor. In a nutshell, a light emitted at a scale factor $a(t_e)$ travels through an expanding universe until measured by another observer at time $t_o > t_e$ corresponding to $a(t_o) > a(t_e)$, therefore $\lambda_o > \lambda_e$, which explains why distant sources are redshifted. In practice, by measuring the spectrum of light of a distant galaxy and convolving it with a standard spectrum (the expected spectrum of galaxy in the nearby universe), it is possible to obtain the redshift of the distant galaxy. If we choose $a = 1$ in the current epoch, the relationship between redshift and the scale factor reduces to
-\begin{equation}\label{eq:redshift}
+\begin{equation} \label{eq:redshift}
     a = \frac{1}{1 + z},
 \end{equation}
-where $z = 0$ refers to the current epoch. Since light moves along a null geodesic, it is possible to obtain the comoving distance to an emitter given the redshift of the emitter. Starting from Eq. \ref{eq:flrw} and Eq. \ref{eq:sphere3}, and working in a coordinate system with the light travelling along $\theta = 0 $ and $\phi = 0$, the null geodesic dictates that 
+where $z = 0$ refers to the current epoch. Since light moves along a null geodesic, it is possible to obtain the comoving distance to an emitter given the redshift of the emitter. Starting from Eq. \ref{eq:FLRW}, and working in a coordinate system with the light travelling along $\theta = 0 $ and $\phi = 0$, the null geodesic dictates that 
 \begin{equation}
     cdt = a(t)d\chi
 \end{equation}
@@ -270,7 +275,7 @@ Figure \ref{theory_fig:energy_budget} shows a schematic representation of the co
 \begin{equation}
     H^2 (a) = H_0^2 \left[ \Omega_r a^{-4} + \Omega_m a^{-3} + \Omega_\Lambda \right], 
 \end{equation}
-where the different additive terms dominate the evolution at different epochs. In particular, dark energy is the dominant component in the current epoch. To constrain the equation of state of dark energy, cosmic shear stands as a powerful probe of late structure formation since it is an integrated qunatity that includes signficant contribution from the late evolution of the universe, and therefore sensitive to dark energy. The basic principles of cosmic shear and its relationship to the matter density field are explained in \ref{theory_sec:cosmic_shear}. This thesis focuses on using FRBs to constain baryonic feedback on the large scale structure and therefore improve the modelling of cosmic shear on small scales, which in turn improves the constraining power of cosmic shear on dark energy.
+where the different additive terms dominate the evolution at different epochs. In particular, dark energy is the dominant component in the current epoch. To constrain the equation of state of dark energy, cosmic shear stands as a powerful probe of late structure formation since it is an integrated qunatity that includes signficant contribution from the late evolution of the universe, and therefore sensitive to dark energy. The basic principles of cosmic shear and its relationship to the matter density field are explained in \ref{theory_sec:WL}. This thesis focuses on using FRBs to constain baryonic feedback on the large scale structure and therefore improve the modelling of cosmic shear on small scales, which in turn improves the constraining power of cosmic shear on dark energy.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{figs/cover/planck2018_energy_budget.png}
@@ -562,15 +567,91 @@ To obtain tight priors on the baryonic feedback parameter, it is possible to use
 \begin{equation}\label{eq:kSZ}
     \frac{\Delta T_{\mathrm{kSZ}}}{T_{\mathrm{CMB}}} = \frac{\sigma_{\mathrm{T}}}{c} \int_{\mathrm{los}} \mathrm{d}l \, e^{-\tau} n_{\mathrm{e}} \, v_{\mathrm{p}},
 \end{equation}
-where $T_{\mathrm{CMB}} = 2.725 \text{K}$ the blackbody temprature of the CMB, $\sigma_{\mathrm{T}}$ the Thomson cross-section, $\tau$ the optical depth, $l$ is the co-moving distance along the line of sight, and $v_{\mathrm{p}}$ is the peculiar velocity of gas. Eq. \ref{eq:kSZ} indicates that it is possible to proble the distribution of baryons in the universe by extracting the secondary anisotropies in the CMB that are caused by the kSZ effect. Combining the measurements of kSZ with constraints on the hot gas mass fraction from X-ray observations of galaxy clusters can impose constraints constraints on the baryonic feedback parameters. These constraints can be used as priors in a comsological analysis of cosmic shear data yielding tighter constraints on the comsological parameter as compared to 
+where $T_{\mathrm{CMB}} = 2.725 \text{K}$ the blackbody temprature of the CMB, $\sigma_{\mathrm{T}}$ the Thomson cross-section, $\tau$ the optical depth, $l$ is the co-moving distance along the line of sight, and $v_{\mathrm{p}}$ is the peculiar velocity of gas. Eq. \ref{eq:kSZ} indicates that it is possible to proble the distribution of baryons in the universe by extracting the secondary anisotropies in the CMB that are caused by the kSZ effect. Combining the measurements of kSZ with constraints on the hot gas mass fraction from X-ray observations of galaxy clusters can impose constraints constraints on the baryonic feedback parameters. These constraints can be used as priors in a comsological analysis of cosmic shear data yielding tighter constraints on the comsological parameter as compared to having wide priors on these paraneters. 
 
-
+Though kSZ is a promising tool, extracting its signal from CMB observation requires assumptions about the temprature and ionization of the gas in galaxy clusters and the bulk velocity of the clusters \citep{carlstrom2002cosmology}. Thankfully, the measured DM of FRBs is a direct probe of the electron number denisty in the unvierse and thereofre baryonic feedback. In section \ref{theory_sec:FRBs}, I describe the use of FRBs in cosmology in addition to the systematic and measurement uncertainties which impacts the modelling and measurements of the DM signal.
 
 
 
 
 
 \section{Fast radio bursts}\label{theory_sec:FRBs}
+This section is based on \citet{alonso2021linear}, \citet{10.1093/mnras/stad1645} and \citet{Petroff_2019}. For ease of writing, I consider that $\hbar = c = 1$ in this section. As mentioned in the introduction, the DM of FRBs is proportional to the difference in arriveal time between high frequency wave and small frequency wave, and I show how this relationship rises below. Since the FRBs passes through the circumgalagtic mesium, it interacts with the plasma in this medium. The plasma is made up out of charged electrons. Therefore, when a light wave of frequency $\omega$ and wave vector $\mathbf{k}$, the plasma follows the dispersion relation
+\begin{equation}\label{eq:dispersion}
+    \omega^2 - |\mathbf{k}|^2 = \omega_e^2, \quad \omega_e \equiv \frac{4\pi e^2 n_\mathrm{e}}{m_e},
+\end{equation}
+where $n_\mathrm{e}$ is the electron number density as measured by the plasma's frame. The velocity of the electromagnetic wave packet in the plasma's frame of reference $v_g$, is equivalent to the velocity of a massive particle with mass $\omega_e$ and energy $\omega$
+\begin{equation}
+    v_g = \sqrt{1 - \frac{\omega_e^2}{\omega^2}}.
+\end{equation}
+Since the FRBs are in the radio regime, the ratio $\frac{\omega_\mathrm{e}^2}{\omega^2} << 1$, and the group velocity can be approximated assume
+\begin{equation}
+    v_g \approx \left(1 - \frac{1}{2}\frac{\omega_\mathrm{e}^2}{\omega^2}\right).
+\end{equation}
+To calculate the time delay due to scattering of the free electrons, I turn the problem into calculating the time daley between the arrival of a pulse with frequency $\nu_0$ and a pulse of infinite frequency. I call these pulses a normal and infinite pulses respectively. Once I have an expression for the time delay, it possible to calculate the time delay between pulses of a high frequency $\nu_{\text{high}}$ and a low frequency $\nu_{\text{low}}$ Theoretically, plasma does not affect the infinite pulse since the pulse has infinite momentum. Therefore, the group velocity of the infinite pulse is $1$.
+I use the setup in Fig. \ref{theory_fig:time_delay} to find an expression of the imte delay. The setup shows freely falling frame of references along the trajectory of the normal pulse. The time delay beetween the arrival of the normal pulse and the arrival of the infinite pulse (the two events are marked by an \textbf{x} on the yellow lines) can be given by 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/cover/time_delay.png}
+    \caption{Spacetime diagram showing the evaluation of time dalay between a pulse of frequency $\nu_0$ (world line in red) and a pulse of infinite frequency (world lines in blue and dashed). The plasma particles follow world lines given in yellow color.}
+    \label{theory_fig:time_delay}
+\end{figure}
+\begin{equation}
+    \mathrm{d} \tau = \frac{\mathrm{d} l}{v_g} - \mathrm{d} l
+\end{equation} 
+with $\tau$ being the proper time measured by the plasma (notice that I used the group velocity relative to the plasma) and $\mathrm{d} l$ the proper ditsnce between the two stations. The correponding time delay measured by the comoving observer $\mathrm{d} t$ is given by
+\begin{equation}
+    \mathrm{d}t = (1 + z)\mathrm{d}\tau.
+\end{equation}
+If the normal pulse has a 4-momentum defined as $P^\mu = \mathrm{d}x^\mu / d\Lambda$ (see Eq. \ref{eq:4-velocity}), where $\lambda$ is an affine parameter, the proper length can be written as $\mathrm{d} l = P^\mu u_{e, \mu}$, where $u_{e, \mu}$ is the station's 4-velocity as measured by the observed. Thus to lowest order in $\omega_\mathrm{e} / \omega$, the measured time $\mathrm{d}t$ is written
+\begin{equation}
+    dt = \frac{(1+z)\omega_\mathrm{e}^2}{2\omega^2} \left( P^\mu u_{e,\mu} \right) d\lambda.
+\end{equation}
+Finally, due to cosmological redshift, the station observes a frequency $\omega$ different from the what the observers detects, as shown by Eq. \ref{eq:redshift_freq}. We relate the two frequencies via the relation $\omega = 2\pi \nu_0 (1 + z)$, making the final expression for the time delay
+\begin{equation}
+    \Delta t = \frac{e^2}{2\pi m_\mathrm{e} \nu_o^2} \mathrm{DM},
+\end{equation}
+where DM is the dispersion measure given as an integral
+\begin{equation} \label{eq:dispersion_full}
+    \mathrm{DM} \equiv \int_{\lambda_\mathrm{e}}^{\lambda_o} d\lambda \left( n_\mathrm{e} \frac{P^\mu u_{e,\mu}}{1+z} \right)\Bigg|_{\lambda},
+\end{equation}
+where the subscript $\lambda$ is a reminder tha tthe integrand is evaluated along the pulse's trajectory. In a realistic situation, the plasma has a peculiar velocity and the normal pulse does not follow a null geodesic. I consider a situation where the stations are comoving observer with 4-velocity $u_{e}^\mu = (1, 0, 0, 0)$, and the pulse moves along a null geodesic in an unperturbed universe with momentum $P^\mu = (A/a, A/a^2, 0, 0)$\footnote{I omit the proof to obtain this results. The proof can be done by solving the geodesic equation (Eq. \ref{eq:geodesic}) and setting the coordinate origin such that the photon follows a geodesic with $\phi = 0$ and $\theta =0$.}, where $A$ is a constant. The inner producet of momentum and veloctiy reduces to 
+\begin{equation}
+    P^\mu u_{e,\mu} = g_{tt}(A/a)(1)  = -A/a,
+\end{equation}
+Since $\lambda$ parametrizes the geodesic of the pulse, it is possible to change variables in Eq. \ref{eq:dispersion_full} using the expression for the 4-momentum where $\mathrm{d}t/\mathrm{d}\lambda = A/a$. The integral becomes
+\begin{equation}
+    \mathrm{DM} \equiv \int_{t_o}^{t_e} dt \, a \, n_\mathrm{e},
+\end{equation}
+where I have changed the integral pounds. Remeber that $n_\mathrm{e}$ is the physical density as measured by the plasma. It can be written in terms of the comoving density as $n_\mathrm{e} = n_{\mathrm{e}, c} a^{-3}$. Therefore, the correpoinding comoving density scales with Using the relationship between cosmic time $t$ and the sacle factor $a$ as in Eq. \ref{eq:hubble} and the relationship between the $a$ and $z$ in Eq. \ref{eq:redshift}, the integral can be written as
+\begin{equation} \label{eq:dispersion_ne}
+    \mathrm{DM} \equiv \int_{z_e}^{0} \mathrm{d}z' \frac{1 + z'}{H(z')}  n_{\mathrm{e}, c}(z').
+\end{equation}
+Eq. \ref{eq:dispersion_ne} is the dispersion measure-redshift relation $\mathrm{DM}_z$ which I use in this thesis to study the impact of systematic uncertainties. Eq. \ref{eq:dispersion} includes an expression of the comoving electron number density $n_{\mathrm{e}, c}$ this quantity can be written in terms of the baryon density fraciton $\Omega_\mathrm{b}$ given some consideration to the ratio of free electron in the universe that disperses the signal. In general, the expression should look like
+\begin{equation}
+    n_{\mathrm{e}, c} = \frac{\bar{\rho}_\mathrm{b}}{m_\mathrm{p}}\, F(z)
+\end{equation}
+where $\bar{\rho}_\mathrm{b}$ is the average of the baryonic density in the universe, $m_\mathrm{p}$ is the mass of proton, and $F(z)$ is the fraciotn of free electrons in the intergalactic medium. To find $F(z)$, I make the following considerations
+\begin{itemize}
+    \item If the universe has only helium and hydrogen atom, then the fraction of free electrons in the universe is $Y_{\mathrm{H}}X_{\mathrm{e, H}}(z) + Y_{\mathrm{H}} X_{\mathrm{e, He}}(z)$, with $Y_{\mathrm{H}}$,  $Y_{\mathrm{He}}$, $X_{\mathrm{e, H}}(z)$, and $X_{\mathrm{e, He}}(z)$ the mass fraction of hydrogen, the mass fraction of helium, the ionized fraction of hydrogen, and the ionized fraciotn of helium respectively. Using big bang nucleosyntheis, I assume that molecules in the unvierse are in the form of either hydron or helium with the fraction of hydrogen $Y_{\mathrm{H}} = 0.75$ and the fraction of helium is $Y_{\mathrm{He}} = 0.25$.
+    
+    \item Hydrogn and helium are fully ionized for $z \lesssim 3$ \citep{RevModPhys.81.1405}, meaning that the ionized fraction of Hydrogen $X_{\mathrm{e, H}}(z)$ and $X_{\mathrm{e, He}}(z)$ are both equla to 1.
+    
+    \item The fraction of free electrons in the intergalactic medium $f_{\mathrm{IGM}}$ is constant for the range of redshifts considered in this problem{\color{red} find a citations for this}.
+\end{itemize}
+By dropping the redshif tdependence on the ionized fraction, I get an expression of $F(z)$ that is constant in redshift for the range of redshifts considered in this thesis.
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{itemize}
     \item show the relationship between the ispersion measure and the time of arrival.
     \item Speak about hte collaborations to find FRBs.
@@ -639,3 +720,25 @@ Each of the terms making up the integral could be further reduced
 \end{align} 
 
 Keeping in mind, that $DM_{\text{host}}$ that we use in Eq. \ref{eq:obs_prob} is flat since we do not have any information of the 
+
+
+
+
+discuss the motivation for the SBI method.
+
+\section{The systematic uncertainties} \label{theory_sec:uncertainties}
+{\color{red} It is important here to mention how this is modelled on the level of the simulation and the level of covariance.}
+In this section, I describe the modelling of systematic uncertainties on the dispersion measure. 
+
+\begin{itemize}
+\item \textbf{Milkyway contribution}
+\item \textbf{Host galaxy contribution}
+\item \textbf{Redshift uncertainty}
+Follow up optical observations of FRBs allows spectroscopic estimation of the redshifts of its host galaxy. The measurement uncertainty on the redshift can induce additional scatter in the estimated cosmological covariance matrix and modify the source redshift distribution. The latter effect is especially important when cross-correlating FRBs with cosmic shear as performed by \citet{reischke2023calibrating}. A faster way to localize FRBs is to use wide field spectroscopic or photometric surveys by deriving an astrometric solution, yielding a set of possible candidates of the host with a probability for each canditate \citep{garcia2025search}. This method is, nonetheless, highly uncertain. Therefore, the redshift uncertainty is an important systematic uncertainty to mitigate in an analysis involving FRBs.
+
+ In section 
+
+
+\item \textbf{Selection effects}
+\item \textbf{Unlocalised hosts}
+\end{itemize}
