@@ -5,9 +5,10 @@ In this section, we explain the methoddology used in this thesis.
 
 Add a flow chart that summarizes the different steps in the pipeline, like the one in the interview presentation.
 
-Add a table showing the cosmological parameters.
+Add a table showing the cosmological parameters, theri fiducial value and their prior. 
 
-Consider adding a table which describes the fiducial cosmology.
+
+
 
 \section{Modelling the electron power spectrum} \label{meth_sec:pee}
 
@@ -15,9 +16,40 @@ explain things in a schematic representation first.
 
 \subsection{The baryonification correction model}
 explain how we ignore the redshift evolution of some parameters.
-\subsection{The halo model}
-Check that you have explained what dark matter halos are in the beginning. Refer to Either the review by Marika or the paper on the Web halo model.
-Mention that we use the Tinker halo mass function and the NFW profile.
+
+
+
+
+
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c c p{6cm} c}
+\hline\hline
+\textbf{Parameter} & \textbf{Prior} & \textbf{Description} & \textbf{Fixed value} \\
+\hline
+$\theta_{\mathrm{co}}$ & U[0.001, 0.5] & Core radius of the gas profile relative to $r_{200}$ (Eq. 2.6) & 0.3 \\
+$\log_{10} M_{\mathrm{c}}$ & U[11.0, 15.0] & Pivot mass for the mass dependent slope of the gas profile (Eq. 2.6 \& Eq. 2.7) & - \\
+$\mu$ & U[0.0, 2.0] & Transition steepness of mass dependent gas parameter (Eq. 2.6 \& Eq. 2.7) & - \\
+$\delta$ & U[1.0, 11.0] & Characterizes the transition from inner to outer part of the gas profile (Eq. 2.6) & - \\
+$\eta$ & U[0.0, 0.5] & Total stellar fraction within a halo (Eq. 2.10) & 0.1 \\
+$d\eta$ & U[0.0, 0.5] & Fraction of central galaxies w.r.t. total stellar fraction (Eq. 2.10) & 0.22 \\
+$N_{\mathrm{star}}$ & U[0.0, 0.05] & Stellar fraction amplitude (Eq. 2.10) & 0.030 \\
+$c_{\mathrm{iga}}$ & U[0.0, 1.0] & Cold gas fraction (see Eq. 2.12) & 0.1 \\
+$b_{\mathrm{hse}}$ & $\mathcal{N}(0.26, 0.07)$ & Hydrostatic mass bias & - \\
+$\alpha_{0,\mathrm{nt}}$ & - & Non-thermal pressure amplitude (see Eq. 2.15) & 0.1 \\
+\hline\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
 
 \subsubsection{The Core Cosmology Library (CCL)}
 
@@ -29,9 +61,8 @@ Add a table with the fiducial values and their prior. explain how we ignore the 
 \subsection{The Generator for Large Scale Structure (GLASS)}
 mention the reason behind the choice of 30 shells.
 
-\subsection{The electron angular power spectrum}
-\subsection{The cosmological covariance of the dispersion measure signal}
-
+\subsection{The electron angular power spectrum} \label{meth_sec:angular_power_spectrum}
+\subsection{The numerical implementation of the cosmological covariance matrix}
 
 \section{Simulating the systematic uncertainties}
 

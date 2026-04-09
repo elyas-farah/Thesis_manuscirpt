@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(latexmk -pdf -interaction=nonstopmode -force sbi.tex)",
+      "Bash(latexmk -pdf -interaction=nonstopmode -gg sbi.tex)",
+      "Bash(grep -c \"Missing $\\\\|Bad math\\\\|LaTeX Error\" /Users/elyasfarah/Documents/Thesis_manuscirpt/sbi.log)"
+    ]
+  }
+}

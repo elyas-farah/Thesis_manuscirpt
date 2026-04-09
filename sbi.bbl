@@ -1516,6 +1516,36 @@
       \verb 10.1103/physrevlett.91.141302
       \endverb
     \endentry
+    \entry{kaiser1992weak}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=54743cd1f37377b20c96b832ba3b235f}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{54743cd1f37377b20c96b832ba3b235f}
+      \strng{fullhash}{54743cd1f37377b20c96b832ba3b235f}
+      \strng{fullhashraw}{54743cd1f37377b20c96b832ba3b235f}
+      \strng{bibnamehash}{54743cd1f37377b20c96b832ba3b235f}
+      \strng{authorbibnamehash}{54743cd1f37377b20c96b832ba3b235f}
+      \strng{authornamehash}{54743cd1f37377b20c96b832ba3b235f}
+      \strng{authorfullhash}{54743cd1f37377b20c96b832ba3b235f}
+      \strng{authorfullhashraw}{54743cd1f37377b20c96b832ba3b235f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astrophysical Journal, Part 1 (ISSN 0004-637X), vol. 388, April 1, 1992, p. 272-286. Research supported by NSERC and Canadian Institute for Advanced Research.}
+      \field{title}{Weak gravitational lensing of distant galaxies}
+      \field{volume}{388}
+      \field{year}{1992}
+      \field{pages}{272\bibrangedash 286}
+      \range{pages}{15}
+    \endentry
     \entry{Kaiser_Squires_1993}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=54743cd1f37377b20c96b832ba3b235f}{%
@@ -1554,6 +1584,56 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1086/172297
+      \endverb
+    \endentry
+    \entry{PhysRevD.95.063522}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a079f49893df22fc2a1420e873da174a}{%
+           family={Kitching},
+           familyi={K\bibinitperiod},
+           given={T.\bibnamedelimi D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6028ec66cb54f7b934ecb96eae14ee3}{%
+           family={Heavens},
+           familyi={H\bibinitperiod},
+           given={A.\bibnamedelimi F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{1a5c381fd8b21dc61e166b138ab58890}
+      \strng{fullhash}{1a5c381fd8b21dc61e166b138ab58890}
+      \strng{fullhashraw}{1a5c381fd8b21dc61e166b138ab58890}
+      \strng{bibnamehash}{1a5c381fd8b21dc61e166b138ab58890}
+      \strng{authorbibnamehash}{1a5c381fd8b21dc61e166b138ab58890}
+      \strng{authornamehash}{1a5c381fd8b21dc61e166b138ab58890}
+      \strng{authorfullhash}{1a5c381fd8b21dc61e166b138ab58890}
+      \strng{authorfullhashraw}{1a5c381fd8b21dc61e166b138ab58890}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{6}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{3}
+      \field{title}{Unequal-time correlators for cosmology}
+      \field{volume}{95}
+      \field{year}{2017}
+      \field{pages}{063522}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.95.063522
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.95.063522
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.95.063522
       \endverb
     \endentry
     \entry{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}{article}{}{}
@@ -1866,6 +1946,36 @@
       \field{journaltitle}{arXiv preprint arXiv:1104.2932}
       \field{title}{The cosmic linear anisotropy solving system (CLASS) I: Overview}
       \field{year}{2011}
+    \endentry
+    \entry{limber1953analysis}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dd9908d17d387cd7b30e029dc0e3d5b6}{%
+           family={Limber},
+           familyi={L\bibinitperiod},
+           given={D\bibnamedelima Nelson},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \strng{fullhash}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \strng{fullhashraw}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \strng{bibnamehash}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \strng{authorbibnamehash}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \strng{authornamehash}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \strng{authorfullhash}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \strng{authorfullhashraw}{dd9908d17d387cd7b30e029dc0e3d5b6}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astrophysical Journal, vol. 117, p. 134}
+      \field{title}{The analysis of counts of the extragalactic nebulae in terms of a fluctuating density field.}
+      \field{volume}{117}
+      \field{year}{1953}
+      \field{pages}{134}
+      \range{pages}{1}
     \endentry
     \entry{liu2025measurements}{article}{}{}
       \true{moreauthor}

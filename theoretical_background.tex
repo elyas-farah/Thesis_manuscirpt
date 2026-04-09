@@ -369,7 +369,10 @@ The detailed mechanism of how this happens is highly non-linear and complicated.
 \begin{equation}
     \delta_g (\mathbf{x}, t) = b(t) \delta(\mathbf{x}, t),
 \end{equation}
-with $b$ being the linear bias parameter. The linear bias model is a good approximation on large scales, however, on small scales, the relationship between the galaxy field and the matter field is highly non-linear and the linear bias model breaks down \citep{desjacques2018large}. Notice that the galaxy number density contrast is only dependent on the local matter density field and does not depend on the environment surrounding the galaxy. This approximation breaks down on small scales where th environment of a galaxy can have a significant impact of the galaxy formation process. Galaxies are called 'biased tracers of dark matter' since they trace the underlying matter field.
+with $b$ being the linear bias parameter. The linear bias model is a good approximation on large scales, however, on small scales, the relationship between the galaxy field and the matter field is highly non-linear and the linear bias model breaks down \citep{desjacques2018large}. Notice that the galaxy number density contrast is only dependent on the local matter density field and does not depend on the environment surrounding the galaxy. This approximation breaks down on small scales where th environment of a galaxy can have a significant impact of the galaxy formation process. Galaxies are called 'biased tracers of dark matter' since they trace the underlying matter field. For any tracer $\mathrm{u}$ of dark matter, I define the pwoer spectrum of the density constrast of this tracer $\delta_\mathrm{u}$ in a similar fashion to Eq. \ref{eq:power_spectrum}
+\begin{equation} \label{eq:power_spectrum_tracers}
+    \langle \delta_\mathrm{u}(\mathbf{k}) \delta_\mathrm{u}^*(\mathbf{k}') \rangle = (2\pi)^3 P_{uu}(k) \delta_D(\mathbf{k} - \mathbf{k}'),
+\end{equation}
 
 It is possible to use the same formalism of galaxy bias to relate the matter density contrast with other tracers of dark matter such as dark matter halos. In practice, the bias of dark matter halos is related to the underlzing matter field via the following relationship
 \begin{equation}\label{eq:halo_bias}
@@ -394,8 +397,8 @@ The definition of the power spectrum in Eq. \ref{eq:power_spectrum} assumes that
 \end{equation}
 
 The angular power spectrum $C_\ell$ is then defined in terms of the spherical harmonic coefficients 
-\begin{equation}
-    \langle \hat{f}(\ell m) \hat{f}(\ell' m')\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{\ell}
+\begin{equation} \label{eq:ang_power_spectrum}
+    \langle \hat{f}_{\ell m} \hat{f}_{\ell' m'}\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{\ell}
 \end{equation}
 where $\delta$ here is the Kronecker delta. Notice how the power spectrum is not dependent on $m$ by virtue of the cosmological principle. 
 
@@ -403,7 +406,7 @@ The angular power specrtrum of a cosmological field can be obtained from the pow
  
 
 
-\section{The halo model \& the electron power spectrum}
+\section{The halo model \& the electron power spectrum} \label{theory_sec:halo_model}
 The details in this section are based on a review of the halo model by \citet{asgari2023halo}. The halo model assumes that matter in the universe are entirely contained in dark matter halos. Therfore, any cosmological field $\delta_{\mathrm{u}}$ at a comoving coordinate $\mathbf{x}$ can be expressed in terms of the halo denisty profile $W_{\mathrm{u},i}$ such that \footnote{notice that the time dependency is omitted for ease of writing.}
 \begin{equation}
     \delta_{\mathrm{u}}(\mathbf{x}) = \sum_{i} N_i \, W_{\mathrm{u},i}\!\left(\left|\mathbf{x} - \mathbf{x}_i\right|\right),
@@ -627,19 +630,121 @@ where I have changed the integral pounds. Remeber that $n_\mathrm{e}$ is the phy
 \begin{equation} \label{eq:dispersion_ne}
     \mathrm{DM} \equiv \int_{z_e}^{0} \mathrm{d}z' \frac{1 + z'}{H(z')}  n_{\mathrm{e}, c}(z').
 \end{equation}
-Eq. \ref{eq:dispersion_ne} is the dispersion measure-redshift relation $\mathrm{DM}_z$ which I use in this thesis to study the impact of systematic uncertainties. Eq. \ref{eq:dispersion} includes an expression of the comoving electron number density $n_{\mathrm{e}, c}$ this quantity can be written in terms of the baryon density fraciton $\Omega_\mathrm{b}$ given some consideration to the ratio of free electron in the universe that disperses the signal. In general, the expression should look like
+Hereafter, I work with comiving qunatities and will label the comoving electorn density at a redshift $z$ with $n_\mathrm{e}$. Eq. \ref{eq:dispersion_ne} is the dispersion measure-redshift relation $\mathrm{DM}_z$ which I use in this thesis to study the impact of systematic uncertainties. Eq. \ref{eq:dispersion} includes an expression of the comoving electron number density $n_{\mathrm{e}, c}$ this quantity can be written in terms of the baryon density fraciton $\Omega_\mathrm{b}$ given some consideration to the ratio of free electron in the universe that disperses the signal. In general, the expression should look like
 \begin{equation}
-    n_{\mathrm{e}, c} = \frac{\bar{\rho}_\mathrm{b}}{m_\mathrm{p}}\, F(z)
+    n_{\mathrm{e}} = \frac{\bar{\rho}_\mathrm{b}}{m_\mathrm{p}}\, F(z)
 \end{equation}
 where $\bar{\rho}_\mathrm{b}$ is the average of the baryonic density in the universe, $m_\mathrm{p}$ is the mass of proton, and $F(z)$ is the fraciotn of free electrons in the intergalactic medium. To find $F(z)$, I make the following considerations
 \begin{itemize}
-    \item If the universe has only helium and hydrogen atom, then the fraction of free electrons in the universe is $Y_{\mathrm{H}}X_{\mathrm{e, H}}(z) + Y_{\mathrm{H}} X_{\mathrm{e, He}}(z)$, with $Y_{\mathrm{H}}$,  $Y_{\mathrm{He}}$, $X_{\mathrm{e, H}}(z)$, and $X_{\mathrm{e, He}}(z)$ the mass fraction of hydrogen, the mass fraction of helium, the ionized fraction of hydrogen, and the ionized fraciotn of helium respectively. Using big bang nucleosyntheis, I assume that molecules in the unvierse are in the form of either hydron or helium with the fraction of hydrogen $Y_{\mathrm{H}} = 0.75$ and the fraction of helium is $Y_{\mathrm{He}} = 0.25$.
+    \item If the universe has only helium and hydrogen atom, then the fraction of free electrons in the universe is $\chi_\mathrm{e} = Y_{\mathrm{H}}X_{\mathrm{e, H}}(z) + \frac{1}{2}Y_{\mathrm{H}} X_{\mathrm{e, He}}(z)$, with $Y_{\mathrm{H}}$,  $Y_{\mathrm{He}}$, $X_{\mathrm{e, H}}(z)$, and $X_{\mathrm{e, He}}(z)$ the mass fraction of hydrogen, the mass fraction of helium, the ionized fraction of hydrogen, and the ionized fraction of helium respectively. I multiply $Y_{\mathrm{He}}$ with a factor $1/2$ since the helium atom has two the Using big bang nucleosyntheis, I assume that molecules in the unvierse are in the form of either hydron or helium with the fraction of hydrogen $Y_{\mathrm{H}} = 0.75$ and the fraction of helium is $Y_{\mathrm{He}} = 0.25$.
     
-    \item Hydrogn and helium are fully ionized for $z \lesssim 3$ \citep{RevModPhys.81.1405}, meaning that the ionized fraction of Hydrogen $X_{\mathrm{e, H}}(z)$ and $X_{\mathrm{e, He}}(z)$ are both equla to 1.
+    \item Hydrogn and helium are fully ionized for $z \lesssim 3$ \citep{RevModPhys.81.1405}, meaning that the ionized fraction of Hydrogen $X_{\mathrm{e, H}}(z)$ and $X_{\mathrm{e, He}}(z)$ are both equal to 1.
     
     \item The fraction of free electrons in the intergalactic medium $f_{\mathrm{IGM}}$ is constant for the range of redshifts considered in this problem{\color{red} find a citations for this}.
 \end{itemize}
-By dropping the redshif tdependence on the ionized fraction, I get an expression of $F(z)$ that is constant in redshift for the range of redshifts considered in this thesis.
+By dropping the redshift dependence on the ionized fraction, I get an expression of $F(z)$ that is constant in redshift for the range of redshifts considered in this thesis,
+\begin{equation}
+    F(z) = f_{\mathrm{IGM}}\left[Y_{\mathrm{H}}X_{\mathrm{e, H}} + \frac{1}{2}Y_{\mathrm{He}} X_{\mathrm{e, He}}\right],
+\end{equation}
+Writing $\bar{\rho}_\mathrm{b} = \Omega_\mathrm{b} \rho_{\mathrm{cr}}$, The final form of Eq. \ref{eq:dispersion_ne} is given by
+\begin{equation} \label{eq:dispersion_final}
+    \mathrm{DM}(z) = \mathcal{A} \int_0^z \frac{1+z'}{E(z')} \mathrm{d}z' \, ,
+\end{equation}
+with $\mathcal{A} := \frac{3c\Omega_{\mathrm{b0}}H_0}{8\pi G m_{\mathrm{p}}} \chi_{\mathrm{e}} f_{\mathrm{IGM}}$, and $E(z) = H(z)/H_0$. This is the expression for the DM that rises from free electrons that follows the large scales structure, hence, I will label the DM that rises from the cosmic electron density with $\mathrm{DM}_\mathrm{LSS}$ hereafter. As seen from \ref{eq:dispersion_final},  $\mathrm{DM}_\mathrm{LSS}$ is highly sensitive to he baryon density in the universe $\Omega_\mathrm{b}$ and the Hubble constant $H_0$. 
+
+Eq. \ref{eq:dispersion_final} expresses the mean DM at a redshift $z$. For a perturbed universe, the electron number density field is also a function of the angular direction $\mathbf{\hat{x}}$. I defined the electron number density constrast $\delta_\mathrm{e}(\mathbf{\hat{x}}, z)$ in terms of the mean electorn density $n_\mathrm{e}(z)$ and the electron density in a perturbed universe $n_\mathrm{e}(\mathbf{\hat{x}}, z)$
+\begin{equation}
+    \delta_\mathrm{e}(\mathbf{\hat{x}}, z) = \frac{n_\mathrm{e}(\mathbf{\hat{x}}, z) - n_\mathrm{e}(z)}{n_\mathrm{e}(z)}.
+\end{equation}
+The corresponding $\mathrm{DM}_\mathrm{LSS}$ is therefore
+\begin{equation}
+    \mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}, z) = \mathcal{A} \int_0^z \frac{1+z'}{E(z')} (1 + \delta_\mathrm{e}(\mathbf{\hat{x}}, z')) \mathrm{d}z' \, .
+\end{equation}
+It is clear that $\mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}, z)$ is a random field since it is related to $\delta_\mathrm{e}(\mathbf{\hat{x}}, z')$ which in turn is related to the matter density contrast $\delta$. 
+
+Using the formalism introduced in sections \ref{theory_sec:statistics} and \ref{theory_sec:halo_model}, it is possible to use the electron power spectrum $P_{\mathrm{ee}}$ to express the correlation between two measured $\mathrm{DM}_\mathrm{LSS}$ at a angular positions $\left(\mathbf{\hat{x}}_i, \mathbf{\hat{x}}_j\right)$ and at redshifts $(z_i, z_j)$, namely the covariance matrix. \citep{10.1093/mnras/stad1645} showed that the cosmological covariance of  $\mathrm{DM}_\mathrm{LSS}$ is derivd by first writing the correlator bracket 
+\begin{equation}
+    \mathrm{cov}_{ij} = \langle\mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}_i, z_i) \mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}_j, z_j)\rangle - \mathrm{DM}_\mathrm{LSS}(z_i) \mathrm{DM}_\mathrm{LSS}(z_j)
+\end{equation}
+Simplifying, the expression reduced to
+\begin{equation}
+    \mathrm{cov}_{ij} = \int_0^{z_i} \mathrm{d}z_i' \, W_{\mathrm{DM}}^i(z_i') \int_0^{z_j} \mathrm{d}z_j' \, W_{\mathrm{DM}}^j(z_j') \left\langle \delta_{\mathrm{e}}(\mathbf{\hat{x}}_i, z_i') \delta_{\mathrm{e}}(\mathbf{\hat{x}}_j, z_j') \right\rangle,
+\end{equation}
+where I have defined the weight $W_{\mathrm{DM}}(z)$ as
+\begin{equation}
+    W_{\mathrm{DM}}(z) = \begin{cases} \mathcal{A} \dfrac{1+z}{E(z)} & z < z_{\mathrm{FRB}} \\ 0 & z > z_{\mathrm{FRB}} \end{cases}
+\end{equation}
+with $z_\mathrm{FRB} = z_i, z_j$ the redshift of an FRB. The electron correlator bracket in real space can be written in harmonic space such that
+\begin{equation} \label{eq:e_fourier}
+    \left\langle \delta_{\mathrm{e}}(\mathbf{\hat{x}}_i, z_i) \delta_{\mathrm{e}}(\mathbf{\hat{x}}_j, z_j) \right\rangle = \int \frac{\mathrm{d}^3k}{(2\pi)^3} \, e^{i\mathbf{k} \cdot (\mathbf{x}_i - \mathbf{x}_j)} P_{\mathrm{ee}}(k, z_i, z_j),
+\end{equation}
+where I define the power spectrum in Fourier space in similar fashion to \ref{eq:power_spectrum_tracers} as
+\begin{equation}
+    \langle \delta_\mathrm{e}(\mathbf{k}, z_i) \delta_\mathrm{u}^*(\mathbf{k}', z_j) \rangle = (2\pi)^3 P_{uu}(k, z_i, z_j) \delta_D(\mathbf{k} - \mathbf{k}'),
+\end{equation}
+and $\mathbf{x}$ is the cosmoving spatial position and related to the comoving distance as $\mathbf{x} = (\chi \mathbf{\hat{x}}, \chi)$.
+
+To perform the integral in \ref{eq:e_fourier}, I work in spherical coordinate sin the $k$-space, and decompose the integral into the radiu $k$ and a solid angle $\Omega_k$. In addition, I expand the exponential $e^{i\mathbf{k} \cdot (\mathbf{x}_i - \mathbf{x}_j)}$ into plane waves (As explained in the appendix)
+\begin{align}
+&\left\langle \delta_{\mathrm{e}}(\hat{x}_i, z_i) \delta_{\mathrm{e}}(\hat{x}_j, z_j) \right\rangle \notag \\[8pt]
+&= \frac{2}{\pi} \int k^2 \mathrm{d}k \int \mathrm{d}\Omega_k \, P_{\mathrm{ee}}(k, z_i, z_j) \notag \\[8pt]
+&\quad \times \sum_{\ell, \ell'} \sum_{m, m'} \mathrm{i}^\ell (-\mathrm{i})^{\ell'} Y_{\ell m}(\hat{k}) \, Y^*_{\ell m}(\hat{x}_i) \, j_\ell(k\chi_i) \, Y^*_{\ell' m'}(\hat{k}) \, Y_{\ell' m'}(\hat{x}_j) \, j_{\ell'}(k\chi_j) \notag \\[8pt]
+&= \frac{2}{\pi} \int k^2 \mathrm{d}k \, P_{\mathrm{ee}}(k, z_i, z_j) \sum_{\ell} \sum_{m} Y^*_{\ell m}(\hat{x}_i) \, j_\ell(k\chi_i) \, Y_{\ell m}(\hat{x}_j) \, j_\ell(k\chi_j) \notag \\[8pt]
+&= \frac{1}{2\pi^2} \sum_{\ell} (2\ell+1) \int k^2 \mathrm{d}k \, P_{\mathrm{ee}}(k, z_i, z_j) \, j_\ell(k\chi_i) \, j_\ell(k\chi_j) \, P_\ell(\cos\theta).
+\end{align}
+with $Y_{\ell m}$ and $j_\ell$ being the spherical harmonic function and the the spherical Bessel function of the first kind respectively. To simplify the sum, I use the property 
+\begin{equation} \label{eq:spherical_property}
+    \sum_m Y_{\ell m}(\mathbf{\hat{x}}_i) Y^*_{\ell m}(\mathbf{\hat{x}}_j) = \frac{2\ell+1}{4\pi} P_\ell(\cos\theta),
+\end{equation}
+with $\cos\theta_{ij} =\mathbf{\hat{x}}_i . \mathbf{\hat{x}}_j $ and $P_\ell$ is the Legendre polynomial of degree $\ell$ (defined in the appendix). In addition, the power spectrum at two as a funciton of two redshifts $z_i$ and $z_j$ can be replaced by its geometric mean such that $P_{\mathrm{ee}}(k, z_i, z_j) = \sqrt{P_{\mathrm{ee}}(k, z_i) P_{\mathrm{ee}}(k, z_j)}$ \citep{PhysRevD.95.063522}. The final expression for the cosmological covariance of $\mathrm{DM}_\mathrm{LSS}$ is
+\begin{align}\label{eq:cosmological_covariance}
+\mathrm{cov}_{ij}(\cos\theta, z_i, z_j) &= \frac{1}{2\pi^2} \sum_{\ell} (2\ell+1) P_\ell(\hat{x}_i \cdot \hat{x}_j) \int k^2 \mathrm{d}k \notag \\[8pt]
+&\quad \times \int_0^{z_i} \mathrm{d}z_i' \, W_{\mathrm{DM}}^i(z_i') \sqrt{P_{\mathrm{ee}}(k, z_i')} \, j_\ell(k\chi_i) \notag \\[8pt]
+&\quad \times \int_0^{z_j} \mathrm{d}z_j' \, W_{\mathrm{DM}}^j(z_j') \sqrt{P_{\mathrm{ee}}(k, z_j')} \, j_\ell(k\chi_j) \notag \\[8pt]
+&= \sum_{\ell} \frac{2\ell+1}{4\pi} P_\ell(\cos\theta_{ij}) C_{ij}(\ell).
+\end{align}
+
+The expression contains two integral where one integral goes over the sacle $k$ and two integrals to include the $\mathrm{DM}_\mathrm{LSS}$ contribution from redshift $z = 0$ up to the redshift of the FRB $z = z_i , \, z_j$. In this thesis, fast calculation of the covariance matrix is essential since I use a compression step to pass one simulation instance in the simulation based inference pipeline. Therefore, I use the Limber approximation \citep{limber1953analysis} to accelerate the calculation of the covaraince. I show a comparison between the Limber approximation and the non-Limber approximation in section \ref{meth_sec:angular_power_spectrum}. The Limber approximation assumes tha the spherical bessel function $j_\ell$ can be effectively replaced by a Dirac-Delta distribution such that
+\begin{equation} \label{eq:limber_ass}
+    j_\ell(k \chi) \to \sqrt{\frac{\pi}{2(\ell + \frac{1}{2})}} \, \delta_D((\ell + \frac{1}{2}) - k\chi).
+\end{equation}
+The word \textit{effectively} is important in this context since the $j_\ell$ by itself is \textbf{not} approximated by a the expression in Eq. \ref{eq:limber_ass}, however, the two resultant integrals are equivilant in some regimes of $\ell$. Invoking, the approximation in the full expression of the covariance and changing the integration vaiable into the comoving radius $\chi$, I obtain the final expression
+\begin{equation}
+    C_{ij}(\ell) = \int_0^{\min(\chi_i ', \chi_j ')}  \, \frac{\mathrm{d}\chi'}{\chi^2(z')} \, \frac{\mathrm{d}z}{\mathrm{d}\chi}W_{\mathrm{DM}}^j(z(\chi')) \, W_{\mathrm{DM}}^i(z(\chi')) \, P_{\mathrm{ee}}\!\left(\frac{\ell + 1/2}{\chi'}, z'(\chi')\right),
+\end{equation}
+The choice of the Limber approximation is valid when the terms multiplied by $j_\ell$ are slowly changing realtive to $j_\ell$. The calculation via the Limber approximation agrees with the brute force calcualtion for large $\ell$ i.e the regime where $j_\ell$ oscillates very quickly. This is evident by noticing that error on the Limber approximation scales with $\mathcal{O}(\ell^\frac{1}{2})$.
+
+Eq. \ref{eq:cosmological_covariance} has another bottleneck. The sum over the Legendre polynomials is another computationally expensive step that scales as  $\mathcal{O}(\ell)$. At small enough angular separations, it is possible to approximate the spherical coordinates as flat, in what is called the flat sky approximations \citep{kaiser1992weak}. In this approximation, the relationship between the angular power spectrum is derived by taking the Fourier tansform in two-dimesions of the field instead of the spherical harmonic transform. Starting from the last line of Eq. \ref{eq:cosmological_covariance}, the property in Eq. \ref{eq:spherical_property}, and the definition of the angular power spectrum in Eq. \ref{eq:ang_power_spectrum}, the covariance can be re-written as
+\begin{equation} \label{eq:cov_real}
+    \mathrm{cov}_{ij} = \langle \mathrm{DM}(\mathbf{\hat{x}}_i, z_i) \mathrm{DM}(\mathbf{\hat{x}}_j, z_j)\rangle 
+\end{equation}
+where I used 
+\begin{equation}
+    \langle \mathrm{DM}_{\ell m}(z_i) \mathrm{DM}_{\ell' m'}(z_j)\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{ij}(\ell)
+\end{equation}
+and
+\begin{equation}
+    \mathrm{DM}_{\ell m}(z_i) = \sum_{\ell m}   Y_{\ell m}(\mathbf{\hat{x}}_i) \mathrm{DM}_{\ell m}(z_i)
+\end{equation}
+To invoke the flat sky approximation, I invoke the Fourier transform of $ \mathrm{DM}(\mathbf{\hat{x}}_i, z_i)$ in Eq. \ref{eq:cov_real} and assume that in the two-dimensional Fourier space
+\begin{equation}
+     \langle \mathrm{DM}(\ell, z_i) \mathrm{DM}(\ell', z_j)\rangle = \left(2\pi\right)^2 \delta^{D}(\ell - \ell') C_{ij}(\ell),
+\end{equation}
+I end up with the following expression 
+\begin{equation}
+    \mathrm{cov}_{ij} = \int \mathrm{d} \boldsymbol{\ell} e^{-i\boldsymbol{\ell}. \boldsymbol{\theta}_{ij}} C_{ij}(\ell).
+\end{equation}
+with volume element can be written as $\mathrm{d}\boldsymbol{\ell} = \ell \mathrm{d}\ell \mathrm{d}\alpha$, and the integral can be performed in the angular position of the Fourier space $\alpha$. I use the properties of the Bessel function of the first kind
+\begin{equation}
+    J_0(\ell \theta_{ij}) = \frac{1}{2\pi} \int_0^{2\pi} e^{i\ell \theta_{ij} \cos\alpha} \, \mathrm{d}\alpha
+\end{equation}
+The covariance matrix in the flat sky approximation is
+\begin{equation}
+    \mathrm{cov}_{ij} = \int  \, \frac{\ell \mathrm{d}\ell}{2\pi} \, J_0(\ell \theta_{ij}) \, C_{ij}(\ell)
+\end{equation}
+This result is very useful to further accelerate the calculation of the covariance matrix. Though only valid on small angular separation, this apprixomation is widely used for forecasting purposes.
+
+Simulating the dispersion to fulfill the puprpose of this thesis will be described in section \ref{meth_sec:sim_dm}.
 
 
 
@@ -648,15 +753,6 @@ By dropping the redshif tdependence on the ionized fraction, I get an expression
 
 
 
-
-
-
-
-\begin{itemize}
-    \item show the relationship between the ispersion measure and the time of arrival.
-    \item Speak about hte collaborations to find FRBs.
-    \item 
-\end{itemize}
 
 
 {\color{red} describe how modelling the PDF is a hard thing to do}
@@ -731,14 +827,14 @@ discuss the motivation for the SBI method.
 In this section, I describe the modelling of systematic uncertainties on the dispersion measure. 
 
 \begin{itemize}
-\item \textbf{Milkyway contribution}
-\item \textbf{Host galaxy contribution}
-\item \textbf{Redshift uncertainty}
+\item \textbf{Milkyway contribution} add a plot of the Milkyway dispersion measure.
+\item \textbf{Host galaxy contribution} talk about Robert's paper on the analytical model. motivate why the host contribution could be a 
+\item \textbf{Redshift uncertainty} 
 Follow up optical observations of FRBs allows spectroscopic estimation of the redshifts of its host galaxy. The measurement uncertainty on the redshift can induce additional scatter in the estimated cosmological covariance matrix and modify the source redshift distribution. The latter effect is especially important when cross-correlating FRBs with cosmic shear as performed by \citet{reischke2023calibrating}. A faster way to localize FRBs is to use wide field spectroscopic or photometric surveys by deriving an astrometric solution, yielding a set of possible candidates of the host with a probability for each canditate \citep{garcia2025search}. This method is, nonetheless, highly uncertain. Therefore, the redshift uncertainty is an important systematic uncertainty to mitigate in an analysis involving FRBs.
 
  In section 
 
 
-\item \textbf{Selection effects}
-\item \textbf{Unlocalised hosts}
+\item \textbf{Selection effects} Refer to the paper by Kritshi and the 
+\item \textbf{Unlocalised hosts} refer to the interview presentation
 \end{itemize}
