@@ -2469,17 +2469,25 @@
     <bcf:citekey order="86" intorder="1">alonso2021linear</bcf:citekey>
     <bcf:citekey order="87" intorder="1">10.1093/mnras/stad1645</bcf:citekey>
     <bcf:citekey order="88" intorder="1">Petroff_2019</bcf:citekey>
-    <bcf:citekey order="89" intorder="1">RevModPhys.81.1405</bcf:citekey>
-    <bcf:citekey order="90" intorder="1">10.1093/mnras/stad1645</bcf:citekey>
-    <bcf:citekey order="91" intorder="1">PhysRevD.95.063522</bcf:citekey>
-    <bcf:citekey order="92" intorder="1">limber1953analysis</bcf:citekey>
-    <bcf:citekey order="93" intorder="1">kaiser1992weak</bcf:citekey>
-    <bcf:citekey order="94" intorder="1">reischke2023calibrating</bcf:citekey>
-    <bcf:citekey order="95" intorder="1">garcia2025search</bcf:citekey>
-    <bcf:citekey order="96" intorder="1">aghanim2020planck</bcf:citekey>
-    <bcf:citekey order="97" intorder="1">pillepich2018simulating</bcf:citekey>
-    <bcf:citekey order="98" intorder="1">crain2023hydrodynamical</bcf:citekey>
-    <bcf:citekey order="99" intorder="1">huang2019modelling</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">alonso2021linear</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">alonso2021linear</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">RevModPhys.81.1405</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">10.1093/mnras/stad1645</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">PhysRevD.95.063522</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">limber1953analysis</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">kaiser1992weak</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">Villaescusa-Navarro_2021</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">theis2024galaxy</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">reischke2024analytical</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">Schneider_Kovač_etal._2025</bcf:citekey>
+    <bcf:citekey order="99" intorder="2">Schneider_Teyssier_2015</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">reischke2023calibrating</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">garcia2025search</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">aghanim2020planck</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">pillepich2018simulating</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">crain2023hydrodynamical</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">huang2019modelling</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">alonso2021linear</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -3004,6 +3004,57 @@
       \verb 2507.17742
       \endverb
     \endentry
+    \entry{reischke2024analytical}{article}{}{}
+      \name{author}{5}{ul=2}{%
+        {{un=0,uniquepart=base,hash=feee8b9f7a9954fe55e6a43b89890eab}{%
+           family={Reischke},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=081e67702bad6433c00356e3f8ce6d6c}{%
+           family={Kovač},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92216fd479254f61a0e8565132478197}{%
+           family={Nicola},
+           familyi={N\bibinitperiod},
+           given={Andrina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=436bb173d4e5f18abbaa529d256b1083}{%
+           family={Hagstotz},
+           familyi={H\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0bbc045c27bc983e70475c843a27564}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Aurel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3abfdf7a2ef1c2018727c269361da9f3}
+      \strng{fullhash}{01857a2b97a7782213354ae1d68e2ead}
+      \strng{fullhashraw}{01857a2b97a7782213354ae1d68e2ead}
+      \strng{bibnamehash}{01857a2b97a7782213354ae1d68e2ead}
+      \strng{authorbibnamehash}{01857a2b97a7782213354ae1d68e2ead}
+      \strng{authornamehash}{3abfdf7a2ef1c2018727c269361da9f3}
+      \strng{authorfullhash}{01857a2b97a7782213354ae1d68e2ead}
+      \strng{authorfullhashraw}{01857a2b97a7782213354ae1d68e2ead}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2411.17682}
+      \field{title}{An analytical model for the dispersion measure of Fast Radio Burst host galaxies}
+      \field{year}{2024}
+    \endentry
     \entry{reischke2023calibrating}{article}{}{}
       \name{author}{5}{ul=2}{%
         {{un=0,uniquepart=base,hash=feee8b9f7a9954fe55e6a43b89890eab}{%
@@ -3846,6 +3897,51 @@
       \verb 10.1088/1475-7516/2024/10/057
       \endverb
     \endentry
+    \entry{theis2024galaxy}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=66e93e79e7804fe3335e9b2875da892f}{%
+           family={Theis},
+           familyi={T\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=436bb173d4e5f18abbaa529d256b1083}{%
+           family={Hagstotz},
+           familyi={H\bibinitperiod},
+           given={Steffen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=feee8b9f7a9954fe55e6a43b89890eab}{%
+           family={Reischke},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8651f7074783c65eada28bd9483764ee}{%
+           family={Weller},
+           familyi={W\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6b6ca912b661ee43fe90d15cef5e8e51}
+      \strng{fullhash}{35ae94d04f52c9d503e3548133749440}
+      \strng{fullhashraw}{35ae94d04f52c9d503e3548133749440}
+      \strng{bibnamehash}{35ae94d04f52c9d503e3548133749440}
+      \strng{authorbibnamehash}{35ae94d04f52c9d503e3548133749440}
+      \strng{authornamehash}{6b6ca912b661ee43fe90d15cef5e8e51}
+      \strng{authorfullhash}{35ae94d04f52c9d503e3548133749440}
+      \strng{authorfullhashraw}{35ae94d04f52c9d503e3548133749440}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2403.08611}
+      \field{title}{Galaxy dispersion measured by Fast Radio Bursts as a probe of baryonic feedback models}
+      \field{year}{2024}
+    \endentry
     \entry{tinker2010large}{article}{}{}
       \name{author}{7}{}{%
         {{un=0,uniquepart=base,hash=3158e68f0b626840ce5223c1f4a7f576}{%
@@ -4110,6 +4206,177 @@
       \field{year}{2024}
       \field{pages}{287\bibrangedash 331}
       \range{pages}{45}
+    \endentry
+    \entry{Villaescusa-Navarro_2021}{article}{}{}
+      \name{author}{22}{}{%
+        {{un=0,uniquepart=base,hash=1a4cfdbc9ade02d799167e7959adeff8}{%
+           family={Villaescusa-Navarro},
+           familyi={V\bibinithyphendelim N\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f98e34773f07da3f643cf912ebda392f}{%
+           family={Anglés-Alcázar},
+           familyi={A\bibinithyphendelim A\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c91318360a31c3782dec15bb32a9a305}{%
+           family={Genel},
+           familyi={G\bibinitperiod},
+           given={Shy},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28da91bfaf78ab22ad19a6b9d8fd62e1}{%
+           family={Spergel},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a35079978d52be96adf8825899ebfd36}{%
+           family={S.\bibnamedelimi Somerville},
+           familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Rachel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=530729db2f1b88e5c034095084ca1f4e}{%
+           family={Dave},
+           familyi={D\bibinitperiod},
+           given={Romeel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d33cbf265c601867102906996581ef38}{%
+           family={Pillepich},
+           familyi={P\bibinitperiod},
+           given={Annalisa},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea49fbd6c94c7c89f99c3f989cc8b15f}{%
+           family={Hernquist},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b9909edb91e754e15f2d489182a87df}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Dylan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f62acde05559146e05e6150742d70731}{%
+           family={Torrey},
+           familyi={T\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=833b93325f94628d7717003fc51982cb}{%
+           family={Narayanan},
+           familyi={N\bibinitperiod},
+           given={Desika},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07e26844b73cfbeb7f20e73779d321e4}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4683b4f1956af5960845f53247d3cd1d}{%
+           family={Philcox},
+           familyi={P\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04619635ca16c2d6545f999713ed3e13}{%
+           family={La\bibnamedelima Torre},
+           familyi={L\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Valentina},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a57def41edcad736bccc5584a6177110}{%
+           family={Maria\bibnamedelima Delgado},
+           familyi={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b755f0738ae9e96bfddd2247581347f}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Shirley},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aceec38bf901dd5b24a76fa49db039cf}{%
+           family={Hassan},
+           familyi={H\bibinitperiod},
+           given={Sultan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a435eb884098f9bc9a1e0faf47596b48}{%
+           family={Burkhart},
+           familyi={B\bibinitperiod},
+           given={Blakesley},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56115f802724bb5bfcdb50dfa5a9dc30}{%
+           family={Wadekar},
+           familyi={W\bibinitperiod},
+           given={Digvijay},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76aacf4f3858b51999570dd1b5a4e5f0}{%
+           family={Battaglia},
+           familyi={B\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=886fa792d1a030c3b77680ac7e17f104}{%
+           family={Contardo},
+           familyi={C\bibinitperiod},
+           given={Gabriella},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e25ea61c4d9d75f908baaa42d04e8c7b}{%
+           family={Bryan},
+           familyi={B\bibinitperiod},
+           given={Greg\bibnamedelima L.},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {The American Astronomical Society}%
+      }
+      \strng{namehash}{b362696c82028878fe9028ea6504c598}
+      \strng{fullhash}{489e1be2f7faa67aabf2dc65b74a325a}
+      \strng{fullhashraw}{489e1be2f7faa67aabf2dc65b74a325a}
+      \strng{bibnamehash}{b362696c82028878fe9028ea6504c598}
+      \strng{authorbibnamehash}{b362696c82028878fe9028ea6504c598}
+      \strng{authornamehash}{b362696c82028878fe9028ea6504c598}
+      \strng{authorfullhash}{489e1be2f7faa67aabf2dc65b74a325a}
+      \strng{authorfullhashraw}{489e1be2f7faa67aabf2dc65b74a325a}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present the Cosmology and Astrophysics with MachinE Learning Simulations (CAMELS) project. CAMELS is a suite of 4233 cosmological simulations of volume each: 2184 state-of-the-art (magneto)hydrodynamic simulations run with the AREPO and GIZMO codes, employing the same baryonic subgrid physics as the IllustrisTNG and SIMBA simulations, and 2049 N-body simulations. The goal of the CAMELS project is to provide theory predictions for different observables as a function of cosmology and astrophysics, and it is the largest suite of cosmological (magneto)hydrodynamic simulations designed to train machine-learning algorithms. CAMELS contains thousands of different cosmological and astrophysical models by way of varying Ω m , σ 8, and four parameters controlling stellar and active galactic nucleus feedback, following the evolution of more than 100 billion particles and fluid elements over a combined volume of . We describe the simulations in detail and characterize the large range of conditions represented in terms of the matter power spectrum, cosmic star formation rate density, galaxy stellar mass function, halo baryon fractions, and several galaxy scaling relations. We show that the IllustrisTNG and SIMBA suites produce roughly similar distributions of galaxy properties over the full parameter space but significantly different halo baryon fractions and baryonic effects on the matter power spectrum. This emphasizes the need for marginalizing over baryonic effects to extract the maximum amount of information from cosmological surveys. We illustrate the unique potential of CAMELS using several machine-learning applications, including nonlinear interpolation, parameter estimation, symbolic regression, data generation with Generative Adversarial Networks, dimensionality reduction, and anomaly detection.}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{7}
+      \field{number}{1}
+      \field{title}{The CAMELS Project: Cosmology and Astrophysics with Machine-learning Simulations}
+      \field{volume}{915}
+      \field{year}{2021}
+      \field{pages}{71}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/1538-4357/abf7ba
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3847/1538-4357/abf7ba
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3847/1538-4357/abf7ba
+      \endverb
     \endentry
     \entry{Wechsler_Tinker_2018}{article}{}{}
       \name{author}{2}{}{%

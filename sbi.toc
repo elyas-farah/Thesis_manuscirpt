@@ -22,35 +22,35 @@
 \contentsline {section}{\numberline {2.7}Weak gravitational Lensing \& cosmic shear}{23}{section.2.7}%
 \contentsline {section}{\numberline {2.8}The impact of baryonic feedback on the large-scale structure}{26}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Fast radio bursts}{28}{section.2.9}%
-\contentsline {section}{\numberline {2.10}The systematic uncertainties}{36}{section.2.10}%
-\contentsline {chapter}{\numberline {3}Methodology}{38}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Modelling the electron power spectrum}{38}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}The baryonification correction model}{38}{subsection.3.1.1}%
-\contentsline {subsubsection}{\nonumberline The Core Cosmology Library (CCL)}{38}{subsubsection*.10}%
-\contentsline {section}{\numberline {3.2}Simulating the dispersion measure signal}{38}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}The Generator for Large Scale Structure (GLASS)}{38}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}The electron angular power spectrum}{39}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}The numerical implementation of the cosmological covariance matrix}{39}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Simulating the systematic uncertainties}{39}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Milkyway contribution}{39}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Host contribution}{39}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Redshift uncertainty}{39}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Selection effects}{40}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Unlocalised hosts}{40}{subsection.3.3.5}%
-\contentsline {section}{\numberline {3.4}Simulation-based inference}{40}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Approximate Baysian inference}{40}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Neural Posterior Estimator}{40}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}The Sequentual Neural Posterio Estimator}{40}{subsection.3.4.3}%
-\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{40}{subsubsection*.11}%
-\contentsline {subsection}{\numberline {3.4.4}Flow matching posterior estimator}{40}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Data Compression}{40}{subsection.3.4.5}%
-\contentsline {subsubsection}{\nonumberline Numerical derivative stability}{40}{subsubsection*.12}%
-\contentsline {subsubsection}{\nonumberline The Sensitivity of compressed statistics to model parameters}{40}{subsubsection*.13}%
-\contentsline {chapter}{\numberline {4}Results}{41}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{42}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Useful information}{43}{appendix.A}%
+\contentsline {section}{\numberline {2.10}The systematic uncertainties}{37}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Methodology}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Modelling the electron power spectrum}{39}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The baryonification correction model}{39}{subsection.3.1.1}%
+\contentsline {subsubsection}{\nonumberline The Core Cosmology Library (CCL)}{39}{subsubsection*.10}%
+\contentsline {section}{\numberline {3.2}Simulating the dispersion measure signal}{39}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The Generator for Large Scale Structure (GLASS)}{39}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The electron angular power spectrum}{40}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The numerical implementation of the cosmological covariance matrix}{40}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Simulating the systematic uncertainties}{40}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Milkyway contribution}{40}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Host contribution}{40}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Redshift uncertainty}{40}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Selection effects}{41}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Unlocalised hosts}{41}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Data Compression}{41}{section.3.4}%
+\contentsline {subsubsection}{\nonumberline Numerical derivative stability}{41}{subsubsection*.11}%
+\contentsline {subsubsection}{\nonumberline The Sensitivity of compressed statistics to model parameters}{41}{subsubsection*.12}%
+\contentsline {section}{\numberline {3.5}Simulation-based inference}{41}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Approximate Baysian inference}{41}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Neural Posterior Estimator}{41}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}The Sequentual Neural Posterio Estimator}{41}{subsection.3.5.3}%
+\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{41}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {3.5.4}Flow matching posterior estimator}{41}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Results}{42}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{43}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Useful information}{44}{appendix.A}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\nonumberline Bibliography}{44}{chapter*.14}%
-\contentsline {chapter}{\nonumberline List of Figures}{48}{chapter*.15}%
-\contentsline {chapter}{\nonumberline List of Tables}{49}{chapter*.16}%
+\contentsline {chapter}{\nonumberline Bibliography}{45}{chapter*.14}%
+\contentsline {chapter}{\nonumberline List of Figures}{50}{chapter*.15}%
+\contentsline {chapter}{\nonumberline List of Tables}{51}{chapter*.16}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

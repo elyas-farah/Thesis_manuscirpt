@@ -596,7 +596,7 @@ I use the setup in Fig. \ref{theory_fig:time_delay} to find an expression of the
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/cover/time_delay.png}
-    \caption{Spacetime diagram showing the evaluation of time dalay between a pulse of frequency $\nu_0$ (world line in red) and a pulse of infinite frequency (world lines in blue and dashed). The plasma particles follow world lines given in yellow color.}
+    \caption{Spacetime diagram showing the evaluation of time dalay between a pulse of frequency $\nu_0$ (world line in red) and a pulse of infinite frequency (world lines in blue and dashed). The plasma particles follow world lines given in yellow color. The figure is adopted from \citet{alonso2021linear}}.
     \label{theory_fig:time_delay}
 \end{figure}
 \begin{equation}
@@ -742,14 +742,29 @@ The covariance matrix in the flat sky approximation is
 \begin{equation}
     \mathrm{cov}_{ij} = \int  \, \frac{\ell \mathrm{d}\ell}{2\pi} \, J_0(\ell \theta_{ij}) \, C_{ij}(\ell)
 \end{equation}
-This result is very useful to further accelerate the calculation of the covariance matrix. Though only valid on small angular separation, this apprixomation is widely used for forecasting purposes.
+This result is very useful to further accelerate the calculation of the covariance matrix. Though only valid on small angular separation, this apprixomation is widely used for forecasting purposes. Simulating the dispersion to fulfill the puprpose of this thesis will be described in section \ref{meth_sec:sim_dm}. 
 
-Simulating the dispersion to fulfill the puprpose of this thesis will be described in section \ref{meth_sec:sim_dm}.
+Now that an expression of the covariance is obtained, I focus on deriving an expression for the variance of the dispersion measure signal at a certain redshift $z$. The variance of the DM sinal is defined as
+\begin{equation}
+    \sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right] = \langle \left((\mathrm{DM}(\mathbf{\hat{x}}, z) - \mathrm{DM}(z))^2\right)\rangle
+\end{equation}
+The expression can be easily derived from Eq. \ref{eq:cosmological_covariance} by setting $\mathbf{\hat{x}}_i = \mathbf{\hat{x}}_j$ and $z_i = z_j$ writing $C_{ij}(\ell) = C(\ell, z)$, yielding
+\begin{equation}
+    \sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right] = \sum_{\ell} \frac{2\ell+1}{4\pi} C(\ell, z),
+\end{equation}
+and if I use the flat sky approximation, the expression changes to
+\begin{equation}
+    \sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right] = \int  \, \frac{\ell \mathrm{d}\ell}{2\pi} \,  C(\ell, z)
+\end{equation}
+In total, the variance of the DM field is an importnat quantity for constraining baryonic feedback. As you can see from Eq. \ref{eq:dispersion_final}, the mean DM-$z$ relation is strongly sensitive to the value of the baryonic density ratio $\Omega_\mathrm{b}$ and the Hubble constant $H_0$ and dependent on the other density ratios through the rate of expansion $E(z)$. Therefore, the dependednce on the baryonic feedback paramerters is entirely encoded in $\sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right]$ and the electron density contrast $\delta_\mathrm{e}$. I will explain how to model the electron power spectrum using an analytical model of the baryonic feedback in section \ref{meth_sec:bfc}. Fig. \ref{theory_fig:DM-z} shows a plot of the dipersion measure redshift relation for different values of $\Omega_\mathrm{b}$ and differnet values for baryonic feedback parameters.
 
 
-
-
-
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{}
+%     \caption{A plot showing the impact of varying $\Omega_\mathrm{b}$ on the mean DM-$z$ relation and the impact of varying $\log_{10} M_\mathrm{c}$ one of the baryonic feedback parametrs on on the variance of the DM-$z$ relation.}
+%     \label{theory_fig:DM-z}
+% \end{figure}
 
 
 
@@ -827,10 +842,21 @@ discuss the motivation for the SBI method.
 In this section, I describe the modelling of systematic uncertainties on the dispersion measure. 
 
 \begin{itemize}
-\item \textbf{Milkyway contribution} add a plot of the Milkyway dispersion measure.
-\item \textbf{Host galaxy contribution} talk about Robert's paper on the analytical model. motivate why the host contribution could be a 
-\item \textbf{Redshift uncertainty} 
-Follow up optical observations of FRBs allows spectroscopic estimation of the redshifts of its host galaxy. The measurement uncertainty on the redshift can induce additional scatter in the estimated cosmological covariance matrix and modify the source redshift distribution. The latter effect is especially important when cross-correlating FRBs with cosmic shear as performed by \citet{reischke2023calibrating}. A faster way to localize FRBs is to use wide field spectroscopic or photometric surveys by deriving an astrometric solution, yielding a set of possible candidates of the host with a probability for each canditate \citep{garcia2025search}. This method is, nonetheless, highly uncertain. Therefore, the redshift uncertainty is an important systematic uncertainty to mitigate in an analysis involving FRBs.
+\item \textbf{Milkyway contribution:} The Milkyway (MW) galaxy, just like any disc galaxy, has free electrons in the interstellar medium (ISM). As the FRB pulse pass through the interstellar medium, it gets further dispersed by the free electron in the interstellar medium, adding an additional contribution to the measured $\mathrm{DM}$. I will label the contribution from the MW with $\mathrm{DM}_\mathrm{MW}$. There are curently no analytical model that can accuratley describe the electron number density in the MW, however there exists an empirical model that is calibrated on quasars data, and which we will use in this thesis {\color{red} cite the NE2001 model}. Nonetheless, the model is highly uncertain near the galactic plane meaning that subtracting the MW contribution from $\mathrm{DM}_{tot}$ leads to large measurement error if the FRB is detected near the galactic plane. Fig \ref{theory_fig:MW_map} shows a map of the MW contribution to DM as predicted by the NE2001 model.
+
+
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{}
+%     \caption{A map of the MW contribution to the measured DM with the NPE2001 model. The model is calibrated on data from quasars. As seen from the map, $\mathrm{DM}_\mathrm{MW}$ is large a the galactic plane and lower towards the pole since baryons in the MW are situated in a disk-like shape.}
+%     \label{theory_fig:MW_map}
+% \end{figure}
+
+
+\item \textbf{Host galaxy contribution:} FRB picks up a contribution from the galaxy that hosts the FRB source, namely the host galaxy. To model the host galaxy contribtion, N-body simulation provide the best information to date. Using the CAMELS simulation \citep{Villaescusa-Navarro_2021}, \citet{theis2024galaxy} showed that the variability of the host contribution with redshift is mainly driven by the variability of star formation with redshift while the placement of the FRB source in the host galaxy does not impact the mean of the host contribution across different redshifts \footnote{Sources that lie at the further end of the galaxy along the line of sight will pick up higher contribution as compared to a source at the near end of a galaxy, however, on average, the mean of the distribution does not change.}. Nonetheless, varying the feedback mechanism does impact the distrubtion of the host contribution. Therefore, \citet{reischke2024analytical} provided an analytic model of the DM host contribution using the baryonificaiton correction model \citep{Schneider_Kovač_etal._2025,Schneider_Teyssier_2015}.
+
+in host contribution can be modeled with a lognormal distribution, parameterized with mean and variance.  however, an analytical model is needed for parameter inference. Another layer of uncertainty surrounds the variability of host contribution with redshifts and the position of the FRB source within the host. Within the halo model, it is possible to obtain gas halo profiles and stellar density profiles which can probe the position of FRBs in the host \footnote{As the source of FRB is likely to be a magnetar, the likelihood of an FRB source to be at a certain radial position is given by the stellar density profile.}, however, the halo mass will also add another layer of uncertainty by marginalising on the range of possible halo masses where the FRB resides {\color{red} cite Robert's paper}
+\item \textbf{Redshift uncertainty:} Follow up optical observations of FRBs allows spectroscopic estimation of the redshifts of its host galaxy. The measurement uncertainty on the redshift can induce additional scatter in the estimated cosmological covariance matrix and modify the source redshift distribution. The latter effect is especially important when cross-correlating FRBs with cosmic shear as performed by \citet{reischke2023calibrating}. A faster way to localize FRBs is to use wide field spectroscopic or photometric surveys by deriving an astrometric solution, yielding a set of possible candidates of the host with a probability for each canditate \citep{garcia2025search}. This method is, nonetheless, highly uncertain. Therefore, the redshift uncertainty is an important systematic uncertainty to mitigate in an analysis involving FRBs.
 
  In section 
 

@@ -14,7 +14,12 @@ Add a table showing the cosmological parameters, theri fiducial value and their 
 
 explain things in a schematic representation first. 
 
-\subsection{The baryonification correction model}
+- a plot for the comparison between Limber and non-Limber approximations.
+- a plot validating the number of chosen z and k grid for the power spectrum.
+- talk about eh power spcetrum extrapolation.
+
+
+\subsection{The baryonification correction model} \label{meth_sec:bfc}
 explain how we ignore the redshift evolution of some parameters.
 
 
@@ -48,21 +53,21 @@ $\alpha_{0,\mathrm{nt}}$ & - & Non-thermal pressure amplitude (see Eq. 2.15) & 0
 
 
 
-
-
-
 \subsubsection{The Core Cosmology Library (CCL)}
-
+describe CLASS and what it does.
 
 
 \section{Simulating the dispersion measure signal} \label{meth_sec:sim_dm}
 Add a table with the fiducial values and their prior. explain how we ignore the redshift evolution of some parameters. Motivate the choice for the number of shells and the redshift range.
 
 \subsection{The Generator for Large Scale Structure (GLASS)}
-mention the reason behind the choice of 30 shells.
+mention the reason behind the choice of 30 shells. and the binning in comoving space.
 
 \subsection{The electron angular power spectrum} \label{meth_sec:angular_power_spectrum}
 \subsection{The numerical implementation of the cosmological covariance matrix}
+- Add a plot for the validity of the divisions when implementing in z.
+
+
 
 \section{Simulating the systematic uncertainties}
 
@@ -95,10 +100,16 @@ I show the impact of redshift uncertainty on the scatter in the DM-$z$ relation 
 
 
 \subsection{Selection effects}
+- show a plot of full PDF and a truncated PDF.
+
 \subsection{Unlocalised hosts}
 
+\section{Data Compression}
+I simulate the electron density shells and place FRBs in the same redshift and angular position as in the mock catalog. This will reduce the computational cost and the need to calculate the covariance matrix for each realisation within the SBI pipeline. (Try to do this excercise without choosing the sdame redshifts for a lower number of sources such that it lowers down the computational costs)
+\subsubsection{Numerical derivative stability}
+\subsubsection{The Sensitivity of compressed statistics to model parameters}
 
-
+Add a plot about derivative stability. Add a plot for the sensitivity.
 
 \section{Simulation-based inference} \label{meth_sec:sbi}
 \subsection{Approximate Baysian inference}
@@ -107,16 +118,11 @@ I show the impact of redshift uncertainty on the scatter in the DM-$z$ relation 
 \subsubsection{The truncated sequential neural posterior estimator}
 \subsection{Flow matching posterior estimator}
 
-\subsection{Data Compression}
 
 
 
 
 
-I simulate the electron density shells and place FRBs in the same redshift and angular position as in the mock catalog. This will reduce the computational cost and the need to calculate the covariance matrix for each realisation within the SBI pipeline. (Try to do this excercise without choosing the sdame redshifts for a lower number of sources such that it lowers down the computational costs)
-\subsubsection{Numerical derivative stability}
-\subsubsection{The Sensitivity of compressed statistics to model parameters}
 
-Add a plot about derivative stability. Add a plot for the sensitivity.
 
 
