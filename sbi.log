@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  10 APR 2026 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  11 APR 2026 14:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1836,8 +1836,8 @@ Package pdftex.def Info: figs/cover/galaxy_foramtion.png  used on input line 363
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [19] [20 <./figs/cover/galaxy_foramtion.png>]
-Overfull \hbox (6.021pt too wide) detected at line 418
-[][][][]\LMS/ntxsy/m/n/10.95 h\OML/ntxmi/m/it/10.95 ^^N[]\LMS/ntxsy/m/n/10.95 ¹\OT1/minntx/b/n/10.95 x\LMS/ntxsy/m/n/10.95 ºi \U/ntxmia/m/it/10.95 = [] = [][] \OT1/minntx/m/n/10.95 d\OML/ntxmi/m/it/10.95 M n\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º [] \OT1/minntx/m/n/10.95 d[]\OML/ntxmi/m/it/10.95 x[] W[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M; \LMS/ntxsy/m/n/10.95 j\OT1/minntx/b/n/10.95 x \LMS/ntxsy/m/n/10.95 ^^@ \OT1/minntx/b/n/10.95 x[]\LMS/ntxsy/m/n/10.95 jº \U/ntxmia/m/it/10.95 = [][] \OT1/minntx/m/n/10.95 d\OML/ntxmi/m/it/10.95 M W[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 n\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º \OML/ntxmi/m/it/10.95 :
+Overfull \hbox (5.78008pt too wide) detected at line 418
+[][][][]\LMS/ntxsy/m/n/10.95 h\OML/ntxmi/m/it/10.95 ^^N[]\LMS/ntxsy/m/n/10.95 ¹\OT1/minntx/b/n/10.95 x\LMS/ntxsy/m/n/10.95 ºi \U/ntxmia/m/it/10.95 = [] = [][] \OT1/minntx/m/n/10.95 d\OML/ntxmi/m/it/10.95 M n\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º [] \OT1/minntx/m/n/10.95 d[]\OML/ntxmi/m/it/10.95 x[] W[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M; \LMS/ntxsy/m/n/10.95 j\OT1/minntx/b/n/10.95 x \LMS/ntxsy/m/n/10.95 ^^@ \OT1/minntx/b/n/10.95 x[]\LMS/ntxsy/m/n/10.95 jº \U/ntxmia/m/it/10.95 = [][] \OT1/minntx/m/n/10.95 d\OML/ntxmi/m/it/10.95 M W[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º\OML/ntxmi/m/it/10.95 n\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 M\LMS/ntxsy/m/n/10.95 º \OML/ntxmi/m/it/10.95 ;
  []
 
 [21] [22]
@@ -1916,18 +1916,15 @@ File: figs/cover/time_delay.png Graphic file (type png)
 <use figs/cover/time_delay.png>
 Package pdftex.def Info: figs/cover/time_delay.png  used on input line 598.
 (pdftex.def)             Requested size: 313.69029pt x 224.44733pt.
- [29 <./figs/cover/time_delay.png>]
-Overfull \vbox (1.74174pt too high) has occurred while \output is active []
-
- [30] [31] [32] [33] [34]
+ [29 <./figs/cover/time_delay.png>] [30] [31] [32] [33] [34]
 
 LaTeX Warning: Reference `theory_fig:DM-z' on page 35 undefined on input line 759.
 
 [35] [36]
 
-LaTeX Warning: Reference `theory_fig:MW_map' on page 37 undefined on input line 845.
+LaTeX Warning: Reference `theory_fig:MW_map' on page 37 undefined on input line 847.
 
-[37]) [38]
+[37] [38]) [39]
 \openout2 = `methodology.aux'.
 
  (./methodology.tex
@@ -1935,18 +1932,18 @@ chapter 3.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39
+[40
 
 
 
 
 
-] [40]) [41]
+] [41]) [42]
 \openout2 = `results.aux'.
 
  (./results.tex
 chapter 4.
-) [42
+) [43
 
 
 
@@ -1957,7 +1954,7 @@ chapter 4.
 
  (./discussion.tex
 chapter 5.
-) [43
+) [44
 
 
 
@@ -1968,7 +1965,7 @@ chapter 5.
 
  (./thesis_appendix.tex
 chapter A.
-) [44
+) [45
 
 
 
@@ -1991,15 +1988,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [45
+ [46
 
 
 
 
-{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [46] [47]
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [47] [48]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 194.
- [48] [49]
+ [49] [50]
 Package tocbasic Info: character protrusion at lof deactivated on input line 212.
  (./sbi.lof
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
@@ -2008,7 +2005,7 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lof=\write5
 \openout5 = `sbi.lof'.
 
- [50
+ [51
 
 
 
@@ -2022,13 +2019,13 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lot=\write6
 \openout6 = `sbi.lot'.
 
- [51
+ [52
 
 
 ]
 \openout2 = `thesis_acknowledge.aux'.
 
- (./thesis_acknowledge.tex) [52
+ (./thesis_acknowledge.tex) [53
 
 
 
@@ -2049,18 +2046,18 @@ Package logreq Info: Writing requests to 'sbi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43973 strings out of 467525
- 890947 string characters out of 5408440
- 1955436 words of memory out of 5000000
- 71667 multiletter control sequences out of 15000+600000
- 805124 words of font info for 413 fonts, out of 8000000 for 9000
+ 43999 strings out of 467525
+ 891721 string characters out of 5408440
+ 1955897 words of memory out of 5000000
+ 71690 multiletter control sequences out of 15000+600000
+ 804210 words of font info for 410 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,21n,147p,11252b,5036s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,20n,147p,11252b,5036s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on sbi.pdf (56 pages, 1710087 bytes).
+Output written on sbi.pdf (57 pages, 1715658 bytes).
 PDF statistics:
- 1208 PDF objects out of 1440 (max. 8388607)
- 1085 compressed objects within 11 object streams
- 343 named destinations out of 1000 (max. 500000)
+ 1233 PDF objects out of 1440 (max. 8388607)
+ 1107 compressed objects within 12 object streams
+ 350 named destinations out of 1000 (max. 500000)
  63324 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -12,12 +12,12 @@ To have a mathematical theory where observation could be interpreted, Einstein u
 The metric tensor $g_{\nu \mu}$ (in Einstein index notation) is a $4 \times 4$ symmetric tensor that describes the physical length of an infinitesimal line given a particular system of coordinates such that 
 
 \begin{equation}
-ds^2 = g_{\nu \mu} dx^{\nu} dx^{\mu},
+\mathrm{d}s^2 = g_{\nu \mu} \mathrm{d}x^{\nu} \mathrm{d}x^{\mu},
 \end{equation}
-where $\{dx^\mu\}_{0, 1, 2, 3}$ is a basis for the contangent bundle of the manifold. In classical terms, $\{dx^\mu\}_{0, 1, 2, 3}$ is the differential along a coordinate axis $\{x^\mu\}_{0, 1, 2, 3}$ For a generalized space time, the path of a free particle is described by the geodesic equation. If the coordinates of a particle in spacetime $x^\mu$ is parameterized with an affine parameter $\lambda$, then the coordinates $x^{\mu} (\lambda)$ is constrained by an ordinary differential equation, namely the geodesic equation given as:
+where $\{\mathrm{d}x^\mu\}_{0, 1, 2, 3}$ is a basis for the contangent bundle of the manifold. In classical terms, $\{\mathrm{d}x^\mu\}_{0, 1, 2, 3}$ is the differential along a coordinate axis $\{x^\mu\}_{0, 1, 2, 3}$ For a generalized space time, the path of a free particle is described by the geodesic equation. If the coordinates of a particle in spacetime $x^\mu$ is parameterized with an affine parameter $\lambda$, then the coordinates $x^{\mu} (\lambda)$ is constrained by an ordinary differential equation, namely the geodesic equation given as:
 
 \begin{equation} \label{eq:geodesic}
-    \frac{d^2x^\mu}{d\lambda^2} + \Gamma^\mu_{\rho\sigma} \frac{dx^\rho}{d\lambda} \frac{dx^\sigma}{d\lambda} = 0,
+    \frac{\mathrm{d}^2x^\mu}{\mathrm{d}\lambda^2} + \Gamma^\mu_{\rho\sigma} \frac{\mathrm{d}x^\rho}{\mathrm{d}\lambda} \frac{\mathrm{d}x^\sigma}{\mathrm{d}\lambda} = 0,
 \end{equation}
 where $\Gamma^\mu_{\rho\sigma}$ are the Christoffel symbols given in terms the metric tensor such that
 
@@ -47,7 +47,7 @@ Meanwhile, the Ricci scale is defined as the contraction of the Ricci tensor
 
 Therefore, a possible relationship between the stress-energy tensor and the Ricci tensor is
 \begin{equation} \label{eq:EFE_guess}
-    R_{\mu\nu} = \kappa T_{\mu\nu},
+    R_{\mu\nu} = \kappa T_{\mu\nu}.
 \end{equation}
 To find $\kappa$, the conservation of energy is invoked as  
 \begin{equation}
@@ -63,31 +63,31 @@ Therefore, we can define another tensor $G_{\mu \nu}$ with a vanishing covariant
 \end{equation}
 $G_{\mu\nu}$ is called the Einstein tensor, and the Einstein's field equation regardless
 \begin{equation} \label{eq:EFE}
-    G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
+    G_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu},
 \end{equation}
 where I used $\kappa = 8\pi G/c^4$ which can be obtained by reducing Eq. \ref{eq:EFE} to the Newtonian limit in Eq. \ref{eq:potential}. Einstein modified Eq. \ref{eq:EFE} to account for a vacuum solution by adding a term to represent the vacuum energy $\Lambda g_{\mu \nu}$ where $\Lambda$ is called the cosmological constant, and the final equation becomes
 \begin{equation} \label{eq:EFE_full}
-    G_{\mu\nu} + \Lambda g_{\mu \nu} = 8\pi G T_{\mu\nu}
+    G_{\mu\nu} + \Lambda g_{\mu \nu} = 8\pi G T_{\mu\nu}.
 \end{equation}
 
 
 
 Finally, the 4-velocity of a particle in general relativity is defined as 
 \begin{equation} \label{eq:4-velocity}
-    U^{\mu} = \frac{dx^{\mu}}{d\lambda},
-\end{equation} 
+    U^{\mu} = \frac{\mathrm{d}x^{\mu}}{\mathrm{d}\lambda}.
+\end{equation}
 Therefore, the 4-velocity would follow the normalization
 \begin{equation}
-    g_{\mu \nu}U^{\mu}U^{\nu} = -1
+    g_{\mu \nu}U^{\mu}U^{\nu} = -1,
 \end{equation}
 
 and the 4-momentum for a particle of mass $m$ is defined as
 \begin{equation}
-    P^{\mu} = m U^{\mu}
+    P^{\mu} = m U^{\mu},
 \end{equation}
 and the normalization of momentum is 
 \begin{equation} \label{eq:momentum_noermal}
-    g_{\mu \nu}P^{\mu}P^{\nu} = -m^2
+    g_{\mu \nu}P^{\mu}P^{\nu} = -m^2.
 \end{equation}
 Notice that either of the previous normalization is invariant under coordinate transformation. We define the observed energy of a particle of 4-momentum $P^{\mu}$ with respect to an observer with 4-velocity $U^{\mu}$ such that it reduces to the special relativistic limit if the particle has a vanishing spatial velocity and the observer 
 \begin{equation} \label{eq:energy}
@@ -105,7 +105,7 @@ The Einstein theory of general relativity can explain cosmological observations 
 \section{The Friedmann-Robertson-Lemaître-Walker metric} \label{theory_sec:FLRW}
 To describe the entire universe using one metric tensor requires educated simplifications and assumptions. The first guiding principle is the Copernican principle \citep{bondi2010cosmology} which states that \textbf{'we do not occupy a special place in space'}. The Copernican principle motivates the cosmological principle which states that 'the universe is homogeneous and isotropic'. Early galaxy surveys have shown that the universe is only homogeneous on large scales, therefore, the full cosmological principle is stated as \textbf{'the universe is homogeneous and symmetric on large scales'}. An additional assumption that simplifies that narrows down the possible formula for a metric is Weyl's postulate which states that \textbf{'the world lines of the galaxies form a 3-sheaf of non-intersecting geodesics orthogonal to layers of spacelike hypersurfaces'}. Weyl's postulate, coupled with the cosmological principle, allows a better definition of where homogeneity and isotropy apply, namely that the universe is 'spatially homogeneous and isotropic'. Therefore, a maximally symmetric metric that follows both principles takes the form
 \begin{equation}
-    ds^2 = -c^2 dt^2 + g_{ij} dx^i dx^j, 
+    \mathrm{d}s^2 = -c^2 \mathrm{d}t^2 + g_{ij} \mathrm{d}x^i \mathrm{d}x^j,
 \end{equation}
 where $t$ is cosmic time. A two-dimensional schematic diagram of this metric is shown in \ref{theory_fig:world_lines}. 
 \begin{figure}[h!]
@@ -118,12 +118,12 @@ where $t$ is cosmic time. A two-dimensional schematic diagram of this metric is 
 
 Using the tools of differential geometry, a maximally symmetric metric that also accounts for a homogeneous expansion of the universe is 
 \begin{equation} \label{eq:flrw}
-    \mathrm{d}s^2 = -c^2\mathrm{d}t^2 + a^2(t) \mathrm{d}s_3^2
+    \mathrm{d}s^2 = -c^2\mathrm{d}t^2 + a^2(t) \mathrm{d}s_3^2,
 \end{equation}
 
 where $a(t)$ is the scale factor that couples the spatial part with time and the spatial part, $c$ is the speed of light, $\mathrm{d}s_3^2$ represent a volume element in a maximally symmetric space that takes the following form in hyperspherical coordinates
 \begin{equation}\label{eq:sphere3}
-    \mathrm{d}s_3^2 = \mathrm{d}\chi^2 + S_k(\chi)^2 \left( \mathrm{d}\theta^2 + \sin^2 \theta \, \mathrm{d}\phi^2 \right).
+    \mathrm{d}s_3^2 = \mathrm{d}\chi^2 + S_k(\chi)^2 \left( \mathrm{d}\theta^2 + \sin^2 \theta \, \mathrm{d}\phi^2 \right),
 \end{equation}
 the function $S_k(\chi)$ takes one of three forms by virtue of the number $k$
 \begin{equation}
@@ -132,11 +132,11 @@ S_k(\chi) =
     \frac{1}{\sqrt{k}} \sin(\sqrt{k} \chi) & \text{if } k > 0, \text{for a closed universe}\\
     \chi & \text{if } k = 0, \text{for a flat universe}\\
     \frac{1}{\sqrt{|k|}} \sinh(\sqrt{|k|} \chi) & \text{if } k < 0, \text{for an open universe}
-\end{cases}
+\end{cases}.
 \end{equation}
 The case when $k = 0$ represents a flat universe, where the spatial part reduces to the usual spherical coordinates. The flat FLRW metric reads
 \begin{equation} \label{eq:FLRW}
-    \mathrm{d}s^2 = -c^2\mathrm{d}t^2 + a^2(t) \left[ \mathrm{d}\chi^2 + \chi^2 \left( \mathrm{d}\theta^2 + \sin^2 \theta \, \mathrm{d}\phi^2 \right)\right]
+    \mathrm{d}s^2 = -c^2\mathrm{d}t^2 + a^2(t) \left[ \mathrm{d}\chi^2 + \chi^2 \left( \mathrm{d}\theta^2 + \sin^2 \theta \, \mathrm{d}\phi^2 \right)\right].
 \end{equation}
 
 The coordinate $\chi$ could be understood by considering two space like points in spacetime, one with $\chi = 0$ and another with $\chi = \chi_c$ leading To
@@ -146,9 +146,9 @@ The coordinate $\chi$ could be understood by considering two space like points i
 \end{equation}
 which means that the physical distance changes with time for a given $\chi_c$. We call $\chi_c$ the comoving distance. Taking the derivative with respect to cosmic time in Eq. \ref{eq:comoving}, we can retrieve the empirical law that \citet{Hubble_1929} discovered by recording the relationship between the distance to galaxy and the speed of the galaxy
 \begin{equation}
-   \frac{ds}{dt} = V = \frac{\dot{a}}{a} s,
+   \frac{\mathrm{d}s}{\mathrm{d}t} = V = \frac{\dot{a}}{a} s,
 \end{equation}
-with $\dot{a} = da/dt$. We define the Hubble parameter at a cosmological time $t$ such that
+with $\dot{a} = \mathrm{d}a/\mathrm{d}t$. We define the Hubble parameter at a cosmological time $t$ such that
 \begin{equation} \label{eq:hubble}
     H(t) = \frac{\dot{a}}{a}.
 \end{equation}
@@ -159,19 +159,19 @@ Another distance indicator is gravitational redshift, similar to doppler redshif
 \end{equation}
 where $E_e$ and $E_o$ are the energy of light measured by the emitter and the observer respectively, and \textbf{$z$ is called the cosmological redshift}. $z$ is related to the wavelength of light in the limit where each of the emitter and the observer are fundamental observers, meaning that their 4-velocity is $U^{\mu} = (1, 0, 0, 0)$. Therefore, the light energy could be expressed using Planck's law \citep{Planck1900b},  $E = h/\lambda$, with $h = 6.626 \times 10^{-34} \text{J·s}$ is Planck's constant, and $\lambda$ is the wavelength of light. The final relationship describing the modulation in the observed wavelength of light is 
 \begin{equation} \label{eq:redshift_freq}
-    1 + z = \frac{a(t_o)}{a(t_e)} = \frac{\lambda_o}{\lambda_e}
-\end{equation} 
+    1 + z = \frac{a(t_o)}{a(t_e)} = \frac{\lambda_o}{\lambda_e},
+\end{equation}
 with $\lambda_e$ and $\lambda_o$ are the light wavelength measured by the emitter and the observer respectively. This relationship could be exploited by quantifying the modulation of the wavelength and its relationship to the scale factor. In a nutshell, a light emitted at a scale factor $a(t_e)$ travels through an expanding universe until measured by another observer at time $t_o > t_e$ corresponding to $a(t_o) > a(t_e)$, therefore $\lambda_o > \lambda_e$, which explains why distant sources are redshifted. In practice, by measuring the spectrum of light of a distant galaxy and convolving it with a standard spectrum (the expected spectrum of galaxy in the nearby universe), it is possible to obtain the redshift of the distant galaxy. If we choose $a = 1$ in the current epoch, the relationship between redshift and the scale factor reduces to
 \begin{equation} \label{eq:redshift}
     a = \frac{1}{1 + z},
 \end{equation}
 where $z = 0$ refers to the current epoch. Since light moves along a null geodesic, it is possible to obtain the comoving distance to an emitter given the redshift of the emitter. Starting from Eq. \ref{eq:FLRW}, and working in a coordinate system with the light travelling along $\theta = 0 $ and $\phi = 0$, the null geodesic dictates that 
 \begin{equation}
-    cdt = a(t)d\chi
+    c\mathrm{d}t = a(t)\mathrm{d}\chi,
 \end{equation}
 which could be further arranged using Eq. \ref{eq:hubble} and Eq. \ref{eq:redshift} into
 \begin{equation} \label{eq:comoving_distance}
-    \chi = \int_{1}^{z_e} \frac{c}{H(z)} dz.
+    \chi = \int_{1}^{z_e} \frac{c}{H(z)} \mathrm{d}z.
 \end{equation}
 From the perspective of Eq. \ref{eq:redshift}, the cosmological redshift can be used as proxy of time where larger value of redshfit conrreponds to smaller value of the scale factor $a$. Meanwhile from the perspective of Eq. \ref{eq:comoving_distance}, the cosmolgoical redshift is proxy for distance where sources of larger redshift correspond to larger distance. In a cosmological galaxy survey, measuring distances from the Earth towards galaxies is not a trivial task, however, the cosmological redshift can be measured by measuring the deviation the electromagnetic spectrum of a galaxy from the expected spectrum of a galaxy at redshift $z = 0$ \footnote{Of course, the process of measuring redshifts is cumbersome in practice, and this statemetn is meant to explain the basic principle behind measring the cosmological redshift.}. 
 
@@ -187,7 +187,7 @@ Throughout this chapter, a question is lurking behind all the kinematics of the 
 \label{eq:Friedmann}
 \begin{align} 
     \frac{\ddot{a}}{a} &= -\frac{4\pi G}{3} \left( \rho + \frac{3p}{c^2} \right) + \frac{\Lambda c^2}{3} \label{eq:Friedmann1} \\
-    \frac{\dot{a}^2}{a^2} &= \frac{8\pi G}{3} \rho + \frac{\Lambda c^2}{3} - \frac{kc^2}{a^2} \label{eq:Friedmann2}
+    \frac{\dot{a}^2}{a^2} &= \frac{8\pi G}{3} \rho + \frac{\Lambda c^2}{3} - \frac{kc^2}{a^2}, \label{eq:Friedmann2}
 \end{align}
 \end{subequations}
 with $p$ being the isotropic pressure of the cosmic fluid and $\rho$ being the density \footnote{Since energy and mass are equivalent up to the squared of the speed of light, we may refer to the different constituents of the universe as 'contributing to the energy budget of the universe'.}. These equations are known as the Friedmann equations, describing the evolution of the scale factor $a$ with respect to cosmic time $t$. To solve these equations, a relationship between the pressure p and the energy density is needed, known as the equation of state. The possible components that contribute to the energy density $\rho$ have been a process of trial and error starting de Sitter universe \citep{deSitter_1917} which is a universe with no matter up to the recently speculated model with dynamical dark energy \citep{adame2025desi}. Eqs. \ref{eq:Friedmann} were derived with the assumption of a homogeneous and isotropic universe on all scales; this is not the case when studying the inhomogeneous universe with large-scale structure. Therefore, the physical quantities in Eqs. \ref{eq:Friedmann} are only a functions of time (the total density $\rho(t)$ and the isotropic pressure $p(t)$).In \ref{theory_sec:cosmo_model}, I briefly present the case of inhomogeneous universe with perturbations 
@@ -249,31 +249,31 @@ In total, the $\Lambda$CDM universe contains the following constituents:
 \begin{itemize}
     \item \textbf{Radiation:} Radiation is mostly composed of freely propagating relativistic particles: photons and neutrinos. Photons have been propagating in the universe since recombination. Recombination is the epoch when free electrons combine with nuclei to form neutral atoms, after which the photon mean free path becomes effectively infinite and photons decouple from matter; these photons are observed today as the cosmic microwave background (CMB) radiation. CMB anisotropies contain a wealth of information about the density fractions of the other components of the Universe and its spatial curvature. The temperature of the photon background scales as $T_{r} \propto a^{-1}$. With equation of state
     \begin{equation}
-        p_r = \frac{1}{3} \rho_{r} c^2
+        p_r = \frac{1}{3} \rho_{r} c^2,
     \end{equation}
     and the radiation energy density scales as $\rho_{r} \propto a^{-4}$.
     \begin{equation}
-        \rho_{r} = \rho_{r,0} a^{-4}
+        \rho_{r} = \rho_{r,0} a^{-4}.
     \end{equation}
     In addition to photon, neutrinos contribute to the radiation budget in the universe. At early times, neutrinos are in equilibrium with other particles such as electrons and photons, however, as the universe expands and the temperature drops, electrons no longer interact with neutrinos, therefore, neutrinos decouple from the rest of the components in the universe in a process known as freeze-out. The density of neutrinos scales to the scale factor in a similar way to photons, however, the present day temperature of neutrinos is different from that of photons  
 
 
-    \item \textbf{Baryonic matter:} Baryonic matter is composed of the particles that make up the standard model of particle physics. The particles that make up this component interact with light and with itself through long range pressure. In the early universe, baryonic matter is coupled to photons through absorption, emission, and scattering processes. Due to the expansion of the universe, the absorption cross-section approaches zero, therefore, the photons emitted from recombining electrons with nuclei have less energy than needed to ionize a similar atom, leaving the photon free. The process of forming neutral atoms by combining free electrons with nuclei is called recombination. This process continues until all the atoms are neutral, and then, photons propagate freely in the universe, with a very low probability of interacting with Baryons. After an epoch of structure formation (with the universe being transparent), neutral gas clouds in dark matter halos collapse under gravity to form stars and trigger fusion reactions \footnote{A fusion reaction is a nuclear reaction when two low mass atoms combine to form a heavier atom, emitting an amount of energy.}. Photons emitted from stars reionize the medium around stars, and baryons interact again with photons \citep{Draine_2011}. The fraction of baryonic matter in the universe is measured to be $ \Omega_{b} h^2 = 0.0225 \pm 0.0003$. In the early universe, the equation of state of baryonic matter is derived with relativistic consideration, however, after recombination, the short range pressure of baryons is negligible and the equation of state for baryons is that of dark matter on large scales. On small scale, baryonic processes in the late universe are highly non-linear and cumbersome to model which impose a limitation on the modelling of the cosmic shear signal. \textbf{This is the exact problem that this thesis is trying to tackle}.
+    \item \textbf{Baryonic matter:} Baryonic matter is composed of the particles that make up the standard model of particle physics. The particles that make up this component interact with light and with itself through long range pressure. In the early universe, baryonic matter is coupled to photons through absorption, emission, and scattering processes. Due to the expansion of the universe, the absorption cross-section approaches zero, therefore, the photons emitted from recombining electrons with nuclei have less energy than needed to ionize a similar atom, leaving the photon free. The process of forming neutral atoms by combining free electrons with nuclei is called recombination. This process continues until all the atoms are neutral, and then, photons propagate freely in the universe, with a very low probability of interacting with Baryons. After an epoch of structure formation (with the universe being transparent), neutral gas clouds in dark matter halos collapse under gravity to form stars and trigger fusion reactions \footnote{A fusion reaction is a nuclear reaction when two low mass atoms combine to form a heavier atom, emitting an amount of energy.}. Photons emitted from stars reionize the medium around stars, and baryons interact again with photons \citep{Draine_2011}. The fraction of baryonic matter in the universe is measured to be $ \Omega_{\mathrm{b}} h^2 = 0.0225 \pm 0.0003$. In the early universe, the equation of state of baryonic matter is derived with relativistic consideration, however, after recombination, the short range pressure of baryons is negligible and the equation of state for baryons is that of dark matter on large scales. On small scale, baryonic processes in the late universe are highly non-linear and cumbersome to model which impose a limitation on the modelling of the cosmic shear signal. \textbf{This is the exact problem that this thesis is trying to tackle}.
     \item \textbf{Dark matter:} Dark matter is matter that does not interact with light, however, its effect is observed gravitationally. Recent results from different cosmological probes including CMB, galaxy clustering and weak lensing favour a cold dark matter component, meaning that the temperature of dark matter is much less than its mass. As a consequence, dark matter could be modelled as a pressureless fluid on large scale (on small scales, the fluid approximation breaks down). Using this simple picture of cold dark matter (CDM), it is possible to solve the fluid equation of dark matter to linear order and obtain a good approximation of the linear density evolution with cosmic time (I show this derivation below). The equation of state of dark matter, therefore, is simply $p = 0$. By solving Eq. \ref{eq:adiabatic} for dark matter, the density of dark matter depends on the scale factor $a$ such that
     \begin{equation}
-        \rho_c = \rho_{c, 0} a^{-3}
+        \rho_c = \rho_{c, 0} a^{-3}.
     \end{equation}
-    The present day value of the dark matter density fraction is measured to be $\Omega_m h^2 = 0.1431 \pm 0.0025$ by the Planck collaboration \citep{aghanim2020planck}. Dark matter is the main driver of matter clustering in the universe since dark matter can form virialized region of space called dark matter halos which accretes baryons and leads to galaxy formation as a consequence \citep{Wechsler_Tinker_2018}. 
+    The present day value of the dark matter density fraction is measured to be $\Omega_{\mathrm{m}} h^2 = 0.1431 \pm 0.0025$ by the Planck collaboration \citep{aghanim2020planck}. Dark matter is the main driver of matter clustering in the universe since dark matter can form virialized region of space called dark matter halos which accretes baryons and leads to galaxy formation as a consequence \citep{Wechsler_Tinker_2018}. 
     \item \textbf{Dark energy:} dark energy is a term coined by Michael S. Turner \citep{Turner_2001} to describe the contribution to the energy budget that is not in a form of particles. From Eqs. \ref{eq:Omega_params}, dark energy is the component with density fraction $\Omega_\Lambda$. Early on, this component was considered to be smooth and homogeneous, meaning that its corresponding density $\rho_\Lambda = \Omega_\Lambda \rho_{cr}$ only varies with cosmic time. In its simplest form, the dark energy pressure is related to the dark energy density as follows
     \begin{equation}
-        p_\Lambda = w_\Lambda \rho_\Lambda c^2
+        p_\Lambda = w_\Lambda \rho_\Lambda c^2,
     \end{equation}
     with the simplest case $w_\Lambda = -1$. The equation of state of dark energy is highly debated with many modification suggested to explain tensions in cosmology such as the Hubble tension \citep{verde2024tale}. In this work, we assume an equation of state of dark energy with $w_\Lambda = -1$. The Planck collaboration \citep{aghanim2020planck} reported that $\Omega_\Lambda = 0.6889 \pm 0.0056$.
 \end{itemize}
 
-Figure \ref{theory_fig:energy_budget} shows a schematic representation of the components discussed above. In general, the matter density fraction $\Omega_m$ is the sum of the baryonic matter density fraction $\Omega_b$ and the dark matter density fraction $\Omega_c$. The total energy budget of the universe is the sum of the matter density fraction $\Omega_m$, the dark energy density fraction $\Omega_\Lambda$, and the radiation density fraction $\Omega_r$. Since the radiation density fraction is negligible in the current epoch, we have $\Omega_m + \Omega_\Lambda \approx 1$. With that, the evolution of the expansion rate of the universe in terms of the scale factor $a$ is given by
+Figure \ref{theory_fig:energy_budget} shows a schematic representation of the components discussed above. In general, the matter density fraction $\Omega_{\mathrm{m}}$ is the sum of the baryonic matter density fraction $\Omega_{\mathrm{b}}$ and the dark matter density fraction $\Omega_c$. The total energy budget of the universe is the sum of the matter density fraction $\Omega_{\mathrm{m}}$, the dark energy density fraction $\Omega_\Lambda$, and the radiation density fraction $\Omega_r$. Since the radiation density fraction is negligible in the current epoch, we have $\Omega_{\mathrm{m}} + \Omega_\Lambda \approx 1$. With that, the evolution of the expansion rate of the universe in terms of the scale factor $a$ is given by
 \begin{equation}
-    H^2 (a) = H_0^2 \left[ \Omega_r a^{-4} + \Omega_m a^{-3} + \Omega_\Lambda \right], 
+    H^2 (a) = H_0^2 \left[ \Omega_r a^{-4} + \Omega_{\mathrm{m}} a^{-3} + \Omega_\Lambda \right], 
 \end{equation}
 where the different additive terms dominate the evolution at different epochs. In particular, dark energy is the dominant component in the current epoch. To constrain the equation of state of dark energy, cosmic shear stands as a powerful probe of late structure formation since it is an integrated qunatity that includes signficant contribution from the late evolution of the universe, and therefore sensitive to dark energy. The basic principles of cosmic shear and its relationship to the matter density field are explained in \ref{theory_sec:WL}. This thesis focuses on using FRBs to constain baryonic feedback on the large scale structure and therefore improve the modelling of cosmic shear on small scales, which in turn improves the constraining power of cosmic shear on dark energy.
 \begin{figure}[h!]
@@ -283,11 +283,11 @@ where the different additive terms dominate the evolution at different epochs. I
     \label{theory_fig:energy_budget}
 \end{figure}
 
-So far, I have only introduced the universe as a homogeneous entity, ignoring the fact the universe is inhomogeneous on small scales. As a physical system, the initial conditions of the universe are scale-dependent Gaussian perturbations which grow to be highly non-linear (and non-Gaussian) large perturbations (large relative to the mean density of the universe). Since the initial perturbations were generated via a stochastic process, the resultant perturbations are called random fields. In particular, the matter density field $\rho_m (\mathbf{x}, t)$ is the random field that describes the matter density at a comoving position $\mathbf{x}$ and cosmic time $t$. For simplicity, the matter perturbations are often expressed in terms of the matter density contrast $\delta_m$ such that
+So far, I have only introduced the universe as a homogeneous entity, ignoring the fact the universe is inhomogeneous on small scales. As a physical system, the initial conditions of the universe are scale-dependent Gaussian perturbations which grow to be highly non-linear (and non-Gaussian) large perturbations (large relative to the mean density of the universe). Since the initial perturbations were generated via a stochastic process, the resultant perturbations are called random fields. In particular, the matter density field $\rho_{\mathrm{m}} (\mathbf{x}, t)$ is the random field that describes the matter density at a comoving position $\mathbf{x}$ and cosmic time $t$. For simplicity, the matter perturbations are often expressed in terms of the matter density contrast $\delta_{\mathrm{m}}$ such that
 \begin{equation}
-    \delta_m (\mathbf{x}, t) = \frac{\rho_m (\mathbf{x}, t) - \bar{\rho}_m(t)}{\bar{\rho}_m(t)},
+    \delta_{\mathrm{m}} (\mathbf{x}, t) = \frac{\rho_{\mathrm{m}} (\mathbf{x}, t) - \bar{\rho}_{\mathrm{m}}(t)}{\bar{\rho}_{\mathrm{m}}(t)},
 \end{equation}
-where $\bar{\rho}_m(t)$ is the average matter density at a cosmic time $t$. In addition, similar definitions apply to any other density field such as the baryonic density contrast or the electron density contrast, which will be important in the study of FRBs. By construction, any density contrast field is a random field with a mean of zero i.e. $\langle \delta_m \rangle = 0$. Higher order statistics of a random field also encode information about the random field. This thesis only uses the two-point statistics of the matter density contrast and its Fourier space counterpart, namely the power spectrum. We discuss these statistics below. Since dark matter is the dominant component of matter in the universe, it is the component responsible for the observed structure in the universe. In addition, the pressure induced by baryonic processes is negligible on large scales, meaning that the evolution of matter density contrast on large scales is well approximated by the evolution of dark matter density contrast. Therefore, the evolution of matter density contrast $\delta_m$ is well approximated by the evolution of dark matter density contrast $\delta_c$. I present below the Einstein-Boltzmann equation that describes the phase-space evolution of a particle species in the universe.
+where $\bar{\rho}_{\mathrm{m}}(t)$ is the average matter density at a cosmic time $t$. In addition, similar definitions apply to any other density field such as the baryonic density contrast or the electron density contrast, which will be important in the study of FRBs. By construction, any density contrast field is a random field with a mean of zero i.e. $\langle \delta_{\mathrm{m}} \rangle = 0$. Higher order statistics of a random field also encode information about the random field. This thesis only uses the two-point statistics of the matter density contrast and its Fourier space counterpart, namely the power spectrum. We discuss these statistics below. Since dark matter is the dominant component of matter in the universe, it is the component responsible for the observed structure in the universe. In addition, the pressure induced by baryonic processes is negligible on large scales, meaning that the evolution of matter density contrast on large scales is well approximated by the evolution of dark matter density contrast. Therefore, the evolution of matter density contrast $\delta_{\mathrm{m}}$ is well approximated by the evolution of dark matter density contrast $\delta_c$. I present below the Einstein-Boltzmann equation that describes the phase-space evolution of a particle species in the universe.
 
 
 
@@ -302,14 +302,14 @@ This section is partly based on a review on the effective field theory of large 
 \end{equation}
 with $m$ being the mass of the dark matter particle. If dark matter behaves as a fluid, the density and the bulk velocity of the fluid could be obtained by taking the first two moments of the distribution function $f$ such that 
 \begin{align} 
-    \rho_m(\mathbf{x}, t) &= \frac{m}{a^3} \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t), \label{eq:rho} \\
+    \rho_{\mathrm{m}}(\mathbf{x}, t) &= \frac{m}{a^3} \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t), \label{eq:rho} \\
     v_i(\mathbf{x}, t) &= \int \mathrm{d}^3p \, \frac{p_i}{am} f(\mathbf{x}, \mathbf{p}, t) \Bigg/ \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t), \label{eq:vi} \\
-    \sigma_{ij}(\mathbf{x}, t) &= \int \mathrm{d}^3p \, \frac{p_i}{am} \frac{p_j}{am} f(\mathbf{x}, \mathbf{p}, t) \Bigg/ \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t) - v_i(\mathbf{x}) v_j(\mathbf{x}). \label{eq:sigma}
+    \sigma_{ij}(\mathbf{x}, t) &= \int \mathrm{d}^3p \, \frac{p_i}{am} \frac{p_j}{am} f(\mathbf{x}, \mathbf{p}, t) \Bigg/ \int \mathrm{d}^3p \, f(\mathbf{x}, \mathbf{p}, t) - v_i(\mathbf{x}) v_j(\mathbf{x}), \label{eq:sigma}
 \end{align}
 with $\sigma_{ij}(\mathbf{x}, t)$ representing the velocity dispersion tensor. The distribution function $f$ has higher order moments, however, the anisotropic stress tensor is second order in momentum, therefore, it can be postulated that it is negligible at linear order and at early times where the velocity dispersion is small\footnote{The usual practice in standard perturbation theory is to truncate the Boltzmann hierarchy even for higher order perturbations}. In this thesis, I am only interested in the evolution of the matter density contrast. Using Eq. \ref{eq:Boltzmann}, the evolution of the matter density contrast and the bulk velocity are governed by the continuity and the Euler equations. The equations up to linear order are as follows
 \begin{subequations} \label{eq:continuity_euler}
 \begin{align}
-    \frac{\partial \delta_m}{\partial \tau} + \frac{1}{a} \nabla \cdot \mathbf{v} & = 0, \\
+    \frac{\partial \delta_{\mathrm{m}}}{\partial \tau} + \frac{1}{a} \nabla \cdot \mathbf{v} & = 0, \\
     \frac{\partial \mathbf{v}}{\partial \tau} + \frac{1}{a} (\mathbf{v} \cdot \nabla) \mathbf{v} &= -\frac{1}{a} \nabla \phi,
 \end{align}
 \end{subequations}
@@ -321,17 +321,17 @@ To solve the equations in real space is a cumbersome task, therefore, we take th
     \item The velocity field is a vector field, therefore, it can be decomposed into a curl-free component and a divergence-free component. The curl-free component is called the velocity divergence $\theta$ and is defined as $\theta = \nabla \cdot \mathbf{v}$, while the divergence-free component is called the vorticity $\omega$ and is defined as $\omega = \nabla \times \mathbf{v}$. At linear order, the vorticity decays with time, therefore, it can be neglected at linear order.
     \item The peculiar gravitational potential $\phi$ can be related to the matter density contrast by the relationship known as the Poisson equation such that
     \begin{equation}
-    \nabla^2 \phi = \frac{3}{2}\Omega_{\mathrm{m}}H_0^2\frac{\delta_m}{a}.
+    \nabla^2 \phi = \frac{3}{2}\Omega_{\mathrm{m}}H_0^2\frac{\delta_{\mathrm{m}}}{a}.
     \end{equation}
 \end{itemize}
 With these steps, the equation that governs the eveolution of the matter denstiy field at a linear level is a second order ordinary differential equation with respect to the conformal time $\tau$ such that
 \begin{equation}\label{eq:}
-    \frac{\mathrm{d}^2 \delta_m}{\mathrm{d}\tau^2} + \mathcal{H} \frac{\mathrm{d} \delta_m}{\mathrm{d}\tau} - \frac{3}{2}\Omega_{\mathrm{m}}H_0^2\frac{\delta_m}{a} = 0,
-\end{equation}with $\mathcal{H} = aH$ being the conformal Hubble parameter. A solution for the matter density contrast $\delta$\footnote{$\delta$ refers to the matter density contrast $\delta_m$ hereafter, and the subsript is omitted for ease of writing.} at linear order in Fourier space as follows
+    \frac{\mathrm{d}^2 \delta_{\mathrm{m}}}{\mathrm{d}\tau^2} + \mathcal{H} \frac{\mathrm{d} \delta_{\mathrm{m}}}{\mathrm{d}\tau} - \frac{3}{2}\Omega_{\mathrm{m}}H_0^2\frac{\delta_{\mathrm{m}}}{a} = 0,
+\end{equation}with $\mathcal{H} = aH$ being the conformal Hubble parameter. A solution for the matter density contrast $\delta$\footnote{$\delta$ refers to the matter density contrast $\delta_{\mathrm{m}}$ hereafter, and the subsript is omitted for ease of writing.} at linear order in Fourier space as follows
 \begin{equation}\label{eq:linear_solution}
     \delta(\mathbf{k}, t) = D_+(\tau)\delta_{+,0}(\mathbf{k}),
 \end{equation}
-where $\delta_{+,0}$ is the initial conditions of the matter density contrast, and $D_+(\tau)$ is the growth factor whose exact expression depends on the cosmological model considered. For an Einstein-de Sitter universe, which is a universe with $\Omega_m = 1$ and $\Omega_\Lambda = 0$, the growth factor is simply $D_+(\tau) = a(\tau)$. The importance of the result \ref{eq:linear_solution} lies in two observations: the first is that the growth of each Fourier mode of the matter density contrast is independent from other modes (modes of different length scales are not coupled), and the second is that the time evolution of the matter density contrast is separable from its spatial dependence. 
+where $\delta_{+,0}$ is the initial conditions of the matter density contrast, and $D_+(\tau)$ is the growth factor whose exact expression depends on the cosmological model considered. For an Einstein-de Sitter universe, which is a universe with $\Omega_{\mathrm{m}} = 1$ and $\Omega_\Lambda = 0$, the growth factor is simply $D_+(\tau) = a(\tau)$. The importance of the result \ref{eq:linear_solution} lies in two observations: the first is that the growth of each Fourier mode of the matter density contrast is independent from other modes (modes of different length scales are not coupled), and the second is that the time evolution of the matter density contrast is separable from its spatial dependence. 
 
 The solution to Eqs. \ref{eq:continuity_euler} is given assuming that the universe is way into matter dominated epoch, where the impact of radiation is negligible. In the early universe, the radiation component is dominant and initiates pressure that only acts on sacles smaller that the horizon scale, defined in Eq. \ref{eq:hubble_scale}, since pressure is a causal process that can only propagate at a speed less than the speed of light. Therefore, $\delta_{+,0}(\mathbf{k})$ should encode all the physics of the early universe including the impact of radiation on the matter density contrast and the initial conditions. In practice, comparing the evolved density field with observaiton will not give a conclusive answer on whether the theory presented here is correct or not, since the current universe is one realisaiton of the stochastic process that generated the initial conditions, therefore, estimating the statistical properties of the observed matter density field and comparing it with the theoretical prediction is the way to test the theory. In the next section, I present the power spectrum as a statistic that encodes the statistical properties of the matter density field.
 
@@ -347,7 +347,7 @@ The mean of $\delta_{0}(\mathbf{k})$ is zero by construction, therefore, the var
 \begin{equation} \label{eq:power_spectrum}
     \langle \delta_{0}(\mathbf{k}) \delta_{0}^*(\mathbf{k}') \rangle = (2\pi)^3 P(k) \delta_D(\mathbf{k} - \mathbf{k}'),
 \end{equation}
-where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is only a function of the magnitude of the Fourier space wavevector $k = |\mathbf{k}|$ due to the statistical isotropy of the universe. Fig. \ref{} shows the matter power spectrum obtain using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic} with varying fraction of baryonic matter $\Omega_b$ and varying Hubble parameter $H_0$ at redshift $z = 0$.
+where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is only a function of the magnitude of the Fourier space wavevector $k = |\mathbf{k}|$ due to the statistical isotropy of the universe. Fig. \ref{} shows the matter power spectrum obtain using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic} with varying fraction of baryonic matter $\Omega_{\mathrm{b}}$ and varying Hubble parameter $H_0$ at redshift $z = 0$.
 
 % \begin{figure}[h!]
 %     \centering
@@ -371,7 +371,7 @@ The detailed mechanism of how this happens is highly non-linear and complicated.
 \end{equation}
 with $b$ being the linear bias parameter. The linear bias model is a good approximation on large scales, however, on small scales, the relationship between the galaxy field and the matter field is highly non-linear and the linear bias model breaks down \citep{desjacques2018large}. Notice that the galaxy number density contrast is only dependent on the local matter density field and does not depend on the environment surrounding the galaxy. This approximation breaks down on small scales where th environment of a galaxy can have a significant impact of the galaxy formation process. Galaxies are called 'biased tracers of dark matter' since they trace the underlying matter field. For any tracer $\mathrm{u}$ of dark matter, I define the pwoer spectrum of the density constrast of this tracer $\delta_\mathrm{u}$ in a similar fashion to Eq. \ref{eq:power_spectrum}
 \begin{equation} \label{eq:power_spectrum_tracers}
-    \langle \delta_\mathrm{u}(\mathbf{k}) \delta_\mathrm{u}^*(\mathbf{k}') \rangle = (2\pi)^3 P_{uu}(k) \delta_D(\mathbf{k} - \mathbf{k}'),
+    \langle \delta_\mathrm{u}(\mathbf{k}) \delta_\mathrm{u}^*(\mathbf{k}') \rangle = (2\pi)^3 P_{uu}(k) \delta_D(\mathbf{k} - \mathbf{k}').
 \end{equation}
 
 It is possible to use the same formalism of galaxy bias to relate the matter density contrast with other tracers of dark matter such as dark matter halos. In practice, the bias of dark matter halos is related to the underlzing matter field via the following relationship
@@ -380,25 +380,25 @@ It is possible to use the same formalism of galaxy bias to relate the matter den
 \end{equation}
 with $b_h$ being the dark matter halo bias parameter. Owing to Eq. \ref{eq:halo_bias}, the halo power psectrum can be expressed in terms of the matter power spectrum defined in Eq. \ref{eq:power_spectrum} such that 
 \begin{equation}
-    P_{hh} (k, t) = b_{h}^2 (t) P_{mm} (k, t)
+    P_{hh} (k, t) = b_{h}^2 (t) P_{mm} (k, t).
 \end{equation}
 
 
 For dark matter halos, it is possible to go bayond a linear bias model by fitting an empirical model of halo bias to the results of an N-body gravitional simulation. In this thesis, I use the fitting formula of \citet{tinker2010large} to model the halo bias. In this recipe, the halo bias is a function of the halo mass and its redshift $b_h (M, z)$. As a consequence, the halo power spectrum is related to the matter power spectrum with the relationship
 \begin{equation} \label{eq:halo_spectrum}
-    P_{\mathrm{hh}}(M_1, M_2, k) = b(M_1) b(M_2) P_{\mathrm{mm}}^{\mathrm{lin}}(k) [1 + \beta^{\mathrm{nl}}(M_1, M_2, k)]
+    P_{\mathrm{hh}}(M_1, M_2, k) = b(M_1) b(M_2) P_{\mathrm{mm}}^{\mathrm{lin}}(k) [1 + \beta^{\mathrm{nl}}(M_1, M_2, k)].
 \end{equation}
 
 In the next section, I present the halo model, a non-pertubative approximation to obtain the non-linear power spectrum of matter or a tracer of matter. In particular, this thesis is concerned with the electron power spectrum in order to model the cosmological contribution of the dispersion measure of fast radio bursts.
 \subsection{The angular power specrtum}
 The definition of the power spectrum in Eq. \ref{eq:power_spectrum} assumes that the observed field is sampled in three-dimensional space, therefore, the density field in real space can be written in using the Fourier space exponent as in EQ. \ref{eq:fourier} which represent a full orthogonal basis. WHen observing cosmological fields on the sky, a different othogonal basis is needed to decompose the cosmological field since the values measured live on the unit spehre and not on a flat geometry. For this purpose, the a cosmological field $f$ in the direction $\boldsymbol{\theta}$ can be written in terms of the spherical harmonic functions $Y_{\boldsymbol{\ell}}(\boldsymbol{\theta})$, where $\boldsymbol{\ell}$ is the Fourier space counterpart of $\boldsymbol{\theta}$. Therefore, if $f_{\boldsymbol{\ell}}$ is the spherical harmonic coeficients and $\boldsymbol{\ell} = (\ell, m)$\footnote{more on the spherical harmonics can be found in the appendix} for a moment $m$ and a multipole $\ell$, the spherical harmonic transform and its inverse are given as
 \begin{equation}
-    f(\boldsymbol{\theta}) = \sum_{\ell m} Y_{\ell m}(\boldsymbol{\theta}) \, f_{\ell m} \quad \leftrightarrow \quad f_{\ell m} = \int d\boldsymbol{\theta} \, f(\boldsymbol{\theta}) \, Y_{\ell m}^*(\boldsymbol{\theta}),
+    f(\boldsymbol{\theta}) = \sum_{\ell m} Y_{\ell m}(\boldsymbol{\theta}) \, f_{\ell m} \quad \leftrightarrow \quad f_{\ell m} = \int \mathrm{d}\boldsymbol{\theta} \, f(\boldsymbol{\theta}) \, Y_{\ell m}^*(\boldsymbol{\theta}).
 \end{equation}
 
 The angular power spectrum $C_\ell$ is then defined in terms of the spherical harmonic coefficients 
 \begin{equation} \label{eq:ang_power_spectrum}
-    \langle \hat{f}_{\ell m} \hat{f}_{\ell' m'}\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{\ell}
+    \langle \hat{f}_{\ell m} \hat{f}_{\ell' m'}\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{\ell},
 \end{equation}
 where $\delta$ here is the Kronecker delta. Notice how the power spectrum is not dependent on $m$ by virtue of the cosmological principle. 
 
@@ -414,7 +414,7 @@ The details in this section are based on a review of the halo model by \citet{as
 where the sum runs over all volume elements and $N_i = \{0, 1\}$ determines whether there is a halo centre in that volume element. $W_{\mathrm{u},i}$ could express the halo density profile for any comp onent that traces halos such as electrons. In N-body simulations, the halo profile $W_{\mathrm{u},i}$ of a particular dark matter halo $i$ difffers from one halo to another as a funciton of the halo mass $M$. To express this scatter, the halo-mass distribution function is introduced. The halo mass distrinution function $n(M)$ is defined as the number of dark matter halos with $M_i \in [M, M + \mathrm{d} M]$ is $n(M)\mathrm{d}M$. Averaging over all possible halo-masses, the expectation value of a field becomes
 
 \begin{equation}
-    \langle \delta_{\mathrm{u}}(\mathbf{x}) \rangle = \left\langle \sum_{i} N_i \, W_{\mathrm{u}}(M_i, |\mathbf{x} - \mathbf{x}_i|) \right\rangle = \int_0^{\infty} \mathrm{d}M \, n(M) \int \mathrm{d}^3x' \, W_{\mathrm{u}}(M, |\mathbf{x} - \mathbf{x}'|) = \int_0^{\infty} \mathrm{d}M \, W_{\mathrm{u}}(M) n(M) \, .
+    \langle \delta_{\mathrm{u}}(\mathbf{x}) \rangle = \left\langle \sum_{i} N_i \, W_{\mathrm{u}}(M_i, |\mathbf{x} - \mathbf{x}_i|) \right\rangle = \int_0^{\infty} \mathrm{d}M \, n(M) \int \mathrm{d}^3x' \, W_{\mathrm{u}}(M, |\mathbf{x} - \mathbf{x}'|) = \int_0^{\infty} \mathrm{d}M \, W_{\mathrm{u}}(M) n(M) \, ,
 \end{equation}
 
 where $W_\mathrm{u}(M, \mathbf{x})$ can be split into two multiplicative component: $W_u (M)$ which encodes the amplitud eof the halo profile and $U_\mathrm{u}(M, \mathbf{x})$ whichc encodes information about the shape of the profile, andd the mass-dependent halo profile can be written as
@@ -446,7 +446,7 @@ The sum can be further divided into two contributions:
 \end{itemize}
 The non-linear power spetrum wihtin the halo model of a species $\mathrm{u}$ is given by 
 \begin{equation}
-    P_{uu}(k) =  P_{\mathrm{uu}}^{\mathrm{1h}}(k) + P_{\mathrm{uu}}^{\mathrm{2h}}(k)
+    P_{uu}(k) =  P_{\mathrm{uu}}^{\mathrm{1h}}(k) + P_{\mathrm{uu}}^{\mathrm{2h}}(k).
 \end{equation}
 Fig. \ref{} shows an example of the non-linear power specrutm with the different contributions from the one-halo and the two-halo terms. Since $P_{\mathrm{uu}}^{\mathrm{1h}}$ describes the \textbf{inter-halo} clustering of a species $\mathrm{u}$, it dominates the power spctrum on small scales. Meanwhile, 
 
@@ -504,7 +504,7 @@ The source galaxy shape $\mathrm{\alpha}$ is observed with a lensed shape $\math
 \end{equation}
 with $\mathcal{A}$ beging a $2 \times 2$ matrix. $\mathcal{A}$ can be written in terms of two components: the shear $\gamma$ and the convergence $\kappa$ such that
 \begin{equation}
-    \mathcal{A} = \begin{pmatrix} 1 - \kappa - \gamma_1 & -\gamma_2 \\ -\gamma_2 & 1 - \kappa + \gamma_1 \end{pmatrix}.
+    \mathcal{A} = \begin{pmatrix} 1 - \kappa - \gamma_1 & -\gamma_2 \\ -\gamma_2 & 1 - \kappa + \gamma_1 \end{pmatrix},
 \end{equation}
 where $\gamma = \gamma_1 + i \gamma_2$ in the the plain of complex numbers. Each of the convergence and the shear has both a geometric and a physical meaning. The trace of the $\mathcal{A}$ is $\text{tr}(\mathcal{A}) = 2(1 - \kappa)$, meaning that the magnification effects are controlled by the quatity $\kappa$. Meanwhile, $\gamma$ is the qunatity that controls the shearing of an image. In this formalism, THe convergence $\kappa$ is actullay a field, since it is related to the matter denstiy contrast $\delta$ via the relationship 
 \begin{align}
@@ -530,7 +530,7 @@ where $\kappa_0$ is a constant that arises since $\mathcal{D}$ is not defined at
 
 To relate the shear to the shape of galaxy there is one important assumptions. Galaxies in the universe are randomly oriented, however by virtue of the cosmological principles, the expectation value of galaxy shapes should be zero. If $\epsilon_s$ is the intrinsic shape of galaxy, therefore
 \begin{equation}
-    \langle \epsilon_s \rangle = 0
+    \langle \epsilon_s \rangle = 0.
 \end{equation}
 However, the observed shape of a galaxy $\epsilon$ is subject to lensing effects. In the weak field limit, the expectation value of the observed galaxy shapes is an unbiased estimator of the shear, meaning 
 \begin{equation} \label{eq:shape_shear}
@@ -542,7 +542,7 @@ This is an extremely important result which signals the possibility of constrain
 \end{equation}
 where $P = P(k, \chi)$ is the matter power spectrum at scale $k$ and cosmocving distance $\chi$. Furthermore, the shear power spectrum and the convergence power spectrum are the same, and by virture of Eq. \ref{eq:shape_shear}, the same as the galaxy shapes power spectrum,
 \begin{equation}
-    P_{\kappa \kappa} = P_{\gamma \gamma} = P_{\epsilon \epsilon}
+    P_{\kappa \kappa} = P_{\gamma \gamma} = P_{\epsilon \epsilon}.
 \end{equation}
 
 Eq. \ref{eq:convergence_ps} shows that any approximation to obtain a theoretical prediction of the matter power spectrum $P(k, \chi)$ will also influence the shear power spectrum $P_{\gamma \gamma}$. One of the main assumptions in this calculation is that structure growth in the late universe is only gravitionally driven. However, baryonic feedback on the large scales structure can influence the distributino of matter in the unvierse on different scales \citep{van2011effects}. In section \ref{theory_sec:BF}, I discuss how baryonic feedback influences the power spectrum. 
@@ -600,15 +600,15 @@ I use the setup in Fig. \ref{theory_fig:time_delay} to find an expression of the
     \label{theory_fig:time_delay}
 \end{figure}
 \begin{equation}
-    \mathrm{d} \tau = \frac{\mathrm{d} l}{v_g} - \mathrm{d} l
-\end{equation} 
+    \mathrm{d} \tau = \frac{\mathrm{d} l}{v_g} - \mathrm{d} l,
+\end{equation}
 with $\tau$ being the proper time measured by the plasma (notice that I used the group velocity relative to the plasma) and $\mathrm{d} l$ the proper ditsnce between the two stations. The correponding time delay measured by the comoving observer $\mathrm{d} t$ is given by
 \begin{equation}
     \mathrm{d}t = (1 + z)\mathrm{d}\tau.
 \end{equation}
-If the normal pulse has a 4-momentum defined as $P^\mu = \mathrm{d}x^\mu / d\Lambda$ (see Eq. \ref{eq:4-velocity}), where $\lambda$ is an affine parameter, the proper length can be written as $\mathrm{d} l = P^\mu u_{e, \mu}$, where $u_{e, \mu}$ is the station's 4-velocity as measured by the observed. Thus to lowest order in $\omega_\mathrm{e} / \omega$, the measured time $\mathrm{d}t$ is written
+If the normal pulse has a 4-momentum defined as $P^\mu = \mathrm{d}x^\mu / \mathrm{d}\Lambda$ (see Eq. \ref{eq:4-velocity}), where $\lambda$ is an affine parameter, the proper length can be written as $\mathrm{d} l = P^\mu u_{e, \mu}$, where $u_{e, \mu}$ is the station's 4-velocity as measured by the observed. Thus to lowest order in $\omega_\mathrm{e} / \omega$, the measured time $\mathrm{d}t$ is written
 \begin{equation}
-    dt = \frac{(1+z)\omega_\mathrm{e}^2}{2\omega^2} \left( P^\mu u_{e,\mu} \right) d\lambda.
+    \mathrm{d}t = \frac{(1+z)\omega_\mathrm{e}^2}{2\omega^2} \left( P^\mu u_{e,\mu} \right) \mathrm{d}\lambda.
 \end{equation}
 Finally, due to cosmological redshift, the station observes a frequency $\omega$ different from the what the observers detects, as shown by Eq. \ref{eq:redshift_freq}. We relate the two frequencies via the relation $\omega = 2\pi \nu_0 (1 + z)$, making the final expression for the time delay
 \begin{equation}
@@ -616,23 +616,23 @@ Finally, due to cosmological redshift, the station observes a frequency $\omega$
 \end{equation}
 where DM is the dispersion measure given as an integral
 \begin{equation} \label{eq:dispersion_full}
-    \mathrm{DM} \equiv \int_{\lambda_\mathrm{e}}^{\lambda_o} d\lambda \left( n_\mathrm{e} \frac{P^\mu u_{e,\mu}}{1+z} \right)\Bigg|_{\lambda},
+    \mathrm{DM} \equiv \int_{\lambda_\mathrm{e}}^{\lambda_o} \mathrm{d}\lambda \left( n_\mathrm{e} \frac{P^\mu u_{e,\mu}}{1+z} \right)\Bigg|_{\lambda},
 \end{equation}
 where the subscript $\lambda$ is a reminder tha tthe integrand is evaluated along the pulse's trajectory. In a realistic situation, the plasma has a peculiar velocity and the normal pulse does not follow a null geodesic. I consider a situation where the stations are comoving observer with 4-velocity $u_{e}^\mu = (1, 0, 0, 0)$, and the pulse moves along a null geodesic in an unperturbed universe with momentum $P^\mu = (A/a, A/a^2, 0, 0)$\footnote{I omit the proof to obtain this results. The proof can be done by solving the geodesic equation (Eq. \ref{eq:geodesic}) and setting the coordinate origin such that the photon follows a geodesic with $\phi = 0$ and $\theta =0$.}, where $A$ is a constant. The inner producet of momentum and veloctiy reduces to 
 \begin{equation}
-    P^\mu u_{e,\mu} = g_{tt}(A/a)(1)  = -A/a,
+    P^\mu u_{e,\mu} = g_{tt}(A/a)(1)  = -A/a.
 \end{equation}
 Since $\lambda$ parametrizes the geodesic of the pulse, it is possible to change variables in Eq. \ref{eq:dispersion_full} using the expression for the 4-momentum where $\mathrm{d}t/\mathrm{d}\lambda = A/a$. The integral becomes
 \begin{equation}
-    \mathrm{DM} \equiv \int_{t_o}^{t_e} dt \, a \, n_\mathrm{e},
+    \mathrm{DM} \equiv \int_{t_o}^{t_e} \mathrm{d}t \, a \, n_\mathrm{e},
 \end{equation}
 where I have changed the integral pounds. Remeber that $n_\mathrm{e}$ is the physical density as measured by the plasma. It can be written in terms of the comoving density as $n_\mathrm{e} = n_{\mathrm{e}, c} a^{-3}$. Therefore, the correpoinding comoving density scales with Using the relationship between cosmic time $t$ and the sacle factor $a$ as in Eq. \ref{eq:hubble} and the relationship between the $a$ and $z$ in Eq. \ref{eq:redshift}, the integral can be written as
 \begin{equation} \label{eq:dispersion_ne}
-    \mathrm{DM} \equiv \int_{z_e}^{0} \mathrm{d}z' \frac{1 + z'}{H(z')}  n_{\mathrm{e}, c}(z').
+    \mathrm{DM} \equiv \int^{z_e}_{0} \mathrm{d}z' \frac{1 + z'}{H(z')}  n_{\mathrm{e}, c}(z').
 \end{equation}
 Hereafter, I work with comiving qunatities and will label the comoving electorn density at a redshift $z$ with $n_\mathrm{e}$. Eq. \ref{eq:dispersion_ne} is the dispersion measure-redshift relation $\mathrm{DM}_z$ which I use in this thesis to study the impact of systematic uncertainties. Eq. \ref{eq:dispersion} includes an expression of the comoving electron number density $n_{\mathrm{e}, c}$ this quantity can be written in terms of the baryon density fraciton $\Omega_\mathrm{b}$ given some consideration to the ratio of free electron in the universe that disperses the signal. In general, the expression should look like
 \begin{equation}
-    n_{\mathrm{e}} = \frac{\bar{\rho}_\mathrm{b}}{m_\mathrm{p}}\, F(z)
+    n_{\mathrm{e}} = \frac{\bar{\rho}_\mathrm{b}}{m_\mathrm{p}}\, F(z),
 \end{equation}
 where $\bar{\rho}_\mathrm{b}$ is the average of the baryonic density in the universe, $m_\mathrm{p}$ is the mass of proton, and $F(z)$ is the fraciotn of free electrons in the intergalactic medium. To find $F(z)$, I make the following considerations
 \begin{itemize}
@@ -648,7 +648,7 @@ By dropping the redshift dependence on the ionized fraction, I get an expression
 \end{equation}
 Writing $\bar{\rho}_\mathrm{b} = \Omega_\mathrm{b} \rho_{\mathrm{cr}}$, The final form of Eq. \ref{eq:dispersion_ne} is given by
 \begin{equation} \label{eq:dispersion_final}
-    \mathrm{DM}(z) = \mathcal{A} \int_0^z \frac{1+z'}{E(z')} \mathrm{d}z' \, ,
+    \mathrm{DM}_\mathrm{LSS}(z) = \mathcal{A} \int_0^z \frac{1+z'}{E(z')} \mathrm{d}z' \, ,
 \end{equation}
 with $\mathcal{A} := \frac{3c\Omega_{\mathrm{b0}}H_0}{8\pi G m_{\mathrm{p}}} \chi_{\mathrm{e}} f_{\mathrm{IGM}}$, and $E(z) = H(z)/H_0$. This is the expression for the DM that rises from free electrons that follows the large scales structure, hence, I will label the DM that rises from the cosmic electron density with $\mathrm{DM}_\mathrm{LSS}$ hereafter. As seen from \ref{eq:dispersion_final},  $\mathrm{DM}_\mathrm{LSS}$ is highly sensitive to he baryon density in the universe $\Omega_\mathrm{b}$ and the Hubble constant $H_0$. 
 
@@ -664,7 +664,7 @@ It is clear that $\mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}, z)$ is a random fie
 
 Using the formalism introduced in sections \ref{theory_sec:statistics} and \ref{theory_sec:halo_model}, it is possible to use the electron power spectrum $P_{\mathrm{ee}}$ to express the correlation between two measured $\mathrm{DM}_\mathrm{LSS}$ at a angular positions $\left(\mathbf{\hat{x}}_i, \mathbf{\hat{x}}_j\right)$ and at redshifts $(z_i, z_j)$, namely the covariance matrix. \citep{10.1093/mnras/stad1645} showed that the cosmological covariance of  $\mathrm{DM}_\mathrm{LSS}$ is derivd by first writing the correlator bracket 
 \begin{equation}
-    \mathrm{cov}_{ij} = \langle\mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}_i, z_i) \mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}_j, z_j)\rangle - \mathrm{DM}_\mathrm{LSS}(z_i) \mathrm{DM}_\mathrm{LSS}(z_j)
+    \mathrm{cov}_{ij} = \langle\mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}_i, z_i) \mathrm{DM}_\mathrm{LSS}(\mathbf{\hat{x}}_j, z_j)\rangle - \mathrm{DM}_\mathrm{LSS}(z_i) \mathrm{DM}_\mathrm{LSS}(z_j),
 \end{equation}
 Simplifying, the expression reduced to
 \begin{equation}
@@ -672,7 +672,7 @@ Simplifying, the expression reduced to
 \end{equation}
 where I have defined the weight $W_{\mathrm{DM}}(z)$ as
 \begin{equation}
-    W_{\mathrm{DM}}(z) = \begin{cases} \mathcal{A} \dfrac{1+z}{E(z)} & z < z_{\mathrm{FRB}} \\ 0 & z > z_{\mathrm{FRB}} \end{cases}
+    W_{\mathrm{DM}}(z) = \begin{cases} \mathcal{A} \dfrac{1+z}{E(z)} & z < z_{\mathrm{FRB}} \\ 0 & z > z_{\mathrm{FRB}} \end{cases},
 \end{equation}
 with $z_\mathrm{FRB} = z_i, z_j$ the redshift of an FRB. The electron correlator bracket in real space can be written in harmonic space such that
 \begin{equation} \label{eq:e_fourier}
@@ -690,7 +690,7 @@ To perform the integral in \ref{eq:e_fourier}, I work in spherical coordinate si
 &= \frac{2}{\pi} \int k^2 \mathrm{d}k \int \mathrm{d}\Omega_k \, P_{\mathrm{ee}}(k, z_i, z_j) \notag \\[8pt]
 &\quad \times \sum_{\ell, \ell'} \sum_{m, m'} \mathrm{i}^\ell (-\mathrm{i})^{\ell'} Y_{\ell m}(\hat{k}) \, Y^*_{\ell m}(\hat{x}_i) \, j_\ell(k\chi_i) \, Y^*_{\ell' m'}(\hat{k}) \, Y_{\ell' m'}(\hat{x}_j) \, j_{\ell'}(k\chi_j) \notag \\[8pt]
 &= \frac{2}{\pi} \int k^2 \mathrm{d}k \, P_{\mathrm{ee}}(k, z_i, z_j) \sum_{\ell} \sum_{m} Y^*_{\ell m}(\hat{x}_i) \, j_\ell(k\chi_i) \, Y_{\ell m}(\hat{x}_j) \, j_\ell(k\chi_j) \notag \\[8pt]
-&= \frac{1}{2\pi^2} \sum_{\ell} (2\ell+1) \int k^2 \mathrm{d}k \, P_{\mathrm{ee}}(k, z_i, z_j) \, j_\ell(k\chi_i) \, j_\ell(k\chi_j) \, P_\ell(\cos\theta).
+&= \frac{1}{2\pi^2} \sum_{\ell} (2\ell+1) \int k^2 \mathrm{d}k \, P_{\mathrm{ee}}(k, z_i, z_j) \, j_\ell(k\chi_i) \, j_\ell(k\chi_j) \, P_\ell(\cos\theta),
 \end{align}
 with $Y_{\ell m}$ and $j_\ell$ being the spherical harmonic function and the the spherical Bessel function of the first kind respectively. To simplify the sum, I use the property 
 \begin{equation} \label{eq:spherical_property}
@@ -710,21 +710,21 @@ The expression contains two integral where one integral goes over the sacle $k$ 
 \end{equation}
 The word \textit{effectively} is important in this context since the $j_\ell$ by itself is \textbf{not} approximated by a the expression in Eq. \ref{eq:limber_ass}, however, the two resultant integrals are equivilant in some regimes of $\ell$. Invoking, the approximation in the full expression of the covariance and changing the integration vaiable into the comoving radius $\chi$, I obtain the final expression
 \begin{equation}
-    C_{ij}(\ell) = \int_0^{\min(\chi_i ', \chi_j ')}  \, \frac{\mathrm{d}\chi'}{\chi^2(z')} \, \frac{\mathrm{d}z}{\mathrm{d}\chi}W_{\mathrm{DM}}^j(z(\chi')) \, W_{\mathrm{DM}}^i(z(\chi')) \, P_{\mathrm{ee}}\!\left(\frac{\ell + 1/2}{\chi'}, z'(\chi')\right),
+    C_{ij}(\ell) = \int_0^{\min(\chi_i , \chi_j )}  \, \frac{\mathrm{d}\chi}{\chi^2} \, \frac{\mathrm{d}z}{\mathrm{d}\chi} \, \frac{\mathrm{d}z}{\mathrm{d}\chi}  \,W_{\mathrm{DM}}^j(z(\chi)) \, W_{\mathrm{DM}}^i(z(\chi)) \, P_{\mathrm{ee}}\!\left(\frac{\ell + 1/2}{\chi}, z'(\chi)\right).
 \end{equation}
 The choice of the Limber approximation is valid when the terms multiplied by $j_\ell$ are slowly changing realtive to $j_\ell$. The calculation via the Limber approximation agrees with the brute force calcualtion for large $\ell$ i.e the regime where $j_\ell$ oscillates very quickly. This is evident by noticing that error on the Limber approximation scales with $\mathcal{O}(\ell^\frac{1}{2})$.
 
-Eq. \ref{eq:cosmological_covariance} has another bottleneck. The sum over the Legendre polynomials is another computationally expensive step that scales as  $\mathcal{O}(\ell)$. At small enough angular separations, it is possible to approximate the spherical coordinates as flat, in what is called the flat sky approximations \citep{kaiser1992weak}. In this approximation, the relationship between the angular power spectrum is derived by taking the Fourier tansform in two-dimesions of the field instead of the spherical harmonic transform. Starting from the last line of Eq. \ref{eq:cosmological_covariance}, the property in Eq. \ref{eq:spherical_property}, and the definition of the angular power spectrum in Eq. \ref{eq:ang_power_spectrum}, the covariance can be re-written as
+Eq. \ref{eq:cosmological_covariance} has another bottleneck. The sum over the Legendre polynomials is another computationally expensive step that scales as  $\mathcal{O}(\ell)$. At small enough angular separations, it is possible to approximate the spherical coordinates as flat, in what is called the flat sky approximations \citep{kaiser1992weak}. In this approximation, the relationship between the angular power spectrum is derived by taking the Fourier tansform in two-dimesions of the field instead of the spherical harmonic transform. Starting from the last line of Eq. \ref{eq:cosmological_covariance}, the property in Eq. \ref{eq:spherical_property}, and the definition of the angular power spectrum in Eq. \ref{eq:ang_power_spectrum}, the covariance can be re-written as\footnote{I omit the subscript from $\mathrm{DM}_\mathrm{LSS}$ hereafter, where the symbol $\mathrm{DM}$ refers to the cosmological contributiuon to the DM.}
 \begin{equation} \label{eq:cov_real}
-    \mathrm{cov}_{ij} = \langle \mathrm{DM}(\mathbf{\hat{x}}_i, z_i) \mathrm{DM}(\mathbf{\hat{x}}_j, z_j)\rangle 
+    \mathrm{cov}_{ij} = \langle \mathrm{DM}(\mathbf{\hat{x}}_i, z_i) \mathrm{DM}(\mathbf{\hat{x}}_j, z_j)\rangle,
 \end{equation}
 where I used 
 \begin{equation}
-    \langle \mathrm{DM}_{\ell m}(z_i) \mathrm{DM}_{\ell' m'}(z_j)\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{ij}(\ell)
+    \langle \mathrm{DM}_{\ell m}(z_i) \mathrm{DM}_{\ell' m'}(z_j)\rangle = \delta_{\ell \ell'} \delta_{m m'}C_{ij}(\ell),
 \end{equation}
 and
 \begin{equation}
-    \mathrm{DM}_{\ell m}(z_i) = \sum_{\ell m}   Y_{\ell m}(\mathbf{\hat{x}}_i) \mathrm{DM}_{\ell m}(z_i)
+    \mathrm{DM}_{\ell m}(z_i) = \sum_{\ell m}   Y_{\ell m}(\mathbf{\hat{x}}_i) \mathrm{DM}_{\ell m}(z_i).
 \end{equation}
 To invoke the flat sky approximation, I invoke the Fourier transform of $ \mathrm{DM}(\mathbf{\hat{x}}_i, z_i)$ in Eq. \ref{eq:cov_real} and assume that in the two-dimensional Fourier space
 \begin{equation}
@@ -732,21 +732,21 @@ To invoke the flat sky approximation, I invoke the Fourier transform of $ \mathr
 \end{equation}
 I end up with the following expression 
 \begin{equation}
-    \mathrm{cov}_{ij} = \int \mathrm{d} \boldsymbol{\ell} e^{-i\boldsymbol{\ell}. \boldsymbol{\theta}_{ij}} C_{ij}(\ell).
+    \mathrm{cov}_{ij} = \int \mathrm{d} \boldsymbol{\ell} e^{-i\boldsymbol{\ell}. \boldsymbol{\theta}_{ij}} C_{ij}(\ell),
 \end{equation}
 with volume element can be written as $\mathrm{d}\boldsymbol{\ell} = \ell \mathrm{d}\ell \mathrm{d}\alpha$, and the integral can be performed in the angular position of the Fourier space $\alpha$. I use the properties of the Bessel function of the first kind
 \begin{equation}
-    J_0(\ell \theta_{ij}) = \frac{1}{2\pi} \int_0^{2\pi} e^{i\ell \theta_{ij} \cos\alpha} \, \mathrm{d}\alpha
+    J_0(\ell \theta_{ij}) = \frac{1}{2\pi} \int_0^{2\pi} e^{i\ell \theta_{ij} \cos\alpha} \, \mathrm{d}\alpha,
 \end{equation}
 The covariance matrix in the flat sky approximation is
 \begin{equation}
-    \mathrm{cov}_{ij} = \int  \, \frac{\ell \mathrm{d}\ell}{2\pi} \, J_0(\ell \theta_{ij}) \, C_{ij}(\ell)
+    \mathrm{cov}_{ij} = \int  \, \frac{\ell \mathrm{d}\ell}{2\pi} \, J_0(\ell \theta_{ij}) \, C_{ij}(\ell).
 \end{equation}
 This result is very useful to further accelerate the calculation of the covariance matrix. Though only valid on small angular separation, this apprixomation is widely used for forecasting purposes. Simulating the dispersion to fulfill the puprpose of this thesis will be described in section \ref{meth_sec:sim_dm}. 
 
 Now that an expression of the covariance is obtained, I focus on deriving an expression for the variance of the dispersion measure signal at a certain redshift $z$. The variance of the DM sinal is defined as
 \begin{equation}
-    \sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right] = \langle \left((\mathrm{DM}(\mathbf{\hat{x}}, z) - \mathrm{DM}(z))^2\right)\rangle
+    \sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right] = \langle \left((\mathrm{DM}(\mathbf{\hat{x}}, z) - \mathrm{DM}(z))^2\right)\rangle.
 \end{equation}
 The expression can be easily derived from Eq. \ref{eq:cosmological_covariance} by setting $\mathbf{\hat{x}}_i = \mathbf{\hat{x}}_j$ and $z_i = z_j$ writing $C_{ij}(\ell) = C(\ell, z)$, yielding
 \begin{equation}
@@ -754,7 +754,7 @@ The expression can be easily derived from Eq. \ref{eq:cosmological_covariance} b
 \end{equation}
 and if I use the flat sky approximation, the expression changes to
 \begin{equation}
-    \sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right] = \int  \, \frac{\ell \mathrm{d}\ell}{2\pi} \,  C(\ell, z)
+    \sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right] = \int  \, \frac{\ell \mathrm{d}\ell}{2\pi} \,  C(\ell, z).
 \end{equation}
 In total, the variance of the DM field is an importnat quantity for constraining baryonic feedback. As you can see from Eq. \ref{eq:dispersion_final}, the mean DM-$z$ relation is strongly sensitive to the value of the baryonic density ratio $\Omega_\mathrm{b}$ and the Hubble constant $H_0$ and dependent on the other density ratios through the rate of expansion $E(z)$. Therefore, the dependednce on the baryonic feedback paramerters is entirely encoded in $\sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right]$ and the electron density contrast $\delta_\mathrm{e}$. I will explain how to model the electron power spectrum using an analytical model of the baryonic feedback in section \ref{meth_sec:bfc}. Fig. \ref{theory_fig:DM-z} shows a plot of the dipersion measure redshift relation for different values of $\Omega_\mathrm{b}$ and differnet values for baryonic feedback parameters.
 
@@ -766,7 +766,10 @@ In total, the variance of the DM field is an importnat quantity for constraining
 %     \label{theory_fig:DM-z}
 % \end{figure}
 
-
+So far, I have only introduced the cosmological DM. In reality, the measured $\mathrm{DM}$ receives contributions from the Milkyway galaxy and the host galaxy contribution which are not included in Eq. \ref{eq:dispersion_final}. We label each of these contribution with $\mathrm{DM}_\mathrm{MW}$ and $\mathrm{DM}_\mathrm{host}$ respectively. We discuss these two contributions in section \ref{theory_sec:uncertainties}. The total DM measured as measured on Earth is 
+\begin{equation}
+    \mathrm{DM}_\mathrm{tot} = \mathrm{DM}_\mathrm{LSS} + \mathrm{DM}_\mathrm{MW} + \mathrm{DM}_\mathrm{host}.
+\end{equation}
 
 
 
@@ -774,32 +777,32 @@ In total, the variance of the DM field is an importnat quantity for constraining
 To forward model observations, we convolve the $DM-z$ represented by $P(DM|z)$ with measurement and systematic uncertainties, in addition to other observational effects. A catalog of detected FRBs is expected to have observed dispersion measure $DM_\text{obs}^i$, galactic coordinates, and redshifts for a subset of and observations $z^i$. We assume that each detected FRB was emitted at redshift $z^i$ where the difference between identified and unidentified host can be integrated in how $P(z^i)$ is modeled. Assume that we observe $N_{FRB}$ fast radio bursts signal. We express the observations as the probability of detecting an FRB $DM_\text{obs}$ given a set of estimated redshifts $\{z^i\}$, can be decomposed using the Bayes rule such that
 
 \begin{equation}
-P(DM_\text{obs}|\{z^i\}) \propto P(\{z^i\}|DM_\text{obs}) P(DM_\text{obs})    
+P(DM_\text{obs}|\{z^i\}) \propto P(\{z^i\}|DM_\text{obs}) P(DM_\text{obs}).
 \end{equation}
 Furthermore, if we assume that each observation $z_i$ is independent of other observations we may use the Bayes rule to decompose $P(\{z^i\}|DM_\text{obs})$ such that
 \begin{equation} \label{eq:step2}
-    P(\{z^i\}|DM_\text{obs}) = \prod_{i}P(z^i|DM_\text{obs})
+    P(\{z^i\}|DM_\text{obs}) = \prod_{i}P(z^i|DM_\text{obs}).
 \end{equation}
 Furthermore, the individual terms in Eq. \ref{eq:step2} could be derived using the joint probability distribution of the observed and the dispersion measure contribution from the large scale structure, namely $DM_\text{obs}$ and $DM$ such that
 \begin{equation}
     \begin{split}
     P(z^i|DM_\text{obs}) & \propto P(DM_\text{obs}|z^i) P(z^i) \\
-                    & = P(z^i) \int P(DM_\text{obs}, DM|z^i)dDM \\
-                    & = P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)dDM
+                    & = P(z^i) \int P(DM_\text{obs}, DM|z^i)\mathrm{d}DM \\
+                    & = P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)\mathrm{d}DM.
     \end{split}
 \end{equation}
 The final expression that relates the probability distribution function of an observation to other modelled terms is 
 \begin{equation} \label{eq:obs_prob}
 \begin{split}
     P(DM_\text{obs}|\{z^i\}) \propto & \\
-    & P(DM_\text{obs}) \prod_{i}P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)dDM
+    & P(DM_\text{obs}) \prod_{i}P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)\mathrm{d}DM.
 \end{split}
 \end{equation}
 
 Furthermore, to model each component of the resulting expression, we start with $P(DM_\text{obs})$. There are three components that contribute additively to $DM_\text{obs}$: the large scale structure contribution $DM_{\text{LSS}}$, the Milkyway contribution $DM_{\text{MW}}$, and the host galaxy contribution $DM_{\text{host}}$, and the observed dispersion measure is given as
 
 \begin{equation}
-    DM_\text{obs} = DM_{\text{LSS}} + DM_{\text{MW}} + DM_{\text{host}}
+    DM_\text{obs} = DM_{\text{LSS}} + DM_{\text{MW}} + DM_{\text{host}}.
 \end{equation}
 For simplicity, we indicate to the contribution from the large-scale structure simply with $DM$ which is the same in Equation Eq. \ref{eq:obs_prob}. Consider the joint probability distribution $P(DM, DM_{\text{MW}},  DM_{\text{host}})$, this can be related to $P(DM_\text{obs}) = P(DM + DM_{\text{MW}} + DM_{\text{host}})$ via the constrained integral
 
@@ -809,7 +812,7 @@ For simplicity, we indicate to the contribution from the large-scale structure s
     & = \int_{\mathcal{C}} P(DM, DM_{\text{MW}},  DM_{\text{host}}) \text{ d}DM \text{ d}DM_{\text{MW}}
     \text{ d}DM_{\text{obs}} \\ 
     & = \int_{\mathcal{C}} P(DM)P(DM_{\text{MW}})  P(DM_{\text{host}}) \text{ d}DM \text{ d}DM_{\text{MW}}
-    \text{ d}DM_{\text{obs}} 
+    \text{ d}DM_{\text{obs}},
 \end{split}
 \end{equation}
 Where $\mathcal{C} = \{DM, DM_{\text{MW}},  DM_{\text{host}}; DM_{\text{obs}} = DM + DM_{\text{MW}} + DM_{\text{host}}\}$
@@ -818,7 +821,7 @@ Similarly, I can model $P(DM_\text{obs}|z^i, DM)$ as
 \begin{equation}
     \begin{split}
         P(DM_\text{obs}|z^i, DM)  &=  \int_{\mathcal{C}} P(DM|z^i, DM)P(DM_{\text{MW}}|z^i, DM)  \\ &P(DM_{\text{host}}|z^i, DM) \text{ d}DM \text{ d}DM_{\text{MW}}
-    \text{ d}DM_{\text{obs}}
+    \text{ d}DM_{\text{obs}},
     \end{split}
 \end{equation}
 Each of the terms making up the integral could be further reduced 
@@ -827,8 +830,8 @@ Each of the terms making up the integral could be further reduced
 \begin{align}
     P(DM|z^i, DM) & \propto P(DM|z^i) P(DM) \\
     P(DM_{\text{MW}}|z^i, DM) & = P(DM_{\text{MW}}) \\
-    P(DM_{\text{host}}|z^i, DM) & \propto P(DM_{\text{host}}|z^i)P(DM|z^i)
-\end{align} 
+    P(DM_{\text{host}}|z^i, DM) & \propto P(DM_{\text{host}}|z^i)P(DM|z^i).
+\end{align}
 
 Keeping in mind, that $DM_{\text{host}}$ that we use in Eq. \ref{eq:obs_prob} is flat since we do not have any information of the 
 
@@ -838,11 +841,10 @@ Keeping in mind, that $DM_{\text{host}}$ that we use in Eq. \ref{eq:obs_prob} is
 discuss the motivation for the SBI method.
 
 \section{The systematic uncertainties} \label{theory_sec:uncertainties}
-{\color{red} It is important here to mention how this is modelled on the level of the simulation and the level of covariance.}
 In this section, I describe the modelling of systematic uncertainties on the dispersion measure. 
 
 \begin{itemize}
-\item \textbf{Milkyway contribution:} The Milkyway (MW) galaxy, just like any disc galaxy, has free electrons in the interstellar medium (ISM). As the FRB pulse pass through the interstellar medium, it gets further dispersed by the free electron in the interstellar medium, adding an additional contribution to the measured $\mathrm{DM}$. I will label the contribution from the MW with $\mathrm{DM}_\mathrm{MW}$. There are curently no analytical model that can accuratley describe the electron number density in the MW, however there exists an empirical model that is calibrated on quasars data, and which we will use in this thesis {\color{red} cite the NE2001 model}. Nonetheless, the model is highly uncertain near the galactic plane meaning that subtracting the MW contribution from $\mathrm{DM}_{tot}$ leads to large measurement error if the FRB is detected near the galactic plane. Fig \ref{theory_fig:MW_map} shows a map of the MW contribution to DM as predicted by the NE2001 model.
+\item \textbf{Milkyway contribution:} The Milkyway (MW) galaxy, just like any disc galaxy, has free electrons in the interstellar medium (ISM). As the FRB pulse pass through the interstellar medium, it gets further dispersed by the free electron in the interstellar medium, adding an additional contribution to the measured $\mathrm{DM}_{\mathrm{tot}}$. There are curently no analytical model that can accuratley describe the electron number density in the MW, however I use the NPE2001 model which is an empirical model that is calibrated on quasars data, and which we will use in this thesis \citep{ocker2024ne2001p}. Nonetheless, the model is highly uncertain near the galactic plane meaning that subtracting $\mathrm{DM}_\mathrm{MW}$ obtained from this model from $\mathrm{DM}_{tot}$ leads to large measurement error if the FRB source is located near the galactic plane. Fig \ref{theory_fig:MW_map} shows a map of the MW contribution to DM as predicted by the NE2001 model.
 
 
 % \begin{figure}[h!]
@@ -853,14 +855,41 @@ In this section, I describe the modelling of systematic uncertainties on the dis
 % \end{figure}
 
 
-\item \textbf{Host galaxy contribution:} FRB picks up a contribution from the galaxy that hosts the FRB source, namely the host galaxy. To model the host galaxy contribtion, N-body simulation provide the best information to date. Using the CAMELS simulation \citep{Villaescusa-Navarro_2021}, \citet{theis2024galaxy} showed that the variability of the host contribution with redshift is mainly driven by the variability of star formation with redshift while the placement of the FRB source in the host galaxy does not impact the mean of the host contribution across different redshifts \footnote{Sources that lie at the further end of the galaxy along the line of sight will pick up higher contribution as compared to a source at the near end of a galaxy, however, on average, the mean of the distribution does not change.}. Nonetheless, varying the feedback mechanism does impact the distrubtion of the host contribution. Therefore, \citet{reischke2024analytical} provided an analytic model of the DM host contribution using the baryonificaiton correction model \citep{Schneider_Kovač_etal._2025,Schneider_Teyssier_2015}.
+\item \textbf{Host galaxy contribution:} FRB picks up a contribution from the galaxy that hosts the FRB source, namely the host galaxy. To model the host galaxy contribtion, N-body simulation provide the best information to date. Using the CAMELS simulation \citep{Villaescusa-Navarro_2021}, \citet{theis2024galaxy} showed that the variability of the host contribution with redshift is mainly driven by the variability of star formation with redshift while the placement of the FRB source in the host galaxy does not impact the mean of the host contribution across different redshifts \footnote{Sources that lie at the further end of the galaxy along the line of sight will pick up higher contribution as compared to a source at the near end of a galaxy, however, on average, the mean of the distribution does not change.}. Nonetheless, varying the feedback mechanism does impact the distrubtion of the host contribution. Therefore, \citet{reischke2024analytical} provided an analytic model of the DM host contribution using the baryonificaiton correction model \citep{Schneider_Kovač_etal._2025,Schneider_Teyssier_2015}. This model was able to reproduce the probability distribution of the host contribution given redshift and halo mass as found from the CAMELS simulation suit.
+However, integrating this impact in a cosmological analysis will double the dimensionality of the paramter space since another copy of baryonic feedback parameters are needed to account for the host contribution beside the cosmological contribution of the dispersion measure $\mathrm{DM}_\mathrm{LSS}$. In addition, the analytical model reuquires simplistic assumption regarding the distribution of stars in halos.
 
-in host contribution can be modeled with a lognormal distribution, parameterized with mean and variance.  however, an analytical model is needed for parameter inference. Another layer of uncertainty surrounds the variability of host contribution with redshifts and the position of the FRB source within the host. Within the halo model, it is possible to obtain gas halo profiles and stellar density profiles which can probe the position of FRBs in the host \footnote{As the source of FRB is likely to be a magnetar, the likelihood of an FRB source to be at a certain radial position is given by the stellar density profile.}, however, the halo mass will also add another layer of uncertainty by marginalising on the range of possible halo masses where the FRB resides {\color{red} cite Robert's paper}
+In this work, I assume that the host contribution follows a lognormal distribution since it fits the analytical prediction from  \citet{reischke2024analytical} and the simulation results from \citet{theis2024galaxy} for a sample size of $10^4$ FRBs, which what we consider in this thesis. In general, if the lognormal distribution is parameterized by $\mu$ and $\sigma_\mathrm{LN}^2$, then the probability distribution funciton of the host contribution is given as
+\begin{equation}
+P_{\mathrm{host}}(\mathrm{DM}_\mathrm{host};\mu,\sigma_{\mathrm{LN}}) = \frac{1}{\mathrm{DM}_\mathrm{host}\sigma_{\mathrm{LN}}\sqrt{2\pi}} \exp\left(-\frac{(\ln \mathrm{DM}_\mathrm{host} - \mu)^2}{2\sigma_{\mathrm{LN}}^2}\right).
+\end{equation}
+
+
 \item \textbf{Redshift uncertainty:} Follow up optical observations of FRBs allows spectroscopic estimation of the redshifts of its host galaxy. The measurement uncertainty on the redshift can induce additional scatter in the estimated cosmological covariance matrix and modify the source redshift distribution. The latter effect is especially important when cross-correlating FRBs with cosmic shear as performed by \citet{reischke2023calibrating}. A faster way to localize FRBs is to use wide field spectroscopic or photometric surveys by deriving an astrometric solution, yielding a set of possible candidates of the host with a probability for each canditate \citep{garcia2025search}. This method is, nonetheless, highly uncertain. Therefore, the redshift uncertainty is an important systematic uncertainty to mitigate in an analysis involving FRBs.
 
- In section 
+In this work, I assume that the measured that a redshift measuremnet $z_i$ is sampled from a Gaussian distribution with mean $z_i$ and standard deviation $\sigma_i = \eta z_i$, where $\eta_i$ is a number between $0$ and $1$.
 
 
-\item \textbf{Selection effects} Refer to the paper by Kritshi and the 
-\item \textbf{Unlocalised hosts} refer to the interview presentation
+\item \textbf{Selection effects:} The time resolution of radio telescope and its ability to detect a wide range of DM values is limited by the instrument. In other words, radio telescopes are only able to detect DM values up to a certain upper limit. THis effect originate from dispersive smearing in the different radio frequency channels in the telescop, leading to an artificial broadening of the signal and low signal-to-noise ratio \citep{hoffmann2025modelling}. In general, this affects the normalization of the PDF of measured DM and not the shape. Therfore, the search efforts are restricted to a $\mathrm{DM}_\mathrm{\max}$, depending on the instrument. Table \ref{tab:dmmax} shows some exmaples for radio surrveys and their correponding $\mathrm{DM}_\mathrm{\max}$. Since $\mathrm{DM}$ is an integrated value, a lower value of $\mathrm{DM}_\mathrm{\max}$ restricts the search to inlcude low redshifts only. 
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lc}
+        \hline
+        Survey & $\mathrm{DM}_{\mathrm{max}}$ (pc\,cm$^{-3}$) \\
+        \hline
+        DSA-110        & 1500               \\
+        FAST/CRAFTS    & 5000               \\
+        FAST/GPPS      & 3700               \\
+        \hline
+    \end{tabular}
+    \caption{Maximum dispersion measure search limits for FRB surveys, the values are adopted from \citet{hoffmann2025modelling}}
+
+    \label{tab:dmmax}
+\end{table}
+
+The impact of this systematic uncertainty was suttied by \citet{sharma2026quantifying}. 
+
+
+Refer to the paper by Kritshi and the and add the plot to the SKAO source number density distribution.
+\item \textbf{Unlocalised hosts:} refer to the interview presentation
 \end{itemize}
