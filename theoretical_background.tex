@@ -579,7 +579,7 @@ Though kSZ is a promising tool, extracting its signal from CMB observation requi
 
 
 \section{Fast radio bursts}\label{theory_sec:FRBs}
-This section is based on \citet{alonso2021linear}, \citet{10.1093/mnras/stad1645} and \citet{Petroff_2019}. For ease of writing, I consider that $\hbar = c = 1$ in this section. As mentioned in the introduction, the DM of FRBs is proportional to the difference in arriveal time between high frequency wave and small frequency wave, and I show how this relationship rises below. Since the FRBs passes through the circumgalagtic mesium, it interacts with the plasma in this medium. The plasma is made up out of charged electrons. Therefore, when a light wave of frequency $\omega$ and wave vector $\mathbf{k}$, the plasma follows the dispersion relation
+This section is based on \citet{alonso2021linear}, \citet{10.1093/mnras/stad1645} and \citet{Petroff_2019}. For ease of writing, I consider that $\hbar = c = 1$ in this section. As mentioned in the introduction, the DM of FRBs is proportional to the difference in arriveal time between high frequency wave and small frequency wave, and I show how this relationship rises below. Since the FRBs passes through the intergalactic medium (IGM), it interacts with the plasma in this medium. The plasma is made up out of charged electrons. Therefore, when a light wave of frequency $\omega$ and wave vector $\mathbf{k}$, the plasma follows the dispersion relation
 \begin{equation}\label{eq:dispersion}
     \omega^2 - |\mathbf{k}|^2 = \omega_e^2, \quad \omega_e \equiv \frac{4\pi e^2 n_\mathrm{e}}{m_e},
 \end{equation}
@@ -860,9 +860,9 @@ However, integrating this impact in a cosmological analysis will double the dime
 
 In this work, I assume that the host contribution follows a lognormal distribution since it fits the analytical prediction from  \citet{reischke2024analytical} and the simulation results from \citet{theis2024galaxy} for a sample size of $10^4$ FRBs, which what we consider in this thesis. In general, if the lognormal distribution is parameterized by $\mu$ and $\sigma_\mathrm{LN}^2$, then the probability distribution funciton of the host contribution is given as
 \begin{equation}
-P_{\mathrm{host}}(\mathrm{DM}_\mathrm{host};\mu,\sigma_{\mathrm{LN}}) = \frac{1}{\mathrm{DM}_\mathrm{host}\sigma_{\mathrm{LN}}\sqrt{2\pi}} \exp\left(-\frac{(\ln \mathrm{DM}_\mathrm{host} - \mu)^2}{2\sigma_{\mathrm{LN}}^2}\right).
+P_{\mathrm{host}}(\mathrm{DM}_\mathrm{host};\mu,\sigma_{\mathrm{LN}}) = \frac{1}{\mathrm{DM}_\mathrm{host}\sigma_{\mathrm{LN}}\sqrt{2\pi}} \exp\left(-\frac{(\ln \mathrm{DM}_\mathrm{host} - \mu)^2}{2\sigma_{\mathrm{LN}}^2}\right),
 \end{equation}
-
+where $\exp(\mu)$ and $\exp(2\mu + \sigma_{\mathrm{LN}}^2)\left[\exp(\sigma_{\mathrm{LN}}^2) - 1\right]$ are the median and the variance of the distribution. 
 
 \item \textbf{Redshift uncertainty:} Follow up optical observations of FRBs allows spectroscopic estimation of the redshifts of its host galaxy. The measurement uncertainty on the redshift can induce additional scatter in the estimated cosmological covariance matrix and modify the source redshift distribution. The latter effect is especially important when cross-correlating FRBs with cosmic shear as performed by \citet{reischke2023calibrating}. A faster way to localize FRBs is to use wide field spectroscopic or photometric surveys by deriving an astrometric solution, yielding a set of possible candidates of the host with a probability for each canditate \citep{garcia2025search}. This method is, nonetheless, highly uncertain. Therefore, the redshift uncertainty is an important systematic uncertainty to mitigate in an analysis involving FRBs.
 
@@ -887,9 +887,22 @@ In this work, I assume that the measured that a redshift measuremnet $z_i$ is sa
     \label{tab:dmmax}
 \end{table}
 
-The impact of this systematic uncertainty was suttied by \citet{sharma2026quantifying}. 
+The impact of selection was studied by \citet{sharma2026quantifying}. In this work, the authors use a probabilistic model to describe the DM with all the possible selection effect. Beside the selection based on $\mathrm{DM}_\mathrm{\max}$, the authors consider the redshift source distribution by modeling with 3 free parameters and fitting this model to data along with the cosmological and baryonic feedback parameters. Furthermore, this work concludes that selection effects lead to $3\sigma$ bias in the inferred paramters for $10^4$ FRBs.
 
+In this thesis, I fix the redshift source distribution to coincide with that expected from the Square Kilometer Array Observatory (SKAO) \citep{braun2015advancing}, and impose a smooth cut on the measured $DM$ by multiplying the PDF $P(\mathrm{DM}^i ; \{z_\mathrm{FRB}^i\})$ with a sigmoid kernel \citep{shannon2018dispersion} parameterized by $\mathrm{DM}_\mathrm{\max}$ and the smoothness of the cut $\epsilon$
 
-Refer to the paper by Kritshi and the and add the plot to the SKAO source number density distribution.
-\item \textbf{Unlocalised hosts:} refer to the interview presentation
+\begin{equation}
+    \sigma (\mathrm{DM}; \mathrm{DM}_\mathrm{max}, \epsilon) = \frac{1}{1 + \exp\left(\frac{\mathrm{DM} - \mathrm{DM}_\mathrm{max}}{\epsilon}\right)}
+\end{equation}
+Therefore, for a simulated catalog, each value of $DM$, is weighed with $\sigma (\mathrm{DM}; \mathrm{DM}_\mathrm{max}, \epsilon)$. 
+
+\item \textbf{Unlocalised hosts:} So far, the number of detected FRBs is ~3000\footnote{\href{https://www.chime-frb.ca/catalog2}{CHIME/FRB Catalog 2.}
+}, and only 100 of them has identified host \citep{Reischke:2025srr} i.e only the redshifts of 100 FRBs is known. This poses as an obstacle to use all FRBs for cosmological inference since redshifts are important to calculate data covariance and constrain the DM-$z$ relationship. Since follow-up optical observation to identify the host galacxy is both time and resource consuming, it is important to realised the best strategy to distribute these resources. 
+In this thesis, I explore whether constraining the DM-$z$ relation is possible if only a subset of the observed FRBs has an identified host. I explore the following cases
+\begin{itemize}
+    \item A random subset of FRBs has no identified hosts.
+    \item A subset of high redshfit FRBs has no identified hosts. 
+    \item A subset of low redshfit FRBs has no identified hosts.
+\end{itemize}
+Retrospectively, FRBs with high redshift has higher signal-to-noise since they pick higher contribution from the electorn density along their path to Earth, however, the measurement uncertainty of their redshift is high. Meanwhile, FRBs with low redshifts has lower signal-noise-ratio since the path they travel is less as compared to high redshift sources, however, their measured redshfits have lower uncertainties. The results will show whether observing high- or low- redshift sources will be the best stretegy to follow for follow-up optical observations. 
 \end{itemize}

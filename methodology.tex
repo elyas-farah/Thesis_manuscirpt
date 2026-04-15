@@ -1,20 +1,61 @@
 \chapter{Methodology} \label{chap:method}
+In this section, I explain the methoddology used in this thesis. The end purpose is to show how the $DM$-$z$ relation deviates from its what is expected by contaminating mock FRBs catalog with systematic uncertainties through simulating FRBs catalogs and studying the impact of systematic uncertainties when contaminating catalogs with these systematic uncertainties. Fig. \ref{meth_fig:simulation_flow} shows a flowchart of how to generate a mock catalog. I explain the steps in details below. I perform the analysis assuming the detection for $N_\mathrm{FRBs} = 10^4$. This is the expected number of detected FRBs per year by future FRBs survey such as ther SKAO \citep{ macquart2015fast}. Future work should focus on scaling up to larger sample size since the impact of systematic uncertainties changes with sample size. 
+
+Table \ref{tab:cosmo_params} shows the cosmological and baryonic feedback paramters which are used to generate mock catalogs. These parameters are used to obtain an expectation of the electron power spectrum.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figs/cover/simulation_flow.png}
+    \caption{A flowchat of the simulation pipeline introduced in this section. Starting from model parameters I obatin the non-linear electron power spectrum via the halo model. Then, I perform the Limber integral to obatin the electron angular power spectrum in each redshift bin. After that, I use the GLASS package to obatin lognormal maps of electrons in bins of redshifts. Then, I sample in angular positions and redshifts and sum the contribution of each shell to obtain an uncontaminated catalog. Eventually, The systematic uncertainties are then added.}
+    \label{meth_fig:simulation_flow}
+\end{figure}
+To model the dispersion measure signal, I use the Generator for Large-Scale Structure (GLASS) \citep{tessore2023glass} package. I describe this package in further details in section \ref{meth_sec:glass}. Briefly, the GLASS package generates lognormal maps of a cosmological field starting from a given angular power spectra. On contrary to the commonly used \texttt{healpy} package, it assumes that the cosmological field follows a lognormal distribution. Though this is not the case in for a real cosmological field, the GLASS package preserves the two-point statistics of the cosmologocal field, which is enough for the sample size I am considering in this thesis. Higher order statistics such as the bispectrum (3-point) and the trispectrum (4-point) requires a larger sample size for detection. Using the electron power spectrum, I project the spectra on the unit sphere to obtain an expectation of the angular power specta in bins of redshifts. After that, I feed the resultatnt power spectra to GLASS in order to obtain maps of electron density in bins of redshift. THe next step constitute in sampling randomly on the sky and according to the source redshift distribution in redshift then sum the contribution from different shells. In general, the simulation spicificaitons are shown in Table \ref{}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{c p{7cm} c c}
+\hline\hline
+\textbf{Parameter} & \textbf{Description} & \textbf{Fixed value} & \textbf{Prior} \\
+\hline
+$\Omega_{\mathrm{b}}$ & Baryon density parameter & 0.0493 & - \\
+$\Omega_{\mathrm{c}}$ & Cold dark matter density parameter & 0.264 & - \\
+$h$ & Dimensionless Hubble parameter &0.6766 & - \\
+$n_{\mathrm{s}}$ & Spectral index of primordial power spectrum &  0.9665 & - \\
+$\sigma_8$ & Amplitude of matter fluctuations & 0.8102 & - \\
+\hline\hline
+\end{tabular}
+\caption{A table with the cosmological parameters used in this thesis. The values are adopted from Planck 2018 results \citep{aghanim2020planck}.}
+\label{tab:cosmo_params}
+\end{table}
 
 
-In this section, we explain the methoddology used in this thesis. 
 
-Add a flow chart that summarizes the different steps in the pipeline, like the one in the interview presentation.
-
-Add a table showing the cosmological parameters, theri fiducial value and their prior. Look at the table in Kritti et al on the selection effects. Add the parameters that I fix and the parameter that I free. In addition, add the values for the parameters to model systematics and priors (in case I present the SBI).
-
+\begin{table}[h]
+\centering
+\begin{tabular}{c p{8cm} c}
+\hline\hline
+\textbf{Property} & \textbf{Description} & \textbf{Value} \\
+\hline
+$z_{\min}$ & Minimum redshift & 0.01 \\
+$z_{\max}$ & Maximum redshift & 2.0 \\
+$n_{\mathrm{shells}}$ & Number of shells & 30\\
+$\ell_{\max}$ & Maximum multipole & 4100 \\
+$N_{\mathrm{side}}$ & Map resolution (HEALPix) & 4096 \\
+$b_{\mathrm{h}}(M)$ & Bias model as a funciton of halo mass $M$ & \citet{tinker2010large}\\
+$n(M)$ & Halo mass function & \citet{tinker2008toward} \\
+\hline\hline
+\end{tabular}
+\label{tab:sim_spec}
+\caption{The specifiactions of the FRB catalog specification. HEALPix \citep{gorski2005healpix} is an algorithm to pixellize as an image with certain resolution. The resolution parameter $N_\mathrm{side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta_\mathrm{min} \approx 1/N_\mathrm{side}$.}
+\end{table}
 
 
 
 \section{Modelling the electron power spectrum} \label{meth_sec:pee}
+To model the electron power spectrum, I use the halo model (introduceed in section \ref{theory_sec:halo_model}), where I obtain halo profiles using the Baryonification Correction Model (BCM) \citep{Schneider_Teyssier_2015,Schneider_Kovač_etal._2025}.
 
 explain things in a schematic representation first. 
 
-- a plot for the comparison between Limber and non-Limber approximations.
 - a plot validating the number of chosen z and k grid for the power spectrum.
 - talk about eh power spcetrum extrapolation.
 
@@ -53,17 +94,23 @@ $\alpha_{0,\mathrm{nt}}$ & - & Non-thermal pressure amplitude (see Eq. 2.15) & 0
 
 
 
-\subsubsection{The Core Cosmology Library (CCL)}
-describe CLASS and what it does.
+\subsection{The Core Cosmology Library (CCL)}
+
+
+\subsection{The electron angular power spectrum} \label{meth_sec:angular_power_spectrum}
+
+- Add a plot for the comparison between the limber and the non-limber approximations.
+
 
 
 \section{Simulating the dispersion measure signal} \label{meth_sec:sim_dm}
 Add a table with the fiducial values and their prior. explain how we ignore the redshift evolution of some parameters. Motivate the choice for the number of shells and the redshift range.
 
-\subsection{The Generator for Large Scale Structure (GLASS)}
+\subsection{The Generator for Large Scale Structure (GLASS)}\label{meth_sec:glass}
 mention the reason behind the choice of 30 shells. and the binning in comoving space.
+add a plot of the concentric shells. 
+speak a bit about HEALPix
 
-\subsection{The electron angular power spectrum} \label{meth_sec:angular_power_spectrum}
 \subsection{The numerical implementation of the cosmological covariance matrix}
 - Add a plot for the validity of the divisions when implementing in z.
 
@@ -71,10 +118,68 @@ mention the reason behind the choice of 30 shells. and the binning in comoving s
 
 \section{Simulating the systematic uncertainties}
 
+
+
+
+
+
+
+
+
+\begin{table}[h]
+\centering
+\caption{Summary of Model Parameters}
+\begin{tabular}{c p{8cm} c}
+\hline\hline
+\textbf{Symbol} & \textbf{Description} & \textbf{Range} \\
+\hline
+\multicolumn{3}{c}{\textit{Redshift Uncertainty}} \\
+\hline
+$\eta$ & the ratio between a redshift measurement $z$ and its standard deviation& $[0.05, 0.4]$\\
+\hline
+\multicolumn{3}{c}{\textit{The host contribution}} \\
+\hline
+$\mu$ & The underlying Gaussian mean of the lognormal distribution & $[50, 300]$\\
+$\sigma_\mathrm{LN}$ & The scale of the lognormal distribution& [0.01, 0.15]\\
+\hline
+\multicolumn{3}{c}{\textit{The Milkyway contribution}} \\
+\hline
+$\mathrm{DM}_\mathrm{MW}(\mathbf{\hat{x}})$ & The Milkyway contribution as a function of angular position $\mathbf{\hat{x}}$ & Given by the NPE2001 model \\
+\hline
+\multicolumn{3}{c}{\textit{Selection effects}} \\
+\hline
+$\mathrm{DM}_\mathrm{max}$ & The maximum value of DM that the instrument is able to detect. & [1500, 3500]\\
+$\epsilon$ & The smoothing scale of the PDF. & [0.1, 3]\\
+\hline
+\multicolumn{3}{c}{\textit{Missing redshifts}} \\
+\hline
+$f$ & The fraction of FRBs with missing redshift. & [0.05, 0.4]\\
+\hline\hline
+\end{tabular}
+\caption{A table with the parameters of the systematic uncertainties. The range of the parameters is chosen to be wide enough to cover the expected values for these parameters. }
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Milkyway contribution}
 \subsection{Host contribution}
 offer an explnation for the chosen values of the parameters.
-\subsection{Redshift uncertainty}
+\subsection{Redshift uncertainty} \label{meth_sec:z_uncertainty}
 I simulate the imapct of redshift uncertainty by assuming that a redshift measuremnet $z_i$ is sampled from a Gaussian distribution with mean $z_i$ and standard deviation $\sigma_i = \eta z_i$, where $\eta_i$ is a number between $0$ and $1$. To propagate the error on the cosmological covariance, consider that $(z_i, z_j)  \sim \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma)$, with $\mathcal{N}$ is the normal distribution and
 \begin{equation}
     \Sigma = \begin{bmatrix}
@@ -88,11 +193,11 @@ To propagate the error, I calcualte the expectation value $\langle \hat{C}_{ij} 
 \end{equation}
 With Taylor's expansion around $(\hat{z}_i, \hat{z}_j)$ and setting $\Delta_{ij} = (z_i, z_j) - (\hat{z}_i, \hat{z}_j)$, the covariance matrix can be written
 \begin{equation}
-    \langle \hat{C}_{ij} \rangle = \int \mathcal{N} \, \, \left(\hat{C}_{ij} + \nabla C_{ij}|_{(\hat{z_i}, \hat{z_j})} \Delta_{ij} + \frac{1}{2} \Delta_{ij}^{T} \nabla^2 C_{ij}|_{(\hat{z_i}, \hat{z_j})}\Delta_{ij} + .....\right)\, \,dz_i \, \, dz_j.
+    \langle \hat{C}_{ij} \rangle = \int \mathcal{N} \, \, \left(\hat{C}_{ij} + \nabla C_{ij}|_{(\hat{z}_i, \hat{z}_j)} \Delta_{ij} + \frac{1}{2} \Delta_{ij}^{T} \nabla^2 C_{ij}|_{(\hat{z}_i, \hat{z}_j)}\Delta_{ij} + .....\right)\, \,dz_i \, \, dz_j.
 \end{equation}
 Since the Gaussian distribution has vanaishing moments for moment larger than third order, the expression is simplified into
 \begin{equation}
-    \langle \hat{C}_{ij} \rangle = \hat{C}_{ij} + \frac{1}{2} \, \, \sigma_{i}^2 \, \, \partial^2_{ii} \, C_{ij}|_{(\hat{z_i}, \hat{z_j})} \, \, + \frac{1}{2} \, \, \sigma_{j}^2 \, \, \partial^2_{jj} \, C_{ij}|_{(\hat{z_i}, \hat{z_j})}.
+    \langle \hat{C}_{ij} \rangle = \hat{C}_{ij} + \frac{1}{2} \, \, \sigma_{i}^2 \, \, \partial^2_{ii} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)} \, \, + \frac{1}{2} \, \, \sigma_{j}^2 \, \, \partial^2_{jj} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)}.
 \end{equation}
 Therefore, it is possible to account for the error in the covariance due to redshift uncertainty using the second derivative of the covariance with respect to redshift $z$.
 
@@ -103,6 +208,20 @@ I show the impact of redshift uncertainty on the scatter in the DM-$z$ relation 
 - show a plot of full PDF and a truncated PDF.
 - Discuss the choice for different normalizations and the excluded FRBs depending on redshift.
 \subsection{Unlocalised hosts}
+I simulate unlocalised FRBs in a fashion similar to what is descibed in seciotn \ref{theory_sec:uncertainties}. To fill in missing redshift, I use the fiducial parameters in order to obtain an expectation of the unknown redshift $z_i = z(\mathrm{DM}_i)$ from the measured $\mathrm{DM}_i$. To propagate the error to the redshift space, I assume that $\mathrm{DM}$ follows a lognormal distribution with underlying Gaussian mean  $\mathrm{DM}_i$ and variance $\sigma^2(z_i)$, such that
+\begin{equation}
+    \mathrm{DM}_i \sim P(\mathrm{DM}; \mu^i, \sigma_{\mathrm{LN}, i}^2)
+\end{equation}
+with 
+\begin{equation}
+    \mu^i = \ln\left(\frac{\mathrm{DM}_{i}^{2}}{\sqrt{\sigma^2(z^i) + \mathrm{DM}_{i}^{2}}}\right) \, , \, \sigma_{\mathrm{LN}, i}^2 = \ln\left(1 + \frac{\sigma^2(z^i)}{\mathrm{DM}_{i}^{2}}\right)
+\end{equation}
+The lognormal assumption is valid in the case of this work since the $\mathrm{DM}$ contributions from the different shells are lognormal. After that, I sample $\mathrm{sample}$ from the distribution, and I use the same mean DM-$z$ relation to map the sampled DM to $z$-space. After that, I calculate the sample variance of the mapped redshifts $\sigma^2_{i}$, where $\sigma_i/\sqrt{n_{\mathrm{sample}}}$ is the error on the estimated redshift $z_i$.
+
+To propagate the error to the covarirance, I use the same formalism introduced in section \ref{meth_sec:z_uncertainty}, only as an approximation, since the underlying PDF of the estimated redshift is not a Gaussian distribution. For the values of $\sigma_{ii}$, if the FRB has an undefined host, the redshift uncertainty is calculated with the method introduced before. Meanwhile, if the redshift is exact, then I set the value of $\sigma_{ii} = 0$. In this theis, I aim to disentangle the different systematic uncertainties. In reality, These effects could be degenerate in the way they impact the measured DM or the covariance. I discuss that futher in chapter \ref{chap:discuss}.
+
+
+
 
 \section{Data Compression}
 I simulate the electron density shells and place FRBs in the same redshift and angular position as in the mock catalog. This will reduce the computational cost and the need to calculate the covariance matrix for each realisation within the SBI pipeline. (Try to do this excercise without choosing the sdame redshifts for a lower number of sources such that it lowers down the computational costs)
