@@ -349,6 +349,12 @@ The mean of $\delta_{0}(\mathbf{k})$ is zero by construction, therefore, the var
 \end{equation}
 where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is only a function of the magnitude of the Fourier space wavevector $k = |\mathbf{k}|$ due to the statistical isotropy of the universe. Fig. \ref{} shows the matter power spectrum obtain using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic} with varying fraction of baryonic matter $\Omega_{\mathrm{b}}$ and varying Hubble parameter $H_0$ at redshift $z = 0$.
 
+The real space counterpart of the power spectrum is called the 2-point correlation function $\xi(r)$, and is defined assume
+\begin{equation}
+    \xi(r) = \langle \delta(\mathbf{x}) \delta(\mathbf{x} - \mathbf{r})\rangle
+\end{equation}
+where $\xi$ is a function of the comoving lenth scale $r$ and is independent of direction. In practice, $\xi$ represent the excess probability that two points separated with $r$ have denisty contrast of $\delta(\mathbf{x})$ and  $\delta(\mathbf{x} - \mathbf{r})$ respectively.
+
 % \begin{figure}[h!]
 %     \centering
 %     \includegraphics[width=0.5\textwidth]{}
@@ -434,12 +440,12 @@ With this formalism in place, the ingredients of the halo model allows an esitma
 The sum can be further divided into two contributions:
 \begin{itemize}
     \item a contribution with $i = j$ which is the power restultant from the correlation of dark matter particles within one dark matter halo given by 
-    \begin{equation}
+    \begin{equation} \label{eq:1h}
         P_{\mathrm{uu}}^{\mathrm{1h}}(k) = \int_0^{\infty} \hat{W}_{\mathrm{u}}(M,k) \, \hat{W}_{\mathrm{u}}(M,k) \, n(M) \, \mathrm{d}M \, ,
     \end{equation}
     and this contribution is termed as \textbf{the one-halo term}.
     \item a contrubution with $i \neq j$ whcih is the power resultant from the correlation of dark matter particles in two different halos given as
-    \begin{equation}
+    \begin{equation}\label{eq:2h}
         P_{\mathrm{uu}}^{\mathrm{2h}}(k) = \int_0^{\infty} \int_0^{\infty} \mathrm{d}M_1 \, \mathrm{d}M_2 \, P_{\mathrm{hh}}(M_1, M_2, k) \, \hat{W}_{\mathrm{u}}(M_1, k) \, \hat{W}_{\mathrm{u}}(M_2, k) \, n(M_1) \, n(M_2),
     \end{equation}
     and this contribution is termed as \textbf{the two-halo contribution}. $P_{hh}$ is the halo power spectrum defined in Eq. \ref{eq:halo_spectrum}.
@@ -759,12 +765,12 @@ and if I use the flat sky approximation, the expression changes to
 In total, the variance of the DM field is an importnat quantity for constraining baryonic feedback. As you can see from Eq. \ref{eq:dispersion_final}, the mean DM-$z$ relation is strongly sensitive to the value of the baryonic density ratio $\Omega_\mathrm{b}$ and the Hubble constant $H_0$ and dependent on the other density ratios through the rate of expansion $E(z)$. Therefore, the dependednce on the baryonic feedback paramerters is entirely encoded in $\sigma^2\left[\mathrm{DM}(\mathbf{\hat{x}}, z)\right]$ and the electron density contrast $\delta_\mathrm{e}$. I will explain how to model the electron power spectrum using an analytical model of the baryonic feedback in section \ref{meth_sec:bfc}. Fig. \ref{theory_fig:DM-z} shows a plot of the dipersion measure redshift relation for different values of $\Omega_\mathrm{b}$ and differnet values for baryonic feedback parameters.
 
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{}
-%     \caption{A plot showing the impact of varying $\Omega_\mathrm{b}$ on the mean DM-$z$ relation and the impact of varying $\log_{10} M_\mathrm{c}$ one of the baryonic feedback parametrs on on the variance of the DM-$z$ relation.}
-%     \label{theory_fig:DM-z}
-% \end{figure}
+\begin{figure}[h!]
+    \centering
+    % \includegraphics[width=0.5\textwidth]{}
+    \caption{A plot showing the impact of varying $\Omega_\mathrm{b}$ on the mean DM-$z$ relation and the impact of varying $\log_{10} M_\mathrm{c}$ one of the baryonic feedback parametrs on on the variance of the DM-$z$ relation.}
+    \label{theory_fig:DM-z}
+\end{figure}
 
 So far, I have only introduced the cosmological DM. In reality, the measured $\mathrm{DM}$ receives contributions from the Milkyway galaxy and the host galaxy contribution which are not included in Eq. \ref{eq:dispersion_final}. We label each of these contribution with $\mathrm{DM}_\mathrm{MW}$ and $\mathrm{DM}_\mathrm{host}$ respectively. We discuss these two contributions in section \ref{theory_sec:uncertainties}. The total DM measured as measured on Earth is 
 \begin{equation}
@@ -847,12 +853,12 @@ In this section, I describe the modelling of systematic uncertainties on the dis
 \item \textbf{Milkyway contribution:} The Milkyway (MW) galaxy, just like any disc galaxy, has free electrons in the interstellar medium (ISM). As the FRB pulse pass through the interstellar medium, it gets further dispersed by the free electron in the interstellar medium, adding an additional contribution to the measured $\mathrm{DM}_{\mathrm{tot}}$. There are curently no analytical model that can accuratley describe the electron number density in the MW, however I use the NPE2001 model which is an empirical model that is calibrated on quasars data, and which we will use in this thesis \citep{ocker2024ne2001p}. Nonetheless, the model is highly uncertain near the galactic plane meaning that subtracting $\mathrm{DM}_\mathrm{MW}$ obtained from this model from $\mathrm{DM}_{tot}$ leads to large measurement error if the FRB source is located near the galactic plane. Fig \ref{theory_fig:MW_map} shows a map of the MW contribution to DM as predicted by the NE2001 model.
 
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{}
-%     \caption{A map of the MW contribution to the measured DM with the NPE2001 model. The model is calibrated on data from quasars. As seen from the map, $\mathrm{DM}_\mathrm{MW}$ is large a the galactic plane and lower towards the pole since baryons in the MW are situated in a disk-like shape.}
-%     \label{theory_fig:MW_map}
-% \end{figure}
+\begin{figure}[h!]
+    \centering
+    % \includegraphics[width=0.5\textwidth]{}
+    \caption{A map of the MW contribution to the measured DM with the NPE2001 model. The model is calibrated on data from quasars. As seen from the map, $\mathrm{DM}_\mathrm{MW}$ is large a the galactic plane and lower towards the pole since baryons in the MW are situated in a disk-like shape.}
+    \label{theory_fig:MW_map}
+\end{figure}
 
 
 \item \textbf{Host galaxy contribution:} FRB picks up a contribution from the galaxy that hosts the FRB source, namely the host galaxy. To model the host galaxy contribtion, N-body simulation provide the best information to date. Using the CAMELS simulation \citep{Villaescusa-Navarro_2021}, \citet{theis2024galaxy} showed that the variability of the host contribution with redshift is mainly driven by the variability of star formation with redshift while the placement of the FRB source in the host galaxy does not impact the mean of the host contribution across different redshifts \footnote{Sources that lie at the further end of the galaxy along the line of sight will pick up higher contribution as compared to a source at the near end of a galaxy, however, on average, the mean of the distribution does not change.}. Nonetheless, varying the feedback mechanism does impact the distrubtion of the host contribution. Therefore, \citet{reischke2024analytical} provided an analytic model of the DM host contribution using the baryonificaiton correction model \citep{Schneider_Kovač_etal._2025,Schneider_Teyssier_2015}. This model was able to reproduce the probability distribution of the host contribution given redshift and halo mass as found from the CAMELS simulation suit.

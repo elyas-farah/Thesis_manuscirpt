@@ -45,29 +45,55 @@ $b_{\mathrm{h}}(M)$ & Bias model as a funciton of halo mass $M$ & \citet{tinker2
 $n(M)$ & Halo mass function & \citet{tinker2008toward} \\
 \hline\hline
 \end{tabular}
+\caption{The specifiactions of FRB catalog simulations. HEALPix \citep{gorski2005healpix} is an algorithm to pixellize as an image with certain resolution. The resolution parameter $N_\mathrm{side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta_\mathrm{min} \approx 1/N_\mathrm{side}$.}
 \label{tab:sim_spec}
-\caption{The specifiactions of the FRB catalog specification. HEALPix \citep{gorski2005healpix} is an algorithm to pixellize as an image with certain resolution. The resolution parameter $N_\mathrm{side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta_\mathrm{min} \approx 1/N_\mathrm{side}$.}
 \end{table}
 
 
 
 \section{Modelling the electron power spectrum} \label{meth_sec:pee}
-To model the electron power spectrum, I use the halo model (introduceed in section \ref{theory_sec:halo_model}), where I obtain halo profiles using the Baryonification Correction Model (BCM) \citep{Schneider_Teyssier_2015,Schneider_Kovač_etal._2025}.
-
-explain things in a schematic representation first. 
-
-- a plot validating the number of chosen z and k grid for the power spectrum.
-- talk about eh power spcetrum extrapolation.
+To model the electron power spectrum, I use the halo model (introduceed in section \ref{theory_sec:halo_model}), where I obtain halo profiles using the Baryonification Model (BCM) \citep{Schneider_Teyssier_2015,Schneider_Kovač_etal._2025}.
 
 
-\subsection{The baryonification correction model} \label{meth_sec:bfc}
-explain how we ignore the redshift evolution of some parameters.
+\subsection{The baryonification model} \label{meth_sec:bfc}
+This section is based on the review of the baryonificaiton correction model presented in \citet{torkamani2026baryonification}.
+
+The purpose of the baryonificaiton model (BFC) is modify the profiles of dark matter halos from N-body gravitational simulation to that which involves baryonic feedback. The change is expressed as a shift in the position of dark matter particles which is parameterized by a set of baryonic feedback parameters.The displacement for dark matter (dm) and baryonic matter (bar) is performed along the radius of a dark matter halo. In practice, the dm and the bar profiles are modified differently when baryonic feedback is taken into consideration. In this thesis, I only focus on the case of modified bar profile. In a a scenario without baryonic feedback, the baryons  follow the distribution of dark matter. The baryon halo profile $\rho_{\mathrm{bar}, i}$ can be written in terms of the underlying dark matter profile  $\rho_{\mathrm{NFW}}$\footnote{$\rho_{\mathrm{NFW}}$ is an analytical expression of dark matter halo density profiles, predicted empirically by fitting the expression to N-body gravitional simulation \citep{Navarro_1997}} on small scales in addition to a large scale contribution from the matter outside of the collapsed halo region which I label as $\rho_{\mathrm{2h}}$\footnote{This contribution is labelled similary to the 2-halo term of the power spectrum since it dominates the contribution on large scales similar to the 2-halo term of the power spectrum}. In total, the final expression reads
+\begin{equation}
+    \rho_{\mathrm{bar,i}}(r) = f_{\mathrm{bar}} \left[ \rho_{\mathrm{NFW}}(r) + \rho_{\mathrm{2h}}(r) \right],
+\end{equation}
+with $f_{\mathrm{bar}}  = \Omega_\mathrm{b}/\Omega_\mathrm{c}$ $\rho_{\mathrm{2h}}$ given in term the linear order 2-point correlation function $\xi_\mathrm{lin}$
+\begin{equation}
+    \rho_{\mathrm{2h}}(r) = \left[ 1 + b(\nu)\xi_{\mathrm{lin}}(r) \right] \Omega_{\mathrm{b}} \rho_{\mathrm{crit}} \, ,
+\end{equation}
+with $b(\nu)$ the halo bias taken from \citet{tinker2010large}. $\nu$ in this context refer to the ratio between the critical density contrast for spherical collapse at linear order $\delta_\mathrm{c, lin}$ and the standard deviation of halo mass $\sigma(M)$. 
+
+Since baryonic feedback affects the distribution of matter on small sacles, the modified baryon profile  the component $\rho_{\mathrm{NFW}}$\footnote{$\rho_{NFW}$} should be modified. Empirically, this mean that on small scales, the contribution to the baryon profile comes primarily from gas and stars within a dark matter halo. The modified component $\rho_{\mathrm{bar,f}}$ becomes
+\begin{equation}
+    \rho_{\mathrm{bar,f}}(r) = \rho_{\mathrm{gas}}(r) + \rho_{\mathrm{star}}(r) + f_{\mathrm{bar}}\rho_{\mathrm{2h}}(r).
+\end{equation}
+Each of the densities in the previous equation is parametrized with a set of cosmological and baryonic feedback parameters. For any species $\mathrm{u}$, the cumilitive mass up to a radius $r$ is given By
+\begin{equation}
+    M_{\mathrm{u}}(R) = 4\pi \int_0^R r^2 \rho_{\mathrm{u}} \, \mathrm{d}r = f_{\mathrm{u}} Y_{\mathrm{u}}(R),
+\end{equation}
+where $f_{\mathrm{u}}$ is the abundance of a component (relative to the total matter) and $Y_{\mathrm{u}}$ is normalized such that $Y_{\mathrm{u}}(\inf) = M_\mathrm{tot}$
+To qunatify the deviation $d(r)$ in a particle's position between its initial (gavitational effects only) position $r_\mathrm{bar, i}$ to its final (gravitional effects and baryonic feedback) position $r_\mathrm{bar, f}$, the radius $r_\mathrm{bar}$ as a function of the cumilitive mass $M_{\mathrm{bar}}$ is obtained
+\begin{equation}
+    r_{\mathrm{bar}} = \mathrm{inv}\left[ M_{\mathrm{bar}}(r) \right],
+\end{equation}
+and the resultant deviation is written as
+\begin{equation}
+    d(r) = r_{\mathrm{bar,f}} - r_{\mathrm{bar,i}}.
+\end{equation}
+The mapping from $r_{\mathrm{bar,i}}$ to $r_{\mathrm{bar,f}}$ is parameterized with the baryonic feedback paramters shown in Table \ref{tab:bfc_prarams}. In addition, Fig. \ref{meth_fig:bfc} shows how the BFC model changes the profiles of dark matter halos.
 
 
-
-
-
-
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/cover/bcm.png}
+    \caption{A plot showing how the BFC model modifies halo profiles (left) and the cumilitive mass (right). At small radius, the profile shifts up to account for star formation processes while it shiffts down on larger radius to account for AGN and supernova feedback. The figure is adopted from \citet{Schneider_Teyssier_2015}.}
+    \label{meth_fig:bfc}
+\end{figure}
 
 
 
@@ -89,17 +115,39 @@ $b_{\mathrm{hse}}$ & $\mathcal{N}(0.26, 0.07)$ & Hydrostatic mass bias & - \\
 $\alpha_{0,\mathrm{nt}}$ & - & Non-thermal pressure amplitude (see Eq. 2.15) & 0.1 \\
 \hline\hline
 \end{tabular}
+\caption{The parameters of the BFC model.}
+\label{tab:bfc_prarams}
+
 \end{table}
 
-
+In this thesis, I use the halo gas profiles predicted by the BFC model to obatin a theoretical expectation of the gas power spectrum, which in turn is the electron power spectrum. I derive the 1-halo and the 2-halo terms using the Core Cosmology Library which is discussed in the next section. As an example of how baryonic feedbck modifies the power spcetrum, Fig. \ref{} shows how the power spectrum changes with changing values of $\log_{10} M_c$, one of the baryonic feedback parameters.
 
 
 \subsection{The Core Cosmology Library (CCL)}
+The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enables fast and efficient calculations of basic cosmological observables with high accuracy. CCL implements a Boltzmann solver in order to obtain a prediction of the linear power spectrum on a grid of redshifts $z$ and scale $k$. It also provides a bicubic interpolator for accurate calculation of the power spectrum, starting from the initial grid points. In this thesis, I sample 30 grid points in $z$ and 150 points in $k$. These are enough grid points to ensure sub-percent accuracy as compared larger numbe of grid points. However, since the $\log P (k, z)$ is linearly related to $\log z$ and $\log k$ for both large and small values of $z$ and $k$, it is possible to extrapolate the power spectrum in logarithmic space beyond the ranges specified in Table \ref{tab:sim_spec}. I show the extrapolation in Fig. \ref{meth_fig:extrapolation}. In addition, to obtain the non-linear power spectrum, CCL implements the halo model where the 1-halo and the 2-halo terms are calculated using the halo profiles obtained from the BFC model. The halo mass function and the halo bias are taken from \citet{tinker2008toward} and \citet{tinker2010large}, respectively. I consider only a linear bias model where the term $\beta$ from Eq. \ref{eq:halo_spectrum} is set to $0$. I show a plot of th epower spectrum for different redshfits in Fig. \ref{meth_fig:power_spectrum}.
 
+In this thesis, I use CCL to obtain a non-linear prediction of the elctron power spectrum using the halo model where the integrals in Eqs. \ref{eq:1h} and \ref{eq:2h} are calculated using the halo profiles obtained from the BFC model. I use the resultant power spectrum to obtain an expectation of the electron angular power spectrum in bins of redshifts using the Limber approximation, which is described in the next section.
 
 \subsection{The electron angular power spectrum} \label{meth_sec:angular_power_spectrum}
+To obtain the electron angular power spectra in bins of redshifts, I define the electron density contrast $\delta_\mathrm{e}^i$ in a redshift bin $i$ as
+\begin{equation}
+    \delta_\mathrm{e}^i(\mathbf{\hat{x}}) = \int W^i(z) \, \delta_\mathrm{e}(z, \mathbf{\hat{x}}) \, \mathrm{d}z,
+\end{equation} 
+with $W^i(z)$ is the normalized weight function of the redshift bin $i$. The general form of the weight funciton is a top-hat function multiplied by a weight factor
+\begin{equation}
+    W_i(z) = \begin{cases} f(z) & \text{if } z_{i-1} \leq z < z_i, \\ 0 & \text{otherwise,} \end{cases},
+\end{equation}
+where the form of the function $f(z)$ is chosen arbitrarly such as to account for the expansion of the universe. I discuss the choice of $f$ in section \ref{meth_sec:glass}. The electron angular power spectrum $C_\ell^{ij}$ between two redshift bins $i$ and $j$ is given by 
+\begin{align}
+    C_{\delta_e \delta_e}^{(ij)}(\ell) &= \frac{2}{\pi} \int \mathrm{d}\chi \frac{\mathrm{d}z}{\mathrm{d}\chi}\, \frac{\mathrm{d}z}{\mathrm{d}\chi} \, W^{(i)}(z(\chi)) \int \mathrm{d}\chi' \frac{\mathrm{d}z}{\mathrm{d}\chi'}\, W^{(j)}(z(\chi')) \notag \\
+    &\quad \int \mathrm{d}k \, k^2 \, P_{\delta_e, \mathrm{nl}}(k, z(\chi), z(\chi')) \, j_\ell(k\chi) \, j_\ell(k\chi'),
+\end{align}
+where this derivation follows similarly to the derivation of the covariance matrix in section \ref{theory_sec:covariance}. Using the Limber approximation describes in section \ref{theory_sec:covariance}, the expression is simplified into
+\begin{equation}
+    C_{\delta_e \delta_e}^{(ij)}(\ell) = \int \mathrm{d}\chi \frac{\mathrm{d}z}{\mathrm{d}\chi} \frac{W^{(i)}(z(\chi)) W^{(j)}(z(\chi))}{\chi^2} P_{\delta_e, \mathrm{nl}}\left(k = \frac{\ell + 1/2}{\chi}, z(\chi)\right).
+\end{equation}
 
-- Add a plot for the comparison between the limber and the non-limber approximations.
+Similar tothe covariance calculation discussed in section \ref{theory_sec:covariance}, I use the Limber approximation to obtain an expression for the angular power spectrum since it is computationally efficient and accurate for the scales of interest in this thesis.
 
 
 
@@ -107,16 +155,18 @@ $\alpha_{0,\mathrm{nt}}$ & - & Non-thermal pressure amplitude (see Eq. 2.15) & 0
 Add a table with the fiducial values and their prior. explain how we ignore the redshift evolution of some parameters. Motivate the choice for the number of shells and the redshift range.
 
 \subsection{The Generator for Large Scale Structure (GLASS)}\label{meth_sec:glass}
+discuss the choice of the the weight function
 mention the reason behind the choice of 30 shells. and the binning in comoving space.
 add a plot of the concentric shells. 
 speak a bit about HEALPix
+add a plot of the shells.
 
 \subsection{The numerical implementation of the cosmological covariance matrix}
 - Add a plot for the validity of the divisions when implementing in z.
 
 
 
-\section{Simulating the systematic uncertainties}
+\section{Simulating the systematic uncertainties} \label{meth_sec:uncertainties}
 
 
 
@@ -139,7 +189,7 @@ $\eta$ & the ratio between a redshift measurement $z$ and its standard deviation
 \hline
 \multicolumn{3}{c}{\textit{The host contribution}} \\
 \hline
-$\mu$ & The underlying Gaussian mean of the lognormal distribution & $[50, 300]$\\
+$\mathrm{DM}_{host, mean}$ & The underlying Gaussian mean of the lognormal distribution & $[50, 300]$\\
 $\sigma_\mathrm{LN}$ & The scale of the lognormal distribution& [0.01, 0.15]\\
 \hline
 \multicolumn{3}{c}{\textit{The Milkyway contribution}} \\

@@ -7,16 +7,15 @@
 \babel@toc {UKenglish}{}\relax 
 \babel@toc {UKenglish}{}\relax 
 \babel@toc {UKenglish}{}\relax 
-\babel@toc {UKenglish}{}\relax 
-\babel@toc {UKenglish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Maximum dispersion measure search limits for FRB surveys, the values are adopted from \citet {hoffmann2025modelling}}}{39}{table.caption.9}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Maximum dispersion measure search limits for FRB surveys, the values are adopted from \citet {hoffmann2025modelling}}}{38}{table.caption.11}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces A table with the cosmological parameters used in this thesis. The values are adopted from Planck 2018 results \citep {aghanim2020planck}.}}{41}{table.caption.11}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces The specifiactions of the FRB catalog specification. HEALPix \citep {gorski2005healpix} is an algorithm to pixellize as an image with certain resolution. The resolution parameter $N_\mathrm {side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta _\mathrm {min} \approx 1/N_\mathrm {side}$.}}{42}{table.caption.12}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Summary of Model Parameters}}{43}{table.caption.14}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces A table with the parameters of the systematic uncertainties. The range of the parameters is chosen to be wide enough to cover the expected values for these parameters. }}{43}{table.caption.14}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces A table with the cosmological parameters used in this thesis. The values are adopted from Planck 2018 results \citep {aghanim2020planck}.}}{41}{table.caption.13}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces The specifiactions of FRB catalog simulations. HEALPix \citep {gorski2005healpix} is an algorithm to pixellize as an image with certain resolution. The resolution parameter $N_\mathrm {side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta _\mathrm {min} \approx 1/N_\mathrm {side}$.}}{42}{table.caption.14}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces The parameters of the BFC model.}}{44}{table.caption.16}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Summary of Model Parameters}}{46}{table.caption.17}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces A table with the parameters of the systematic uncertainties. The range of the parameters is chosen to be wide enough to cover the expected values for these parameters. }}{46}{table.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

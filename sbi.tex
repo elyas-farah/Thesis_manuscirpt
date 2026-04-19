@@ -95,8 +95,18 @@
 % English regardless of the language of the thesis.
 \newcommand{\thesisabstract}{%
   \begin{otherlanguage}{UKenglish}
-    This is your thesis abstract. It may be in a language that is
-    different from the rest of your thesis.
+    \section*{Abstract}
+    Fast Radio Bursts (FRBs) are pulses of electromagnetic waves of extragalactic origin. As an FRB propagates through the Universe, its signal gets broadened by the free electrons in the intergalactic medium, leading to a disprsed signal. This dispersion measure (DM) is easily observable via the delayed arrival time which is directly proportional to the column denisty of free electrons, making the DM signal an excellent probe of baryons in the Universe. It is possible to model the DM signal by modelling the cosmological electron number density on large scales; nonetheless, the DM signal receives contribution from the galaxy that hosts the FRB source in addition to a contribution from the Milky Way (MW) galaxy, which poses as systematic uncertainties in a cosmological analysis. Furthermore, redshift measurements and the telescope's sensitivity also represent measurement uncertainty. Failing to account for these effects can lead to biases in the inferred cosmological parameters.
+
+
+
+    In this thesis, I explore how measurement and systematic uncertainties affect a cosmological analysis and suggest strategies to mitigate their impact for a survey with 10000 detected FRBs. I use the halo model and the baryonification correction model to generate lognormal maps of electron density in bins of redshift in which the mock FRBs are placed. After that, I contaminate the catalog with one of the uncertainties and study its impact of this systematic on the DM-redshift relation. To make the simulation pipeline scalable, I use GPUs to calculate the covariance matrices of the mock data.
+
+    I find that ignoring redshift uncertainty leads to more than 1$\sigma$ and up to 3.5$\sigma$ deviation from the fiducial DM-redshift relation. In addition, ignoring host contrubution leads to 1$\sigma$ and up to 4.6$\sigma$ deviation. Ignoring the MW contribution leads to up to 1$\sigma$ deviation, however, by choosing the appropriate galactic cut, the bias can be reduced without adding a term to the covariance that accounts for the additional MW contribution. For FRBs with unlocalised hosts, I find that unlocalised FRBs at high redshifts lead to severe deviation as compared to unlocalised low redshifts for the same number of unlocalised sources. Finally, I find that it is possible to mitigate all these systematic uncertainties by modelling their impact on the level of the covariance and the FRB catalog.
+
+    In total, the efficient simulation pipeline presented in this thesis can be used for simulation-based inference where the systematic uncertainties can be easily put in the simulation to quantify the bias in estimated parameters.
+
+
   \end{otherlanguage}
 }
 
@@ -149,9 +159,10 @@
 %------------------------------------------------------------------------------
 % You can add your acknowledgements here.
 % \include{thesis_acknowledge}
+\thesisabstract
 
 \tableofcontents
-\thesisabstract
+
 \mainmatter
 \pagestyle{scrheadings}
 
@@ -159,7 +170,6 @@
 % \ifthenelse{\equal{\ThesisVersion}{Draft}}{%
 %   \backgroundsetup{contents={}}
 % }{}
-\thesisabstract
 %------------------------------------------------------------------------------
 % Add your chapters here - don't forget to also add them to \includeonly above.
 \include{thesis_intro}
