@@ -110,7 +110,7 @@ To describe the entire universe using one metric tensor requires educated simpli
 where $t$ is cosmic time. A two-dimensional schematic diagram of this metric is shown in \ref{theory_fig:world_lines}. 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/cover/world_lines.png}
+    \includegraphics[width=0.5\textwidth]{figs/world_lines.png}
     \caption{A schematic representation of spacetime that follows Weyl's postulate. The green lines labelled with letters are world lines, the path of freely falling objects in the spacetime (or geodesics). The redlines are spacelike hypersurfaces labelled with the same cosmic time $t_i$. These hypersuraces are homogeneous and isotropic.}
     \label{theory_fig:world_lines}
 \end{figure}
@@ -278,7 +278,7 @@ Figure \ref{theory_fig:energy_budget} shows a schematic representation of the co
 where the different additive terms dominate the evolution at different epochs. In particular, dark energy is the dominant component in the current epoch. To constrain the equation of state of dark energy, cosmic shear stands as a powerful probe of late structure formation since it is an integrated qunatity that includes signficant contribution from the late evolution of the universe, and therefore sensitive to dark energy. The basic principles of cosmic shear and its relationship to the matter density field are explained in \ref{theory_sec:WL}. This thesis focuses on using FRBs to constain baryonic feedback on the large scale structure and therefore improve the modelling of cosmic shear on small scales, which in turn improves the constraining power of cosmic shear on dark energy.
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/cover/planck2018_energy_budget.png}
+    \includegraphics[width=0.5\textwidth]{figs/planck2018_energy_budget.png}
     \caption{A schematic representation of density fractions of the different components in the $\Lambda$CDM model. The density fractions are measured by the Planck collaboration \citep{aghanim2020planck} using measurements of the CMB anisotropies.}
     \label{theory_fig:energy_budget}
 \end{figure}
@@ -347,7 +347,7 @@ The mean of $\delta_{0}(\mathbf{k})$ is zero by construction, therefore, the var
 \begin{equation} \label{eq:power_spectrum}
     \langle \delta_{0}(\mathbf{k}) \delta_{0}^*(\mathbf{k}') \rangle = (2\pi)^3 P(k) \delta_D(\mathbf{k} - \mathbf{k}'),
 \end{equation}
-where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is only a function of the magnitude of the Fourier space wavevector $k = |\mathbf{k}|$ due to the statistical isotropy of the universe. Fig. \ref{} shows the matter power spectrum obtain using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic} with varying fraction of baryonic matter $\Omega_{\mathrm{b}}$ and varying Hubble parameter $H_0$ at redshift $z = 0$.
+where $\delta_D$ is the Dirac delta function. Notice that the power spectrum is only a function of the magnitude of the Fourier space wavevector $k = |\mathbf{k}|$ due to the statistical isotropy of the universe. Fig. \ref{theory_fig:power_spectrum_varying_params} shows the matter power spectrum obtain using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic} with varying fraction of baryonic matter $\Omega_{\mathrm{b}}$ and varying Hubble parameter $H_0$ at redshift $z = 0$.
 
 The real space counterpart of the power spectrum is called the 2-point correlation function $\xi(r)$, and is defined assume
 \begin{equation}
@@ -355,18 +355,30 @@ The real space counterpart of the power spectrum is called the 2-point correlati
 \end{equation}
 where $\xi$ is a function of the comoving lenth scale $r$ and is independent of direction. In practice, $\xi$ represent the excess probability that two points separated with $r$ have denisty contrast of $\delta(\mathbf{x})$ and  $\delta(\mathbf{x} - \mathbf{r})$ respectively.
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{}
-%     \caption{A plot of the matter power spectrum at redshift $z = 0$ with varying fraction of baryonic matter $\Omega_b$ and varying Hubble parameter $H_0$. The power spectrum is obtained using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic}. Notice the the power specturm peaks at a scale equivalent to the Hubble scale at the matter-radiation equality. Furthermore, the wiggles in the power spectrum are due to the sound waves that popagates in the baryon-phton fluid due the contrasting force of the fluids's pressure and gravity.}
-%     \label{}
-% \end{figure}
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{/Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_Omega_c.png}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{/Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_h.png}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \caption{A plot of the matter power spectrum at redshift $z = 0$ with varying fraction of cold dark matter density $\Omega_\mathrm{c}$ and varying Hubble parameter $h$. The power spectrum is obtained using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic}. Notice the the power specturm peaks at a scale equivalent to the Hubble scale at the matter-radiation equality. Furthermore, the wiggles in the power spectrum are due to the sound waves that popagates in the baryon-phton fluid due the contrasting force of the fluids's pressure and gravity.}
+    \label{theory_fig:power_spectrum_varying_params}
+\end{figure}
 
 \subsection{Dark matter tracers}
 Though the matter power spectrum is a powerful statistic that encodes the statistical properties of the matter density field, it is not directly observable. In order to relate the matter field to obervables, it is important to understand the physical mechanisms by which the observables are related to the matter field. For galaxies, galaxy formation theories suggest that baryonic matter falls into the potential well of a dark matter halo and accretes to form a galaxy. Fig. \ref{theory_fig:galaxy_formation} illustrastes a snapshot of hydrodynamical simualtion with a dark matter halo hosting a galaxy. 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\textwidth]{figs/cover/galaxy_foramtion.png}
+    \includegraphics[width=0.8\textwidth]{figs/galaxy_foramtion.png}
     \caption{A 2D plot from the IllustrisTNG simulation \citep{pillepich2018simulating}, adopted from \citet{crain2023hydrodynamical}. It is a snapshot of hydrodynamical simulation showing how a 'danser than average' region of dark matter hosts a galaxy (stars make up the 'skeleton' of a galaxy).}
     \label{theory_fig:galaxy_formation}
 \end{figure}
@@ -454,16 +466,16 @@ The non-linear power spetrum wihtin the halo model of a species $\mathrm{u}$ is 
 \begin{equation}
     P_{uu}(k) =  P_{\mathrm{uu}}^{\mathrm{1h}}(k) + P_{\mathrm{uu}}^{\mathrm{2h}}(k).
 \end{equation}
-Fig. \ref{} shows an example of the non-linear power specrutm with the different contributions from the one-halo and the two-halo terms. Since $P_{\mathrm{uu}}^{\mathrm{1h}}$ describes the \textbf{inter-halo} clustering of a species $\mathrm{u}$, it dominates the power spctrum on small scales. Meanwhile, 
+Fig. \ref{theory_fig:halo_model} shows an example of the non-linear power specrutm with the different contributions from the one-halo and the two-halo terms. Since $P_{\mathrm{uu}}^{\mathrm{1h}}$ describes the \textbf{inter-halo} clustering of a species $\mathrm{u}$, it dominates the power spctrum on small scales. Meanwhile, 
 
 
 
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{}
-%     \caption{A plot showing the linear power spectrum, the one-halo, the two-halo, and the non-linear power spectrum. }
-%     \label{}
-% \end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/halo_model.png}
+    \caption{A plot showing the gas linear power spectrum, the one-halo, the two-halo, and the non-linear power spectrum, and the linear matter power spectrum. For small $k$, the two-halo term dominates the power spectrum, while for large $k$, the one-halo term dominates the power spectrum. In calculating the non-linear power spectrum, the one-halo term is supressed on larger large scales to remove the contribution of shot noise arising from assuming that halos are infinitely small point on larger scales. The power spectrum is obtained using the halo model formalism described in this section, and the halo profile is obtained using the baryonfication correction model described in section \ref{theory_sec:BF}. I use the cosmological parameters listed in table \ref{tab:cosmo_params}. The gas power spectrum converges to the linear matter power spectrum on large scales is modified on small scales due to the impact of baryonic feedback.}
+    \label{theory_fig:halo_model}
+\end{figure}
 
 Naturally, the halo-model is a recipe for obtainting an approximnation of the non-linear pwoer spectrum. By knowing the halo profile of a spcies $\mathrm{u}$, it is possible to obtain the non-linear power spectrum of this species. In this thesis, we use the halo model to obatin a theoretical prediction of the electron power spectrum. Section \ref{meth_sec:pee} describes the procedure of obtaining the electron power spectrum using the baryonfication correction model, and section \ref{theory_sec:BF} describes how electron profiles are obtained usinga model for baryonic feedback. 
 
@@ -476,7 +488,7 @@ This section is based on the lecture notes of the \textit{Gravitational Lensing}
 Gravitational lensing, in the language of general relativity, is the modification of light (null) geodesics by virtue of the existance of massive objects. In the language of special relativity, it is the bening of light by virtute of the gravitional force of a massive object on a photon. As a result, the image of a bright object (galaxy or a quasar for example) gets magnified and sheared as compared to a situation where there are no lensing effects. In this thesis, I am only interested with the weak field limit of the gravitional lensing where only shear effects are observable. Fig. \ref{theory_fig:lensing} shows a schematic representation of shearing and magnification effects. 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/cover/shear.png}
+    \includegraphics[width=0.5\textwidth]{figs/shear.png}
     \caption{A schematic representation of the imapct of gravitational lensing on a source with a circular shape (blue). Lensing has two main effect: shearing (red) and magnification (green). In the weak field limit, the magnificaiton effects are negligible and shearing effects dominate.}
     \label{theory_fig:lensing}
 \end{figure}
@@ -499,7 +511,7 @@ This is clear from Fig. \ref{theory_fig:angle}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.5\textwidth]{figs/cover/lensing_angle.png}
+    \includegraphics[width=0.5\textwidth]{figs/lensing_angle.png}
     \caption{A schematic representation showing how the angle $\boldsymbol{\theta}$ is related }
     \label{theory_fig:angle}
 \end{figure}
@@ -567,7 +579,7 @@ Fig. \ref{theory_fig:baryonic_feedback} shows a plot comparing the ratio of the 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{figs/cover/baryonic_feedback.png}
+    \includegraphics[width=0.7\textwidth]{figs/baryonic_feedback.png}
     \caption{A plot adopted from \citet{huang2019modelling} showing the supression of the power spcctrum for different hydrodynamical simulations with different models for baryonic feedback. For simulations where supernova feedback and AGN feedback are present, the power is superessed on the scales where the gas pressure from these two feedback mechanism influences matter distribution. The ratio rises for larger for smaller scales since gas cooling leads to star formation, boosting the power on small scales.}
     \label{theory_fig:baryonic_feedback}
 \end{figure}
@@ -601,7 +613,7 @@ To calculate the time delay due to scattering of the free electrons, I turn the 
 I use the setup in Fig. \ref{theory_fig:time_delay} to find an expression of the imte delay. The setup shows freely falling frame of references along the trajectory of the normal pulse. The time delay beetween the arrival of the normal pulse and the arrival of the infinite pulse (the two events are marked by an \textbf{x} on the yellow lines) can be given by 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.7\textwidth]{figs/cover/time_delay.png}
+    \includegraphics[width=0.7\textwidth]{figs/time_delay.png}
     \caption{Spacetime diagram showing the evaluation of time dalay between a pulse of frequency $\nu_0$ (world line in red) and a pulse of infinite frequency (world lines in blue and dashed). The plasma particles follow world lines given in yellow color. The figure is adopted from \citet{alonso2021linear}}.
     \label{theory_fig:time_delay}
 \end{figure}

@@ -124,7 +124,15 @@ In this thesis, I use the halo gas profiles predicted by the BFC model to obatin
 
 
 \subsection{The Core Cosmology Library (CCL)}
-The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enables fast and efficient calculations of basic cosmological observables with high accuracy. CCL implements a Boltzmann solver in order to obtain a prediction of the linear power spectrum on a grid of redshifts $z$ and scale $k$. It also provides a bicubic interpolator for accurate calculation of the power spectrum, starting from the initial grid points. In this thesis, I sample 30 grid points in $z$ and 150 points in $k$. These are enough grid points to ensure sub-percent accuracy as compared larger numbe of grid points. However, since the $\log P (k, z)$ is linearly related to $\log z$ and $\log k$ for both large and small values of $z$ and $k$, it is possible to extrapolate the power spectrum in logarithmic space beyond the ranges specified in Table \ref{tab:sim_spec}. I show the extrapolation in Fig. \ref{meth_fig:extrapolation}. In addition, to obtain the non-linear power spectrum, CCL implements the halo model where the 1-halo and the 2-halo terms are calculated using the halo profiles obtained from the BFC model. The halo mass function and the halo bias are taken from \citet{tinker2008toward} and \citet{tinker2010large}, respectively. I consider only a linear bias model where the term $\beta$ from Eq. \ref{eq:halo_spectrum} is set to $0$. I show a plot of th epower spectrum for different redshfits in Fig. \ref{meth_fig:power_spectrum}.
+The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enables fast and efficient calculations of basic cosmological observables with high accuracy. CCL implements a Boltzmann solver in order to obtain a prediction of the linear power spectrum on a grid of redshifts $z$ and scale $k$. It also provides a bicubic interpolator for accurate calculation of the power spectrum, starting from the initial grid points. In this thesis, I sample 30 grid points in $z$ and 150 points in $k$. These are enough grid points to ensure sub-percent accuracy as compared larger numbe of grid points. However, since the $\log P (k, z)$ is linearly related to  $\log k$ for both large and small values of $k$, it is possible to extrapolate the power spectrum in logarithmic space beyond the ranges specified in Table \ref{tab:sim_spec}. I show the extrapolation in Fig. \ref{meth_fig:extrapolation}. In addition, to obtain the non-linear power spectrum, CCL implements the halo model where the 1-halo and the 2-halo terms are calculated using the halo profiles obtained from the BFC model. The halo mass function and the halo bias are taken from \citet{tinker2008toward} and \citet{tinker2010large}, respectively. I consider only a linear bias model where the term $\beta$ from Eq. \ref{eq:halo_spectrum} is set to $0$. I show a plot of th epower spectrum for different redshfits in Fig. \ref{meth_fig:power_spectrum}.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{thesis_plots/power_spectrum.png}
+    \caption{A plot showing the power spectrum in logarithmic space. The power spectrum is extrapolated in logarithmic space beyond the range of $k$ and $z$ specified in Table \ref{tab:sim_spec}.}
+    \label{meth_fig:power_spectrum_extrapolation}
+\end{figure}
 
 In this thesis, I use CCL to obtain a non-linear prediction of the elctron power spectrum using the halo model where the integrals in Eqs. \ref{eq:1h} and \ref{eq:2h} are calculated using the halo profiles obtained from the BFC model. I use the resultant power spectrum to obtain an expectation of the electron angular power spectrum in bins of redshifts using the Limber approximation, which is described in the next section.
 
@@ -137,17 +145,16 @@ with $W^i(z)$ is the normalized weight function of the redshift bin $i$. The gen
 \begin{equation}
     W_i(z) = \begin{cases} f(z) & \text{if } z_{i-1} \leq z < z_i, \\ 0 & \text{otherwise,} \end{cases},
 \end{equation}
-where the form of the function $f(z)$ is chosen arbitrarly such as to account for the expansion of the universe. I discuss the choice of $f$ in section \ref{meth_sec:glass}. The electron angular power spectrum $C_\ell^{ij}$ between two redshift bins $i$ and $j$ is given by 
+where the form of the function $f(z)$ is chosen arbitrarly such as to account for the expansion of the Universe. I discuss the choice of $f$ in section \ref{meth_sec:glass}. The electron angular power spectrum $C_{\delta_e \delta_e}^{(ij)}(\ell)$ between two redshift bins $i$ and $j$ is given by 
 \begin{align}
     C_{\delta_e \delta_e}^{(ij)}(\ell) &= \frac{2}{\pi} \int \mathrm{d}\chi \frac{\mathrm{d}z}{\mathrm{d}\chi}\, \frac{\mathrm{d}z}{\mathrm{d}\chi} \, W^{(i)}(z(\chi)) \int \mathrm{d}\chi' \frac{\mathrm{d}z}{\mathrm{d}\chi'}\, W^{(j)}(z(\chi')) \notag \\
-    &\quad \int \mathrm{d}k \, k^2 \, P_{\delta_e, \mathrm{nl}}(k, z(\chi), z(\chi')) \, j_\ell(k\chi) \, j_\ell(k\chi'),
+    &\quad \int \mathrm{d}k \, k^2 \, P_\mathrm{e, nl}(k, z(\chi), z(\chi')) \, j_\ell(k\chi) \, j_\ell(k\chi'),
 \end{align}
-where this derivation follows similarly to the derivation of the covariance matrix in section \ref{theory_sec:covariance}. Using the Limber approximation describes in section \ref{theory_sec:covariance}, the expression is simplified into
+where this derivation follows similarly to the derivation of the covariance matrix in section \ref{theory_sec:FRBs}. Using the Limber approximation, the expression is simplified into
 \begin{equation}
-    C_{\delta_e \delta_e}^{(ij)}(\ell) = \int \mathrm{d}\chi \frac{\mathrm{d}z}{\mathrm{d}\chi} \frac{W^{(i)}(z(\chi)) W^{(j)}(z(\chi))}{\chi^2} P_{\delta_e, \mathrm{nl}}\left(k = \frac{\ell + 1/2}{\chi}, z(\chi)\right).
+    C_{\delta_e \delta_e}^{(ij)}(\ell) = \int \mathrm{d}\chi \, \frac{\mathrm{d}z}{\mathrm{d}\chi} \,\frac{\mathrm{d}z}{\mathrm{d}\chi} \, \frac{W^{(i)}(z(\chi)) W^{(j)}(z(\chi))}{\chi^2} P_\mathrm{e, nl}\left(k = \frac{\ell + 1/2}{\chi}, z(\chi)\right).
 \end{equation}
 
-Similar tothe covariance calculation discussed in section \ref{theory_sec:covariance}, I use the Limber approximation to obtain an expression for the angular power spectrum since it is computationally efficient and accurate for the scales of interest in this thesis.
 
 
 
