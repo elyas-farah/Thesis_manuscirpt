@@ -15,7 +15,7 @@ To model the dispersion measure signal, I use the Generator for Large-Scale Stru
 \centering
 \begin{tabular}{c p{7cm} c c}
 \hline\hline
-\textbf{Parameter} & \textbf{Description} & \textbf{Fixed value} & \textbf{Prior} \\
+\textbf{Parameter} & \textbf{Description} & \textbf{Fiducial value} & \textbf{Prior} \\
 \hline
 $\Omega_{\mathrm{b}}$ & Baryon density parameter & 0.0493 & - \\
 $\Omega_{\mathrm{c}}$ & Cold dark matter density parameter & 0.264 & - \\
@@ -38,7 +38,7 @@ $\sigma_8$ & Amplitude of matter fluctuations & 0.8102 & - \\
 \hline
 $z_{\min}$ & Minimum redshift & 0.01 \\
 $z_{\max}$ & Maximum redshift & 2.0 \\
-$n_{\mathrm{shells}}$ & Number of shells & 30\\
+$n_{\mathrm{shells}}$ & Number of shells & 29\\
 $\ell_{\max}$ & Maximum multipole & 4100 \\
 $N_{\mathrm{side}}$ & Map resolution (HEALPix) & 4096 \\
 $b_{\mathrm{h}}(M)$ & Bias model as a funciton of halo mass $M$ & \citet{tinker2010large}\\
@@ -104,15 +104,14 @@ The mapping from $r_{\mathrm{bar,i}}$ to $r_{\mathrm{bar,f}}$ is parameterized w
 \textbf{Parameter} & \textbf{Prior} & \textbf{Description} & \textbf{Fixed value} \\
 \hline
 $\theta_{\mathrm{co}}$ & U[0.001, 0.5] & Core radius of the gas profile relative to $r_{200}$ (Eq. 2.6) & 0.3 \\
-$\log_{10} M_{\mathrm{c}}$ & U[11.0, 15.0] & Pivot mass for the mass dependent slope of the gas profile (Eq. 2.6 \& Eq. 2.7) & - \\
-$\mu$ & U[0.0, 2.0] & Transition steepness of mass dependent gas parameter (Eq. 2.6 \& Eq. 2.7) & - \\
-$\delta$ & U[1.0, 11.0] & Characterizes the transition from inner to outer part of the gas profile (Eq. 2.6) & - \\
-$\eta$ & U[0.0, 0.5] & Total stellar fraction within a halo (Eq. 2.10) & 0.1 \\
-$d\eta$ & U[0.0, 0.5] & Fraction of central galaxies w.r.t. total stellar fraction (Eq. 2.10) & 0.22 \\
-$N_{\mathrm{star}}$ & U[0.0, 0.05] & Stellar fraction amplitude (Eq. 2.10) & 0.030 \\
-$c_{\mathrm{iga}}$ & U[0.0, 1.0] & Cold gas fraction (see Eq. 2.12) & 0.1 \\
-$b_{\mathrm{hse}}$ & $\mathcal{N}(0.26, 0.07)$ & Hydrostatic mass bias & - \\
-$\alpha_{0,\mathrm{nt}}$ & - & Non-thermal pressure amplitude (see Eq. 2.15) & 0.1 \\
+$\log_{10} M_{\mathrm{c}}$ & U[11.0, 15.0] & Pivot mass for the mass dependent slope of the gas profile (Eq. 2.6 \& Eq. 2.7) & 14 \\
+$\mu$ & U[0.0, 2.0] & Transition steepness of mass dependent gas parameter (Eq. 2.6 \& Eq. 2.7) & 0.3 \\
+$\delta$ & U[1.0, 11.0] & Characterizes the transition from inner to outer part of the gas profile (Eq. 2.6) & 7.0 \\
+$\eta$ & U[0.0, 0.5] & Total stellar fraction within a halo (Eq. 2.10) & 0.32 \\
+$d\eta$ & U[0.0, 0.5] & Fraction of central galaxies w.r.t. total stellar fraction (Eq. 2.10) & 0.28 \\
+$N_{\mathrm{star}}$ & U[0.0, 0.05] & Stellar fraction amplitude (Eq. 2.10) & 0.040 \\
+$c_{\mathrm{iga}}$ & U[0.0, 1.0] & Cold gas fraction (see Eq. 2.12) & 0. \\
+
 \hline\hline
 \end{tabular}
 \caption{The parameters of the BFC model.}
@@ -124,28 +123,28 @@ In this thesis, I use the halo gas profiles predicted by the BFC model to obatin
 
 
 \subsection{The Core Cosmology Library (CCL)}
-The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enables fast and efficient calculations of basic cosmological observables with high accuracy. CCL implements a Boltzmann solver in order to obtain a prediction of the linear power spectrum on a grid of redshifts $z$ and scale $k$. It also provides a bicubic interpolator for accurate calculation of the power spectrum, starting from the initial grid points. In this thesis, I sample 30 grid points in $z$ and 150 points in $k$. These are enough grid points to ensure sub-percent accuracy as compared larger numbe of grid points. However, since the $\log P (k, z)$ is linearly related to  $\log k$ for both large and small values of $k$, it is possible to extrapolate the power spectrum in logarithmic space beyond the ranges specified in Table \ref{tab:sim_spec}. I show the extrapolation in Fig. \ref{meth_fig:extrapolation}. In addition, to obtain the non-linear power spectrum, CCL implements the halo model where the 1-halo and the 2-halo terms are calculated using the halo profiles obtained from the BFC model. The halo mass function and the halo bias are taken from \citet{tinker2008toward} and \citet{tinker2010large}, respectively. I consider only a linear bias model where the term $\beta$ from Eq. \ref{eq:halo_spectrum} is set to $0$. I show a plot of th epower spectrum for different redshfits in Fig. \ref{meth_fig:power_spectrum}.
+The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enables fast and efficient calculations of basic cosmological observables with high accuracy. CCL implements a Boltzmann solver in order to obtain a prediction of the linear power spectrum on a grid of redshifts $z$ and scale $k$. It also provides a bicubic interpolator for accurate calculation of the power spectrum, starting from the initial grid points. In this thesis, I sample 30 grid points in $z$ and 150 points in $k$. These are enough grid points to ensure sub-percent accuracy as compared larger numbe of grid points. However, since the $\log P (k, z)$ is linearly related to  $\log k$ for both large and small values of $k$, it is possible to extrapolate the power spectrum in logarithmic space beyond the ranges specified in Table \ref{tab:sim_spec}. In addition, to obtain the non-linear power spectrum, CCL implements the halo model where the 1-halo and the 2-halo terms are calculated using the halo profiles obtained from the BFC model. The halo mass function and the halo bias are taken from \citet{tinker2008toward} and \citet{tinker2010large}, respectively. I consider only a linear bias model where the term $\beta$ from Eq. \ref{eq:halo_spectrum} is set to $0$. I show a plot of th epower spectrum for different redshfits in Fig. \ref{meth_fig:power_spectrum}.
 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{thesis_plots/power_spectrum.png}
     \caption{A plot showing the power spectrum in logarithmic space. The power spectrum is extrapolated in logarithmic space beyond the range of $k$ and $z$ specified in Table \ref{tab:sim_spec}.}
-    \label{meth_fig:power_spectrum_extrapolation}
+    \label{meth_fig:power_spectrum}
 \end{figure}
 
 In this thesis, I use CCL to obtain a non-linear prediction of the elctron power spectrum using the halo model where the integrals in Eqs. \ref{eq:1h} and \ref{eq:2h} are calculated using the halo profiles obtained from the BFC model. I use the resultant power spectrum to obtain an expectation of the electron angular power spectrum in bins of redshifts using the Limber approximation, which is described in the next section.
 
 \subsection{The electron angular power spectrum} \label{meth_sec:angular_power_spectrum}
 To obtain the electron angular power spectra in bins of redshifts, I define the electron density contrast $\delta_\mathrm{e}^i$ in a redshift bin $i$ as
-\begin{equation}
+\begin{equation}\label{eq:project_delta_e}
     \delta_\mathrm{e}^i(\mathbf{\hat{x}}) = \int W^i(z) \, \delta_\mathrm{e}(z, \mathbf{\hat{x}}) \, \mathrm{d}z,
 \end{equation} 
 with $W^i(z)$ is the normalized weight function of the redshift bin $i$. The general form of the weight funciton is a top-hat function multiplied by a weight factor
 \begin{equation}
-    W_i(z) = \begin{cases} f(z) & \text{if } z_{i-1} \leq z < z_i, \\ 0 & \text{otherwise,} \end{cases},
+    W_i(z) = \begin{cases} f(z) & \text{if } z^{i}_\mathrm{min} \leq z < z^i_\mathrm{max}, \\ 0 & \text{otherwise,} \end{cases},
 \end{equation}
-where the form of the function $f(z)$ is chosen arbitrarly such as to account for the expansion of the Universe. I discuss the choice of $f$ in section \ref{meth_sec:glass}. The electron angular power spectrum $C_{\delta_e \delta_e}^{(ij)}(\ell)$ between two redshift bins $i$ and $j$ is given by 
+where $z^{i}_\mathrm{min}$ and $z^{i}_\mathrm{max}$ are the minimum and the maximmum redshift of a shell $i$ and the form of the function $f(z)$ is chosen arbitrarly such as to account for the expansion of the Universe. I discuss the choice of $f$ in section \ref{meth_sec:glass}. The electron angular power spectrum $C_{\delta_e \delta_e}^{(ij)}(\ell)$ between two redshift bins $i$ and $j$ is given by 
 \begin{align}
     C_{\delta_e \delta_e}^{(ij)}(\ell) &= \frac{2}{\pi} \int \mathrm{d}\chi \frac{\mathrm{d}z}{\mathrm{d}\chi}\, \frac{\mathrm{d}z}{\mathrm{d}\chi} \, W^{(i)}(z(\chi)) \int \mathrm{d}\chi' \frac{\mathrm{d}z}{\mathrm{d}\chi'}\, W^{(j)}(z(\chi')) \notag \\
     &\quad \int \mathrm{d}k \, k^2 \, P_\mathrm{e, nl}(k, z(\chi), z(\chi')) \, j_\ell(k\chi) \, j_\ell(k\chi'),
@@ -154,38 +153,139 @@ where this derivation follows similarly to the derivation of the covariance matr
 \begin{equation}
     C_{\delta_e \delta_e}^{(ij)}(\ell) = \int \mathrm{d}\chi \, \frac{\mathrm{d}z}{\mathrm{d}\chi} \,\frac{\mathrm{d}z}{\mathrm{d}\chi} \, \frac{W^{(i)}(z(\chi)) W^{(j)}(z(\chi))}{\chi^2} P_\mathrm{e, nl}\left(k = \frac{\ell + 1/2}{\chi}, z(\chi)\right).
 \end{equation}
+In this theis, I use th limber approximation to obtain the angular power psectrum since it is computationally effecient as compared to the non-Limber expression. At large values of $\ell$, the non-Limber expression converges to the Limber expression, as can be seen in Fig. \ref{meth_fig:cls}. $z_\mathrm{eff}$ refers ti the effective redshift of the bin which is given by
+\begin{equation}\label{eq:z_eff}
+    z_\mathrm{eff} = \int z W^{(i)}(z) \, \mathrm{d}z
+\end{equation}
 
 
 
+
+The choice of 29 redshift bin is validated by looking at the correlation betwen two neighboring shells. I define the ratio
+\begin{equation}
+    R = \frac{C_{\delta_e \delta_e}^{(i, i+1)}(\ell)}{\sqrt{C_{\delta_e \delta_e}^{(i, i)}(\ell) C_{\delta_e \delta_e}^{(i+1, i+1)}(\ell)}},
+\end{equation}
+which is a measure of the correlation between two neighboring shells. I find that for 29 redshift bins, the ratio $R$ is less than $0.1$ for all values of $\ell$, which means that the correlation between neighboring shells is small enough to be ignored in this work. I show the comparison in Fig. \ref{meth_fig:cls_shells_compared}. Since I perform the analysis on mock catalogs, I can ignore the correlation between neighboring shells which is the default when using the Limber approximation. For applicaiton on real data, the correlation between neighboring shells should be taken into consideration by using the non-Limber expression for the angular power spectrum. I show a comparison between the Limber and the non-Limber expressions in Fig. \ref{meth_fig:cls}.
+
+
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/cls_limber.png}
+        \caption{Limber approximation.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/cls_non_limber.png}
+        \caption{Non-Limber approximation.}
+    \end{subfigure}
+    \caption{(a) The electron power spectrum in the Limber approximation for the redshift bins considered in this thesis. The color coding represents the effective redshift of every bin as calculated by Eq. \ref{eq:z_eff}. (b) A comparison between the Limber and the non-Limber approximations for the electron power spectrum. The two calculations agree for large values of $\ell$. Non-Limber integral is done via the Levin approximation using \cite{reischke2025pylevin}.}
+    \label{meth_fig:cls}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/cls_compare.png}
+    \caption{A plot showing the ratio $R$ between neighboring shells for 29 redshift bins. The ratio is less than $0.1$ for all values of $\ell$, which means that the correlation between neighboring shells is small enough to be ignored in this work. The spectra are obtained using the non-Limber expression of the power spectrum.}
+    \label{meth_fig:cls_shells_compared}
+\end{figure}
 
 \section{Simulating the dispersion measure signal} \label{meth_sec:sim_dm}
-Add a table with the fiducial values and their prior. explain how we ignore the redshift evolution of some parameters. Motivate the choice for the number of shells and the redshift range.
+Table \ref{tab:cosmo_params} and \ref{tab:bfc_prarams} contain the fiducial values of the cosmological and baryonic feedback parameters, which are used to obtain an expectaiton of the power spectrum. In addition, Table \ref{tab:sim_spec} contains the specifications of the simulation such as the number of redshift bins and the maximum multipole. In particular the choice of maximum mutlipole $\ell_\mathrm{max} = 4100$ is motivated by the fact that this scale corresponds to a length scale of $k \approx 10 \, h/\mathrm{Mpc}$ at a redshift of $z = 1$ which is the scale where baryonic feedback modifies the power spectrum \citep{Maraio_Hall_Taylor_2025}.
 
-\subsection{The Generator for Large Scale Structure (GLASS)}\label{meth_sec:glass}
-discuss the choice of the the weight function
-mention the reason behind the choice of 30 shells. and the binning in comoving space.
-add a plot of the concentric shells. 
-speak a bit about HEALPix
-add a plot of the shells.
+\subsection{Generating electron density maps}\label{meth_sec:glass}
+To generate electron density maps, I use The Generator for Large Scale Structure (GLASS) \citep{tessore2023glass} which is a package that generates lognormal maps of a cosmological field starting from a given angular power spectra. The GLASS package is used in this thesis to generate maps of electron density in bins of redshift starting from the electron angular power spectrum obtained in section \ref{meth_sec:angular_power_spectrum}. The GLASS package assumes that the cosmological field follows a lognormal distribution, which is not the case for a real cosmological field. However, the GLASS package preserves the two-point statistics of the cosmological field. 
 
-\subsection{The numerical implementation of the cosmological covariance matrix}
-- Add a plot for the validity of the divisions when implementing in z.
+For an arbitrary cosmological field $u$, the GLASS package assumes that the fiels follows a lognormal distribution with an underlying Gaussian field $g$ such that
+\begin{equation}\label{eq:lognorma_gaussian}
+    u = \lambda \left(e^g + 1\right)\,  \equiv g = \ln\left( \frac{u - 1}{\lambda} \right),
+\end{equation}
+where $\lambda$ is a parameter that can be chosen by noticing that the lower bound of a Gaussian field that represent density perturbation is $-1$, making $\lambda = 1$. The reason behind linking the field $f$ to a field $g$ is that sampling from a Gaussian distribution is computationally efficient as compared to a lognormal distribution. 
 
 
+After feeding the electron power spectrum to the GLASS package, it converts the power spectra to 2-point correlations functions $C(\theta)$ of the field $f$. Then, it uses the relation between $f$ and $u$ to obtain the 2-point correlation function $G(\theta)$ of the underlying Gaussian field $g$. The 2-point correlation function of the Gaussian field $g$ is given by
+\begin{equation}
+    G(\theta) = \ln\left( \frac{C(\theta)}{\lambda^2} + 1 \right).
+\end{equation}
+After that, $G(\theta)$ is converted to the angular electron power spectrum $G_\ell$ of the underlying Gaussian field $g$. Finally, the GLASS package samples from the Gaussian distribition with a pwoer spectrum $G_\ell$ to obtain a map of the underlying Gaussian field $g$, which is then converted to a map of the electron density field $u$ using Eq. \ref{eq:lognorma_gaussian}. The conversion between the power spectrum and the 2-point correaltion function is not trivial since it involves an infinite sum over the multipoles $\ell$ similar to \ref{eq:cosmological_covariance}, however, the GLASS package implements a solver to perform this conversion efficiently. I refer the reader to section 3.3 of \citet{tessore2023glass} for more details about the implementation of the GLASS package.
+
+To use this package, I specify a weight function $W$ as desscribed in section \ref{meth_sec:angular_power_spectrum}. The choice of the weight function is motivated by the fact that the DM signal is a projection along the line of sight which mean that a comoving volume element at a redshift $z$ contributes to the DM signal with a weight that is proportional to the comoving volume element at that redshift. Therefore, I choose a weight function of the form
+\begin{equation}
+    W^{(i)}(z) = \begin{cases} A^{(i)} \chi^2(z)/E(z) & \text{if } z_{i-1} \leq z < z_i, \\ 0 & \text{otherwise,} \end{cases}.
+\end{equation}
+with $A^{(i)}$ being a normalization constant calculated for each bin $i$ such that 
+\begin{equation}
+    \int W^{(i)}(z) \, \mathrm{d}z = 1.
+\end{equation}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/shells_weights.png}
+    \caption{A plot showing the normalized weights for the 29 redshift bins. The weights are normalized such that $\int W^{(i)}(z) \, \mathrm{d}z = 1$ for each bin $i$.}
+    \label{meth_fig:shells_weights}
+\end{figure}
+I choose a maximum value of redshift of $z_\mathrm{max} = 2.$ and a minimum value of redshift of $z_\mathrm{min} = 0.01$ since this is the range of detected FRBs by current surveys. I convert this redshift range into a range of comoving distance and divide the covmoving distance range into 29 shells, this is chosen such that it is similar to a similar work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a} that used 17 shells for sources up to maximum $z = 1$. Dividing in comoving distance rather than redshift ensures that the shells are of equal thickness in comoving space, which is more physically motivated since the DM signal is a projection along the line of sight. Fig. \ref{meth_fig:shells} shows a plot of the resulting shells in redshift space.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/shells.png}
+    \caption{A 2D plot shows maps of concentric shells of electron density in redshift space. The maps are obtained via the GLASS package. Notice that the contrast of a shell increases because of structure growth. The inner most shells represent the lowest red shift bin and the outter most shells represent the highest redshift bin.}
+    \label{meth_fig:shells}
+\end{figure}
+\subsection{Discretizing the dispersion measure contributions}
+To obtain a mock catalog of FRBs, I sample randomly on the sky and according to the source redshift distribution in redshift then sum the contribution from different shells. I use the source redshift distributio n predicted by the SKAO \citep{braun2015advancing}. Fig. \ref{meth_fig:source_redshift_distribution} shows the source redshift distribution used in this thesis. Since hte distribution extends beyond the maximum redshift of the shells, I reject the samples that have a redshfit higher than 2.0.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figs/source_z_dist.png}
+    \caption{A plot showing the normalized source redshift distribution used in this thesis as compared to the sampled distribution of a mock FRBs catalog. The distribution is predicted by the SKAO \citep{braun2015advancing}. The distribution extends beyond the maximum redshift of the shells, therefore, I reject the samples that have a redshfit higher than 2.0.}
+    \label{meth_fig:source_redshift_distribution}
+\end{figure}
+To sum the contritbuion from each shell, I discretize Eq. \ref{eq:DM_inhomogeneous} by splitting the mean DM contribution from the perturbed contribution such that
+\begin{equation}
+    \mathrm{DM}(\mathbf{\hat{x}}, z) = \langle\mathrm{DM}\rangle(z) + \mathcal{D}(\hat{\mathbf{x}}, z),
+\end{equation}
+with $\langle\mathrm{DM}\rangle(z)$ given by Eq. \ref{eq:dispersion_final}, which can be calculated numerically, and $\mathcal{D}(\hat{\mathbf{x}}, z)$ given by
+\begin{equation}\label{eq:dm_perturbation}
+\mathcal{D}(\hat{x}, z) = \mathcal{A} \int_0^z \frac{1+z'}{E(z')} \delta_{\mathrm{e}}(\hat{x}, z') \mathrm{d}z' \, .
+\end{equation}
+The relationship between $\delta_{\mathrm{e}}(\hat{x}, z)$ and $\delta_{\mathrm{e}}(\hat{x})$ is given by Eq. \ref{eq:project_delta_e}. Therefore, the contribution from a GLASS shell $i$ with an effective redshift $\bar{z}_i$ in a direction $\hat{x}$, namely $\delta_{\mathrm{e}}^{(i)}(\hat{x})$, is given in terms of the electron density contrast $\delta_{\mathrm{e}}(\hat{x}, z)$ as
+\begin{equation} \label{eq:delta_e_discrete}
+\delta_{\mathrm{e}}^{(i)}(\hat{x}) \approx W^{(i)}(\bar{z}_i) \delta_{\mathrm{e}}(\hat{x}, \bar{z}_i) (z_{i + 1} - z_{i}).
+\end{equation}
+Therefore, by discretizing Eq, \ref{eq:dm_perturbation} as 
+\begin{equation}
+\mathcal{D}(\hat{x}, z_\mathrm{FRB}) = \mathcal{A} \displaystyle\sum_{i = 1}^{n_\mathrm{shells}} \frac{1 + \bar{z}_i}{E(\bar{z}_i)} \bar{\delta}_\mathrm{e} (\hat{x}, \bar{z}_i) \, w_\mathrm{shell}^i(z_\mathrm{FRB}),
+\end{equation}
+where $w_\mathrm{shell}^i$ represent the weight a shell's contribution depending on the value of $z_\mathrm{FRB}$ as given by
+\begin{equation}\label{eq:cal_D_descrete}
+    w_\mathrm{shell}^i(z_\mathrm{FRB}) = \begin{cases} 1 & \text{, if } z_\mathrm{FRB} \geq z_\mathrm{max}^i , \\ z_\mathrm{FRB} - z_\mathrm{min}^i & \text{, if } z_\mathrm{min}^i \leq z_\mathrm{FRB} \geq z_\mathrm{max}^i\\ 0 & \text{, if } z_\mathrm{FRB} \leq z_\mathrm{min}^i \end{cases}
+\end{equation}
+Combining Eqs. \ref{eq:delta_e_discrete} and \ref{eq:cal_D_descrete}, The final expression of $\mathcal{D}$ is 
+Do the same here 
+
+\begin{equation}
+    \mathcal{D}(\hat{x}, z_\mathrm{FRB}) =\mathcal{A} \sum_{i = 1}^{n_\mathrm{shells}} \frac{1 + \bar{z}_i}{E(\bar{z}_i)} \delta_{\mathrm{e}}^{(i)}(\hat{x}) \frac{w_\mathrm{shell}^i(z_\mathrm{FRB})}{W^{(i)}(\bar{z}_i)}
+\end{equation}
+
+where I redefine $w_\mathrm{shell}^i(z_\mathrm{FRB})$ as
+\begin{equation}\label{eq:cal_D_descrete_final}
+    w_\mathrm{shell}^i(z_\mathrm{FRB}) = \begin{cases} 1 & \text{, if } z_\mathrm{FRB} \geq z_\mathrm{max}^i , \\ \frac{z_\mathrm{FRB} - z_\mathrm{min}^i}{z_\mathrm{max}^i - z_\mathrm{min}^i} & \text{, if } z_\mathrm{min}^i \leq z_\mathrm{FRB} \geq z_\mathrm{max}^i\\ 0 & \text{, if } z_\mathrm{FRB} \leq z_\mathrm{min}^i \end{cases}
+\end{equation}
+
+In total, I use the above formalism in summing hte contribution from different redshift shells which will evetually lead to the large-scale structure contribution $\mathrm{DM}_i$ of an FRB at redshift $z_\mathrm{FRB}^{i}$ and sky position $(g_l^i, g_b^i)$, yielding a catalog of FRBs.
+
+
+In the next section, I describe how to how to add systematic uncertainties on the level of a catalog.
 
 \section{Simulating the systematic uncertainties} \label{meth_sec:uncertainties}
-
-
-
-
-
+The simulation-based approach which I am using here allows asy integration of systematic uncertainties on the level of a catalog. It allows further use of the simulation pipeline described in Fig. \ref{meth_fig:simulation_flow} in applications of simulation-based inference. In this section, I describe how to contaminate catalogs with systematic uncertatinties. Table \ref{tab:systematics} describes the parameters of every systematic effect used in this thesis. Notice that the chosen range of each systemic is chosen to mirror a situation between an optimistic and pessimistic scenario. I discuss the choices of the fixed parameters and the chosen ranges below.
 
 
 
 
 \begin{table}[h]
 \centering
-\caption{Summary of Model Parameters}
+
 \begin{tabular}{c p{8cm} c}
 \hline\hline
 \textbf{Symbol} & \textbf{Description} & \textbf{Range} \\
@@ -196,8 +296,8 @@ $\eta$ & the ratio between a redshift measurement $z$ and its standard deviation
 \hline
 \multicolumn{3}{c}{\textit{The host contribution}} \\
 \hline
-$\mathrm{DM}_{host, mean}$ & The underlying Gaussian mean of the lognormal distribution & $[50, 300]$\\
-$\sigma_\mathrm{LN}$ & The scale of the lognormal distribution& [0.01, 0.15]\\
+$\mathrm{DM}_\mathrm{host, mean}$ & The underlying Gaussian mean of the lognormal distribution & $[50, 300]$\\
+$\sigma_\mathrm{LN}$ & The scale of the lognormal distribution& 0.76\\
 \hline
 \multicolumn{3}{c}{\textit{The Milkyway contribution}} \\
 \hline
@@ -205,7 +305,7 @@ $\mathrm{DM}_\mathrm{MW}(\mathbf{\hat{x}})$ & The Milkyway contribution as a fun
 \hline
 \multicolumn{3}{c}{\textit{Selection effects}} \\
 \hline
-$\mathrm{DM}_\mathrm{max}$ & The maximum value of DM that the instrument is able to detect. & [1500, 3500]\\
+$\mathrm{DM}_\mathrm{max}$ & The maximum value of DM that the instrument is able to detect. & [700, 3500]\\
 $\epsilon$ & The smoothing scale of the PDF. & [0.1, 3]\\
 \hline
 \multicolumn{3}{c}{\textit{Missing redshifts}} \\
@@ -214,28 +314,35 @@ $f$ & The fraction of FRBs with missing redshift. & [0.05, 0.4]\\
 \hline\hline
 \end{tabular}
 \caption{A table with the parameters of the systematic uncertainties. The range of the parameters is chosen to be wide enough to cover the expected values for these parameters. }
+\label{tab:systematics}
 \end{table}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 \subsection{Milkyway contribution}
+Depending on the angular direciton, the measured $\mathrm{DM}_\mathrm{tot}$ receives a contribution from the MW. This contribution varies depending on the angular position of the FRB. Sources that are close to the galactic plane receive a contribution of order $\mathrm{DM}_\mathrm{MW} \sim 3000 \, \mathrm{pc}.\mathrm{cm}^{-3}$ and with high uncertainty. For larger latitutdes, the contribution is as low as $\mathrm{DM}_\mathrm{MW} \sim 10 \, \mathrm{pc}.\mathrm{cm}^{-3}$. Therefore, as a way to mititgate the impact of MW, it is possible to remove any sources that are located within a particular galactic cut to avoid. Howeverm due to the current sample size of FRBs, it is not duable to do this cut since it will decrease the signal-to-noise ratio due to reduced sample size. Nonetheless, in this thesis, I explore the possibility of imposing a galactic cut $\theta_\mathrm{cut}$ and study its impact on the resulting DM-$z$ relation. Fig. \ref{meth_fig:MW_map} shows a map of $\mathrm{DM}_\mathrm{MW}$ as predeicted by teh NPE2001 model. I study the impact of imposing a galactic cut for a range $\theta_\mathrm{cut} \in [0\,\mathrm{deg}, 60\,\mathrm{deg}]$.
+
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figs/MW.png}
+    \caption{A map of $\mathrm{DM}_\mathrm{MW}$ as predicted by the NPE2001 model. Notice how the contribution decreases with increasing latitutde since the MW galaxy is a disk galaxy where stars are aranged ina disk-like shape.}
+    \label{meth_fig:MW_map}
+\end{figure}
+
+
 \subsection{Host contribution}
-offer an explnation for the chosen values of the parameters.
+To study the impact of the host contribution, I use a lognormal model of the host contribution as described in section \ref{theory_sec:uncertainties} with parameters chosen as described in \ref{tab:systematics}. The range of mean host contribution $\mathrm{DM}_\mathrm{host, mean}$ is taken from the work by \citet{theis2024galaxy} on the host contribution using different hydrodynamical simulations. The value for the scale of the lognormal distribution $\sigma_\mathrm{LN}$ is the parameters inferred with simulation-based inference from 12 localised FRBs in the work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}. 
+
+In addition to these parameters, I consider a simple model for the evolution of the host contribution with redshfit such that
+\begin{equation}
+    \mathrm{DM}_\mathrm{host}(z) = \frac{\mathrm{DM}_\mathrm{host}}{1 + z}
+\end{equation}
+with $z$ corresponding to the redshfit of the FRB.
+
+
+
 \subsection{Redshift uncertainty} \label{meth_sec:z_uncertainty}
 I simulate the imapct of redshift uncertainty by assuming that a redshift measuremnet $z_i$ is sampled from a Gaussian distribution with mean $z_i$ and standard deviation $\sigma_i = \eta z_i$, where $\eta_i$ is a number between $0$ and $1$. To propagate the error on the cosmological covariance, consider that $(z_i, z_j)  \sim \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma)$, with $\mathcal{N}$ is the normal distribution and
 \begin{equation}
@@ -278,16 +385,19 @@ The lognormal assumption is valid in the case of this work since the $\mathrm{DM
 To propagate the error to the covarirance, I use the same formalism introduced in section \ref{meth_sec:z_uncertainty}, only as an approximation, since the underlying PDF of the estimated redshift is not a Gaussian distribution. For the values of $\sigma_{ii}$, if the FRB has an undefined host, the redshift uncertainty is calculated with the method introduced before. Meanwhile, if the redshift is exact, then I set the value of $\sigma_{ii} = 0$. In this theis, I aim to disentangle the different systematic uncertainties. In reality, These effects could be degenerate in the way they impact the measured DM or the covariance. I discuss that futher in chapter \ref{chap:discuss}.
 
 
+\section{Quantifying the deviation form the mean DM-$z$ relation}
 
 
-\section{Data Compression}
-I simulate the electron density shells and place FRBs in the same redshift and angular position as in the mock catalog. This will reduce the computational cost and the need to calculate the covariance matrix for each realisation within the SBI pipeline. (Try to do this excercise without choosing the sdame redshifts for a lower number of sources such that it lowers down the computational costs)
-\subsubsection{Numerical derivative stability}
-\subsubsection{The Sensitivity of compressed statistics to model parameters}
+\subsection{The numerical implementation of the cosmological covariance matrix}
+
 
 Add a plot about derivative stability. Add a plot for the sensitivity.
 
 \section{Simulation-based inference} \label{meth_sec:sbi}
+\subsection{Data Compression}
+I simulate the electron density shells and place FRBs in the same redshift and angular position as in the mock catalog. This will reduce the computational cost and the need to calculate the covariance matrix for each realisation within the SBI pipeline. (Try to do this excercise without choosing the sdame redshifts for a lower number of sources such that it lowers down the computational costs)
+\subsubsection{Numerical derivative stability}
+\subsubsection{The Sensitivity of compressed statistics to model parameters}
 \subsection{Approximate Baysian inference}
 \subsection{Neural Posterior Estimator}
 \subsection{The Sequentual Neural Posterio Estimator}

@@ -198,41 +198,6 @@
       \field{pages}{A6}
       \range{pages}{-1}
     \endentry
-    \entry{Alonso_2021}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=616de3263b076cfa5c29bf8927a1b333}{%
-           family={Alonso},
-           familyi={A\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{616de3263b076cfa5c29bf8927a1b333}
-      \strng{fullhash}{616de3263b076cfa5c29bf8927a1b333}
-      \strng{fullhashraw}{616de3263b076cfa5c29bf8927a1b333}
-      \strng{bibnamehash}{616de3263b076cfa5c29bf8927a1b333}
-      \strng{authorbibnamehash}{616de3263b076cfa5c29bf8927a1b333}
-      \strng{authornamehash}{616de3263b076cfa5c29bf8927a1b333}
-      \strng{authorfullhash}{616de3263b076cfa5c29bf8927a1b333}
-      \strng{authorfullhashraw}{616de3263b076cfa5c29bf8927a1b333}
-      \field{extraname}{1}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Physical Review D}
-      \field{month}{6}
-      \field{number}{12}
-      \field{title}{Linear anisotropies in dispersion-measure-based cosmological observables}
-      \field{volume}{103}
-      \field{year}{2021}
-      \verb{doi}
-      \verb 10.1103/physrevd.103.123544
-      \endverb
-    \endentry
     \entry{alonso2021linear}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=616de3263b076cfa5c29bf8927a1b333}{%
@@ -253,10 +218,8 @@
       \strng{authornamehash}{616de3263b076cfa5c29bf8927a1b333}
       \strng{authorfullhash}{616de3263b076cfa5c29bf8927a1b333}
       \strng{authorfullhashraw}{616de3263b076cfa5c29bf8927a1b333}
-      \field{extraname}{2}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2678,8 +2641,59 @@
       \strng{authornamehash}{3257c8d594fe8e11de5ff9f1af773af5}
       \strng{authorfullhash}{3257c8d594fe8e11de5ff9f1af773af5}
       \strng{authorfullhashraw}{3257c8d594fe8e11de5ff9f1af773af5}
+      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{Mitigating baryon feedback bias in cosmic shear through a theoretical error covariance in the matter power spectrum}
+      \field{volume}{537}
+      \field{year}{2025}
+      \field{pages}{1749\bibrangedash 1762}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1093/mnras/staf113
+      \endverb
+    \endentry
+    \entry{Maraio_Hall_Taylor_2025}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=90778523d1e3ddad37df4ed18976778c}{%
+           family={Maraio},
+           familyi={M\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8253182adf1ee08b8111ef6c7c798ef}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3257c8d594fe8e11de5ff9f1af773af5}
+      \strng{fullhash}{3257c8d594fe8e11de5ff9f1af773af5}
+      \strng{fullhashraw}{3257c8d594fe8e11de5ff9f1af773af5}
+      \strng{bibnamehash}{3257c8d594fe8e11de5ff9f1af773af5}
+      \strng{authorbibnamehash}{3257c8d594fe8e11de5ff9f1af773af5}
+      \strng{authornamehash}{3257c8d594fe8e11de5ff9f1af773af5}
+      \strng{authorfullhash}{3257c8d594fe8e11de5ff9f1af773af5}
+      \strng{authorfullhashraw}{3257c8d594fe8e11de5ff9f1af773af5}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3377,6 +3391,33 @@
       \verb{doi}
       \verb 10.1063/1.1848323
       \endverb
+    \endentry
+    \entry{reischke2025pylevin}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=feee8b9f7a9954fe55e6a43b89890eab}{%
+           family={Reischke},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{feee8b9f7a9954fe55e6a43b89890eab}
+      \strng{fullhash}{feee8b9f7a9954fe55e6a43b89890eab}
+      \strng{fullhashraw}{feee8b9f7a9954fe55e6a43b89890eab}
+      \strng{bibnamehash}{feee8b9f7a9954fe55e6a43b89890eab}
+      \strng{authorbibnamehash}{feee8b9f7a9954fe55e6a43b89890eab}
+      \strng{authornamehash}{feee8b9f7a9954fe55e6a43b89890eab}
+      \strng{authorfullhash}{feee8b9f7a9954fe55e6a43b89890eab}
+      \strng{authorfullhashraw}{feee8b9f7a9954fe55e6a43b89890eab}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2502.12142}
+      \field{title}{pylevin: efficient numerical integration of integrals containing up to three Bessel functions}
+      \field{year}{2025}
     \endentry
     \entry{10.1093/mnras/stad1645}{article}{}{}
       \name{author}{2}{}{%
@@ -5167,6 +5208,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{Alonso_2021}
 \endrefsection
 \endinput
 
