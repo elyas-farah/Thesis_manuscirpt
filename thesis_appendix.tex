@@ -6,13 +6,93 @@
 %==============================================================================
 
 - Fourier transform conventions.
-- Plane wave decomposition into spherical harmonics in the derivaiton o the cosmological covariance. Look at equation 13 on these lecture notes https://scipp-legacy.pbsci.ucsc.edu/~haber/ph215/PlaneWaveExpansion.pdf. 
+- Plane wave decomposition into spherical harmonics in the derivaiton o the cosmological covariance. Look at equation 13 on these lecture notes https://scipp-legacy.pbsci.ucsc.edu/~haber/ph215/PlaneWaveExpansion.pdf.
 - Definition of the Legendre polynomial.
 - Virial theorem.
 - spherical collapse model and the critical density.
 - The Dirac delta function.
 - The limber approximation.
 - The 4 velocity of massless particles (necessairy for the the derivtion fo the dispersion measure expression)
+
+%==============================================================================
+\chapter{Sensitivity of the Gas Power Spectrum to Parameter Variations}%
+\label{sec:app_sensitivity}
+%==============================================================================
+
+
+I present the sensitivity to the four cosmological parameters: the baryon density $\Omega_\mathrm{b}$, the cold dark matter density $\Omega_\mathrm{c}$, the amplitude of matter fluctuations $\sigma_8$, and the reduced Hubble constant $h$, followed by the baryonic feedback parameters.
+
+%------------------------------------------------------------------------------
+\section*{Cosmological Parameters}
+%------------------------------------------------------------------------------
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/p_Omega_b.png}
+        \caption{Sensitivity of the gas power spectrum to the baryon density parameter $\Omega_\mathrm{b}$. Higher baryon fractions increase the overall gas content, boosting power on all scales.}
+        \label{fig:p_Omega_b}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/p_Omega_c.png}
+        \caption{Sensitivity of the gas power spectrum to the cold dark matter density $\Omega_\mathrm{c}$. Changes in $\Omega_\mathrm{c}$ alter the depth of the gravitational potential wells that drive gas clustering.}
+        \label{fig:p_Omega_c}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/p_sigma8.png}
+        \caption{Sensitivity of the gas power spectrum to $\sigma_8$, the RMS amplitude of linear matter fluctuations on $8\,h^{-1}\,\mathrm{Mpc}$ scales. Larger $\sigma_8$ enhances structure formation and increases power at small scales.}
+        \label{fig:p_sigma8}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/p_h.png}
+        \caption{Sensitivity of the gas power spectrum to the reduced Hubble constant $h$. Variations in $h$ shift the characteristic scales of the power spectrum and affect the conversion between comoving distances and redshifts.}
+        \label{fig:p_h}
+    \end{minipage}
+\end{figure}
+
+%------------------------------------------------------------------------------
+\section*{Astrophysical Parameters}
+%------------------------------------------------------------------------------
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/p_Nstar.png}
+        \caption{Sensitivity of the gas power spectrum to the stellar feedback parameter $N_\star$, which controls the efficiency of star formation and the associated stellar-driven gas ejection.}
+        \label{fig:p_Nstar}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/p_delta.png}
+        \caption{Sensitivity of the gas power spectrum to the slope parameter $\delta$, which governs the inner profile of the gas distribution within haloes.}
+        \label{fig:p_delta}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/p_log10_Mc.png}
+        \caption{Sensitivity of the gas power spectrum to $\log_{10} M_\mathrm{c}$, the characteristic halo mass scale for AGN feedback. Haloes above $M_\mathrm{c}$ expel their gas more efficiently, suppressing power at small scales.}
+        \label{fig:p_log10_Mc}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+    \end{minipage}
+\end{figure}
 
 % Print the bibliography starting on the same page at the end of the chapter.
 % \printbibliography[heading=subbibliography]

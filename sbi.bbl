@@ -887,6 +887,52 @@
       \field{pages}{473\bibrangedash 515}
       \range{pages}{43}
     \endentry
+    \entry{cranmer2020frontier}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0003024ea8011848862cbf896b544a27}{%
+           family={Cranmer},
+           familyi={C\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=874c99f840ac4124510f66c8e3c43f6f}{%
+           family={Brehmer},
+           familyi={B\bibinitperiod},
+           given={Johann},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=832b9967410c05c324eec6e9b19da71e}{%
+           family={Louppe},
+           familyi={L\bibinitperiod},
+           given={Gilles},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \strng{fullhash}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \strng{fullhashraw}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \strng{bibnamehash}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \strng{authorbibnamehash}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \strng{authornamehash}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \strng{authorfullhash}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \strng{authorfullhashraw}{ba2736587ecb8b54e6f19add7e3d16f6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{48}
+      \field{title}{The frontier of simulation-based inference}
+      \field{volume}{117}
+      \field{year}{2020}
+      \field{pages}{30055\bibrangedash 30062}
+      \range{pages}{8}
+    \endentry
     \entry{van2011effects}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=6f25147165854f3a40fadb708468b187}{%
@@ -1737,12 +1783,12 @@
            given={Bhuvnesh},
            giveni={B\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
+        {{un=1,uniquepart=given,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
            family={Taylor},
            familyi={T\bibinitperiod},
            given={Andy},
            giveni={A\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \strng{namehash}{918e08cb7ae6603b87585cdad5451c41}
       \strng{fullhash}{918e08cb7ae6603b87585cdad5451c41}
@@ -2626,12 +2672,12 @@
            given={Alex},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
+        {{un=1,uniquepart=given,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
            family={Taylor},
            familyi={T\bibinitperiod},
            given={Andy},
            giveni={A\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \strng{namehash}{3257c8d594fe8e11de5ff9f1af773af5}
       \strng{fullhash}{3257c8d594fe8e11de5ff9f1af773af5}
@@ -2641,59 +2687,8 @@
       \strng{authornamehash}{3257c8d594fe8e11de5ff9f1af773af5}
       \strng{authorfullhash}{3257c8d594fe8e11de5ff9f1af773af5}
       \strng{authorfullhashraw}{3257c8d594fe8e11de5ff9f1af773af5}
-      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
-      \field{month}{1}
-      \field{number}{2}
-      \field{title}{Mitigating baryon feedback bias in cosmic shear through a theoretical error covariance in the matter power spectrum}
-      \field{volume}{537}
-      \field{year}{2025}
-      \field{pages}{1749\bibrangedash 1762}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.1093/mnras/staf113
-      \endverb
-    \endentry
-    \entry{Maraio_Hall_Taylor_2025}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=90778523d1e3ddad37df4ed18976778c}{%
-           family={Maraio},
-           familyi={M\bibinitperiod},
-           given={Alessandro},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e8253182adf1ee08b8111ef6c7c798ef}{%
-           family={Hall},
-           familyi={H\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
-           family={Taylor},
-           familyi={T\bibinitperiod},
-           given={Andy},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{3257c8d594fe8e11de5ff9f1af773af5}
-      \strng{fullhash}{3257c8d594fe8e11de5ff9f1af773af5}
-      \strng{fullhashraw}{3257c8d594fe8e11de5ff9f1af773af5}
-      \strng{bibnamehash}{3257c8d594fe8e11de5ff9f1af773af5}
-      \strng{authorbibnamehash}{3257c8d594fe8e11de5ff9f1af773af5}
-      \strng{authornamehash}{3257c8d594fe8e11de5ff9f1af773af5}
-      \strng{authorfullhash}{3257c8d594fe8e11de5ff9f1af773af5}
-      \strng{authorfullhashraw}{3257c8d594fe8e11de5ff9f1af773af5}
-      \field{extraname}{2}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradate}{2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4558,6 +4553,60 @@
       \verb 10.1088/1475-7516/2024/10/057
       \endverb
     \endentry
+    \entry{Tegmark_1997}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b9b3c445e1013a97fc6318e06799b37b}{%
+           family={Tegmark},
+           familyi={T\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=f2b8bd69ef1d560194dfaca0d5314951}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Andy\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=28586dced43154ae2d16a1b1a0bda8d8}{%
+           family={Heavens},
+           familyi={H\bibinitperiod},
+           given={Alan\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{304788c94b51dc4285b718f984c22275}
+      \strng{fullhash}{304788c94b51dc4285b718f984c22275}
+      \strng{fullhashraw}{304788c94b51dc4285b718f984c22275}
+      \strng{bibnamehash}{304788c94b51dc4285b718f984c22275}
+      \strng{authorbibnamehash}{304788c94b51dc4285b718f984c22275}
+      \strng{authornamehash}{304788c94b51dc4285b718f984c22275}
+      \strng{authorfullhash}{304788c94b51dc4285b718f984c22275}
+      \strng{authorfullhashraw}{304788c94b51dc4285b718f984c22275}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since cosmology is no longer “the data-starved science,” the problem of how to analyze large data sets best has recently received considerable attention, and Karhunen-Loève eigenvalue methods have been applied to both galaxy redshift surveys and cosmic microwave background (CMB) maps. We present a comprehensive discussion of methods for estimating cosmological parameters from large data sets, which includes the previously published techniques as special cases. We show that both the problem of estimating several parameters jointly and the problem of not knowing the parameters a priori can be readily solved by adding an extra singular value decomposition step. It has recently been argued that the information content in a sky map from a next-generation CMB satellite is sufficient to measure key cosmological parameters (h, Ω, Λ, etc.) to an accuracy of a few percent or better—in principle. In practice, the data set is so large that both a brute force likelihood analysis and a direct expansion in signal-to-noise eigenmodes will be computationally unfeasible. We argue that it is likely that a Karhunen-Loève approach can nonetheless measure the parameters with close to maximal accuracy, if preceded by an appropriate form of quadratic “precompression.” We also discuss practical issues regarding parameter estimation from present and future galaxy redshift surveys and illustrate this with a generalized eigenmode analysis of the IRAS 1.2 Jy survey optimized for measuring β ≡ Ω0.6/b using redshift space distortions.}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Karhunen-Loève Eigenvalue Problems in Cosmology: How Should We Tackle Large Data Sets?}
+      \field{volume}{480}
+      \field{year}{1997}
+      \field{pages}{22}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/303939
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1086/303939
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1086/303939
+      \endverb
+    \endentry
     \entry{tessore2023glass}{article}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=d322fc28448c928b2f18298de3891139}{%
@@ -4949,6 +4998,38 @@
       \verb 10.1142/9789812810434_0026
       \endverb
     \endentry
+    \entry{verde2010statistical}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e1d06a928b4397fd26aa8b82f6d19c2a}{%
+           family={Verde},
+           familyi={V\bibinitperiod},
+           given={Licia},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \strng{fullhash}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \strng{fullhashraw}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \strng{bibnamehash}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \strng{authorbibnamehash}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \strng{authornamehash}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \strng{authorfullhash}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \strng{authorfullhashraw}{e1d06a928b4397fd26aa8b82f6d19c2a}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Lectures on Cosmology: Accelerated Expansion of the Universe}
+      \field{title}{Statistical methods in cosmology}
+      \field{year}{2010}
+      \field{pages}{147\bibrangedash 177}
+      \range{pages}{31}
+    \endentry
     \entry{verde2024tale}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=e1d06a928b4397fd26aa8b82f6d19c2a}{%
@@ -5208,7 +5289,7 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Alonso_2021}
+  \missing{Maraio_Hall_Taylor_2025}
 \endrefsection
 \endinput
 

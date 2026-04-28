@@ -9,7 +9,7 @@ Table \ref{tab:cosmo_params} shows the cosmological and baryonic feedback paramt
     \caption{A flowchat of the simulation pipeline introduced in this section. Starting from model parameters I obatin the non-linear electron power spectrum via the halo model. Then, I perform the Limber integral to obatin the electron angular power spectrum in each redshift bin. After that, I use the GLASS package to obatin lognormal maps of electrons in bins of redshifts. Then, I sample in angular positions and redshifts and sum the contribution of each shell to obtain an uncontaminated catalog. Eventually, The systematic uncertainties are then added.}
     \label{meth_fig:simulation_flow}
 \end{figure}
-To model the dispersion measure signal, I use the Generator for Large-Scale Structure (GLASS) \citep{tessore2023glass} package. I describe this package in further details in section \ref{meth_sec:glass}. Briefly, the GLASS package generates lognormal maps of a cosmological field starting from a given angular power spectra. On contrary to the commonly used \texttt{healpy} package, it assumes that the cosmological field follows a lognormal distribution. Though this is not the case in for a real cosmological field, the GLASS package preserves the two-point statistics of the cosmologocal field, which is enough for the sample size I am considering in this thesis. Higher order statistics such as the bispectrum (3-point) and the trispectrum (4-point) requires a larger sample size for detection. Using the electron power spectrum, I project the spectra on the unit sphere to obtain an expectation of the angular power specta in bins of redshifts. After that, I feed the resultatnt power spectra to GLASS in order to obtain maps of electron density in bins of redshift. THe next step constitute in sampling randomly on the sky and according to the source redshift distribution in redshift then sum the contribution from different shells. In general, the simulation spicificaitons are shown in Table \ref{}
+To model the dispersion measure signal, I use the Generator for Large-Scale Structure (GLASS) \citep{tessore2023glass} package. I describe this package in further details in section \ref{meth_sec:glass}. Briefly, the GLASS package generates lognormal maps of a cosmological field starting from a given angular power spectra. On contrary to the commonly used \texttt{healpy} package, it assumes that the cosmological field follows a lognormal distribution. Though this is not the case in for a real cosmological field, the GLASS package preserves the two-point statistics of the cosmologocal field, which is enough for the sample size I am considering in this thesis. Higher order statistics such as the bispectrum (3-point) and the trispectrum (4-point) requires a larger sample size for detection. Using the electron power spectrum, I project the spectra on the unit sphere to obtain an expectation of the angular power specta in bins of redshifts. After that, I feed the resultatnt power spectra to GLASS in order to obtain maps of electron density in bins of redshift. THe next step constitute in sampling randomly on the sky and according to the source redshift distribution in redshift then sum the contribution from different shells. In general, the simulation spicificaitons are shown in Table \ref{tab:sim_spec}.
 
 \begin{table}[h]
 \centering
@@ -99,24 +99,22 @@ The mapping from $r_{\mathrm{bar,i}}$ to $r_{\mathrm{bar,f}}$ is parameterized w
 
 \begin{table}[h]
 \centering
-\begin{tabular}{c c p{6cm} c}
+\begin{tabular}{c p{6cm} c}
 \hline\hline
-\textbf{Parameter} & \textbf{Prior} & \textbf{Description} & \textbf{Fixed value} \\
+\textbf{Parameter} & \textbf{Description} & \textbf{Fixed value} \\
 \hline
-$\theta_{\mathrm{co}}$ & U[0.001, 0.5] & Core radius of the gas profile relative to $r_{200}$ (Eq. 2.6) & 0.3 \\
-$\log_{10} M_{\mathrm{c}}$ & U[11.0, 15.0] & Pivot mass for the mass dependent slope of the gas profile (Eq. 2.6 \& Eq. 2.7) & 14 \\
-$\mu$ & U[0.0, 2.0] & Transition steepness of mass dependent gas parameter (Eq. 2.6 \& Eq. 2.7) & 0.3 \\
-$\delta$ & U[1.0, 11.0] & Characterizes the transition from inner to outer part of the gas profile (Eq. 2.6) & 7.0 \\
-$\eta$ & U[0.0, 0.5] & Total stellar fraction within a halo (Eq. 2.10) & 0.32 \\
-$d\eta$ & U[0.0, 0.5] & Fraction of central galaxies w.r.t. total stellar fraction (Eq. 2.10) & 0.28 \\
-$N_{\mathrm{star}}$ & U[0.0, 0.05] & Stellar fraction amplitude (Eq. 2.10) & 0.040 \\
-$c_{\mathrm{iga}}$ & U[0.0, 1.0] & Cold gas fraction (see Eq. 2.12) & 0. \\
-
+$\theta_{\mathrm{co}}$ & Core radius of the gas profile relative to $r_{200}$ (Eq. 2.6) & 0.3 \\
+$\log_{10} M_{\mathrm{c}}$ & Pivot mass for the mass dependent slope of the gas profile (Eq. 2.6 \& Eq. 2.7) & 14 \\
+$\mu$ & Transition steepness of mass dependent gas parameter (Eq. 2.6 \& Eq. 2.7) & 0.3 \\
+$\delta$ & Characterizes the transition from inner to outer part of the gas profile (Eq. 2.6) & 7.0 \\
+$\eta$ & Total stellar fraction within a halo (Eq. 2.10) & 0.32 \\
+$d\eta$ & Fraction of central galaxies w.r.t. total stellar fraction (Eq. 2.10) & 0.28 \\
+$N_{\mathrm{star}}$ & Stellar fraction amplitude (Eq. 2.10) & 0.040 \\
+$c_{\mathrm{iga}}$ & Cold gas fraction (see Eq. 2.12) & 0.0 \\
 \hline\hline
 \end{tabular}
 \caption{The parameters of the BFC model.}
-\label{tab:bfc_prarams}
-
+\label{tab:bfc_params}
 \end{table}
 
 In this thesis, I use the halo gas profiles predicted by the BFC model to obatin a theoretical expectation of the gas power spectrum, which in turn is the electron power spectrum. I derive the 1-halo and the 2-halo terms using the Core Cosmology Library which is discussed in the next section. As an example of how baryonic feedbck modifies the power spcetrum, Fig. \ref{} shows how the power spectrum changes with changing values of $\log_{10} M_c$, one of the baryonic feedback parameters.
@@ -334,12 +332,15 @@ Depending on the angular direciton, the measured $\mathrm{DM}_\mathrm{tot}$ rece
 
 \subsection{Host contribution}
 To study the impact of the host contribution, I use a lognormal model of the host contribution as described in section \ref{theory_sec:uncertainties} with parameters chosen as described in \ref{tab:systematics}. The range of mean host contribution $\mathrm{DM}_\mathrm{host, mean}$ is taken from the work by \citet{theis2024galaxy} on the host contribution using different hydrodynamical simulations. The value for the scale of the lognormal distribution $\sigma_\mathrm{LN}$ is the parameters inferred with simulation-based inference from 12 localised FRBs in the work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}. 
-
 In addition to these parameters, I consider a simple model for the evolution of the host contribution with redshfit such that
 \begin{equation}
     \mathrm{DM}_\mathrm{host}(z) = \frac{\mathrm{DM}_\mathrm{host}}{1 + z}
 \end{equation}
-with $z$ corresponding to the redshfit of the FRB.
+with $z$ corresponding to the redshfit of the FRB. Assuming that the correlation between the $\mathrm{DM}$ and $\mathrm{DM}_\mathrm{host}$ is negligible, the covariance matrix receives an additional contribution 
+\begin{equation}
+    \langle \mathrm{DM}_{\mathrm{host}, i} \mathrm{DM}_{\mathrm{host}, j}\rangle =  \frac{\sigma^2_\mathrm{host}}{(1 + z_i)(1+ z_j)}
+\end{equation}
+with $\sigma^2_\mathrm{host}$ is the variance of the host contribution as defined in section \ref{theory_sec:uncertainties}.
 
 
 
@@ -351,7 +352,7 @@ I simulate the imapct of redshift uncertainty by assuming that a redshift measur
     0 & \sigma_j^2 
     \end{bmatrix}
 \end{equation}
-To propagate the error, I calcualte the expectation value $\langle \hat{C}_{ij} \rangle$, given as
+To propagate the error inthe covariance, I calcualte the expectation value $\langle \hat{C}_{ij} \rangle$, given as
 \begin{equation}
     \langle \hat{C}_{ij} \rangle = \int \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma) \, \, C_{ij} \, \,dz_i \, \, dz_j
 \end{equation}
@@ -363,14 +364,18 @@ Since the Gaussian distribution has vanaishing moments for moment larger than th
 \begin{equation}
     \langle \hat{C}_{ij} \rangle = \hat{C}_{ij} + \frac{1}{2} \, \, \sigma_{i}^2 \, \, \partial^2_{ii} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)} \, \, + \frac{1}{2} \, \, \sigma_{j}^2 \, \, \partial^2_{jj} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)}.
 \end{equation}
-Therefore, it is possible to account for the error in the covariance due to redshift uncertainty using the second derivative of the covariance with respect to redshift $z$.
+Therefore, it is possible to account for the error in the covariance due to redshift uncertainty using the second derivative of the covariance with respect to redshift $z$. In chapter \ref{chap:results}, I will show the impact to redshift uncertainty relative to the case with correction covariance.
 
-I show the impact of redshift uncertainty on the scatter in the DM-$z$ relation in chapter \ref{chap:results}.
+
 
 
 \subsection{Selection effects}
-- show a plot of full PDF and a truncated PDF.
-- Discuss the choice for different normalizations and the excluded FRBs depending on redshift.
+The parameters for the selection effect model shows in table \ref{tab:systematics} are well-motivated by the range of $\mathrm{DM}_\mathrm{max}$ from diffeerent surveys as shown in table \ref{tab:dmmax}. Meanwhile, I choose the smoothing scale to be comparable with the lower bound of the possible values of $\mathrm{DM}_\mathrm{max}$.
+
+Since the sigmoid function modifies the PDF of the measured $\mathrm{DM}$, the sigmoid scaling acan salso be used in contaminating a mock catalog with no selection effect in the following way: obtain a weight for each value of the measured DM in a catalog, then generate $N_\mathrm{FRB}$ random number sampled uniformly between 0 and 1, after that, compare the sigmoid weight of each FRB with the random number and remove all FRBs with a random number larger than the sigmoid weight. This sequence of steps reweighs the PDF of the observed DM values according to the sigmoid function, yielding an FRBs catalog with the desired selection effect.
+
+
+
 \subsection{Unlocalised hosts}
 I simulate unlocalised FRBs in a fashion similar to what is descibed in seciotn \ref{theory_sec:uncertainties}. To fill in missing redshift, I use the fiducial parameters in order to obtain an expectation of the unknown redshift $z_i = z(\mathrm{DM}_i)$ from the measured $\mathrm{DM}_i$. To propagate the error to the redshift space, I assume that $\mathrm{DM}$ follows a lognormal distribution with underlying Gaussian mean  $\mathrm{DM}_i$ and variance $\sigma^2(z_i)$, such that
 \begin{equation}
@@ -382,11 +387,31 @@ with
 \end{equation}
 The lognormal assumption is valid in the case of this work since the $\mathrm{DM}$ contributions from the different shells are lognormal. After that, I sample $\mathrm{sample}$ from the distribution, and I use the same mean DM-$z$ relation to map the sampled DM to $z$-space. After that, I calculate the sample variance of the mapped redshifts $\sigma^2_{i}$, where $\sigma_i/\sqrt{n_{\mathrm{sample}}}$ is the error on the estimated redshift $z_i$.
 
-To propagate the error to the covarirance, I use the same formalism introduced in section \ref{meth_sec:z_uncertainty}, only as an approximation, since the underlying PDF of the estimated redshift is not a Gaussian distribution. For the values of $\sigma_{ii}$, if the FRB has an undefined host, the redshift uncertainty is calculated with the method introduced before. Meanwhile, if the redshift is exact, then I set the value of $\sigma_{ii} = 0$. In this theis, I aim to disentangle the different systematic uncertainties. In reality, These effects could be degenerate in the way they impact the measured DM or the covariance. I discuss that futher in chapter \ref{chap:discuss}.
+To propagate the error to the covarirance, I use the same formalism introduced in section \ref{meth_sec:z_uncertainty}, only as an approximation, since the underlying PDF of the estimated redshift is not a Gaussian distribution. For the values of $\sigma_{ii}$, if the FRB has an undefined host, the redshift uncertainty is calculated with the method introduced before. Meanwhile, if the redshift is exact, then I set the value of $\sigma_{ii} = 0$. In this theis, I aim to disentangle the different systematic uncertainties. In reality, These effects could be degenerate in the way they impact the measured DM or the covariance. I discuss that futher in chapter \ref{chap:discuss}. 
 
 
 \section{Quantifying the deviation form the mean DM-$z$ relation}
+This section is based on Statistical Methods in Cosmology lecture given by Licia Verde \citep{verde2010statistical}.
+To qunatity the impact of systematic uncertainty on the DM-$z$ relation, I compare a fiducial catalog with a contaminated catalog using the $\chi^2$ test. In particular, the maximum $\chi^2$ estimator is a method to infer model parameters from data by comparing the difference between data $d$ the mean predicted by the model parameters $\mu(\theta)$ given some weight for every point. In a flat geometry, the $\chi^2$ can be written as 
+\begin{equation}
+    \chi^2 = \sum_{i} w_i(d_i - \mu_i(\theta))^2.
+\end{equation}
+If data points are correalted, the $\chi^2$ can be written in terms of the weights $w_{ij}$ such that
+\begin{equation}
+    \chi^2 = \sum_{ij} (d_i - \mu_i(\theta))w_{ij}(d_j - \mu_j(\theta)).
+\end{equation}
+It can be shown that the minimum variane $\chi^2$ estimator is the estimator with $w_{ij}$ being the inverse of the data covariance matrix $C_{ij}$, making the final expression of the $\chi^2$
+\begin{equation}
+    \chi^2 = \sum_{ij} (d_i - \mu_i(\theta))C_{ij}^{-1}(d_j - \mu_j(\theta)).
+\end{equation}
+The probability that a value $\chi^2$ will exceed the true $\hat{\chi}^2$ is given by 
 
+\begin{equation}
+    Q(\nu, \hat{\chi}) = 1 - \Gamma(\nu/2, \hat{\chi}/2), 
+\end{equation}
+where $\Gamma$ is the incomplete $\Gamma$-function and $\nu$ is the number of degrees of freedom. In this thesis, the number of degrees of freedom equals to the number of FRBs in a catalog.
+
+Given an FRB catalog (either contaminated or not contaminated), The likelihood of data $\{\mathrm{DM}_i\}$ given the model parameters $\theta$ is written as 
 
 \subsection{The numerical implementation of the cosmological covariance matrix}
 
@@ -394,13 +419,64 @@ To propagate the error to the covarirance, I use the same formalism introduced i
 Add a plot about derivative stability. Add a plot for the sensitivity.
 
 \section{Simulation-based inference} \label{meth_sec:sbi}
+To forecast the bias in parameter estimation, I use simulation based inference (SBI) method. A review of simulation baed inference can be found in \citet{cranmer2020frontier} and SBI lecture by Noemi Anau Montel \footnote{\href{https://wwwmpa.mpa-garching.mpg.de/~komatsu/lecturenotes/Noemi_Anau_Montel_on_SBI.pdf}{The Postdoc lecture by Noemi Anau Montel}} given at the Postdoc Lecture Series at the Max Planck Institute for Astrophysics. SBI is a method to infer the parameter of a model by compared an observed data vector $d$ with  a data vector obtained from a forward simulation. It is an extension of Baysian inference in which the parameter posterior is constrained by performing Monte Carlo Markov Chain (MCMC) to obtain the parameter's posterior distribution. If the prior of the model parameter is $P(\theta)$ and the likelihood of data given the parameter is $P(d|\theta)$ then the posterior distribution of the parameters given data $P(\theta|d)$ is written by Bayes rule
+\begin{equation}
+    P(\theta|d) \sim P(d|\theta) \, P(\theta).
+\end{equation}
+In traditional cosmological application, there are two consideration. First, by invoking the central limit theorem (CLT)\footnote{Central limit theorem (CLT) states that the probability distribution function of indepedent and identically distributed random variables approaches a Gaussian distribution as the number of sampled variables approaches infinity if the true probability distribution funciton has a finite variance.}, $P(d|\theta)$ can be assumed to be a multivariate Gaussian. However, this is not necessairly true if the conditions of CLT are not fullfilled, leaving the problem with intractable likelihood. 
+
+To solve this problem, Approximate Baysian Computation (ABC) can be used to obtain posterior sample without a tractable likelihood and using a forward model. By defining a distance caliber between an the a data vector $\mathbf{x_0}$ and a data vector form the forward model $\mathbf{x}$ such that
+\begin{equation}
+    d(\mathbf{x}, \mathbf{x_0}) = ||\mathbf{x} - \mathbf{x_0}||.
+\end{equation}
+The samples from the approximate posterior are drawn with rejection sampling using an acceptance tolerance rate $\epsilon$ such that accepted samples satify $d(\mathbf{x}, \mathbf{x_0}) < \epsilon$, and the posterior is given By
+\begin{equation}
+    p_{\mathrm{ABC}}(\Theta \mid \boldsymbol{x}) = \frac{\int_{d(\boldsymbol{x}_0, \boldsymbol{x}) < \epsilon} \mathrm{d}\boldsymbol{x} \, p(\boldsymbol{x} \mid \Theta) p(\Theta)}{\int_{d(\boldsymbol{x}_0, \boldsymbol{x}) < \epsilon} \mathrm{d}\boldsymbol{x} \, p(\boldsymbol{x})}
+\end{equation}
+is guarenteed to converge to the true posterior distributiuon. However, the sampling efficiency of this method is very low, especially if the problem involves wide priors and large parameter space. Therefore, machine learning (ML) methods are used to learn the posterior distribution of the observed data. Nonetheless, with high dimensional data such as that of FRBs, both ML and ABC methods fail to converge quickly. Therefore, the need for a summary statics that retains the cosmological information is necessairy. I describe below how to use the simulation pipeline desceibed in section \ref{meth_sec:sim_dm} to perform simulation based inference of the cosmological and the baryonic feedback paraemters. Table \ref{tab:priors} shows the free parameters along with theor priors. I choose wide enough priors to show the resultant bias in parameter estimation when systematic uncertainties are not taken into consideration in the forward model. In addition, Fig. \ref{meth_fig:inference_flow} shows a schematic representation of the used inference pipeline. Among the baryonic feedback aparameters, I chose $\log_{10} M_\mathrm{c}$ since the gas power spectrum is most sensitive to this parameter, as you can see in the appendix.
+\begin{table}[h]
+\centering
+\begin{tabular}{c p{6cm} c}
+\hline\hline
+\textbf{Parameter} & \textbf{Description} & \textbf{Prior} \\
+\hline
+$\Omega_{\mathrm{c}}$ & Cold dark matter density parameter & U[0.2, 0.5] \\
+$\Omega_{\mathrm{b}}$ & Baryon density parameter & U[0.02, 0.07] \\
+$h$ & Dimensionless Hubble parameter & U[0.5, 0.8] \\
+$\sigma_8$ & Amplitude of matter fluctuations & U[0.6, 1.0] \\
+$\log_{10} M_{\mathrm{c}}$ & Pivot mass for the mass dependent slope of the gas profile & U[11.0, 15.0] \\
+\hline\hline
+\end{tabular}
+\caption{Prior distributions for the free parameters.}
+\label{tab:priors}
+\end{table}
+
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figs/snpe.png}
+    \caption{A flowchat of the inference pipeline with the sequential neural posterior estimator (SNPE) method. The details of this method are described in section \ref{meth_sec:snpe}. In total, the inference conststis of multiple infernec round with the prior used in the first round correponding to the initial parameter prior, while the prior used for later rounds is the learned posterior distribution from the preceeding round. This concentrate the sampes around the area of high posterior with each round.}
+    \label{meth_fig:inference_flow}
+\end{figure}
+
+
+
 \subsection{Data Compression}
 I simulate the electron density shells and place FRBs in the same redshift and angular position as in the mock catalog. This will reduce the computational cost and the need to calculate the covariance matrix for each realisation within the SBI pipeline. (Try to do this excercise without choosing the sdame redshifts for a lower number of sources such that it lowers down the computational costs)
+
+
+This quantity can also be understood from a different perspective as descibed by \citet{Tegmark_1997} in the following way. If the likelihood of data given the paremeter is $L(d| \theta)$, then $L$ can be expanded in the neighbourhood of the true model parameters $\theta_\ast$ up to second order as
+\begin{equation}
+    L(d| \theta) = L(d| \theta_\ast) + (d_i - \mu_i(\theta))^T \nabla L|_{\theta_\ast} + (d_i - \mu_i(\theta))^T \nabla^2 L|_{\theta_\ast} (d_i - \mu_i(\theta)).
+\end{equation}
+Since $\theta_\ast$ is the true parameter value, $\nabla L|_{\theta_\ast} = 0$. In addition, 
+
+
+
 \subsubsection{Numerical derivative stability}
 \subsubsection{The Sensitivity of compressed statistics to model parameters}
-\subsection{Approximate Baysian inference}
-\subsection{Neural Posterior Estimator}
-\subsection{The Sequentual Neural Posterio Estimator}
+\subsection{The Sequentual Neural Posterio Estimator} \label{meth_sec:snpe}
 \subsubsection{The truncated sequential neural posterior estimator}
 \subsection{Flow matching posterior estimator}
 

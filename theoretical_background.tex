@@ -784,7 +784,7 @@ In total, the variance of the DM field is an importnat quantity for constraining
     \label{theory_fig:DM-z}
 \end{figure}
 
-So far, I have only introduced the cosmological DM. In reality, the measured $\mathrm{DM}$ receives contributions from the Milkyway galaxy and the host galaxy contribution which are not included in Eq. \ref{eq:dispersion_final}. We label each of these contribution with $\mathrm{DM}_\mathrm{MW}$ and $\mathrm{DM}_\mathrm{host}$ respectively. We discuss these two contributions in section \ref{theory_sec:uncertainties}. The total DM measured as measured on Earth is 
+So far, I have only introduced the cosmological DM. In reality, the total measured $\mathrm{DM}_\mathrm{tot}$ receives contributions from the Milkyway galaxy and the host galaxy contribution which are not included in Eq. \ref{eq:dispersion_final}. We label each of these contribution with $\mathrm{DM}_\mathrm{MW}$ and $\mathrm{DM}_\mathrm{host}$ respectively. We discuss these two contributions in section \ref{theory_sec:uncertainties}. The total DM measured as measured on Earth is 
 \begin{equation}
     \mathrm{DM}_\mathrm{tot} = \mathrm{DM}_\mathrm{LSS} + \mathrm{DM}_\mathrm{MW} + \mathrm{DM}_\mathrm{host}.
 \end{equation}
@@ -792,54 +792,54 @@ So far, I have only introduced the cosmological DM. In reality, the measured $\m
 
 
 {\color{red} describe how modelling the PDF is a hard thing to do}
-To forward model observations, we convolve the $DM-z$ represented by $P(DM|z)$ with measurement and systematic uncertainties, in addition to other observational effects. A catalog of detected FRBs is expected to have observed dispersion measure $DM_\text{obs}^i$, galactic coordinates, and redshifts for a subset of and observations $z^i$. We assume that each detected FRB was emitted at redshift $z^i$ where the difference between identified and unidentified host can be integrated in how $P(z^i)$ is modeled. Assume that we observe $N_{FRB}$ fast radio bursts signal. We express the observations as the probability of detecting an FRB $DM_\text{obs}$ given a set of estimated redshifts $\{z^i\}$, can be decomposed using the Bayes rule such that
+To forward model observations, we convolve the $DM-z$ represented by $P(DM|z)$ with measurement and systematic uncertainties, in addition to other observational effects. A catalog of detected FRBs is expected to have observed dispersion measure $DM_\text{tot}^i$, galactic coordinates, and redshifts for a subset of and observations $z^i$. We assume that each detected FRB was emitted at redshift $z^i$ where the difference between identified and unidentified host can be integrated in how $P(z^i)$ is modeled. Assume that we observe $N_{FRB}$ fast radio bursts signal. We express the observations as the probability of detecting an FRB $DM_\text{tot}$ given a set of estimated redshifts $\{z^i\}$, can be decomposed using the Bayes rule such that
 
 \begin{equation}
-P(DM_\text{obs}|\{z^i\}) \propto P(\{z^i\}|DM_\text{obs}) P(DM_\text{obs}).
+P(DM_\text{tot}|\{z^i\}) \propto P(\{z^i\}|DM_\text{tot}) P(DM_\text{tot}).
 \end{equation}
-Furthermore, if we assume that each observation $z_i$ is independent of other observations we may use the Bayes rule to decompose $P(\{z^i\}|DM_\text{obs})$ such that
+Furthermore, if we assume that each observation $z_i$ is independent of other observations we may use the Bayes rule to decompose $P(\{z^i\}|DM_\text{tot})$ such that
 \begin{equation} \label{eq:step2}
-    P(\{z^i\}|DM_\text{obs}) = \prod_{i}P(z^i|DM_\text{obs}).
+    P(\{z^i\}|DM_\text{tot}) = \prod_{i}P(z^i|DM_\text{tot}).
 \end{equation}
-Furthermore, the individual terms in Eq. \ref{eq:step2} could be derived using the joint probability distribution of the observed and the dispersion measure contribution from the large scale structure, namely $DM_\text{obs}$ and $DM$ such that
+Furthermore, the individual terms in Eq. \ref{eq:step2} could be derived using the joint probability distribution of the observed and the dispersion measure contribution from the large scale structure, namely $DM_\text{tot}$ and $DM$ such that
 \begin{equation}
     \begin{split}
-    P(z^i|DM_\text{obs}) & \propto P(DM_\text{obs}|z^i) P(z^i) \\
-                    & = P(z^i) \int P(DM_\text{obs}, DM|z^i)\mathrm{d}DM \\
-                    & = P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)\mathrm{d}DM.
+    P(z^i|DM_\text{tot}) & \propto P(DM_\text{tot}|z^i) P(z^i) \\
+                    & = P(z^i) \int P(DM_\text{tot}, DM|z^i)\mathrm{d}DM \\
+                    & = P(z^i) \int P(DM_\text{tot}|z^i, DM) P(DM|z^i)\mathrm{d}DM.
     \end{split}
 \end{equation}
 The final expression that relates the probability distribution function of an observation to other modelled terms is 
 \begin{equation} \label{eq:obs_prob}
 \begin{split}
-    P(DM_\text{obs}|\{z^i\}) \propto & \\
-    & P(DM_\text{obs}) \prod_{i}P(z^i) \int P(DM_\text{obs}|z^i, DM) P(DM|z^i)\mathrm{d}DM.
+    P(DM_\text{tot}|\{z^i\}) \propto & \\
+    & P(DM_\text{tot}) \prod_{i}P(z^i) \int P(DM_\text{tot}|z^i, DM) P(DM|z^i)\mathrm{d}DM.
 \end{split}
 \end{equation}
 
-Furthermore, to model each component of the resulting expression, we start with $P(DM_\text{obs})$. There are three components that contribute additively to $DM_\text{obs}$: the large scale structure contribution $DM_{\text{LSS}}$, the Milkyway contribution $DM_{\text{MW}}$, and the host galaxy contribution $DM_{\text{host}}$, and the observed dispersion measure is given as
+Furthermore, to model each component of the resulting expression, we start with $P(DM_\text{tot})$. There are three components that contribute additively to $DM_\text{tot}$: the large scale structure contribution $DM_{\text{LSS}}$, the Milkyway contribution $DM_{\text{MW}}$, and the host galaxy contribution $DM_{\text{host}}$, and the observed dispersion measure is given as
 
 \begin{equation}
-    DM_\text{obs} = DM_{\text{LSS}} + DM_{\text{MW}} + DM_{\text{host}}.
+    DM_\text{tot} = DM_{\text{LSS}} + DM_{\text{MW}} + DM_{\text{host}}.
 \end{equation}
-For simplicity, we indicate to the contribution from the large-scale structure simply with $DM$ which is the same in Equation Eq. \ref{eq:obs_prob}. Consider the joint probability distribution $P(DM, DM_{\text{MW}},  DM_{\text{host}})$, this can be related to $P(DM_\text{obs}) = P(DM + DM_{\text{MW}} + DM_{\text{host}})$ via the constrained integral
+For simplicity, we indicate to the contribution from the large-scale structure simply with $\mathrm{DM}$ which is the same in Equation Eq. \ref{eq:obs_prob}. Consider the joint probability distribution $P(DM, DM_{\text{MW}},  DM_{\text{host}})$, this can be related to $P(DM_\text{tot}) = P(DM + DM_{\text{MW}} + DM_{\text{host}})$ via the constrained integral
 
 \begin{equation}
 \begin{split}
-    P(DM_\text{obs}) &= P(DM + DM_{\text{MW}} + DM_{\text{host}}) \\
+    P(DM_\text{tot}) &= P(DM + DM_{\text{MW}} + DM_{\text{host}}) \\
     & = \int_{\mathcal{C}} P(DM, DM_{\text{MW}},  DM_{\text{host}}) \text{ d}DM \text{ d}DM_{\text{MW}}
-    \text{ d}DM_{\text{obs}} \\ 
+    \text{ d}DM_{\text{tot}} \\ 
     & = \int_{\mathcal{C}} P(DM)P(DM_{\text{MW}})  P(DM_{\text{host}}) \text{ d}DM \text{ d}DM_{\text{MW}}
-    \text{ d}DM_{\text{obs}},
+    \text{ d}DM_{\text{tot}},
 \end{split}
 \end{equation}
-Where $\mathcal{C} = \{DM, DM_{\text{MW}},  DM_{\text{host}}; DM_{\text{obs}} = DM + DM_{\text{MW}} + DM_{\text{host}}\}$
-Similarly, I can model $P(DM_\text{obs}|z^i, DM)$ as 
+Where $\mathcal{C} = \{DM, DM_{\text{MW}},  DM_{\text{host}}; DM_{\text{tot}} = DM + DM_{\text{MW}} + DM_{\text{host}}\}$
+Similarly, I can model $P(DM_\text{tot}|z^i, DM)$ as 
 
 \begin{equation}
     \begin{split}
-        P(DM_\text{obs}|z^i, DM)  &=  \int_{\mathcal{C}} P(DM|z^i, DM)P(DM_{\text{MW}}|z^i, DM)  \\ &P(DM_{\text{host}}|z^i, DM) \text{ d}DM \text{ d}DM_{\text{MW}}
-    \text{ d}DM_{\text{obs}},
+        P(DM_\text{tot}|z^i, DM)  &=  \int_{\mathcal{C}} P(DM|z^i, DM)P(DM_{\text{MW}}|z^i, DM)  \\ &P(DM_{\text{host}}|z^i, DM) \text{ d}DM \text{ d}DM_{\text{MW}}
+    \text{ d}DM_{\text{tot}},
     \end{split}
 \end{equation}
 Each of the terms making up the integral could be further reduced 
@@ -915,6 +915,7 @@ In this thesis, I fix the redshift source distribution to coincide with that exp
 Therefore, for a simulated catalog, each value of $DM$, is weighed with $\sigma (\mathrm{DM}; \mathrm{DM}_\mathrm{max}, \epsilon)$. 
 
 \item \textbf{Unlocalised hosts:} So far, the number of detected FRBs is ~3000\footnote{\href{https://www.chime-frb.ca/catalog2}{CHIME/FRB Catalog 2.}
+
 }, and only 100 of them has identified host \citep{Reischke:2025srr} i.e only the redshifts of 100 FRBs is known. This poses as an obstacle to use all FRBs for cosmological inference since redshifts are important to calculate data covariance and constrain the DM-$z$ relationship. Since follow-up optical observation to identify the host galacxy is both time and resource consuming, it is important to realised the best strategy to distribute these resources. 
 In this thesis, I explore whether constraining the DM-$z$ relation is possible if only a subset of the observed FRBs has an identified host. I explore the following cases
 \begin{itemize}
