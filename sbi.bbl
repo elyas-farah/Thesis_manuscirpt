@@ -232,6 +232,46 @@
       \field{pages}{123544}
       \range{pages}{1}
     \endentry
+    \entry{alsing2018generalized}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=331e8459f14e0d57e1d8da8baf3ffb64}{%
+           family={Alsing},
+           familyi={A\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1dae8b893a034aa11342e590bd7feb60}{%
+           family={Wandelt},
+           familyi={W\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \strng{fullhash}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \strng{fullhashraw}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \strng{bibnamehash}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \strng{authorbibnamehash}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \strng{authornamehash}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \strng{authorfullhash}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \strng{authorfullhashraw}{cc52d9519fd3fd7c1be6274deafc0c07}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society: Letters}
+      \field{number}{1}
+      \field{title}{Generalized massive optimal data compression}
+      \field{volume}{476}
+      \field{year}{2018}
+      \field{pages}{L60\bibrangedash L64}
+      \range{pages}{-1}
+    \endentry
     \entry{asgari2023halo}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=43dcd463a69bcd8e5af81b4a5016b8ea}{%
@@ -1783,12 +1823,12 @@
            given={Bhuvnesh},
            giveni={B\bibinitperiod},
            givenun=0}}%
-        {{un=1,uniquepart=given,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
+        {{un=0,uniquepart=base,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
            family={Taylor},
            familyi={T\bibinitperiod},
            given={Andy},
            giveni={A\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
       }
       \strng{namehash}{918e08cb7ae6603b87585cdad5451c41}
       \strng{fullhash}{918e08cb7ae6603b87585cdad5451c41}
@@ -2672,12 +2712,12 @@
            given={Alex},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{un=1,uniquepart=given,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
+        {{un=0,uniquepart=base,hash=10f40b39bd21cfc4a2b4f8ecd33ce36a}{%
            family={Taylor},
            familyi={T\bibinitperiod},
            given={Andy},
            giveni={A\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
       }
       \strng{namehash}{3257c8d594fe8e11de5ff9f1af773af5}
       \strng{fullhash}{3257c8d594fe8e11de5ff9f1af773af5}
@@ -3386,6 +3426,36 @@
       \verb{doi}
       \verb 10.1063/1.1848323
       \endverb
+    \endentry
+    \entry{rao1945information}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5c630ca11b703cc6e3f3400df5c98f4d}{%
+           family={RAO},
+           familyi={R\bibinitperiod},
+           given={CR},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \strng{fullhash}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \strng{fullhashraw}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \strng{bibnamehash}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \strng{authorbibnamehash}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \strng{authornamehash}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \strng{authorfullhash}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \strng{authorfullhashraw}{5c630ca11b703cc6e3f3400df5c98f4d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bull. Calcutta Math. Soc.}
+      \field{title}{Information and accuracy attanaible in the estimation of statistical parameters}
+      \field{volume}{37}
+      \field{year}{1945}
+      \field{pages}{81\bibrangedash 91}
+      \range{pages}{11}
     \endentry
     \entry{reischke2025pylevin}{article}{}{}
       \name{author}{1}{}{%
@@ -4551,60 +4621,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1088/1475-7516/2024/10/057
-      \endverb
-    \endentry
-    \entry{Tegmark_1997}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=b9b3c445e1013a97fc6318e06799b37b}{%
-           family={Tegmark},
-           familyi={T\bibinitperiod},
-           given={Max},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=1,uniquepart=given,hash=f2b8bd69ef1d560194dfaca0d5314951}{%
-           family={Taylor},
-           familyi={T\bibinitperiod},
-           given={Andy\bibnamedelima N.},
-           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=28586dced43154ae2d16a1b1a0bda8d8}{%
-           family={Heavens},
-           familyi={H\bibinitperiod},
-           given={Alan\bibnamedelima F.},
-           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{304788c94b51dc4285b718f984c22275}
-      \strng{fullhash}{304788c94b51dc4285b718f984c22275}
-      \strng{fullhashraw}{304788c94b51dc4285b718f984c22275}
-      \strng{bibnamehash}{304788c94b51dc4285b718f984c22275}
-      \strng{authorbibnamehash}{304788c94b51dc4285b718f984c22275}
-      \strng{authornamehash}{304788c94b51dc4285b718f984c22275}
-      \strng{authorfullhash}{304788c94b51dc4285b718f984c22275}
-      \strng{authorfullhashraw}{304788c94b51dc4285b718f984c22275}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Since cosmology is no longer “the data-starved science,” the problem of how to analyze large data sets best has recently received considerable attention, and Karhunen-Loève eigenvalue methods have been applied to both galaxy redshift surveys and cosmic microwave background (CMB) maps. We present a comprehensive discussion of methods for estimating cosmological parameters from large data sets, which includes the previously published techniques as special cases. We show that both the problem of estimating several parameters jointly and the problem of not knowing the parameters a priori can be readily solved by adding an extra singular value decomposition step. It has recently been argued that the information content in a sky map from a next-generation CMB satellite is sufficient to measure key cosmological parameters (h, Ω, Λ, etc.) to an accuracy of a few percent or better—in principle. In practice, the data set is so large that both a brute force likelihood analysis and a direct expansion in signal-to-noise eigenmodes will be computationally unfeasible. We argue that it is likely that a Karhunen-Loève approach can nonetheless measure the parameters with close to maximal accuracy, if preceded by an appropriate form of quadratic “precompression.” We also discuss practical issues regarding parameter estimation from present and future galaxy redshift surveys and illustrate this with a generalized eigenmode analysis of the IRAS 1.2 Jy survey optimized for measuring β ≡ Ω0.6/b using redshift space distortions.}
-      \field{journaltitle}{The Astrophysical Journal}
-      \field{month}{5}
-      \field{number}{1}
-      \field{title}{Karhunen-Loève Eigenvalue Problems in Cosmology: How Should We Tackle Large Data Sets?}
-      \field{volume}{480}
-      \field{year}{1997}
-      \field{pages}{22}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1086/303939
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1086/303939
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1086/303939
       \endverb
     \endentry
     \entry{tessore2023glass}{article}{}{}

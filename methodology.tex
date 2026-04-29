@@ -49,7 +49,7 @@ $n(M)$ & Halo mass function & \citet{tinker2008toward} \\
 \label{tab:sim_spec}
 \end{table}
 
-
+In this work, I make considrable use of the following \texttt{python} packages: \texttt{numpy}, \texttt{scipy}, \texttt{matplotlib}, \texttt{jax}, \texttt{joblib}, \texttt{multiprocessing}, \texttt{pandas}, and \texttt{pytorch}.
 
 \section{Modelling the electron power spectrum} \label{meth_sec:pee}
 To model the electron power spectrum, I use the halo model (introduceed in section \ref{theory_sec:halo_model}), where I obtain halo profiles using the Baryonification Model (BCM) \citep{Schneider_Teyssier_2015,Schneider_Kovač_etal._2025}.
@@ -404,19 +404,91 @@ It can be shown that the minimum variane $\chi^2$ estimator is the estimator wit
 \begin{equation}
     \chi^2 = \sum_{ij} (d_i - \mu_i(\theta))C_{ij}^{-1}(d_j - \mu_j(\theta)).
 \end{equation}
-The probability that a value $\chi^2$ will exceed the true $\hat{\chi}^2$ is given by 
-
+The $\chi^2$ can be used to quantify the inconsitency between a model and data in the following way. First, in the neighborhood of the true model parameters, the data vector follows a Gaussian distribution, and therefore $\chi^2$ follows a $\chi^2$-distribution with mean $\langle \chi^2 \rangle = \nu $ where $\nu$ is the number of degrees of freedom. In this case, $\nu = N_\mathrm{FRBs}$ since I do not use the data in inferring any parametr. I define the reduced $\chi^2$ as 
 \begin{equation}
-    Q(\nu, \hat{\chi}) = 1 - \Gamma(\nu/2, \hat{\chi}/2), 
+    \chi^2_\nu = \frac{\chi^2}{\nu}
 \end{equation}
-where $\Gamma$ is the incomplete $\Gamma$-function and $\nu$ is the number of degrees of freedom. In this thesis, the number of degrees of freedom equals to the number of FRBs in a catalog.
+Therefore, for a model that describes data $\chi^2_\nu$ should be consistent with 1. In this thesis, I quantify the deviation of the $\chi^2_\nu$ calculated using a contaminated FRBs catalog from $\chi^2_{\nu, \mathrm{true}}$, calculated using the fiducial catalog. For example, it is possible to distinguish between two cases of deviation
+\begin{itemize}
+    \item $\chi^2_\nu > 1$, meaning that the covariance matrix is underestimated or the mean predicted by the model is overestimated.
+    \item $\chi^2_\nu < 1$, meaning that the covariance matrix is overestimated or the mean predicted by the model is underestimated.
+\end{itemize}
 
-Given an FRB catalog (either contaminated or not contaminated), The likelihood of data $\{\mathrm{DM}_i\}$ given the model parameters $\theta$ is written as 
 
+To calculate the $\chi^2$, the covariance matrix is needed. In the next section, I describe how to efficiently calculate the covariance matrix.
 \subsection{The numerical implementation of the cosmological covariance matrix}
+The cosmological covariance of FRBs was introduced in section \ref{theory_sec:FRBs}. For a sample size of $10\,000$ FRBs, calculating the cosmological covariance is non-trivial with libraries such as \texttt{numpy}. Therefore, I use the \texttt{jax} library in order to accelerate the calculations of the covariance matrix. \texttt{jax} is a \texttt{python} package originally intended for machine learning applicaitons. Nonetheless, \texttt{jax} includes parallelization functionalities to paralelize matrix computations on Graphic Processing Units (GPUs) in addition to dynamical for-loops. I exploit the functionalies of the \texttt{jax} package to accelerate the calculation of the covariance matrix. The code for the covariance calculation is written as follows
 
+\begin{lstlisting}[style=python, caption={Angular covariance via Limber approximation.}]
+def compute_covariance_4_vmap(
+    theta_ij, large_angle_filter, z_FRBs,
+    k, z, z_integral, z_divisions,
+    J0, p_chi_k, chi, dz_dchi, w, ells, curly_A,
+):
+    # --- 1. Log-log P(k,a) interpolator ---
+    z_interp = jnp.geomspace(z[0], z[-1], z_divisions)
+    a        = 1.0 / (1.0 + z)
+    sorting  = jnp.argsort(a)
+    a, p_k_a = a[sorting], p_chi_k[sorting, :].T
+    log_p_k_a_interp = RegularGridInterpolator(
+        (jnp.log(k), jnp.log(a)), jnp.log(p_k_a), method='linear')
 
-Add a plot about derivative stability. Add a plot for the sensitivity.
+    @jit
+    def p_k_a_jax_interpolator(k_val, a_val):
+        return jnp.exp(log_p_k_a_interp((jnp.log(k_val), jnp.log(a_val))))
+
+    # --- 2. Window outer product ---
+    integration_matrix = w[:, None, :] * w[None, :, :]   # (N, N, Nchi)
+    p_k_a_vmapped      = vmap(p_k_a_jax_interpolator, in_axes=(0, 0))
+
+    # --- 3. Inner chi-integral (Limber approximation) ---
+    @jit
+    def calculate_limber_covariance_one_ell(ell):
+        power     = p_k_a_vmapped((ell + 0.5) / chi, 1.0 / (1.0 + z_integral))
+        integrand = (power[None, None, :] * integration_matrix
+                     * dz_dchi[None, None, :] ** 2
+                     / chi[None, None, :] ** 2)
+        C   = curly_A**2 * jnp.trapezoid(integrand, chi, axis=-1)
+        C   = (C + C.T) / 2.0
+        eps = 1e-8 * jnp.trace(C) / C.shape[0]
+        return C + eps * jnp.eye(C.shape[0])
+
+    # --- 4. Interpolate onto FRB redshifts + Bessel weight ---
+    @jit
+    def evaluate_at_ell(ell):
+        C     = calculate_limber_covariance_one_ell(ell)
+        interp = RegularGridInterpolator(
+            (z_interp, z_interp), C, method='linear')
+        C_frb = vmap(vmap(
+            lambda zi, zj: interp(jnp.array([zi, zj]))[0],
+            in_axes=(None, 0)), in_axes=(0, None))(z_FRBs, z_FRBs)
+        C_frb = (C_frb + C_frb.T) / 2.0
+        eps   = 1e-8 * jnp.trace(C_frb) / C_frb.shape[0]
+        C_frb = C_frb + eps * jnp.eye(C_frb.shape[0])
+        result = ell * J0(ell * theta_ij) * C_frb / (2.0 * jnp.pi)
+        return (result + result.T) / 2.0
+
+    # --- 5. Outer ell-integral via lax.scan ---
+    @jit
+    def little_integrals(carry, ell1):
+        total_sum, point0, ell0 = carry
+        point1    = evaluate_at_ell(ell1)
+        total_sum = total_sum + 0.5 * (ell1 - ell0) * (point0 + point1)
+        total_sum = (total_sum + total_sum.T) / 2.0
+        return (total_sum, point1, ell1), None
+
+    point0     = evaluate_at_ell(ells[0])
+    carry_init = (jnp.zeros((z_FRBs.size, z_FRBs.size)), point0, ells[0])
+    (final_carry, _) = lax.scan(little_integrals, carry_init, ells[1:])
+
+    # --- 6. Final symmetry, regularisation, large-angle filter ---
+    S   = final_carry[0]
+    S   = (S + S.T) / 2.0
+    eps = 1e-8 * jnp.trace(S) / S.shape[0]
+    return large_angle_filter * (S + eps * jnp.eye(S.shape[0]))
+\end{lstlisting}
+
+Using the \texttt{jax.vmap} property it is possible to calcualte multiple covariance at a time which is useful when calcualting hte derivative of the covariance matrix with respect to a model parameter using forward difference method.
 
 \section{Simulation-based inference} \label{meth_sec:sbi}
 To forecast the bias in parameter estimation, I use simulation based inference (SBI) method. A review of simulation baed inference can be found in \citet{cranmer2020frontier} and SBI lecture by Noemi Anau Montel \footnote{\href{https://wwwmpa.mpa-garching.mpg.de/~komatsu/lecturenotes/Noemi_Anau_Montel_on_SBI.pdf}{The Postdoc lecture by Noemi Anau Montel}} given at the Postdoc Lecture Series at the Max Planck Institute for Astrophysics. SBI is a method to infer the parameter of a model by compared an observed data vector $d$ with  a data vector obtained from a forward simulation. It is an extension of Baysian inference in which the parameter posterior is constrained by performing Monte Carlo Markov Chain (MCMC) to obtain the parameter's posterior distribution. If the prior of the model parameter is $P(\theta)$ and the likelihood of data given the parameter is $P(d|\theta)$ then the posterior distribution of the parameters given data $P(\theta|d)$ is written by Bayes rule
@@ -434,6 +506,8 @@ The samples from the approximate posterior are drawn with rejection sampling usi
     p_{\mathrm{ABC}}(\Theta \mid \boldsymbol{x}) = \frac{\int_{d(\boldsymbol{x}_0, \boldsymbol{x}) < \epsilon} \mathrm{d}\boldsymbol{x} \, p(\boldsymbol{x} \mid \Theta) p(\Theta)}{\int_{d(\boldsymbol{x}_0, \boldsymbol{x}) < \epsilon} \mathrm{d}\boldsymbol{x} \, p(\boldsymbol{x})}
 \end{equation}
 is guarenteed to converge to the true posterior distributiuon. However, the sampling efficiency of this method is very low, especially if the problem involves wide priors and large parameter space. Therefore, machine learning (ML) methods are used to learn the posterior distribution of the observed data. Nonetheless, with high dimensional data such as that of FRBs, both ML and ABC methods fail to converge quickly. Therefore, the need for a summary statics that retains the cosmological information is necessairy. I describe below how to use the simulation pipeline desceibed in section \ref{meth_sec:sim_dm} to perform simulation based inference of the cosmological and the baryonic feedback paraemters. Table \ref{tab:priors} shows the free parameters along with theor priors. I choose wide enough priors to show the resultant bias in parameter estimation when systematic uncertainties are not taken into consideration in the forward model. In addition, Fig. \ref{meth_fig:inference_flow} shows a schematic representation of the used inference pipeline. Among the baryonic feedback aparameters, I chose $\log_{10} M_\mathrm{c}$ since the gas power spectrum is most sensitive to this parameter, as you can see in the appendix.
+
+To perform simuation-based inferece with the FRBs catalog, the observed data vector $\mathbf{x_0}$ is the list of observed DM with dimensionality of $10\, 000$. This a high dimrnsional problem which is computtional prohibitive. Therefore, I use a summary statistic of lower dimension to avoid the curse of dimensionality. In section \ref{meth_sec:compression}, I describe the choice for the summary static which I use in this thesis.
 \begin{table}[h]
 \centering
 \begin{tabular}{c p{6cm} c}
@@ -462,20 +536,27 @@ $\log_{10} M_{\mathrm{c}}$ & Pivot mass for the mass dependent slope of the gas 
 
 
 
-\subsection{Data Compression}
-I simulate the electron density shells and place FRBs in the same redshift and angular position as in the mock catalog. This will reduce the computational cost and the need to calculate the covariance matrix for each realisation within the SBI pipeline. (Try to do this excercise without choosing the sdame redshifts for a lower number of sources such that it lowers down the computational costs)
-
-
-This quantity can also be understood from a different perspective as descibed by \citet{Tegmark_1997} in the following way. If the likelihood of data given the paremeter is $L(d| \theta)$, then $L$ can be expanded in the neighbourhood of the true model parameters $\theta_\ast$ up to second order as
+\subsection{Data Compression}\label{meth_sec:compression}
+Following \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}, I use score compression introduced in \citet{alsing2018generalized} which is a model-dependent compression of a data vector with dimensionality $N_\mathrm{FRBs}$ into a summary static with dimensionality equals to the number of model parameters $N_\mathrm{params}$. If the likelihood of data given the paremeter is $L(d| \theta)$, then $L$ can be expanded around fiducial parameters $\theta_\ast$ up to second order as
 \begin{equation}
     L(d| \theta) = L(d| \theta_\ast) + (d_i - \mu_i(\theta))^T \nabla L|_{\theta_\ast} + (d_i - \mu_i(\theta))^T \nabla^2 L|_{\theta_\ast} (d_i - \mu_i(\theta)).
 \end{equation}
-Since $\theta_\ast$ is the true parameter value, $\nabla L|_{\theta_\ast} = 0$. In addition, 
+The second term in this expression is actually the first term that is data dependent through the gradiant of the likelihood $\nabla L|_{\theta_\ast}$, therefore, this quantity can be used as a summary statistic. This quantity is called the score and is therefore given by
+\begin{equation}
+    \mathbf{t} = \nabla L|_{\theta_\ast}.
+\end{equation}
+The score is a linear compression scheme since  it represent the first order of the likelihood's Taylore's expansion. The full expressino of the score is give by 
+\begin{equation}
+    \mathbf{t} = \nabla \boldsymbol{\mu}_*^{\mathrm{T}} \mathbf{C}_*^{-1} (\mathbf{d} - \boldsymbol{\mu}_*) + \frac{1}{2} (\mathbf{d} - \boldsymbol{\mu}_*)^{\mathrm{T}} \mathbf{C}_*^{-1} \nabla \mathbf{C}_* \, \mathbf{C}_*^{-1} (\mathbf{d} - \boldsymbol{\mu}_*) \notag  - \frac{1}{2} \mathrm{tr}(\mathbf{C}_*^{-1} \nabla \mathbf{C}_*).
+\end{equation}
+It can be proven that the covariane matrix associated with $t$ is exactly the Fisher information matrix
+\begin{equation}
+    \text{cov}_{\ast}(\mathbf{t}, \mathbf{t}) = \mathbf{F_\ast}
+\end{equation}
+Therefore, the score $\mathbf{t}$ satisfies the Cramér-Rao bound for a lossless compression \citep{rao1945information}. Even though the score compression is a lossless compression, it is not necessairly sensitive to all the properties in the original data vector. In For the use case of this thesis, 
 
 
 
-\subsubsection{Numerical derivative stability}
-\subsubsection{The Sensitivity of compressed statistics to model parameters}
 \subsection{The Sequentual Neural Posterio Estimator} \label{meth_sec:snpe}
 \subsubsection{The truncated sequential neural posterior estimator}
 \subsection{Flow matching posterior estimator}

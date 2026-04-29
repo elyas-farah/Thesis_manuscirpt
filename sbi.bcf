@@ -2526,18 +2526,20 @@
     <bcf:citekey order="141" intorder="1">Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a</bcf:citekey>
     <bcf:citekey order="142" intorder="1">verde2010statistical</bcf:citekey>
     <bcf:citekey order="143" intorder="1">cranmer2020frontier</bcf:citekey>
-    <bcf:citekey order="144" intorder="1">Tegmark_1997</bcf:citekey>
-    <bcf:citekey order="145" intorder="1">aghanim2020planck</bcf:citekey>
-    <bcf:citekey order="146" intorder="1">lesgourgues2011cosmic</bcf:citekey>
-    <bcf:citekey order="147" intorder="1">pillepich2018simulating</bcf:citekey>
-    <bcf:citekey order="148" intorder="1">crain2023hydrodynamical</bcf:citekey>
-    <bcf:citekey order="149" intorder="1">huang2019modelling</bcf:citekey>
-    <bcf:citekey order="150" intorder="1">alonso2021linear</bcf:citekey>
-    <bcf:citekey order="151" intorder="1">Schneider_Teyssier_2015</bcf:citekey>
-    <bcf:citekey order="153" intorder="1">braun2015advancing</bcf:citekey>
-    <bcf:citekey order="154" intorder="1">hoffmann2025modelling</bcf:citekey>
-    <bcf:citekey order="155" intorder="1">aghanim2020planck</bcf:citekey>
-    <bcf:citekey order="156" intorder="1">gorski2005healpix</bcf:citekey>
+    <bcf:citekey order="144" intorder="1">Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a</bcf:citekey>
+    <bcf:citekey order="145" intorder="1">alsing2018generalized</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">rao1945information</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">aghanim2020planck</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">lesgourgues2011cosmic</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">pillepich2018simulating</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">crain2023hydrodynamical</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">huang2019modelling</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">alonso2021linear</bcf:citekey>
+    <bcf:citekey order="153" intorder="1">Schneider_Teyssier_2015</bcf:citekey>
+    <bcf:citekey order="155" intorder="1">braun2015advancing</bcf:citekey>
+    <bcf:citekey order="156" intorder="1">hoffmann2025modelling</bcf:citekey>
+    <bcf:citekey order="157" intorder="1">aghanim2020planck</bcf:citekey>
+    <bcf:citekey order="158" intorder="1">gorski2005healpix</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

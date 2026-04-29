@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  28 APR 2026 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  29 APR 2026 16:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1188,7 +1188,37 @@ ubonn-biblatex: block set to none
 ubonn-biblatex: maxbibnames set to 5
 ubonn-biblatex: backref is off
 ubonn-biblatex: setting option date=year.
-) (./thesis_defs.sty
+) (./thesis_defs.sty (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count491
+\lst@gtempboxa=\box77
+\lst@token=\toks37
+\lst@length=\count492
+\lst@currlwidth=\dimen284
+\lst@column=\count493
+\lst@pos=\count494
+\lst@lostspace=\dimen285
+\lst@width=\dimen286
+\lst@newlines=\count495
+\lst@lineno=\count496
+\lst@maxwidth=\dimen287
+ (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count497
+\lst@skipnumbers=\count498
+\lst@framebox=\box78
+) (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
 ubonn-thesis: using siunitx version 3
 )
 LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 153.
@@ -1274,25 +1304,25 @@ Package scrbase Info: activating UKenglish \bibname on input line 153.
 Package scrbase Info: activating UKenglish \indexname on input line 153.
  (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count491
-\scratchdimen=\dimen284
-\scratchbox=\box77
-\nofMPsegments=\count492
-\nofMParguments=\count493
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count494
-\MPscratchDim=\dimen285
-\MPnumerator=\count495
-\makeMPintoPDFobject=\count496
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count499
+\scratchdimen=\dimen288
+\scratchbox=\box79
+\nofMPsegments=\count500
+\nofMParguments=\count501
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count502
+\MPscratchDim=\dimen289
+\MPnumerator=\count503
+\makeMPintoPDFobject=\count504
+\everyMPtoPDFconversion=\toks39
 ) (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@mv@tabular=\count497
-\c@mv@boldtabular=\count498
+\c@mv@tabular=\count505
+\c@mv@boldtabular=\count506
 LaTeX Info: Command `\dddot' is already robust on input line 153.
 LaTeX Info: Command `\ddddot' is already robust on input line 153.
  (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
@@ -1303,6 +1333,7 @@ File: translations-basic-dictionary-german.trsl (german translation file `transl
 Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 153.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
@@ -1431,6 +1462,9 @@ Package biblatex Warning: The following entry could not be found
 )
 Package biblatex Info: Reference section=0 on input line 153.
 Package biblatex Info: Reference segment=0 on input line 153.
+\c@lstlisting=\count507
+Package tocbasic Info: setting babel extension for `lol' on input line 153.
+\scr@dte@lstlisting@maxnumwidth=\skip117
 
 ubonn-thesis: thesis dedication not defined
 (./cover/Master_Submit_Title.tex)
@@ -1722,7 +1756,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 
 
 ] [6] [7]
-<figs/world_lines.png, id=287, 978.65625pt x 736.7525pt>
+<figs/world_lines.png, id=291, 978.65625pt x 736.7525pt>
 File: figs/world_lines.png Graphic file (type png)
 <use figs/world_lines.png>
 Package pdftex.def Info: figs/world_lines.png  used on input line 113.
@@ -1833,7 +1867,7 @@ LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 (Font)              scaled to size 5.5pt on input line 238.
  [12] [13]
-<figs/planck2018_energy_budget.png, id=399, 515.2851pt x 582.0144pt>
+<figs/planck2018_energy_budget.png, id=403, 515.2851pt x 582.0144pt>
 File: figs/planck2018_energy_budget.png Graphic file (type png)
 <use figs/planck2018_energy_budget.png>
 Package pdftex.def Info: figs/planck2018_energy_budget.png  used on input line 281.
@@ -1847,12 +1881,12 @@ LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14] [15 <./figs/planck2018_energy_budget.png>] [16] [17]
-</Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_Omega_c.png, id=452, 578.16pt x 433.62pt>
+</Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_Omega_c.png, id=456, 578.16pt x 433.62pt>
 File: /Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_Omega_c.png Graphic file (type png)
 <use /Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_Omega_c.png>
 Package pdftex.def Info: /Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_Omega_c.png  used on input line 362.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-</Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_h.png, id=453, 578.16pt x 433.62pt>
+</Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_h.png, id=457, 578.16pt x 433.62pt>
 File: /Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_h.png Graphic file (type png)
 <use /Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_h.png>
 Package pdftex.def Info: /Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_h.png  used on input line 369.
@@ -1863,7 +1897,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 11.28003pt on input line 377.
-<figs/galaxy_foramtion.png, id=457, 1490.56876pt x 539.01375pt>
+<figs/galaxy_foramtion.png, id=461, 1490.56876pt x 539.01375pt>
 File: figs/galaxy_foramtion.png Graphic file (type png)
 <use figs/galaxy_foramtion.png>
 Package pdftex.def Info: figs/galaxy_foramtion.png  used on input line 381.
@@ -1877,7 +1911,7 @@ Overfull \hbox (5.78008pt too wide) detected at line 436
  []
 
 [21]
-<figs/halo_model.png, id=524, 578.16pt x 433.62pt>
+<figs/halo_model.png, id=528, 578.16pt x 433.62pt>
 File: figs/halo_model.png Graphic file (type png)
 <use figs/halo_model.png>
 Package pdftex.def Info: figs/halo_model.png  used on input line 475.
@@ -1887,7 +1921,7 @@ Package pdftex.def Info: figs/halo_model.png  used on input line 475.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [22]
-<figs/shear.png, id=543, 415.443pt x 298.059pt>
+<figs/shear.png, id=547, 415.443pt x 298.059pt>
 File: figs/shear.png Graphic file (type png)
 <use figs/shear.png>
 Package pdftex.def Info: figs/shear.png  used on input line 491.
@@ -1897,7 +1931,7 @@ Package pdftex.def Info: figs/shear.png  used on input line 491.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [23 <./figs/halo_model.png>]
-<figs/lensing_angle.png, id=554, 455.52pt x 323.025pt>
+<figs/lensing_angle.png, id=558, 455.52pt x 323.025pt>
 File: figs/lensing_angle.png Graphic file (type png)
 <use figs/lensing_angle.png>
 Package pdftex.def Info: figs/lensing_angle.png  used on input line 514.
@@ -1945,7 +1979,7 @@ LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
 (Font)              scaled to size 5.5pt on input line 515.
  [24 <./figs/shear.png> <./figs/lensing_angle.png>] [25] [26]
-<figs/baryonic_feedback.png, id=602, 902.37125pt x 845.1575pt>
+<figs/baryonic_feedback.png, id=606, 902.37125pt x 845.1575pt>
 File: figs/baryonic_feedback.png Graphic file (type png)
 <use figs/baryonic_feedback.png>
 Package pdftex.def Info: figs/baryonic_feedback.png  used on input line 582.
@@ -1955,7 +1989,7 @@ Package pdftex.def Info: figs/baryonic_feedback.png  used on input line 582.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [27] [28 <./figs/baryonic_feedback.png>]
-<figs/time_delay.png, id=633, 1259.70625pt x 901.3675pt>
+<figs/time_delay.png, id=637, 1259.70625pt x 901.3675pt>
 File: figs/time_delay.png Graphic file (type png)
 <use figs/time_delay.png>
 Package pdftex.def Info: figs/time_delay.png  used on input line 616.
@@ -1973,7 +2007,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  (./methodology.tex
 chapter 3.
-<figs/cover/simulation_flow.png, id=823, 1927.2pt x 1084.05pt>
+<figs/cover/simulation_flow.png, id=827, 1927.2pt x 1084.05pt>
 File: figs/cover/simulation_flow.png Graphic file (type png)
 <use figs/cover/simulation_flow.png>
 Package pdftex.def Info: figs/cover/simulation_flow.png  used on input line 8.
@@ -2008,33 +2042,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `tab:bfc_prarams' on page 44 undefined on input line 88.
 
-<figs/cover/bcm.png, id=871, 1288.815pt x 575.14874pt>
+<figs/cover/bcm.png, id=875, 1288.815pt x 575.14874pt>
 File: figs/cover/bcm.png Graphic file (type png)
 <use figs/cover/bcm.png>
 Package pdftex.def Info: figs/cover/bcm.png  used on input line 93.
 (pdftex.def)             Requested size: 313.69029pt x 139.9868pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [44 <./figs/cover/bcm.png>]
-<thesis_plots/power_spectrum.png, id=891, 578.16pt x 433.62pt>
+<thesis_plots/power_spectrum.png, id=895, 578.16pt x 433.62pt>
 File: thesis_plots/power_spectrum.png Graphic file (type png)
 <use thesis_plots/power_spectrum.png>
 Package pdftex.def Info: thesis_plots/power_spectrum.png  used on input line 129.
 (pdftex.def)             Requested size: 313.69029pt x 235.26288pt.
- [45 <./thesis_plots/power_spectrum.png>] [46]
-<figs/cls_limber.png, id=920, 578.16pt x 433.62pt>
+ [45] [46 <./thesis_plots/power_spectrum.png>]
+<figs/cls_limber.png, id=923, 578.16pt x 433.62pt>
 File: figs/cls_limber.png Graphic file (type png)
 <use figs/cls_limber.png>
 Package pdftex.def Info: figs/cls_limber.png  used on input line 174.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/cls_non_limber.png, id=921, 578.16pt x 433.62pt>
+<figs/cls_non_limber.png, id=924, 578.16pt x 433.62pt>
 File: figs/cls_non_limber.png Graphic file (type png)
 <use figs/cls_non_limber.png>
 Package pdftex.def Info: figs/cls_non_limber.png  used on input line 180.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/cls_compare.png, id=926, 578.16pt x 433.62pt>
+<figs/cls_compare.png, id=929, 578.16pt x 433.62pt>
 File: figs/cls_compare.png Graphic file (type png)
 <use figs/cls_compare.png>
 Package pdftex.def Info: figs/cls_compare.png  used on input line 188.
 (pdftex.def)             Requested size: 313.69029pt x 235.26288pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: Reference `tab:bfc_prarams' on page 47 undefined on input line 194.
@@ -2042,13 +2082,13 @@ LaTeX Warning: Reference `tab:bfc_prarams' on page 47 undefined on input line 19
 
 LaTeX Warning: Citation 'Maraio_Hall_Taylor_2025' on page 47 undefined on input line 194.
 
-[47 <./figs/cls_limber.png> <./figs/cls_non_limber.png> <./figs/cls_compare.png>] [48]
-<figs/shells_weights.png, id=950, 722.7pt x 433.62pt>
+[47 <./figs/cls_limber.png> <./figs/cls_non_limber.png>] [48 <./figs/cls_compare.png>]
+<figs/shells_weights.png, id=954, 722.7pt x 433.62pt>
 File: figs/shells_weights.png Graphic file (type png)
 <use figs/shells_weights.png>
 Package pdftex.def Info: figs/shells_weights.png  used on input line 222.
 (pdftex.def)             Requested size: 358.50612pt x 215.1024pt.
-<figs/shells.png, id=953, 382.3083pt x 328.1058pt>
+<figs/shells.png, id=957, 382.3083pt x 328.1058pt>
 File: figs/shells.png Graphic file (type png)
 <use figs/shells.png>
 Package pdftex.def Info: figs/shells.png  used on input line 229.
@@ -2057,16 +2097,17 @@ Package pdftex.def Info: figs/shells.png  used on input line 229.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/source_z_dist.png, id=956, 578.16pt x 433.62pt>
+<figs/source_z_dist.png, id=960, 578.16pt x 433.62pt>
 File: figs/source_z_dist.png Graphic file (type png)
 <use figs/source_z_dist.png>
 Package pdftex.def Info: figs/source_z_dist.png  used on input line 237.
 (pdftex.def)             Requested size: 313.69029pt x 235.26288pt.
+[49 <./figs/shells_weights.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49 <./figs/shells_weights.png>] [50 <./figs/shells.png>] [51 <./figs/source_z_dist.png>]
-<figs/MW.png, id=996, 614.295pt x 390.258pt>
+[50 <./figs/shells.png>] [51 <./figs/source_z_dist.png>]
+<figs/MW.png, id=1000, 614.295pt x 390.258pt>
 File: figs/MW.png Graphic file (type png)
 <use figs/MW.png>
 Package pdftex.def Info: figs/MW.png  used on input line 327.
@@ -2133,18 +2174,42 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 393.
 
-[55] [56]
-<figs/snpe.png, id=1060, 1927.2pt x 1084.05pt>
+[55] (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 422.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 423.
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 423.
+ (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <10> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 423.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `txtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/ntxtt/m/it' in size <10> not available
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 428.
+ [56] [57] [58]
+<figs/snpe.png, id=1145, 1927.2pt x 1084.05pt>
 File: figs/snpe.png Graphic file (type png)
 <use figs/snpe.png>
-Package pdftex.def Info: figs/snpe.png  used on input line 458.
+Package pdftex.def Info: figs/snpe.png  used on input line 532.
 (pdftex.def)             Requested size: 448.13095pt x 252.0721pt.
- [57 <./figs/snpe.png>]) [58]
+ [59 <./figs/snpe.png>]) [60
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.41}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.180 \include{methodology}
+                           ]
 \openout2 = `results.aux'.
 
  (./results.tex
 chapter 4.
-) [59
+) [61
 
 
 
@@ -2155,7 +2220,7 @@ chapter 4.
 
  (./discussion.tex
 chapter 5.
-) [60
+) [62
 
 
 
@@ -2164,84 +2229,80 @@ chapter 5.
 ]
 \openout2 = `thesis_appendix.aux'.
 
- (./thesis_appendix.tex
-chapter A.
-[61
-
-
+ (./thesis_appendix.tex [63
 
 
 
 ]
-chapter B.
-<figs/p_Omega_b.png, id=1092, 578.16pt x 433.62pt>
+chapter A.
+<figs/p_Omega_b.png, id=1180, 578.16pt x 433.62pt>
 File: figs/p_Omega_b.png Graphic file (type png)
 <use figs/p_Omega_b.png>
 Package pdftex.def Info: figs/p_Omega_b.png  used on input line 33.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_Omega_c.png, id=1093, 578.16pt x 433.62pt>
+<figs/p_Omega_c.png, id=1181, 578.16pt x 433.62pt>
 File: figs/p_Omega_c.png Graphic file (type png)
 <use figs/p_Omega_c.png>
 Package pdftex.def Info: figs/p_Omega_c.png  used on input line 40.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_sigma8.png, id=1094, 578.16pt x 433.62pt>
+<figs/p_sigma8.png, id=1182, 578.16pt x 433.62pt>
 File: figs/p_sigma8.png Graphic file (type png)
 <use figs/p_sigma8.png>
 Package pdftex.def Info: figs/p_sigma8.png  used on input line 50.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_h.png, id=1095, 578.16pt x 433.62pt>
+<figs/p_h.png, id=1183, 578.16pt x 433.62pt>
 File: figs/p_h.png Graphic file (type png)
 <use figs/p_h.png>
 Package pdftex.def Info: figs/p_h.png  used on input line 57.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_Nstar.png, id=1096, 578.16pt x 433.62pt>
+<figs/p_Nstar.png, id=1184, 578.16pt x 433.62pt>
 File: figs/p_Nstar.png Graphic file (type png)
 <use figs/p_Nstar.png>
 Package pdftex.def Info: figs/p_Nstar.png  used on input line 71.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_delta.png, id=1097, 578.16pt x 433.62pt>
+<figs/p_delta.png, id=1185, 578.16pt x 433.62pt>
 File: figs/p_delta.png Graphic file (type png)
 <use figs/p_delta.png>
 Package pdftex.def Info: figs/p_delta.png  used on input line 78.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_log10_Mc.png, id=1098, 578.16pt x 433.62pt>
+<figs/p_log10_Mc.png, id=1186, 578.16pt x 433.62pt>
 File: figs/p_log10_Mc.png Graphic file (type png)
 <use figs/p_log10_Mc.png>
 Package pdftex.def Info: figs/p_log10_Mc.png  used on input line 88.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-) [62
+) [64
 
 
- <./figs/p_Omega_b.png> <./figs/p_Omega_c.png>] [63 <./figs/p_sigma8.png> <./figs/p_h.png> <./figs/p_Nstar.png> <./figs/p_delta.png>] [64 <./figs/p_log10_Mc.png>]
+ <./figs/p_Omega_b.png> <./figs/p_Omega_c.png>] [65 <./figs/p_sigma8.png> <./figs/p_h.png> <./figs/p_Nstar.png> <./figs/p_delta.png>] [66 <./figs/p_log10_Mc.png>]
 chapter without number
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 204.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/ntxtlf/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[65
+[67
 
 
 
 
-{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [66] [67]
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [68] [69]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 204.
- [68] [69]
+ [70] [71]
 Package tocbasic Info: character protrusion at lof deactivated on input line 222.
  (./sbi.lof
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
 Package cleveref Info: loaded `ngerman' language definitions on input line 6.
- [70
+ [72
 
 
 
 
-] [71])
+] [73])
 \tf@lof=\write5
 \openout5 = `sbi.lof'.
 
- [72]
+ [74]
 Package tocbasic Info: character protrusion at lot deactivated on input line 223.
  (./sbi.lot
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
@@ -2250,13 +2311,13 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lot=\write6
 \openout6 = `sbi.lot'.
 
- [73
+ [75
 
 
 ]
 \openout2 = `thesis_acknowledge.aux'.
 
- (./thesis_acknowledge.tex) [74
+ (./thesis_acknowledge.tex) [76
 
 
 
@@ -2280,18 +2341,18 @@ Package logreq Info: Writing requests to 'sbi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44512 strings out of 467525
- 903372 string characters out of 5408440
- 1973308 words of memory out of 5000000
- 72054 multiletter control sequences out of 15000+600000
- 822025 words of font info for 464 fonts, out of 8000000 for 9000
+ 46492 strings out of 467525
+ 930859 string characters out of 5408440
+ 2199772 words of memory out of 5000000
+ 73935 multiletter control sequences out of 15000+600000
+ 826255 words of font info for 471 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,21n,147p,11252b,5031s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on sbi.pdf (79 pages, 9280202 bytes).
+ 108i,21n,147p,11252b,5027s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on sbi.pdf (81 pages, 9307681 bytes).
 PDF statistics:
- 1684 PDF objects out of 1728 (max. 8388607)
- 1480 compressed objects within 15 object streams
- 449 named destinations out of 1000 (max. 500000)
- 64981 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1797 PDF objects out of 2073 (max. 8388607)
+ 1586 compressed objects within 16 object streams
+ 521 named destinations out of 1000 (max. 500000)
+ 68581 words of extra memory for PDF output out of 74296 (max. 10000000)
 

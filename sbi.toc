@@ -24,10 +24,10 @@
 \contentsline {chapter}{\numberline {3}Methodology}{41}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Modelling the electron power spectrum}{41}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}The baryonification model}{42}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}The Core Cosmology Library (CCL)}{45}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}The electron angular power spectrum}{46}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Simulating the dispersion measure signal}{48}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Generating electron density maps}{48}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.1.2}The Core Cosmology Library (CCL)}{44}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}The electron angular power spectrum}{45}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Simulating the dispersion measure signal}{47}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Generating electron density maps}{47}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Discretizing the dispersion measure contributions}{49}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Simulating the systematic uncertainties}{52}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Milkyway contribution}{52}{subsection.3.3.1}%
@@ -37,19 +37,19 @@
 \contentsline {subsection}{\numberline {3.3.5}Unlocalised hosts}{54}{subsection.3.3.5}%
 \contentsline {section}{\numberline {3.4}Quantifying the deviation form the mean DM-$z$ relation}{55}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}The numerical implementation of the cosmological covariance matrix}{56}{subsection.3.4.1}%
-\contentsline {section}{\numberline {3.5}Simulation-based inference}{56}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Data Compression}{57}{subsection.3.5.1}%
-\contentsline {subsubsection}{\nonumberline Numerical derivative stability}{58}{subsubsection*.29}%
-\contentsline {subsubsection}{\nonumberline The Sensitivity of compressed statistics to model parameters}{58}{subsubsection*.30}%
-\contentsline {subsection}{\numberline {3.5.2}The Sequentual Neural Posterio Estimator}{58}{subsection.3.5.2}%
-\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{58}{subsubsection*.31}%
-\contentsline {subsection}{\numberline {3.5.3}Flow matching posterior estimator}{58}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Results}{59}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{60}{chapter.5}%
-\contentsline {chapter}{\numberline {A}Useful information}{61}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Sensitivity of the Gas Power Spectrum to Parameter Variations}{62}{appendix.B}%
+\contentsline {section}{\numberline {3.5}Simulation-based inference}{58}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Data Compression}{59}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}The Sequentual Neural Posterio Estimator}{60}{subsection.3.5.2}%
+\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{60}{subsubsection*.29}%
+\contentsline {subsection}{\numberline {3.5.3}Flow matching posterior estimator}{60}{subsection.3.5.3}%
+\contentsline {chapter}{\numberline {4}Results}{61}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{62}{chapter.5}%
+\contentsline {section}{\numberline {.1}Useful information}{63}{section.Alph0.1}%
+\contentsline {chapter}{\numberline {A}Sensitivity of the Gas Power Spectrum to Parameter Variations}{64}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Numerical derivative stability of the covariance matrix}{66}{section.A.1}%
+\contentsline {section}{\numberline {A.2}The Sensitivity of compressed statistics to model parameters}{66}{section.A.2}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\nonumberline Bibliography}{65}{chapter*.36}%
-\contentsline {chapter}{\nonumberline List of Figures}{70}{chapter*.37}%
-\contentsline {chapter}{\nonumberline List of Tables}{73}{chapter*.38}%
+\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.34}%
+\contentsline {chapter}{\nonumberline List of Figures}{72}{chapter*.35}%
+\contentsline {chapter}{\nonumberline List of Tables}{75}{chapter*.36}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
