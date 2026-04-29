@@ -39,17 +39,17 @@
 \contentsline {subsection}{\numberline {3.4.1}The numerical implementation of the cosmological covariance matrix}{56}{subsection.3.4.1}%
 \contentsline {section}{\numberline {3.5}Simulation-based inference}{58}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Data Compression}{59}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}The Sequentual Neural Posterio Estimator}{60}{subsection.3.5.2}%
-\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{60}{subsubsection*.29}%
-\contentsline {subsection}{\numberline {3.5.3}Flow matching posterior estimator}{60}{subsection.3.5.3}%
-\contentsline {chapter}{\numberline {4}Results}{61}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{62}{chapter.5}%
-\contentsline {section}{\numberline {.1}Useful information}{63}{section.Alph0.1}%
-\contentsline {chapter}{\numberline {A}Sensitivity of the Gas Power Spectrum to Parameter Variations}{64}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Numerical derivative stability of the covariance matrix}{66}{section.A.1}%
-\contentsline {section}{\numberline {A.2}The Sensitivity of compressed statistics to model parameters}{66}{section.A.2}%
+\contentsline {subsection}{\numberline {3.5.2}Neural Posterior Estimator}{60}{subsection.3.5.2}%
+\contentsline {subsubsection}{\nonumberline Masked Autoregressive Flows}{61}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{61}{subsubsection*.30}%
+\contentsline {chapter}{\numberline {4}Results}{62}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{63}{chapter.5}%
+\contentsline {section}{\numberline {.1}Useful information}{64}{section.Alph0.1}%
+\contentsline {chapter}{\numberline {A}Sensitivity of the Gas Power Spectrum to Parameter Variations}{65}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Numerical derivative stability of the covariance matrix}{67}{section.A.1}%
+\contentsline {section}{\numberline {A.2}The Sensitivity of compressed statistics to model parameters}{67}{section.A.2}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.34}%
-\contentsline {chapter}{\nonumberline List of Figures}{72}{chapter*.35}%
-\contentsline {chapter}{\nonumberline List of Tables}{75}{chapter*.36}%
+\contentsline {chapter}{\nonumberline Bibliography}{68}{chapter*.35}%
+\contentsline {chapter}{\nonumberline List of Figures}{73}{chapter*.36}%
+\contentsline {chapter}{\nonumberline List of Tables}{76}{chapter*.37}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

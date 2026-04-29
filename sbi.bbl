@@ -3176,6 +3176,80 @@
       \field{pages}{17}
       \range{pages}{1}
     \endentry
+    \entry{papamakarios2016fast}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=eab39f18cad46e4abd05bb4d62b340cd}{%
+           family={Papamakarios},
+           familyi={P\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=237c383069f29d1d1ffe672359e89d38}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Iain},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \strng{fullhash}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \strng{fullhashraw}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \strng{bibnamehash}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \strng{authorbibnamehash}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \strng{authornamehash}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \strng{authorfullhash}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \strng{authorfullhashraw}{ac8eb38f4f04c3b85ba8eaaa8d8b4df0}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Fast $\varepsilon$-free inference of simulation models with bayesian conditional density estimation}
+      \field{volume}{29}
+      \field{year}{2016}
+    \endentry
+    \entry{papamakarios2017masked}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=eab39f18cad46e4abd05bb4d62b340cd}{%
+           family={Papamakarios},
+           familyi={P\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae4c2db9e817bb4a992c37a6d48071f4}{%
+           family={Pavlakou},
+           familyi={P\bibinitperiod},
+           given={Theo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=237c383069f29d1d1ffe672359e89d38}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Iain},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \strng{fullhash}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \strng{fullhashraw}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \strng{bibnamehash}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \strng{authorbibnamehash}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \strng{authornamehash}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \strng{authorfullhash}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \strng{authorfullhashraw}{5f5fd7b129c7fe7e733a4ec6afff57e9}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Masked autoregressive flow for density estimation}
+      \field{volume}{30}
+      \field{year}{2017}
+    \endentry
     \entry{Petroff_2019}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=1bc3af5da6507fa42c3f1ec8a292b3ca}{%
@@ -3677,6 +3751,44 @@
       \field{journaltitle}{arXiv preprint arXiv:2309.09766}
       \field{title}{Calibrating baryonic feedback with weak lensing and fast radio bursts}
       \field{year}{2023}
+    \endentry
+    \entry{rezende2015variational}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9cc8aeb0de8b3e29d29d6aeaad3f7d9b}{%
+           family={Rezende},
+           familyi={R\bibinitperiod},
+           given={Danilo},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b520f2e46ec8803dd4c66bf1d6059482}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={Shakir},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{69cf0dc2f1e2704916090d834063b807}
+      \strng{fullhash}{69cf0dc2f1e2704916090d834063b807}
+      \strng{fullhashraw}{69cf0dc2f1e2704916090d834063b807}
+      \strng{bibnamehash}{69cf0dc2f1e2704916090d834063b807}
+      \strng{authorbibnamehash}{69cf0dc2f1e2704916090d834063b807}
+      \strng{authornamehash}{69cf0dc2f1e2704916090d834063b807}
+      \strng{authorfullhash}{69cf0dc2f1e2704916090d834063b807}
+      \strng{authorfullhashraw}{69cf0dc2f1e2704916090d834063b807}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International conference on machine learning}
+      \field{title}{Variational inference with normalizing flows}
+      \field{year}{2015}
+      \field{pages}{1530\bibrangedash 1538}
+      \range{pages}{9}
     \endentry
     \entry{riess2022comprehensive}{article}{}{}
       \true{moreauthor}
@@ -5305,7 +5417,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Maraio_Hall_Taylor_2025}
 \endrefsection
 \endinput
 

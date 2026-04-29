@@ -34,13 +34,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Sensitivity of the gas power spectrum to the baryon density parameter $\Omega _\mathrm {b}$. Higher baryon fractions increase the overall gas content, boosting power on all scales.}}{64}{figure.caption.30}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Sensitivity of the gas power spectrum to the cold dark matter density $\Omega _\mathrm {c}$. Changes in $\Omega _\mathrm {c}$ alter the depth of the gravitational potential wells that drive gas clustering.}}{64}{figure.caption.30}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Sensitivity of the gas power spectrum to $\sigma _8$, the RMS amplitude of linear matter fluctuations on $8\,h^{-1}\,\mathrm {Mpc}$ scales. Larger $\sigma _8$ enhances structure formation and increases power at small scales.}}{65}{figure.caption.31}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Sensitivity of the gas power spectrum to the reduced Hubble constant $h$. Variations in $h$ shift the characteristic scales of the power spectrum and affect the conversion between comoving distances and redshifts.}}{65}{figure.caption.31}%
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Sensitivity of the gas power spectrum to the stellar feedback parameter $N_\star $, which controls the efficiency of star formation and the associated stellar-driven gas ejection.}}{65}{figure.caption.32}%
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Sensitivity of the gas power spectrum to the slope parameter $\delta $, which governs the inner profile of the gas distribution within haloes.}}{65}{figure.caption.32}%
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Sensitivity of the gas power spectrum to $\log _{10} M_\mathrm {c}$, the characteristic halo mass scale for AGN feedback. Haloes above $M_\mathrm {c}$ expel their gas more efficiently, suppressing power at small scales.}}{66}{figure.caption.33}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Sensitivity of the gas power spectrum to the baryon density parameter $\Omega _\mathrm {b}$. Higher baryon fractions increase the overall gas content, boosting power on all scales.}}{65}{figure.caption.31}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Sensitivity of the gas power spectrum to the cold dark matter density $\Omega _\mathrm {c}$. Changes in $\Omega _\mathrm {c}$ alter the depth of the gravitational potential wells that drive gas clustering.}}{65}{figure.caption.31}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Sensitivity of the gas power spectrum to $\sigma _8$, the RMS amplitude of linear matter fluctuations on $8\,h^{-1}\,\mathrm {Mpc}$ scales. Larger $\sigma _8$ enhances structure formation and increases power at small scales.}}{66}{figure.caption.32}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Sensitivity of the gas power spectrum to the reduced Hubble constant $h$. Variations in $h$ shift the characteristic scales of the power spectrum and affect the conversion between comoving distances and redshifts.}}{66}{figure.caption.32}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Sensitivity of the gas power spectrum to the stellar feedback parameter $N_\star $, which controls the efficiency of star formation and the associated stellar-driven gas ejection.}}{66}{figure.caption.33}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Sensitivity of the gas power spectrum to the slope parameter $\delta $, which governs the inner profile of the gas distribution within haloes.}}{66}{figure.caption.33}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Sensitivity of the gas power spectrum to $\log _{10} M_\mathrm {c}$, the characteristic halo mass scale for AGN feedback. Haloes above $M_\mathrm {c}$ expel their gas more efficiently, suppressing power at small scales.}}{67}{figure.caption.34}%
 \def \@chapapp {\appendixname }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -85,7 +85,7 @@ and the resultant deviation is written as
 \begin{equation}
     d(r) = r_{\mathrm{bar,f}} - r_{\mathrm{bar,i}}.
 \end{equation}
-The mapping from $r_{\mathrm{bar,i}}$ to $r_{\mathrm{bar,f}}$ is parameterized with the baryonic feedback paramters shown in Table \ref{tab:bfc_prarams}. In addition, Fig. \ref{meth_fig:bfc} shows how the BFC model changes the profiles of dark matter halos.
+The mapping from $r_{\mathrm{bar,i}}$ to $r_{\mathrm{bar,f}}$ is parameterized with the baryonic feedback paramters shown in Table \ref{tab:bfc_params}. In addition, Fig. \ref{meth_fig:bfc} shows how the BFC model changes the profiles of dark matter halos.
 
 
 \begin{figure}[h!]
@@ -191,7 +191,7 @@ which is a measure of the correlation between two neighboring shells. I find tha
 \end{figure}
 
 \section{Simulating the dispersion measure signal} \label{meth_sec:sim_dm}
-Table \ref{tab:cosmo_params} and \ref{tab:bfc_prarams} contain the fiducial values of the cosmological and baryonic feedback parameters, which are used to obtain an expectaiton of the power spectrum. In addition, Table \ref{tab:sim_spec} contains the specifications of the simulation such as the number of redshift bins and the maximum multipole. In particular the choice of maximum mutlipole $\ell_\mathrm{max} = 4100$ is motivated by the fact that this scale corresponds to a length scale of $k \approx 10 \, h/\mathrm{Mpc}$ at a redshift of $z = 1$ which is the scale where baryonic feedback modifies the power spectrum \citep{Maraio_Hall_Taylor_2025}.
+Table \ref{tab:cosmo_params} and \ref{tab:bfc_params} contain the fiducial values of the cosmological and baryonic feedback parameters, which are used to obtain an expectaiton of the power spectrum. In addition, Table \ref{tab:sim_spec} contains the specifications of the simulation such as the number of redshift bins and the maximum multipole. In particular the choice of maximum mutlipole $\ell_\mathrm{max} = 4100$ is motivated by the fact that this scale corresponds to a length scale of $k \approx 10 \, h/\mathrm{Mpc}$ at a redshift of $z = 1$ which is the scale where baryonic feedback modifies the power spectrum \citep{Maraio_2025a}.
 
 \subsection{Generating electron density maps}\label{meth_sec:glass}
 To generate electron density maps, I use The Generator for Large Scale Structure (GLASS) \citep{tessore2023glass} which is a package that generates lognormal maps of a cosmological field starting from a given angular power spectra. The GLASS package is used in this thesis to generate maps of electron density in bins of redshift starting from the electron angular power spectrum obtained in section \ref{meth_sec:angular_power_spectrum}. The GLASS package assumes that the cosmological field follows a lognormal distribution, which is not the case for a real cosmological field. However, the GLASS package preserves the two-point statistics of the cosmological field. 
@@ -304,7 +304,7 @@ $\mathrm{DM}_\mathrm{MW}(\mathbf{\hat{x}})$ & The Milkyway contribution as a fun
 \multicolumn{3}{c}{\textit{Selection effects}} \\
 \hline
 $\mathrm{DM}_\mathrm{max}$ & The maximum value of DM that the instrument is able to detect. & [700, 3500]\\
-$\epsilon$ & The smoothing scale of the PDF. & [0.1, 3]\\
+$\epsilon$ & The smoothing scale of the PDF. & 50\\
 \hline
 \multicolumn{3}{c}{\textit{Missing redshifts}} \\
 \hline
@@ -553,13 +553,29 @@ It can be proven that the covariane matrix associated with $t$ is exactly the Fi
 \begin{equation}
     \text{cov}_{\ast}(\mathbf{t}, \mathbf{t}) = \mathbf{F_\ast}
 \end{equation}
-Therefore, the score $\mathbf{t}$ satisfies the Cramér-Rao bound for a lossless compression \citep{rao1945information}. Even though the score compression is a lossless compression, it is not necessairly sensitive to all the properties in the original data vector. In For the use case of this thesis, 
+Therefore, the score $\mathbf{t}$ satisfies the Cramér-Rao bound for a lossless compression \citep{rao1945information}. Even though the score compression is a lossless compression, it is not necessairly sensitive to all the properties in the original data vector.
+
+\subsection{Neural Posterior Estimator} \label{meth_sec:snpe}
+Instead of using ABC for inference, traning a neural network to learn the posterior distribution of model parameter is more efficient and computationally affordable way for SBI \citep{papamakarios2016fast}. There are multiple versions of the inference algorithm but it all boils down to producing a large number of simulation pairs $\{\theta, \mathbf{x}\}$ and training a neural network to learn the conditional probability distribution of the model parameter $\theta$ given an observation with a compression statistic $\mathbf{t}(\mathbf{x})$ as $P(\theta| \mathbf{t})$, then obtaining the posterior distribution given a measurement $\mathbf{t}_0 = \mathbf{t} (\mathbf{x}_0)$ as $P(\theta| \mathbf{t} = \mathbf{t}_0)$. A posterior estimator that uses a neural network as an embedding to learn the posterior distribution of model parameters is called nueral posterior estimator (NPE) $q^\mathrm{NPE}_{\Phi}(\theta|\mathbf{x})$, with $\Phi$ being the parameters of the neural networks. One of the most important considerations in constructing an NPE is that this estimator should eventually have the same properties of a probability distribution. Therefore, one possible way of formulating an NPE is to map a random variable $z$ with $z \sum \mathcal{N}(z;0, 1)$ to a point in the parameter space $\theta$ where this map is bijective, differetiable, and parameterized with a set of hyperparameters $\Phi$ such that
+\begin{equation}
+    \theta = f_\Phi (z).
+\end{equation}
+The map $f_\Phi$ can take many forms, and the ensemble of these forms are label as normalizing flows \citep{rezende2015variational} since it maps a normal (Gaussian) distribution to the target distribution. In this thesis, I use Masked Autoregressive Flows \citep{papamakarios2017masked}, an advanced version of normalizing flows, which will be discussed in section \ref{meth_sec:maf}.
+
+The purpose of training in general is to reduce the dissimilarity between between the true posterior and the estimated posterior. This is equivalent to minimizing the expectation value of the Killback-Leibler divergence defined as 
+\begin{equation}
+    D_{\mathrm{KL}}(P(x) \| q(x)) = \int \mathrm{d}x \, P(x) \ln \left( \frac{P(x)}{q(x)} \right).
+\end{equation}
+By taking the expectation value of the expression above, the loss function of the inference problem is given by 
+\begin{equation}
+    \mathcal{L}^{\mathrm{NPE}}[\Phi] = - \mathop{\mathbb{E}}_{\boldsymbol{x}, \Theta \sim p(\boldsymbol{x}, \Theta)} \ln q_{\Phi}^{\mathrm{NPE}}(\Theta \mid \boldsymbol{x})
+\end{equation}
+
+\subsubsection{Masked Autoregressive Flows}\label{meth_sec:maf}
+The choice of the architechture and depth of the chosen neural network is hypertuned through multiple training runs which leads to a converging training chain. In this thesis, I use Masked Autoregressive Flows (MAF) which is 
 
 
-
-\subsection{The Sequentual Neural Posterio Estimator} \label{meth_sec:snpe}
 \subsubsection{The truncated sequential neural posterior estimator}
-\subsection{Flow matching posterior estimator}
 
 
 
