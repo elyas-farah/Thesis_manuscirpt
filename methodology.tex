@@ -557,7 +557,7 @@ Therefore, the score $\mathbf{t}$ satisfies the Cramér-Rao bound for a lossless
 
 \subsection{Neural Posterior Estimator} \label{meth_sec:snpe}
 Instead of using ABC for inference, traning a neural network to learn the posterior distribution of model parameter is more efficient and computationally affordable way for SBI \citep{papamakarios2016fast}. There are multiple versions of the inference algorithm but it all boils down to producing a large number of simulation pairs $\{\theta, \mathbf{x}\}$ and training a neural network to learn the conditional probability distribution of the model parameter $\theta$ given an observation with a compression statistic $\mathbf{t}(\mathbf{x})$ as $P(\theta| \mathbf{t})$, then obtaining the posterior distribution given a measurement $\mathbf{t}_0 = \mathbf{t} (\mathbf{x}_0)$ as $P(\theta| \mathbf{t} = \mathbf{t}_0)$. A posterior estimator that uses a neural network as an embedding to learn the posterior distribution of model parameters is called nueral posterior estimator (NPE) $q^\mathrm{NPE}_{\Phi}(\theta|\mathbf{x})$, with $\Phi$ being the parameters of the neural networks. One of the most important considerations in constructing an NPE is that this estimator should eventually have the same properties of a probability distribution. Therefore, one possible way of formulating an NPE is to map a random variable $z$ with $z \sum \mathcal{N}(z;0, 1)$ to a point in the parameter space $\theta$ where this map is bijective, differetiable, and parameterized with a set of hyperparameters $\Phi$ such that
-\begin{equation}
+\begin{equation} \label{eq:nf}
     \theta = f_\Phi (z).
 \end{equation}
 The map $f_\Phi$ can take many forms, and the ensemble of these forms are label as normalizing flows \citep{rezende2015variational} since it maps a normal (Gaussian) distribution to the target distribution. In this thesis, I use Masked Autoregressive Flows \citep{papamakarios2017masked}, an advanced version of normalizing flows, which will be discussed in section \ref{meth_sec:maf}.
@@ -572,10 +572,23 @@ By taking the expectation value of the expression above, the loss function of th
 \end{equation}
 
 \subsubsection{Masked Autoregressive Flows}\label{meth_sec:maf}
-The choice of the architechture and depth of the chosen neural network is hypertuned through multiple training runs which leads to a converging training chain. In this thesis, I use Masked Autoregressive Flows (MAF) which is 
+In this thesis, the choice of the architechture and depth of the chosen neural network is hypertuned through multiple training runs which leads to a converging training chain. After many tests, I use Masked Autoregressive Flows (MAF) which is a type of normilizing flows where an initial simple distribution (a Gaussian distribution for example) is mapped into a more complicated distribution through a sequence of bijective mappings in the following way
+if $x_i$ is a random variable whose probability distributiuon given its predecessors $\mathbf{x}_{1:i - 1}$ is given By
+\begin{equation} \label{eq:maf_dist}
+    p(x_i \mid \mathbf{x}_{1:i-1}) = \mathcal{N}\!\left(x_i \mid \mu_i, (\exp \alpha_i)^2\right) \quad \text{where} \quad \mu_i = f_{\mu_i}(\mathbf{x}_{1:i-1}) \quad \text{and} \quad \alpha_i = f_{\alpha_i}(\mathbf{x}_{1:i-1}),
+\end{equation}
+where instead of mapping one variable to another through a bijective map as in Eq. \ref{eq:nf}, I map the preceeding variable to the distribution paremters of the proceeding variable $\mu_i$ and $\alpha_i$. $f_{\mu_i}$ and $f_{\alpha_i}$ are unconstrained scalar funcitons that computes the mean and the log-standard deviation of the distribution which the traning process aims to constrain. Eq. \ref{eq:maf_dist} descibes the flow on the level of the distribution. On the level of the random variables, it is possible to sample form the distribution by following the sequence
+\begin{equation}\label{eq:maf_var}
+    x_i = u_i \exp \alpha_i + \mu_i \quad \text{where} \quad \mu_i = f_{\mu_i}(\mathbf{x}_{1:i-1}), \quad \alpha_i = f_{\alpha_i}(\mathbf{x}_{1:i-1}) \quad \text{and} \quad u_i \sim \mathcal{N}(0, 1).
+\end{equation}
 
+The functions $f_{\mu_i}$ and $f_{\alpha_i}$ can take any form that is bijective and differentiable with a signature of non-linearity to capture complicated features in data. The sequence of mapping in Eq. \ref{eq:maf_var} are called transformations. In addition, each map $f$ has a number of hidden features which correpsonds to the width of the neural network and number of block which correponds to the depth of the neural netwrok. After many tests, the optimal architecture to be used in this thesis truned to be  10 transformations, 50 hidden features, and 2 blocks for each individual map. The caliber to choose the optimal architechture is that the inferred posterior passes the coverage test which I will descibe below.
 
 \subsubsection{The truncated sequential neural posterior estimator}
+In practice, it is possible to sample a large number of points in the parameter space and forward model the correponding observation. In case the prior range is wide, the number of required simulation for inference is large causing a computational bottleneck especially if perfoming one simulation is compulationally expensive as in the case of this thesis. To reduce the number of required simulation, I use the sequential neiral posterior estimator (SNPE) whose algorithm is descibed by the schematic plot in Fig. \ref{meth_fig:inference_flow}. The main improvement in this algorithm constitute in learning the posterior distribution sequentially by shrinking the prior range from one round to another where each new round uses the high density regions of the inferred posterior from the preceeding round as a prior. This method is called the truncated sequential neural posterior estimator (TSNPE ) \citep{deistler2022truncated} since the original prior is truncated at the high posterior region. In this thesis, the posterior is leanring by iterating for a number of rounds that correponds to 6000 simulations in total.
+
+\subsubsection{The coverage tests}
+
 
 
 

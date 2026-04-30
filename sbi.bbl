@@ -1120,6 +1120,48 @@
       \verb 10.1086/160884
       \endverb
     \endentry
+    \entry{deistler2022truncated}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=28180ffd272ad4166dc842916bf3aa92}{%
+           family={Deistler},
+           familyi={D\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=573330b470a3cc1830af35afb3d104e5}{%
+           family={Goncalves},
+           familyi={G\bibinitperiod},
+           given={Pedro\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfcd17e4bc613eaa10247633abddb07a}{%
+           family={Macke},
+           familyi={M\bibinitperiod},
+           given={Jakob\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{51c8af412e35258fc046f8f0849594cb}
+      \strng{fullhash}{51c8af412e35258fc046f8f0849594cb}
+      \strng{fullhashraw}{51c8af412e35258fc046f8f0849594cb}
+      \strng{bibnamehash}{51c8af412e35258fc046f8f0849594cb}
+      \strng{authorbibnamehash}{51c8af412e35258fc046f8f0849594cb}
+      \strng{authornamehash}{51c8af412e35258fc046f8f0849594cb}
+      \strng{authorfullhash}{51c8af412e35258fc046f8f0849594cb}
+      \strng{authorfullhashraw}{51c8af412e35258fc046f8f0849594cb}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{title}{Truncated proposals for scalable and hassle-free simulation-based inference}
+      \field{volume}{35}
+      \field{year}{2022}
+      \field{pages}{23135\bibrangedash 23149}
+      \range{pages}{15}
+    \endentry
     \entry{desjacques2018large}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=b5513c32c229b140def1963d1ba600c6}{%

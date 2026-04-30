@@ -42,14 +42,15 @@
 \contentsline {subsection}{\numberline {3.5.2}Neural Posterior Estimator}{60}{subsection.3.5.2}%
 \contentsline {subsubsection}{\nonumberline Masked Autoregressive Flows}{61}{subsubsection*.29}%
 \contentsline {subsubsection}{\nonumberline The truncated sequential neural posterior estimator}{61}{subsubsection*.30}%
-\contentsline {chapter}{\numberline {4}Results}{62}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{63}{chapter.5}%
-\contentsline {section}{\numberline {.1}Useful information}{64}{section.Alph0.1}%
-\contentsline {chapter}{\numberline {A}Sensitivity of the Gas Power Spectrum to Parameter Variations}{65}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Numerical derivative stability of the covariance matrix}{67}{section.A.1}%
-\contentsline {section}{\numberline {A.2}The Sensitivity of compressed statistics to model parameters}{67}{section.A.2}%
+\contentsline {subsubsection}{\nonumberline The coverage tests}{62}{subsubsection*.31}%
+\contentsline {chapter}{\numberline {4}Results}{63}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Discussion \& Conclusion}{64}{chapter.5}%
+\contentsline {section}{\numberline {.1}Useful information}{65}{section.Alph0.1}%
+\contentsline {chapter}{\numberline {A}Sensitivity of the Gas Power Spectrum to Parameter Variations}{66}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Numerical derivative stability of the covariance matrix}{68}{section.A.1}%
+\contentsline {section}{\numberline {A.2}The Sensitivity of compressed statistics to model parameters}{68}{section.A.2}%
 \def \@chapapp {\appendixname }
-\contentsline {chapter}{\nonumberline Bibliography}{68}{chapter*.35}%
-\contentsline {chapter}{\nonumberline List of Figures}{73}{chapter*.36}%
-\contentsline {chapter}{\nonumberline List of Tables}{76}{chapter*.37}%
+\contentsline {chapter}{\nonumberline Bibliography}{69}{chapter*.36}%
+\contentsline {chapter}{\nonumberline List of Figures}{74}{chapter*.37}%
+\contentsline {chapter}{\nonumberline List of Tables}{77}{chapter*.38}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
