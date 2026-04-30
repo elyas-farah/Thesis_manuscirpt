@@ -1,4 +1,188 @@
-\chapter{Results} \label{chap:results}
+\chapter{Results \& Discussion} \label{chap:results}
 
+\section{Results from the Chi-Squared Test}
 
 Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
+
+\subsection{Milky Way Contribution}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/dm_z_uncertainty_MW_contribution.png}
+        \caption{DM-$z$ relation for varying Milky Way contribution.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/pdf_uncertainty_MW_contribution.png}
+        \caption{PDF of DM for varying Milky Way contribution.}
+    \end{subfigure}
+    \caption{DM-$z$ relation and PDF for the Milky Way contribution systematic.}
+    \label{res_fig:mw_dmz_pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/chi_squared_MW_contribution.png}
+    \caption{$\chi^2$ as a function of the Milky Way contribution parameters.}
+    \label{res_fig:mw_chisq}
+\end{figure}
+
+\subsection{Host Galaxy Contribution}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/dm_z_uncertainty_host_contribution.png}
+        \caption{DM-$z$ relation for varying host galaxy contribution.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/pdf_uncertainty_host_contribution.png}
+        \caption{PDF of DM for varying host galaxy contribution.}
+    \end{subfigure}
+    \caption{DM-$z$ relation and PDF for the host galaxy contribution systematic.}
+    \label{res_fig:host_dmz_pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/chi_squared_host_contribution.png}
+    \caption{$\chi^2$ as a function of the host galaxy contribution parameters.}
+    \label{res_fig:host_chisq}
+\end{figure}
+
+\subsection{Redshift Uncertainty}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/dm_z_uncertainty_z_uncertainty.png}
+        \caption{DM-$z$ relation for varying redshift uncertainty.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/pdf_uncertainty_z_uncertainty.png}
+        \caption{PDF of DM for varying redshift uncertainty.}
+    \end{subfigure}
+    \caption{DM-$z$ relation and PDF for the redshift uncertainty systematic.}
+    \label{res_fig:redshift_dmz_pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/chi_squared_z_uncertainty.png}
+    \caption{$\chi^2$ as a function of the redshift uncertainty parameter $\eta$.}
+    \label{res_fig:redshift_chisq}
+\end{figure}
+
+\subsection{Selection Effects}
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/dm_z_selection_effects.png}
+        \caption{DM-$z$ relation for varying selection effect parameters.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        % \includegraphics[width=\textwidth]{}
+        \caption{PDF of DM for varying selection effect parameters.}
+    \end{subfigure}
+    \caption{DM-$z$ relation and PDF for the selection effects systematic.}
+    \label{res_fig:selection_dmz_pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/chi_squared_selection_effects.png}
+    \caption{$\chi^2$ as a function of the selection effect parameters ($\mathrm{DM}_\mathrm{max}$, $\epsilon$).}
+    \label{res_fig:selection_chisq}
+\end{figure}
+
+\subsection{Unlocalised Hosts}
+
+% --- Random subset ---
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/dm_z_uncertainty_missing_z_random.png}
+        \caption{DM-$z$ relation for a random subset of unlocalised hosts.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/pdf_uncertainty_missing_z_random.png}
+        \caption{PDF of DM for a random subset of unlocalised hosts.}
+    \end{subfigure}
+    \caption{DM-$z$ relation and PDF for the case of a random subset of unlocalised hosts.}
+    \label{res_fig:unloc_random_dmz_pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/chi_squared_missing_z_random.png}
+    \caption{$\chi^2$ as a function of the fraction of unlocalised hosts for the random subset case.}
+    \label{res_fig:unloc_random_chisq}
+\end{figure}
+
+% --- High-redshift subset ---
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/dm_z_uncertainty_missing_z_high_z.png}
+        \caption{DM-$z$ relation when high-$z$ FRBs are unlocalised.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/pdf_uncertainty_missing_z_high_z.png}
+        \caption{PDF of DM when high-$z$ FRBs are unlocalised.}
+    \end{subfigure}
+    \caption{DM-$z$ relation and PDF for the case where high-redshift FRBs are unlocalised.}
+    \label{res_fig:unloc_highz_dmz_pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/chi_squared_missing_z_high_z.png}
+    \caption{$\chi^2$ as a function of the fraction of unlocalised hosts for the high-redshift subset case.}
+    \label{res_fig:unloc_highz_chisq}
+\end{figure}
+
+% --- Low-redshift subset ---
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/dm_z_uncertainty_missing_z_low_z.png}
+        \caption{DM-$z$ relation when low-$z$ FRBs are unlocalised.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/pdf_uncertainty_missing_z_low_z.png}
+        \caption{PDF of DM when low-$z$ FRBs are unlocalised.}
+    \end{subfigure}
+    \caption{DM-$z$ relation and PDF for the case where low-redshift FRBs are unlocalised.}
+    \label{res_fig:unloc_lowz_dmz_pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/chi_squared_missing_z_low_z.png}
+    \caption{$\chi^2$ as a function of the fraction of unlocalised hosts for the low-redshift subset case.}
+    \label{res_fig:unloc_lowz_chisq}
+\end{figure}
+
+\section{Results from Simulation Based Inference}
