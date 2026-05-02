@@ -1030,12 +1030,12 @@
     \endentry
     \entry{Davis_Huchra_Latham_Tonry_1982}{article}{}{}
       \name{author}{4}{ul=2}{%
-        {{un=0,uniquepart=base,hash=d27993d3d39ca56a54118eba9bc5ab30}{%
+        {{un=1,uniquepart=given,hash=d27993d3d39ca56a54118eba9bc5ab30}{%
            family={Davis},
            familyi={D\bibinitperiod},
            given={M.},
            giveni={M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=fd6897aa74b1d4599a582db9a34e34b2}{%
            family={Huchra},
            familyi={H\bibinitperiod},
@@ -1082,12 +1082,12 @@
     \endentry
     \entry{Davis_Peebles_1983}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=d27993d3d39ca56a54118eba9bc5ab30}{%
+        {{un=1,uniquepart=given,hash=d27993d3d39ca56a54118eba9bc5ab30}{%
            family={Davis},
            familyi={D\bibinitperiod},
            given={M.},
            giveni={M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=1a337192b9b9859c4cb8e9b45967eec0}{%
            family={Peebles},
            familyi={P\bibinitperiod},
@@ -1614,6 +1614,96 @@
       \field{year}{2025}
       \field{pages}{e017}
       \range{pages}{-1}
+    \endentry
+    \entry{hoyle2018dark}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=19902f6f02a3c9888fa69ce5ffad0027}{%
+           family={Hoyle},
+           familyi={H\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81015144dd9e75707be8e278eb373be5}{%
+           family={Gruen},
+           familyi={G\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=919aaf88d81122ee69a4ace0fe1314c2}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={GM},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a964637c0f787b81f3a16185b0ecd86}{%
+           family={Rau},
+           familyi={R\bibinitperiod},
+           given={MM},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1097e20737bd9ba46c1ac2af683d83e}{%
+           family={De\bibnamedelima Vicente},
+           familyi={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a6f88015d224d2c93dfef5dbbe44027}{%
+           family={Hartley},
+           familyi={H\bibinitperiod},
+           given={WG},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=34316580ba852078431157911c691be1}{%
+           family={Gaztanaga},
+           familyi={G\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00f59059242fda676e4e6083a4fbf212}{%
+           family={DeRose},
+           familyi={D\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2aed2fc3b8f7263fd1b3dfd332c015d7}{%
+           family={Troxel},
+           familyi={T\bibinitperiod},
+           given={MA},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=889324d12a8f22dcce9a614de547cdb3}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{234c174a5290707b9acd11f55a773369}
+      \strng{fullhash}{b5b9e46821f7bd3307219bc752bbd249}
+      \strng{fullhashraw}{b5b9e46821f7bd3307219bc752bbd249}
+      \strng{bibnamehash}{234c174a5290707b9acd11f55a773369}
+      \strng{authorbibnamehash}{234c174a5290707b9acd11f55a773369}
+      \strng{authornamehash}{234c174a5290707b9acd11f55a773369}
+      \strng{authorfullhash}{b5b9e46821f7bd3307219bc752bbd249}
+      \strng{authorfullhashraw}{b5b9e46821f7bd3307219bc752bbd249}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{number}{1}
+      \field{title}{Dark Energy Survey Year 1 Results: redshift distributions of the weak-lensing source galaxies}
+      \field{volume}{478}
+      \field{year}{2018}
+      \field{pages}{592\bibrangedash 610}
+      \range{pages}{19}
     \endentry
     \entry{Hu_Tegmark_1999}{article}{}{}
       \name{author}{2}{}{%
@@ -2886,10 +2976,8 @@
       \strng{authornamehash}{a3d427c68d713b61cb68770f0a36e8a2}
       \strng{authorfullhash}{5123506542509cdec9b3cb16dcfe07b9}
       \strng{authorfullhashraw}{5123506542509cdec9b3cb16dcfe07b9}
-      \field{extraname}{1}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2916,60 +3004,6 @@
       \verb{url}
       \verb https://doi.org/10.1093/mnras/stab082
       \endverb
-    \endentry
-    \entry{mead2021hmcode}{article}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=ba46f1ba73e7eed4b24aa090ebd41f02}{%
-           family={Mead},
-           familyi={M\bibinitperiod},
-           given={Alexander\bibnamedelima J},
-           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d25e108fa8f8e998a441e598c5c3db09}{%
-           family={Brieden},
-           familyi={B\bibinitperiod},
-           given={Samuel},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=88db394aac1d9008cf04df2252576be1}{%
-           family={Tröster},
-           familyi={T\bibinitperiod},
-           given={Tilman},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=547f50bc09e412063e60ef05fa6befd4}{%
-           family={Heymans},
-           familyi={H\bibinitperiod},
-           given={Catherine},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Oxford University Press}%
-      }
-      \strng{namehash}{e479c32c36d1a279551315d2f689c171}
-      \strng{fullhash}{309fd29b3dea380dbcbe6915bd12465f}
-      \strng{fullhashraw}{309fd29b3dea380dbcbe6915bd12465f}
-      \strng{bibnamehash}{309fd29b3dea380dbcbe6915bd12465f}
-      \strng{authorbibnamehash}{309fd29b3dea380dbcbe6915bd12465f}
-      \strng{authornamehash}{e479c32c36d1a279551315d2f689c171}
-      \strng{authorfullhash}{309fd29b3dea380dbcbe6915bd12465f}
-      \strng{authorfullhashraw}{309fd29b3dea380dbcbe6915bd12465f}
-      \field{extraname}{2}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
-      \field{number}{1}
-      \field{title}{hmcode-2020: improved modelling of non-linear cosmological power spectra with baryonic feedback}
-      \field{volume}{502}
-      \field{year}{2021}
-      \field{pages}{1401\bibrangedash 1422}
-      \range{pages}{22}
     \endentry
     \entry{RevModPhys.81.1405}{article}{}{}
       \name{author}{1}{}{%

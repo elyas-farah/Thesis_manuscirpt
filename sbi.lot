@@ -15,7 +15,7 @@
 \contentsline {table}{\numberline {3.2}{\ignorespaces The specifiactions of FRB catalog simulations. HEALPix \citep {gorski2005healpix} is an algorithm to pixellize as an image with certain resolution. The resolution parameter $N_\mathrm {side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta _\mathrm {min} \approx 1/N_\mathrm {side}$.}}{43}{table.caption.16}%
 \contentsline {table}{\numberline {3.3}{\ignorespaces The parameters of the BFC model.}}{45}{table.caption.18}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces A table with the parameters of the systematic uncertainties. The range of the parameters is chosen to be wide enough to cover the expected values for these parameters. }}{52}{table.caption.25}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Prior distributions for the free parameters.}}{59}{table.caption.27}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Prior distributions for the free parameters.}}{58}{table.caption.26}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

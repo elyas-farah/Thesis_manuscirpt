@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  30 APR 2026 17:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  2 MAY 2026 19:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1232,26 +1232,7 @@ Package csquotes Info: ... found 'babel' package.
  (./sbi.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 12.
- (./thesis_intro.aux) (./theoretical_background.aux
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `@cref' multiply defined.
-
-
-LaTeX Warning: Label `' multiply defined.
-
-
-LaTeX Warning: Label `@cref' multiply defined.
-
-
-LaTeX Warning: Label `sub@' multiply defined.
-
-
-LaTeX Warning: Label `sub@@cref' multiply defined.
-
-) (./methodology.aux) (./results.aux) (./discussion.aux) (./thesis_appendix.aux) (./thesis_acknowledge.aux))
+ (./thesis_intro.aux) (./theoretical_background.aux) (./methodology.aux) (./results.aux) (./discussion.aux) (./thesis_appendix.aux) (./thesis_acknowledge.aux))
 \openout1 = `sbi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 153.
@@ -1981,7 +1962,7 @@ Package pdftex.def Info: figs/baryonic_feedback.png  used on input line 582.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [27] [28 <./figs/baryonic_feedback.png>]
-<figs/time_delay.png, id=649, 1259.70625pt x 901.3675pt>
+<figs/time_delay.png, id=648, 1259.70625pt x 901.3675pt>
 File: figs/time_delay.png Graphic file (type png)
 <use figs/time_delay.png>
 Package pdftex.def Info: figs/time_delay.png  used on input line 616.
@@ -1991,15 +1972,21 @@ Package pdftex.def Info: figs/time_delay.png  used on input line 616.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [29] [30 <./figs/time_delay.png>] [31] [32] [33] [34] [35] [36]
+<figs/MW.png, id=777, 614.295pt x 390.258pt>
+File: figs/MW.png Graphic file (type png)
+<use figs/MW.png>
+Package pdftex.def Info: figs/MW.png  used on input line 870.
+(pdftex.def)             Requested size: 224.06548pt x 142.34473pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] [38] [39]) [40]
+[37] [38 <./figs/MW.png>] [39]) [40]
 \openout2 = `methodology.aux'.
 
  (./methodology.tex
 chapter 3.
-<figs/cover/simulation_flow.png, id=839, 1927.2pt x 1084.05pt>
+<figs/cover/simulation_flow.png, id=840, 1927.2pt x 1084.05pt>
 File: figs/cover/simulation_flow.png Graphic file (type png)
 <use figs/cover/simulation_flow.png>
 Package pdftex.def Info: figs/cover/simulation_flow.png  used on input line 8.
@@ -2031,7 +2018,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] [42 <./figs/cover/simulation_flow.png>] [43]
-<figs/cover/bcm.png, id=888, 1288.815pt x 575.14874pt>
+<figs/cover/bcm.png, id=889, 1288.815pt x 575.14874pt>
 File: figs/cover/bcm.png Graphic file (type png)
 <use figs/cover/bcm.png>
 Package pdftex.def Info: figs/cover/bcm.png  used on input line 93.
@@ -2039,6 +2026,9 @@ Package pdftex.def Info: figs/cover/bcm.png  used on input line 93.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `' on page 44 undefined on input line 120.
 
 [44 <./figs/cover/bcm.png>]
 <thesis_plots/power_spectrum.png, id=909, 578.16pt x 433.62pt>
@@ -2090,263 +2080,251 @@ Package pdftex.def Info: figs/source_z_dist.png  used on input line 237.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[50 <./figs/shells.png>] [51 <./figs/source_z_dist.png>]
-<figs/MW.png, id=1015, 614.295pt x 390.258pt>
-File: figs/MW.png Graphic file (type png)
-<use figs/MW.png>
-Package pdftex.def Info: figs/MW.png  used on input line 327.
-(pdftex.def)             Requested size: 403.31511pt x 256.22527pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[52] [53 <./figs/MW.png>] [54]
+[50 <./figs/shells.png>] [51 <./figs/source_z_dist.png>] [52] [53]
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `OT1/minntx/b/n' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 14.4pt on input line 393.
+(Font)              scaled to size 14.4pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 10.5pt on input line 393.
+(Font)              scaled to size 10.5pt on input line 388.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 7.9pt on input line 393.
+(Font)              scaled to size 7.9pt on input line 388.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 393.
+(hyperref)                removing `math shift' on input line 388.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 393.
+(hyperref)                removing `math shift' on input line 388.
 
-[55] (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstlang1.sty
+[54] (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 422.
+(Font)              scaled to size 10.0pt on input line 417.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 423.
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 423.
+(Font)              scaled to size 6.0pt on input line 418.
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 418.
  (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/b/n' in size <10> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 423.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 418.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `txtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [55]
 LaTeX Font Info:    Font shape `T1/ntxtt/m/it' in size <10> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 428.
- [56] [57] [58]
-<figs/snpe.png, id=1160, 1927.2pt x 1084.05pt>
+(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 423.
+ [56] [57]
+<figs/snpe.png, id=1150, 1927.2pt x 1084.05pt>
 File: figs/snpe.png Graphic file (type png)
 <use figs/snpe.png>
-Package pdftex.def Info: figs/snpe.png  used on input line 532.
+Package pdftex.def Info: figs/snpe.png  used on input line 527.
 (pdftex.def)             Requested size: 448.13095pt x 252.0721pt.
- [59 <./figs/snpe.png>] [60
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[58] [59
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.41}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.568 \end{equation}
-                    ] [61]) [62]
+l.555 \begin{equation}
+                       \label{eq:nf} <./figs/snpe.png>] [60]) [61]
 \openout2 = `results.aux'.
 
  (./results.tex
 chapter 4.
-<figs/dm_z_uncertainty_MW_contribution.png, id=1211, 549.0111pt x 416.2752pt>
+<figs/dm_z_uncertainty_MW_contribution.png, id=1207, 549.0111pt x 416.2752pt>
 File: figs/dm_z_uncertainty_MW_contribution.png Graphic file (type png)
 <use figs/dm_z_uncertainty_MW_contribution.png>
-Package pdftex.def Info: figs/dm_z_uncertainty_MW_contribution.png  used on input line 13.
+Package pdftex.def Info: figs/dm_z_uncertainty_MW_contribution.png  used on input line 16.
 (pdftex.def)             Requested size: 215.10094pt x 163.09619pt.
-<figs/pdf_uncertainty_MW_contribution.png, id=1212, 578.16pt x 433.62pt>
+<figs/pdf_uncertainty_MW_contribution.png, id=1208, 578.16pt x 433.62pt>
 File: figs/pdf_uncertainty_MW_contribution.png Graphic file (type png)
 <use figs/pdf_uncertainty_MW_contribution.png>
-Package pdftex.def Info: figs/pdf_uncertainty_MW_contribution.png  used on input line 19.
+Package pdftex.def Info: figs/pdf_uncertainty_MW_contribution.png  used on input line 22.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/chi_squared_MW_contribution.png, id=1213, 526.3665pt x 280.6485pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figs/chi_squared_MW_contribution.png, id=1210, 526.3665pt x 280.6485pt>
 File: figs/chi_squared_MW_contribution.png Graphic file (type png)
 <use figs/chi_squared_MW_contribution.png>
-Package pdftex.def Info: figs/chi_squared_MW_contribution.png  used on input line 28.
+Package pdftex.def Info: figs/chi_squared_MW_contribution.png  used on input line 35.
 (pdftex.def)             Requested size: 268.8813pt x 143.36436pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/dm_z_uncertainty_host_contribution.png, id=1214, 552.8655pt x 416.2752pt>
+[62
+
+
+
+
+
+] [63 <./figs/dm_z_uncertainty_MW_contribution.png> <./figs/pdf_uncertainty_MW_contribution.png> <./figs/chi_squared_MW_contribution.png>]
+<figs/dm_z_uncertainty_host_contribution.png, id=1233, 552.8655pt x 416.2752pt>
 File: figs/dm_z_uncertainty_host_contribution.png Graphic file (type png)
 <use figs/dm_z_uncertainty_host_contribution.png>
-Package pdftex.def Info: figs/dm_z_uncertainty_host_contribution.png  used on input line 39.
+Package pdftex.def Info: figs/dm_z_uncertainty_host_contribution.png  used on input line 54.
 (pdftex.def)             Requested size: 215.10094pt x 161.95921pt.
-<figs/pdf_uncertainty_host_contribution.png, id=1215, 578.16pt x 433.62pt>
+<figs/pdf_uncertainty_host_contribution.png, id=1234, 578.16pt x 433.62pt>
 File: figs/pdf_uncertainty_host_contribution.png Graphic file (type png)
 <use figs/pdf_uncertainty_host_contribution.png>
-Package pdftex.def Info: figs/pdf_uncertainty_host_contribution.png  used on input line 45.
+Package pdftex.def Info: figs/pdf_uncertainty_host_contribution.png  used on input line 60.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/chi_squared_host_contribution.png, id=1216, 508.5399pt x 280.6485pt>
+<figs/chi_squared_host_contribution.png, id=1235, 508.5399pt x 280.6485pt>
 File: figs/chi_squared_host_contribution.png Graphic file (type png)
 <use figs/chi_squared_host_contribution.png>
-Package pdftex.def Info: figs/chi_squared_host_contribution.png  used on input line 54.
+Package pdftex.def Info: figs/chi_squared_host_contribution.png  used on input line 69.
 (pdftex.def)             Requested size: 268.8813pt x 148.38756pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/dm_z_uncertainty_z_uncertainty.png, id=1217, 548.0475pt x 416.2752pt>
+ [64 <./figs/dm_z_uncertainty_host_contribution.png> <./figs/pdf_uncertainty_host_contribution.png> <./figs/chi_squared_host_contribution.png>]
+<figs/dm_z_uncertainty_z_uncertainty.png, id=1245, 548.0475pt x 416.2752pt>
 File: figs/dm_z_uncertainty_z_uncertainty.png Graphic file (type png)
 <use figs/dm_z_uncertainty_z_uncertainty.png>
-Package pdftex.def Info: figs/dm_z_uncertainty_z_uncertainty.png  used on input line 65.
+Package pdftex.def Info: figs/dm_z_uncertainty_z_uncertainty.png  used on input line 87.
 (pdftex.def)             Requested size: 215.10094pt x 163.38202pt.
-<figs/pdf_uncertainty_z_uncertainty.png, id=1218, 578.16pt x 433.62pt>
+<figs/pdf_uncertainty_z_uncertainty.png, id=1246, 578.16pt x 433.62pt>
 File: figs/pdf_uncertainty_z_uncertainty.png Graphic file (type png)
 <use figs/pdf_uncertainty_z_uncertainty.png>
-Package pdftex.def Info: figs/pdf_uncertainty_z_uncertainty.png  used on input line 71.
+Package pdftex.def Info: figs/pdf_uncertainty_z_uncertainty.png  used on input line 93.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/chi_squared_z_uncertainty.png, id=1219, 510.708pt x 281.1303pt>
+<figs/chi_squared_z_uncertainty.png, id=1250, 510.708pt x 281.1303pt>
 File: figs/chi_squared_z_uncertainty.png Graphic file (type png)
 <use figs/chi_squared_z_uncertainty.png>
-Package pdftex.def Info: figs/chi_squared_z_uncertainty.png  used on input line 80.
+Package pdftex.def Info: figs/chi_squared_z_uncertainty.png  used on input line 114.
 (pdftex.def)             Requested size: 268.8813pt x 148.016pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/dm_z_selection_effects.png, id=1220, 979.9812pt x 416.5161pt>
-File: figs/dm_z_selection_effects.png Graphic file (type png)
-<use figs/dm_z_selection_effects.png>
-Package pdftex.def Info: figs/dm_z_selection_effects.png  used on input line 91.
-(pdftex.def)             Requested size: 215.10094pt x 91.42409pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/chi_squared_selection_effects.png, id=1221, 557.4426pt x 269.808pt>
+[65 <./figs/dm_z_uncertainty_z_uncertainty.png> <./figs/pdf_uncertainty_z_uncertainty.png>]
+<figs/pdf_DM_max_selection_effects.png, id=1261, 555.17815pt x 411.2163pt>
+File: figs/pdf_DM_max_selection_effects.png Graphic file (type png)
+<use figs/pdf_DM_max_selection_effects.png>
+Package pdftex.def Info: figs/pdf_DM_max_selection_effects.png  used on input line 128.
+(pdftex.def)             Requested size: 313.69029pt x 232.35646pt.
+<figs/chi_squared_selection_effects.png, id=1264, 557.4426pt x 269.808pt>
 File: figs/chi_squared_selection_effects.png Graphic file (type png)
 <use figs/chi_squared_selection_effects.png>
-Package pdftex.def Info: figs/chi_squared_selection_effects.png  used on input line 106.
+Package pdftex.def Info: figs/chi_squared_selection_effects.png  used on input line 138.
 (pdftex.def)             Requested size: 268.8813pt x 130.14037pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/dm_z_uncertainty_missing_z_random.png, id=1222, 549.0111pt x 416.2752pt>
+[66 <./figs/chi_squared_z_uncertainty.png> <./figs/pdf_DM_max_selection_effects.png>]
+<figs/dm_z_uncertainty_missing_z_random.png, id=1275, 549.0111pt x 416.2752pt>
 File: figs/dm_z_uncertainty_missing_z_random.png Graphic file (type png)
 <use figs/dm_z_uncertainty_missing_z_random.png>
-Package pdftex.def Info: figs/dm_z_uncertainty_missing_z_random.png  used on input line 118.
+Package pdftex.def Info: figs/dm_z_uncertainty_missing_z_random.png  used on input line 157.
 (pdftex.def)             Requested size: 215.10094pt x 163.09619pt.
-<figs/pdf_uncertainty_missing_z_random.png, id=1223, 578.16pt x 433.62pt>
+<figs/pdf_uncertainty_missing_z_random.png, id=1276, 578.16pt x 433.62pt>
 File: figs/pdf_uncertainty_missing_z_random.png Graphic file (type png)
 <use figs/pdf_uncertainty_missing_z_random.png>
-Package pdftex.def Info: figs/pdf_uncertainty_missing_z_random.png  used on input line 124.
+Package pdftex.def Info: figs/pdf_uncertainty_missing_z_random.png  used on input line 163.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/chi_squared_missing_z_random.png, id=1224, 515.0442pt x 281.6121pt>
+<figs/chi_squared_missing_z_random.png, id=1278, 515.0442pt x 281.6121pt>
 File: figs/chi_squared_missing_z_random.png Graphic file (type png)
 <use figs/chi_squared_missing_z_random.png>
-Package pdftex.def Info: figs/chi_squared_missing_z_random.png  used on input line 133.
+Package pdftex.def Info: figs/chi_squared_missing_z_random.png  used on input line 176.
 (pdftex.def)             Requested size: 268.8813pt x 147.01924pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/dm_z_uncertainty_missing_z_high_z.png, id=1225, 549.0111pt x 416.2752pt>
+[67 <./figs/chi_squared_selection_effects.png> <./figs/dm_z_uncertainty_missing_z_random.png> <./figs/pdf_uncertainty_missing_z_random.png>]
+<figs/dm_z_uncertainty_missing_z_high_z.png, id=1290, 549.0111pt x 416.2752pt>
 File: figs/dm_z_uncertainty_missing_z_high_z.png Graphic file (type png)
 <use figs/dm_z_uncertainty_missing_z_high_z.png>
-Package pdftex.def Info: figs/dm_z_uncertainty_missing_z_high_z.png  used on input line 143.
+Package pdftex.def Info: figs/dm_z_uncertainty_missing_z_high_z.png  used on input line 188.
 (pdftex.def)             Requested size: 215.10094pt x 163.09619pt.
-<figs/pdf_uncertainty_missing_z_high_z.png, id=1226, 578.16pt x 433.62pt>
+<figs/pdf_uncertainty_missing_z_high_z.png, id=1291, 578.16pt x 433.62pt>
 File: figs/pdf_uncertainty_missing_z_high_z.png Graphic file (type png)
 <use figs/pdf_uncertainty_missing_z_high_z.png>
-Package pdftex.def Info: figs/pdf_uncertainty_missing_z_high_z.png  used on input line 149.
+Package pdftex.def Info: figs/pdf_uncertainty_missing_z_high_z.png  used on input line 194.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figs/chi_squared_missing_z_high_z.png, id=1227, 510.708pt x 281.6121pt>
+<figs/chi_squared_missing_z_high_z.png, id=1293, 510.708pt x 281.6121pt>
 File: figs/chi_squared_missing_z_high_z.png Graphic file (type png)
 <use figs/chi_squared_missing_z_high_z.png>
-Package pdftex.def Info: figs/chi_squared_missing_z_high_z.png  used on input line 158.
+Package pdftex.def Info: figs/chi_squared_missing_z_high_z.png  used on input line 207.
 (pdftex.def)             Requested size: 268.8813pt x 148.26968pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/dm_z_uncertainty_missing_z_low_z.png, id=1228, 549.0111pt x 416.2752pt>
+<figs/dm_z_uncertainty_missing_z_low_z.png, id=1295, 549.0111pt x 416.2752pt>
 File: figs/dm_z_uncertainty_missing_z_low_z.png Graphic file (type png)
 <use figs/dm_z_uncertainty_missing_z_low_z.png>
-Package pdftex.def Info: figs/dm_z_uncertainty_missing_z_low_z.png  used on input line 168.
+Package pdftex.def Info: figs/dm_z_uncertainty_missing_z_low_z.png  used on input line 219.
 (pdftex.def)             Requested size: 215.10094pt x 163.09619pt.
-<figs/pdf_uncertainty_missing_z_low_z.png, id=1229, 578.16pt x 433.62pt>
+<figs/pdf_uncertainty_missing_z_low_z.png, id=1296, 578.16pt x 433.62pt>
 File: figs/pdf_uncertainty_missing_z_low_z.png Graphic file (type png)
 <use figs/pdf_uncertainty_missing_z_low_z.png>
-Package pdftex.def Info: figs/pdf_uncertainty_missing_z_low_z.png  used on input line 174.
+Package pdftex.def Info: figs/pdf_uncertainty_missing_z_low_z.png  used on input line 225.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figs/chi_squared_missing_z_low_z.png, id=1230, 526.3665pt x 281.6121pt>
+[68 <./figs/chi_squared_missing_z_random.png> <./figs/dm_z_uncertainty_missing_z_high_z.png> <./figs/pdf_uncertainty_missing_z_high_z.png>]
+<figs/chi_squared_missing_z_low_z.png, id=1309, 526.3665pt x 281.6121pt>
 File: figs/chi_squared_missing_z_low_z.png Graphic file (type png)
 <use figs/chi_squared_missing_z_low_z.png>
-Package pdftex.def Info: figs/chi_squared_missing_z_low_z.png  used on input line 183.
+Package pdftex.def Info: figs/chi_squared_missing_z_low_z.png  used on input line 236.
 (pdftex.def)             Requested size: 268.8813pt x 143.85661pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [63
-
-
-
-
-
- <./figs/dm_z_uncertainty_MW_contribution.png> <./figs/pdf_uncertainty_MW_contribution.png>] [64 <./figs/chi_squared_MW_contribution.png> <./figs/dm_z_uncertainty_host_contribution.png> <./figs/pdf_uncertainty_host_contribution.png> <./figs/chi_squared_host_contribution.png>]
-Overfull \vbox (42.49629pt too high) has occurred while \output is active []
-
- [65 <./figs/dm_z_uncertainty_z_uncertainty.png> <./figs/pdf_uncertainty_z_uncertainty.png> <./figs/chi_squared_z_uncertainty.png> <./figs/dm_z_selection_effects.png>] [66 <./figs/chi_squared_selection_effects.png> <./figs/dm_z_uncertainty_missing_z_random.png> <./figs/pdf_uncertainty_missing_z_random.png> <./figs/chi_squared_missing_z_random.png>] [67 <./figs/dm_z_uncertainty_missing_z_high_z.png> <./figs/pdf_uncertainty_missing_z_high_z.png> <./figs/chi_squared_missing_z_high_z.png> <./figs/dm_z_uncertainty_missing_z_low_z.png> <./figs/pdf_uncertainty_missing_z_low_z.png>] [68 <./figs/chi_squared_missing_z_low_z.png>]
+) [69 <./figs/chi_squared_missing_z_high_z.png> <./figs/dm_z_uncertainty_missing_z_low_z.png> <./figs/pdf_uncertainty_missing_z_low_z.png>] [70 <./figs/chi_squared_missing_z_low_z.png>]
 \openout2 = `discussion.aux'.
 
  (./discussion.tex
 chapter 5.
-) [69
+) [71
 
 
 
@@ -2355,80 +2333,80 @@ chapter 5.
 ]
 \openout2 = `thesis_appendix.aux'.
 
- (./thesis_appendix.tex [70
+ (./thesis_appendix.tex [72
 
 
 
 ]
 chapter A.
-<figs/p_Omega_b.png, id=1298, 578.16pt x 433.62pt>
+<figs/p_Omega_b.png, id=1332, 578.16pt x 433.62pt>
 File: figs/p_Omega_b.png Graphic file (type png)
 <use figs/p_Omega_b.png>
 Package pdftex.def Info: figs/p_Omega_b.png  used on input line 33.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_Omega_c.png, id=1299, 578.16pt x 433.62pt>
+<figs/p_Omega_c.png, id=1333, 578.16pt x 433.62pt>
 File: figs/p_Omega_c.png Graphic file (type png)
 <use figs/p_Omega_c.png>
 Package pdftex.def Info: figs/p_Omega_c.png  used on input line 40.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_sigma8.png, id=1300, 578.16pt x 433.62pt>
+<figs/p_sigma8.png, id=1334, 578.16pt x 433.62pt>
 File: figs/p_sigma8.png Graphic file (type png)
 <use figs/p_sigma8.png>
 Package pdftex.def Info: figs/p_sigma8.png  used on input line 50.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_h.png, id=1301, 578.16pt x 433.62pt>
+<figs/p_h.png, id=1335, 578.16pt x 433.62pt>
 File: figs/p_h.png Graphic file (type png)
 <use figs/p_h.png>
 Package pdftex.def Info: figs/p_h.png  used on input line 57.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_Nstar.png, id=1302, 578.16pt x 433.62pt>
+<figs/p_Nstar.png, id=1336, 578.16pt x 433.62pt>
 File: figs/p_Nstar.png Graphic file (type png)
 <use figs/p_Nstar.png>
 Package pdftex.def Info: figs/p_Nstar.png  used on input line 71.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_delta.png, id=1303, 578.16pt x 433.62pt>
+<figs/p_delta.png, id=1337, 578.16pt x 433.62pt>
 File: figs/p_delta.png Graphic file (type png)
 <use figs/p_delta.png>
 Package pdftex.def Info: figs/p_delta.png  used on input line 78.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-<figs/p_log10_Mc.png, id=1304, 578.16pt x 433.62pt>
+<figs/p_log10_Mc.png, id=1338, 578.16pt x 433.62pt>
 File: figs/p_log10_Mc.png Graphic file (type png)
 <use figs/p_log10_Mc.png>
 Package pdftex.def Info: figs/p_log10_Mc.png  used on input line 88.
 (pdftex.def)             Requested size: 215.10094pt x 161.3235pt.
-) [71
+) [73
 
 
- <./figs/p_Omega_b.png> <./figs/p_Omega_c.png>] [72 <./figs/p_sigma8.png> <./figs/p_h.png> <./figs/p_Nstar.png> <./figs/p_delta.png>] [73 <./figs/p_log10_Mc.png>]
+ <./figs/p_Omega_b.png> <./figs/p_Omega_c.png>] [74 <./figs/p_sigma8.png> <./figs/p_h.png> <./figs/p_Nstar.png> <./figs/p_delta.png>] [75 <./figs/p_log10_Mc.png>]
 chapter without number
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 10.95pt on input line 204.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/ntxtlf/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[74
+[76
 
 
 
 
-{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [75] [76] [77]
+{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [77] [78] [79]
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 204.
- [78]
+ [80]
 Package tocbasic Info: character protrusion at lof deactivated on input line 222.
  (./sbi.lof
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
 Package cleveref Info: loaded `ngerman' language definitions on input line 6.
- [79
+ [81
 
 
 
 
-] [80] [81])
+] [82] [83])
 \tf@lof=\write5
 \openout5 = `sbi.lof'.
 
- [82]
+ [84]
 Package tocbasic Info: character protrusion at lot deactivated on input line 223.
  (./sbi.lot
 Package cleveref Info: loaded `ngerman' language definitions on input line 2.
@@ -2437,13 +2415,13 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 \tf@lot=\write6
 \openout6 = `sbi.lot'.
 
- [83
+ [85
 
 
 ]
 \openout2 = `thesis_acknowledge.aux'.
 
- (./thesis_acknowledge.tex) [84
+ (./thesis_acknowledge.tex) [86
 
 
 
@@ -2457,25 +2435,25 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 Package logreq Info: Writing requests to 'sbi.run.xml'.
 \openout1 = `sbi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46732 strings out of 467525
- 939520 string characters out of 5408440
- 2206475 words of memory out of 5000000
- 74136 multiletter control sequences out of 15000+600000
+ 46746 strings out of 467525
+ 939949 string characters out of 5408440
+ 2232472 words of memory out of 5000000
+ 74149 multiletter control sequences out of 15000+600000
  826255 words of font info for 471 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,21n,147p,11252b,5027s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXBMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/tex-gyre/qtmri.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txexs.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsym.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/txsys.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on sbi.pdf (89 pages, 13280473 bytes).
+Output written on sbi.pdf (91 pages, 13486432 bytes).
 PDF statistics:
- 1960 PDF objects out of 2073 (max. 8388607)
- 1700 compressed objects within 17 object streams
- 560 named destinations out of 1000 (max. 500000)
+ 1994 PDF objects out of 2073 (max. 8388607)
+ 1731 compressed objects within 18 object streams
+ 561 named destinations out of 1000 (max. 500000)
  68729 words of extra memory for PDF output out of 74296 (max. 10000000)
 

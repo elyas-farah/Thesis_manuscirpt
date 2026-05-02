@@ -320,24 +320,19 @@ $f$ & The fraction of FRBs with missing redshift. & [0.05, 0.4]\\
 
 
 \subsection{Milkyway contribution}
-Depending on the angular direciton, the measured $\mathrm{DM}_\mathrm{tot}$ receives a contribution from the MW. This contribution varies depending on the angular position of the FRB. Sources that are close to the galactic plane receive a contribution of order $\mathrm{DM}_\mathrm{MW} \sim 3000 \, \mathrm{pc}.\mathrm{cm}^{-3}$ and with high uncertainty. For larger latitutdes, the contribution is as low as $\mathrm{DM}_\mathrm{MW} \sim 10 \, \mathrm{pc}.\mathrm{cm}^{-3}$. Therefore, as a way to mititgate the impact of MW, it is possible to remove any sources that are located within a particular galactic cut to avoid. Howeverm due to the current sample size of FRBs, it is not duable to do this cut since it will decrease the signal-to-noise ratio due to reduced sample size. Nonetheless, in this thesis, I explore the possibility of imposing a galactic cut $\theta_\mathrm{cut}$ and study its impact on the resulting DM-$z$ relation. Fig. \ref{meth_fig:MW_map} shows a map of $\mathrm{DM}_\mathrm{MW}$ as predeicted by teh NPE2001 model. I study the impact of imposing a galactic cut for a range $\theta_\mathrm{cut} \in [0\,\mathrm{deg}, 60\,\mathrm{deg}]$.
+Depending on the angular direciton, the measured $\mathrm{DM}_\mathrm{tot}$ receives a contribution from the MW. This contribution varies depending on the angular position of the FRB. Sources that are close to the galactic plane receive a contribution of order $\mathrm{DM}_\mathrm{MW} \sim 3000 \, \mathrm{pc}.\mathrm{cm}^{-3}$ and with high uncertainty. For larger latitutdes, the contribution is as low as $\mathrm{DM}_\mathrm{MW} \sim 10 \, \mathrm{pc}.\mathrm{cm}^{-3}$. Therefore, as a way to mititgate the impact of MW, it is possible to remove any sources that are located within a particular galactic cut to avoid. Howeverm due to the current sample size of FRBs, it is not duable to do this cut since it will decrease the signal-to-noise ratio due to reduced sample size. Nonetheless, in this thesis, I explore the possibility of imposing a galactic cut $\theta_\mathrm{cut}$ and study its impact on the resulting DM-$z$ relation. Fig. \ref{theory_fig:MW_map} shows a map of $\mathrm{DM}_\mathrm{MW}$ as predeicted by teh NPE2001 model. I study the impact of imposing a galactic cut for a range $\theta_\mathrm{cut} \in [0\,\mathrm{deg}, 60\,\mathrm{deg}]$.
 
- \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figs/MW.png}
-    \caption{A map of $\mathrm{DM}_\mathrm{MW}$ as predicted by the NPE2001 model. Notice how the contribution decreases with increasing latitutde since the MW galaxy is a disk galaxy where stars are aranged ina disk-like shape.}
-    \label{meth_fig:MW_map}
-\end{figure}
+
 
 
 \subsection{Host contribution}
 To study the impact of the host contribution, I use a lognormal model of the host contribution as described in section \ref{theory_sec:uncertainties} with parameters chosen as described in \ref{tab:systematics}. The range of mean host contribution $\mathrm{DM}_\mathrm{host, mean}$ is taken from the work by \citet{theis2024galaxy} on the host contribution using different hydrodynamical simulations. The value for the scale of the lognormal distribution $\sigma_\mathrm{LN}$ is the parameters inferred with simulation-based inference from 12 localised FRBs in the work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}. 
 In addition to these parameters, I consider a simple model for the evolution of the host contribution with redshfit such that
-\begin{equation}
+\begin{equation}\label{eq:dm_host}
     \mathrm{DM}_\mathrm{host}(z) = \frac{\mathrm{DM}_\mathrm{host}}{1 + z}
 \end{equation}
 with $z$ corresponding to the redshfit of the FRB. Assuming that the correlation between the $\mathrm{DM}$ and $\mathrm{DM}_\mathrm{host}$ is negligible, the covariance matrix receives an additional contribution 
-\begin{equation}
+\begin{equation}\label{eq:dm_host_cov}
     \langle \mathrm{DM}_{\mathrm{host}, i} \mathrm{DM}_{\mathrm{host}, j}\rangle =  \frac{\sigma^2_\mathrm{host}}{(1 + z_i)(1+ z_j)}
 \end{equation}
 with $\sigma^2_\mathrm{host}$ is the variance of the host contribution as defined in section \ref{theory_sec:uncertainties}.
@@ -361,7 +356,7 @@ With Taylor's expansion around $(\hat{z}_i, \hat{z}_j)$ and setting $\Delta_{ij}
     \langle \hat{C}_{ij} \rangle = \int \mathcal{N} \, \, \left(\hat{C}_{ij} + \nabla C_{ij}|_{(\hat{z}_i, \hat{z}_j)} \Delta_{ij} + \frac{1}{2} \Delta_{ij}^{T} \nabla^2 C_{ij}|_{(\hat{z}_i, \hat{z}_j)}\Delta_{ij} + .....\right)\, \,dz_i \, \, dz_j.
 \end{equation}
 Since the Gaussian distribution has vanaishing moments for moment larger than third order, the expression is simplified into
-\begin{equation}
+\begin{equation} \label{eq:cov_z_uncertainty}
     \langle \hat{C}_{ij} \rangle = \hat{C}_{ij} + \frac{1}{2} \, \, \sigma_{i}^2 \, \, \partial^2_{ii} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)} \, \, + \frac{1}{2} \, \, \sigma_{j}^2 \, \, \partial^2_{jj} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)}.
 \end{equation}
 Therefore, it is possible to account for the error in the covariance due to redshift uncertainty using the second derivative of the covariance with respect to redshift $z$. In chapter \ref{chap:results}, I will show the impact to redshift uncertainty relative to the case with correction covariance.

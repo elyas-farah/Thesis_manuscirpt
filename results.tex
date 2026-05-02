@@ -1,11 +1,14 @@
 \chapter{Results \& Discussion} \label{chap:results}
+In this chapter I present the results of the $\chi^2$ test and the SBI. In addition, I didcuss these results and explain the observed patterns. I plot the data points of DM-$z$ from the true and contaminated catalogs in the DM-$z$ plane and show the mean in a line and the correponding 1$\sigma$ as a shaded area, as will be shown in the following sections.
+
+In general, the systematic scenarios considered in this thesis are simple, therefore, it provide s alower limit on the bias caused by each of these uncertainties. 
+
 
 \section{Results from the Chi-Squared Test}
-
-Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
+In this seciton, I present he results of the $\chi^2$ test for all the 5 systematic uncertainties that I am tackling in this thesis.
 
 \subsection{Milky Way Contribution}
-
+The MW uncertaintiy is added by taking a true mock catalog and adding the correponding MW contribution as predicted by the NPE2001 model. As can be seen from Fig. \ref{theory_fig:MW_map}, the largest $\mathrm{DM}_\mathrm{MW}$ corresponds to sources that are located near the galactic plane. Therefore, Figs. \ref{res_fig:mw_dmz_pdf} shows the variabtion of the PDF and the DM-$z$ relation with changing galactic cut. In general, $\mathrm{DM}_\mathrm{MW}$ adds a component to $\mathrm{DM}_\mathrm{tot}$ which ultimately modifies the mean DM and adds a component to the variance. This can be seen from the left-hadn side of Fig. \ref{res_fig:mw_dmz_pdf}. By looking at the right-hand side of Fig. \ref{res_fig:mw_dmz_pdf}, the PDF changes when adding the $\mathrm{DM}_\mathrm{tot}$ with overall shift to the right. This corresponds to a changing mean for the overall PDF. Meanwhile, there is no obvious pattern for changing the variance.   
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
@@ -22,15 +25,27 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
     \caption{DM-$z$ relation and PDF for the Milky Way contribution systematic.}
     \label{res_fig:mw_dmz_pdf}
 \end{figure}
+The variation of $\chi^2$ with galactic cut are shown in Fig. \ref{res_fig:mw_chisq}. For galactic cuts below 30 deg, the $\chi^2$ is larger that the true value, and it gets close to the true value around 30 deg and then decreses for larger galactic cuts. Therefore, it is possible to choose an appropriate galactric cut in orde to mitigate the impact of MW contribution on the DM-$z$ relation. This results requires further verification by studying the variance and the mean of sky area that could be masked out due to having large $\mathrm{DM}_\mathrm{MW}$.
+
+
+
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/chi_squared_MW_contribution.png}
-    \caption{$\chi^2$ as a function of the Milky Way contribution parameters.}
+    \caption{$\chi^2$ as a function of the Milky Way contribution parameters. The uncorrected line in red is the $\chi^2$ without accounting for the MW contribution on the level of the covariance. The corrected line refers to the $\chi^2$ with accounting for the MW contrubution on the level of the covariance.}
     \label{res_fig:mw_chisq}
 \end{figure}
 
 \subsection{Host Galaxy Contribution}
+The host galaxy contribution is added by sampling from a lognormal distribution with a mean $\mathrm{DM}_\mathrm{host, mean}$ and a lognormal scale $\sigma_\mathrm{LN}$. I vary $\mathrm{DM}_\mathrm{host, mean}$ and study its impact on the mean DM-$z$ relation. The left hand side of Fig. \ref{res_fig:host_dmz_pdf} shows that for large values of $\mathrm{DM}_\mathrm{host, mean}$, the variance of the DM-$z$ relation deviated from the true variance at low redshifts and leads to less deviation at higher redshift. This is due to having a redshift-dependence of the host contribution in the contaminated catalog as in Eq. \ref{eq:dm_host}. The right-hand side plot shows the variation of the PDF with $\mathrm{DM}_\mathrm{host, mean}$. Increasing $\mathrm{DM}_\mathrm{host, mean}$ corresponds to increasing the mean and the variance of the PDF relative to a true catalog without a host contribution. 
+
+Fig. \ref{res_fig:host_chisq} shows the variation of $\chi^2$ relative to the value of the reduced fiducial catalog. The red line shows that the $\chi^2$ increase with increases value of $\mathrm{DM}_\mathrm{host, mean}$ which means that the covariance is underestimated. The blue line correponds to correcting the covariance matrix by adding the variance as in Eq. \ref{eq:dm_host_cov}. In total, the host contribution leads to biased DM-$z$ relation by larger than 1$\sigma$ and up to 4$\sigma$ depedning on $\mathrm{DM}_\mathrm{host, mean}$.
+
+The host contribution model considered in this thesis is motivated by results from analyzing hydrodynamical simulations. Nonetheless, the scatter of $\mathrm{DM}_\mathrm{host}$ in this model is overestimated since the model implicitly marginalize over the different variables which controls the host contribution such as the halo mass of the host and the position of an FRB in the host.
+a more complicated and physically motivated model was introduced by \citet{reischke2024analytical} where the host galaxy contribution is modelled probabilitstically, however, with explicit marginalizations over halo masses and the positions of FRBs in the halo. Therefore, future work should explore whether the lognormal model is able to constrain host contribution if the true underlying contribution is sampled from a more complicated model such as the one introduced by \citet{reischke2024analytical}.
+
+
 
 \begin{figure}[h!]
     \centering
@@ -57,6 +72,13 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
 \end{figure}
 
 \subsection{Redshift Uncertainty}
+The impact of redshift uncertainty on the DM-$z$ relation is shown on the left-hadn side of Fig. \ref{res_fig:redshift_dmz_pdf}. By increasing the error ratio $\eta$, the mean DM-$z$ relation is consistent with the mean DM-$z$ relation for low values of $\eta$ with only the variance getting larger with larger than that of the true catalog. For larger $\eta$, both the mean and variance are different from the true catalog. This is further reflected in the right-hand side of Fig. \ref{res_fig:redshift_dmz_pdf} where the variance of the PDF increases with increasing $\eta$ while the peak of the distribution shifts to the left, corresponding to a lower mean.
+
+
+
+
+
+
 
 \begin{figure}[h!]
     \centering
@@ -75,6 +97,18 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
     \label{res_fig:redshift_dmz_pdf}
 \end{figure}
 
+
+
+
+The deviation in $\chi^2$ is shown in Fig. \ref{res_fig:redshift_chisq}. The corrected line correpsond to propagating the error to the covariance as described by Eq. \ref{eq:cov_z_uncertainty}. Meanwhile, the deviation from the fiducial catalog crosses the 1$\sigma$ level for $\eta \approx = 15\%$ and gets up to $4.5\sigma$ for $\eta \approx 35\%$. The $\chi^2$ decreases afterwards since the corresponding mean DM-$z$ of the contaminated catalog decreases. Therefore, for a simple scenario of redshift uncertainty, acccounting for the redshift uncertinaty is important to constrain the DM-$z$ relation and the corresponding parameters.
+
+The redshift uncertainty model discussed in this thesis is a simple model of uncertainty which assumes symmetric error. In other scenarios, it is possible that the redshift error is asymmetric, and the error propagation in this case is nontrivial. Nonetheless, with the simulation based approach, it is possible to integrate any scenario of redshift uncertainty. This is a crucial property when solving inference problem with FRBs detected by different surveys and localised in different methods.
+
+As mentioned in section \ref{theory_sec:uncertainties}, it is possible to localise FRBs by comparing their galactic coordinates with wide galaxy surveys to find possible candidates for a host galaxy with each host candidate having a certain probability to be the host. In this case, propagatinghte error is not a trivial task either and the redshift uncertainty can be simulated as being sampled from a weighted sum of Gaussian distribution where each distribution represent a candidate for a host galaxy. 
+
+
+
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/chi_squared_z_uncertainty.png}
@@ -83,23 +117,21 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
 \end{figure}
 
 \subsection{Selection Effects}
+Fig. \ref{res_fig:selection_dmz_pdf} shows the impact of reqeighing the PDF with a sigmoid function that represents the telescope selection effects. The sigmoid function modifies the shape of the PDF at large values of DM in addition to changing the normalisation. The impact is negligible for larger values of $\mathrm{DM}_\mathrm{max}$ since since the range of DM values considered in this work are below $\mathrm{DM} \approx 2000 \mathrm{pc.cm}^{-3}$ since the simulation is limited to sources up to redshifts 2.
+
+
+
+
 
 \begin{figure}[h!]
     \centering
-    \begin{subfigure}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figs/dm_z_selection_effects.png}
-        \caption{DM-$z$ relation for varying selection effect parameters.}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
-        \centering
-        % \includegraphics[width=\textwidth]{}
-        \caption{PDF of DM for varying selection effect parameters.}
-    \end{subfigure}
-    \caption{DM-$z$ relation and PDF for the selection effects systematic.}
+    \includegraphics[width=0.7\textwidth]{figs/pdf_DM_max_selection_effects.png}
+    \caption{PDF of DM for varying selection effect parameters.}
     \label{res_fig:selection_dmz_pdf}
 \end{figure}
+
+As a consequence, the $\chi^2$ shown in Fig. \ref{res_fig:selection_chisq} shows less than 1$\sigma$ deviation from the true catalog. By considering source at higher redshift this effect has more impact on the inferred Dm-$z$ relatiopn. Furthermore, I have limited the study to the expected source-redshift distribution expected for the SKOA, however, for a full cosmological analysis the source redshift distribution is modelled and parameterized. The parameters are freed then marginalized to obtain constraints on the comsological parameters \citep{hoyle2018dark}. 
+
 
 \begin{figure}[h!]
     \centering
@@ -109,8 +141,15 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
 \end{figure}
 
 \subsection{Unlocalised Hosts}
+In this section, I present the impact of using unlocalised FRBs in a cosmological analysis for three cases: randomly missing redshifts, a fraction of high redshift sources is missing, and a fraction of low redshift sources is missing. 
+
 
 % --- Random subset ---
+The left-hand side of Fig \ref{res_fig:unloc_random_dmz_pdf} shows the resulting DM-$z$ relation foe varried fraction of unlocalised FRBs $f$. The mean DM-$z$ relation is consistent with that of the true catalog, but he variance is larger than the true catalog for the entire range of $f$ at higher redshifts. The PDF displayed on the right-hand side of Fig. \ref{res_fig:unloc_random_dmz_pdf} shows a slight change in the width of the PDF which is reflected by the change in the variance of the DM-$z$ relation.
+
+
+
+
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
@@ -128,6 +167,10 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
     \label{res_fig:unloc_random_dmz_pdf}
 \end{figure}
 
+The $\chi^2$ value shown in Fig. \ref{res_fig:unloc_random_chisq} fluctuates for different values of $f$ since the process of choosing unlocalised FRBs is random. Nonetheless, the deviation from the true catalog ranges between 1$\sigma$ and 2.5$\sigma$. 
+
+
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/chi_squared_missing_z_random.png}
@@ -136,6 +179,8 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
 \end{figure}
 
 % --- High-redshift subset ---
+Fig. \ref{res_fig:unloc_highz_dmz_pdf} shows the variation of the DM-$z$ relation and the PDF for a fraction of unlocalised hosts with high redshifts. The left-hand side of the figure shows the mean of  DM-$z$ relation is consistent with the fiducial catalog, but the variance is underestimated. This is due to mapping a measured DM in the contaminated catalog to the correpoding redshift according to the figucia mean DM-$z$ relation. This is reflected on the right-hand side plot with the shape of the PDF changing for large value of DM since this correponds to unlocalised sources at high $z$. 
+
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
@@ -153,6 +198,10 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
     \label{res_fig:unloc_highz_dmz_pdf}
 \end{figure}
 
+Fig. \ref{res_fig:unloc_highz_chisq} shows a significant deviation from the true value of $\chi^2$. The deviation reaches 5$\sigma$ for larger fraction of missing redshfits, but the deviation is only 1$\sigma$ for $f \approx 25\%$. The deviation is larger compared to the case of randomly ujnlocalised host since sources at high redshifts has a stronger signal since DM is an integrated effet alongthe line of sight and FRB from higher redshift correpond to larger DM values.
+
+
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/chi_squared_missing_z_high_z.png}
@@ -161,6 +210,8 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
 \end{figure}
 
 % --- Low-redshift subset ---
+The left-hand side of Fig. \ref{res_fig:unloc_lowz_dmz_pdf} shows the variation in the DM-$z$ relation when a fraction of low redshift FRBs has unlocatlised hosts. The left-hand side showsa slight deviation of the variance from the variance of the fiducial catalog at low redshift while the mean of the contaminated catalog are consistent with that of the fiducial catalog for the entirerity of redshift reange and for varying fraction of the unlocalised hosts. The PDF on the other hand shows a deviation o the peak with larger values of $f$. In addition the shape of the PDF changes at low values of $z$. However, the width of the PDF does not change, reflecting the unchanging variance from the left-hadn side plot.
+
 \begin{figure}[h!]
     \centering
     \begin{subfigure}[t]{0.48\textwidth}
@@ -178,11 +229,21 @@ Add a plot of Chi-squared vs. the parameters of the systematic uncertainties.
     \label{res_fig:unloc_lowz_dmz_pdf}
 \end{figure}
 
+The variation of the $\chi^2$ in Fig. \ref{res_fig:unloc_lowz_chisq} are consistent with the variation observed from the left-hand side plot of Fig. \ref{res_fig:unloc_lowz_dmz_pdf} where the deviation from due to unlocalised host at low redshift does not exceed $1\sigma$ for the range of $f$ considered in this study. This can be corroboarted by noticing that low redshift sources have a lower signal since the physical distance that he pulse covvers is small as compared to high redshfit sources. 
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/chi_squared_missing_z_low_z.png}
     \caption{$\chi^2$ as a function of the fraction of unlocalised hosts for the low-redshift subset case.}
     \label{res_fig:unloc_lowz_chisq}
 \end{figure}
+
+
+
+compare between the 3 kinds and discuss how this can inform future follow-up optical observation. 
+
+
+
+
 
 \section{Results from Simulation Based Inference}

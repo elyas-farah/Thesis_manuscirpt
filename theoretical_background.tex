@@ -291,7 +291,7 @@ where $\bar{\rho}_{\mathrm{m}}(t)$ is the average matter density at a cosmic tim
 
 
 
-\section{The Boltzmann equation \& the linear perturbation theory} \label{}
+\section{The Boltzmann equation \& the linear perturbation theory} \label{sec:boltzmann}
 This section is partly based on a review on the effective field theory of large scale structure (EFTofLSS) by Tobias Baldauf \citep{Baldauf_EFTLSS_2020}. The Boltzmann equation describes the evolution of the phase-space distribution function of a particle species in the universe. This function is labelled as $f(\mathbf{x}, \mathbf{p}, t)$, where $\mathbf{x}$ is the position, $\mathbf{p}$ is the momentum, and $t$ is the cosmic time. Different observables could be obtained from the distribution function $f$ including the density $\rho(\mathbf{x}, t)$ and the velocity field $\mathbf{v}(\mathbf{x}, t)$. The Boltzmann equation for a collisionless and pressureless dark matter
 
 \begin{equation} \label{eq:Boltzmann}
@@ -361,14 +361,14 @@ where $\xi$ is a function of the comoving lenth scale $r$ and is independent of 
         \centering
         \includegraphics[width=\textwidth]{/Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_Omega_c.png}
         \caption{}
-        \label{}
+        \label{theory_fig:power_spectrum_omega_c}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{/Users/elyasfarah/Documents/Thesis_manuscirpt/figs/p_h.png}
         \caption{}
-        \label{}
+        \label{theory_fig:power_spectrum_h}
     \end{subfigure}
     \caption{A plot of the matter power spectrum at redshift $z = 0$ with varying fraction of cold dark matter density $\Omega_\mathrm{c}$ and varying Hubble parameter $h$. The power spectrum is obtained using the CLASS Boltzmann solver \citep{lesgourgues2011cosmic}. Notice the the power specturm peaks at a scale equivalent to the Hubble scale at the matter-radiation equality. Furthermore, the wiggles in the power spectrum are due to the sound waves that popagates in the baryon-phton fluid due the contrasting force of the fluids's pressure and gravity.}
     \label{theory_fig:power_spectrum_varying_params}
@@ -575,7 +575,7 @@ This section is a qualitative discussion of baryonic feedback on the large sacle
     \item \text{Star formation feedback:} Due to multiple cooling mechanisms the gas in galaxy collapses under the influence of gravity to form stars. Star formation leads to increase of power up to $\sim 10\%$ on scales $k \gtrsim 10 \text{h.Mpc}^{-1}$ \citep{van2011effects}.
 \end{itemize}
 
-Fig. \ref{theory_fig:baryonic_feedback} shows a plot comparing the ratio of the power spectrum of dark matter only scenario $P^{\text{DMO}}_{\delta}$ to the matter power spectrum in different hydrodynamical simualtions $P^{\text{hydro}}_{\delta}$. Each of the given hydrodynamical simulations has different implmentation of small scale physics and is parameterized by a set of nuisance paremters of no particular cosmological. Using astrophysical observations, it is not possible to probe one of these scenarios over the other. Therefore, to mitigate the impact of baryonic feedback on the large scale structure, multiple statistical tools have been introduced, as discussed in the introduction. Other analytical approches involved parametrizing baryonic feedback with analytical models calibrated on hydrodynamical simulations \citep{mead2021hmcode, Schneider_Teyssier_2015}. These models have two shortcomings. First, the hydrodynamical simulation used for calibration is not guarenteed to agree with the true scenario of baryonic feedback in the universe. Second, the parameters that goven baryonic feedback have uniform and wide prior range, meaning that the constraining power of cosmological data will be absorbed by these nuisance parameters, leaving the cosmological parameters with no constraining power \citep{Schneider_Kovač_etal._2025}.
+Fig. \ref{theory_fig:baryonic_feedback} shows a plot comparing the ratio of the power spectrum of dark matter only scenario $P^{\text{DMO}}_{\delta}$ to the matter power spectrum in different hydrodynamical simualtions $P^{\text{hydro}}_{\delta}$. Each of the given hydrodynamical simulations has different implmentation of small scale physics and is parameterized by a set of nuisance paremters of no particular cosmological. Using astrophysical observations, it is not possible to probe one of these scenarios over the other. Therefore, to mitigate the impact of baryonic feedback on the large scale structure, multiple statistical tools have been introduced, as discussed in the introduction. Other analytical approches involved parametrizing baryonic feedback with analytical models calibrated on hydrodynamical simulations \citep{10.1093/mnras/stab082, Schneider_Teyssier_2015}. These models have two shortcomings. First, the hydrodynamical simulation used for calibration is not guarenteed to agree with the true scenario of baryonic feedback in the universe. Second, the parameters that goven baryonic feedback have uniform and wide prior range, meaning that the constraining power of cosmological data will be absorbed by these nuisance parameters, leaving the cosmological parameters with no constraining power \citep{Schneider_Kovač_etal._2025}.
 
 \begin{figure}[h!]
     \centering
@@ -867,8 +867,8 @@ In this section, I describe the modelling of systematic uncertainties on the dis
 
 \begin{figure}[h!]
     \centering
-    % \includegraphics[width=0.5\textwidth]{}
-    \caption{A map of the MW contribution to the measured DM with the NPE2001 model. The model is calibrated on data from quasars. As seen from the map, $\mathrm{DM}_\mathrm{MW}$ is large a the galactic plane and lower towards the pole since baryons in the MW are situated in a disk-like shape.}
+    \includegraphics[width=0.5\textwidth]{figs/MW.png}
+    \caption{A map of $\mathrm{DM}_\mathrm{MW}$ as predicted by the NPE2001 model. Notice how the contribution decreases with increasing latitutde since the MW galaxy is a disk galaxy where stars are aranged in a disk-like shape.}
     \label{theory_fig:MW_map}
 \end{figure}
 
