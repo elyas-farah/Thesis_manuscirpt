@@ -1,15 +1,15 @@
 \chapter{Methodology} \label{chap:method}
-In this section, I explain the methoddology used in this thesis. The end purpose is to show how the $DM$-$z$ relation deviates from its what is expected by contaminating mock FRBs catalog with systematic uncertainties through simulating FRBs catalogs and studying the impact of systematic uncertainties when contaminating catalogs with these systematic uncertainties. Fig. \ref{meth_fig:simulation_flow} shows a flowchart of how to generate a mock catalog. I explain the steps in details below. I perform the analysis assuming the detection for $N_\mathrm{FRBs} = 10^4$. This is the expected number of detected FRBs per year by future FRBs survey such as ther SKAO \citep{ macquart2015fast}. Future work should focus on scaling up to larger sample size since the impact of systematic uncertainties changes with sample size. 
+In this section, I explain the methodology used in this thesis. The end purpose is to show how the $DM$-$z$ relation deviates from what is expected by contaminating mock FRB catalogs with systematic uncertainties through simulating FRB catalogs and studying the impact of systematic uncertainties when contaminating catalogs with these systematic uncertainties. Fig. \ref{meth_fig:simulation_flow} shows a flowchart of how to generate a mock catalog. I explain the steps in detail below. I perform the analysis assuming the detection of $N_\mathrm{FRBs} = 10^4$. This is the expected number of detected FRBs per year by future FRB surveys such as the SKAO \citep{ macquart2015fast}. Future work should focus on scaling up to larger sample sizes since the impact of systematic uncertainties changes with sample size.
 
-Table \ref{tab:cosmo_params} shows the cosmological and baryonic feedback paramters which are used to generate mock catalogs. These parameters are used to obtain an expectation of the electron power spectrum.
+Table \ref{tab:cosmo_params} shows the cosmological and baryonic feedback parameters which are used to generate mock catalogs. These parameters are used to obtain an expectation of the electron power spectrum.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/cover/simulation_flow.png}
-    \caption{A flowchat of the simulation pipeline introduced in this section. Starting from model parameters I obatin the non-linear electron power spectrum via the halo model. Then, I perform the Limber integral to obatin the electron angular power spectrum in each redshift bin. After that, I use the GLASS package to obatin lognormal maps of electrons in bins of redshifts. Then, I sample in angular positions and redshifts and sum the contribution of each shell to obtain an uncontaminated catalog. Eventually, The systematic uncertainties are then added.}
+    \caption{A flowchart of the simulation pipeline introduced in this section. Starting from model parameters I obtain the non-linear electron power spectrum via the halo model. Then, I perform the Limber integral to obtain the electron angular power spectrum in each redshift bin. After that, I use the GLASS package to obtain lognormal maps of electrons in bins of redshifts. Then, I sample in angular positions and redshifts and sum the contribution of each shell to obtain an uncontaminated catalog. Eventually, the systematic uncertainties are then added.}
     \label{meth_fig:simulation_flow}
 \end{figure}
-To model the dispersion measure signal, I use the Generator for Large-Scale Structure (GLASS) \citep{tessore2023glass} package. I describe this package in further details in section \ref{meth_sec:glass}. Briefly, the GLASS package generates lognormal maps of a cosmological field starting from a given angular power spectra. On contrary to the commonly used \texttt{healpy} package, it assumes that the cosmological field follows a lognormal distribution. Though this is not the case in for a real cosmological field, the GLASS package preserves the two-point statistics of the cosmologocal field, which is enough for the sample size I am considering in this thesis. Higher order statistics such as the bispectrum (3-point) and the trispectrum (4-point) requires a larger sample size for detection. Using the electron power spectrum, I project the spectra on the unit sphere to obtain an expectation of the angular power specta in bins of redshifts. After that, I feed the resultatnt power spectra to GLASS in order to obtain maps of electron density in bins of redshift. THe next step constitute in sampling randomly on the sky and according to the source redshift distribution in redshift then sum the contribution from different shells. In general, the simulation spicificaitons are shown in Table \ref{tab:sim_spec}.
+To model the dispersion measure signal, I use the Generator for Large-Scale Structure (GLASS) \citep{tessore2023glass} package. I describe this package in further detail in section \ref{meth_sec:glass}. Briefly, the GLASS package generates lognormal maps of a cosmological field starting from a given angular power spectrum. In contrast to the commonly used \texttt{healpy} package, it assumes that the cosmological field follows a lognormal distribution. Though this is not the case for a real cosmological field, the GLASS package preserves the two-point statistics of the cosmological field, which is enough for the sample size I am considering in this thesis. Higher-order statistics such as the bispectrum (3-point) and the trispectrum (4-point) require a larger sample size for detection. Using the electron power spectrum, I project the spectra on the unit sphere to obtain an expectation of the angular power spectra in bins of redshifts. After that, I feed the resultant power spectra to GLASS in order to obtain maps of electron density in bins of redshift. The next step consists of sampling randomly on the sky and according to the source redshift distribution in redshift then summing the contribution from different shells. In general, the simulation specifications are shown in Table \ref{tab:sim_spec}.
 
 \begin{table}[h]
 \centering
@@ -41,43 +41,43 @@ $z_{\max}$ & Maximum redshift & 2.0 \\
 $n_{\mathrm{shells}}$ & Number of shells & 29\\
 $\ell_{\max}$ & Maximum multipole & 4100 \\
 $N_{\mathrm{side}}$ & Map resolution (HEALPix) & 4096 \\
-$b_{\mathrm{h}}(M)$ & Bias model as a funciton of halo mass $M$ & \citet{tinker2010large}\\
+$b_{\mathrm{h}}(M)$ & Bias model as a function of halo mass $M$ & \citet{tinker2010large}\\
 $n(M)$ & Halo mass function & \citet{tinker2008toward} \\
 \hline\hline
 \end{tabular}
-\caption{The specifiactions of FRB catalog simulations. HEALPix \citep{gorski2005healpix} is an algorithm to pixellize as an image with certain resolution. The resolution parameter $N_\mathrm{side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta_\mathrm{min} \approx 1/N_\mathrm{side}$.}
+\caption{The specifications of FRB catalog simulations. HEALPix \citep{gorski2005healpix} is an algorithm to pixellize an image with a certain resolution. The resolution parameter $N_\mathrm{side}$ can be understood as the inverse of the diameter of one pixel on the map $\theta_\mathrm{min} \approx 1/N_\mathrm{side}$.}
 \label{tab:sim_spec}
 \end{table}
 
-In this work, I make considrable use of the following \texttt{python} packages: \texttt{numpy}, \texttt{scipy}, \texttt{matplotlib}, \texttt{jax}, \texttt{joblib}, \texttt{multiprocessing}, \texttt{pandas}, and \texttt{pytorch}.
+In this work, I make considerable use of the following \texttt{python} packages: \texttt{numpy}, \texttt{scipy}, \texttt{matplotlib}, \texttt{jax}, \texttt{joblib}, \texttt{multiprocessing}, \texttt{pandas}, and \texttt{pytorch}.
 
 \section{Modelling the electron power spectrum} \label{meth_sec:pee}
-To model the electron power spectrum, I use the halo model (introduceed in section \ref{theory_sec:halo_model}), where I obtain halo profiles using the Baryonification Model (BCM) \citep{Schneider_Teyssier_2015,Schneider_Kovač_etal._2025}.
+To model the electron power spectrum, I use the halo model (introduced in section \ref{theory_sec:halo_model}), where I obtain halo profiles using the Baryonification Model (BCM) \citep{Schneider_Teyssier_2015,Schneider_Kovač_etal._2025}.
 
 
 \subsection{The baryonification model} \label{meth_sec:bfc}
-This section is based on the review of the baryonificaiton correction model presented in \citet{torkamani2026baryonification}.
+This section is based on the review of the baryonification correction model presented in \citet{torkamani2026baryonification}.
 
-The purpose of the baryonificaiton model (BFC) is modify the profiles of dark matter halos from N-body gravitational simulation to that which involves baryonic feedback. The change is expressed as a shift in the position of dark matter particles which is parameterized by a set of baryonic feedback parameters.The displacement for dark matter (dm) and baryonic matter (bar) is performed along the radius of a dark matter halo. In practice, the dm and the bar profiles are modified differently when baryonic feedback is taken into consideration. In this thesis, I only focus on the case of modified bar profile. In a a scenario without baryonic feedback, the baryons  follow the distribution of dark matter. The baryon halo profile $\rho_{\mathrm{bar}, i}$ can be written in terms of the underlying dark matter profile  $\rho_{\mathrm{NFW}}$\footnote{$\rho_{\mathrm{NFW}}$ is an analytical expression of dark matter halo density profiles, predicted empirically by fitting the expression to N-body gravitional simulation \citep{Navarro_1997}} on small scales in addition to a large scale contribution from the matter outside of the collapsed halo region which I label as $\rho_{\mathrm{2h}}$\footnote{This contribution is labelled similary to the 2-halo term of the power spectrum since it dominates the contribution on large scales similar to the 2-halo term of the power spectrum}. In total, the final expression reads
+The purpose of the baryonification model (BFC) is to modify the profiles of dark matter halos from N-body gravitational simulations to those which involve baryonic feedback. The change is expressed as a shift in the position of dark matter particles which is parameterized by a set of baryonic feedback parameters. The displacement for dark matter (dm) and baryonic matter (bar) is performed along the radius of a dark matter halo. In practice, the dm and the bar profiles are modified differently when baryonic feedback is taken into consideration. In this thesis, I only focus on the case of the modified bar profile. In a scenario without baryonic feedback, the baryons follow the distribution of dark matter. The baryon halo profile $\rho_{\mathrm{bar}, i}$ can be written in terms of the underlying dark matter profile  $\rho_{\mathrm{NFW}}$\footnote{$\rho_{\mathrm{NFW}}$ is an analytical expression of dark matter halo density profiles, predicted empirically by fitting the expression to N-body gravitational simulations \citep{Navarro_1997}} on small scales in addition to a large-scale contribution from the matter outside of the collapsed halo region which I label as $\rho_{\mathrm{2h}}$\footnote{This contribution is labelled similarly to the 2-halo term of the power spectrum since it dominates the contribution on large scales similar to the 2-halo term of the power spectrum}. In total, the final expression reads
 \begin{equation}
     \rho_{\mathrm{bar,i}}(r) = f_{\mathrm{bar}} \left[ \rho_{\mathrm{NFW}}(r) + \rho_{\mathrm{2h}}(r) \right],
 \end{equation}
-with $f_{\mathrm{bar}}  = \Omega_\mathrm{b}/\Omega_\mathrm{c}$ $\rho_{\mathrm{2h}}$ given in term the linear order 2-point correlation function $\xi_\mathrm{lin}$
+with $f_{\mathrm{bar}}  = \Omega_\mathrm{b}/\Omega_\mathrm{c}$ and $\rho_{\mathrm{2h}}$ given in terms of the linear-order 2-point correlation function $\xi_\mathrm{lin}$
 \begin{equation}
     \rho_{\mathrm{2h}}(r) = \left[ 1 + b(\nu)\xi_{\mathrm{lin}}(r) \right] \Omega_{\mathrm{b}} \rho_{\mathrm{crit}} \, ,
 \end{equation}
-with $b(\nu)$ the halo bias taken from \citet{tinker2010large}. $\nu$ in this context refer to the ratio between the critical density contrast for spherical collapse at linear order $\delta_\mathrm{c, lin}$ and the standard deviation of halo mass $\sigma(M)$. 
+with $b(\nu)$ the halo bias taken from \citet{tinker2010large}. $\nu$ in this context refers to the ratio between the critical density contrast for spherical collapse at linear order $\delta_\mathrm{c, lin}$ and the standard deviation of halo mass $\sigma(M)$.
 
-Since baryonic feedback affects the distribution of matter on small sacles, the modified baryon profile  the component $\rho_{\mathrm{NFW}}$\footnote{$\rho_{NFW}$} should be modified. Empirically, this mean that on small scales, the contribution to the baryon profile comes primarily from gas and stars within a dark matter halo. The modified component $\rho_{\mathrm{bar,f}}$ becomes
+Since baryonic feedback affects the distribution of matter on small scales, the component $\rho_{\mathrm{NFW}}$\footnote{$\rho_{NFW}$} in the modified baryon profile should be modified. Empirically, this means that on small scales, the contribution to the baryon profile comes primarily from gas and stars within a dark matter halo. The modified component $\rho_{\mathrm{bar,f}}$ becomes
 \begin{equation}
     \rho_{\mathrm{bar,f}}(r) = \rho_{\mathrm{gas}}(r) + \rho_{\mathrm{star}}(r) + f_{\mathrm{bar}}\rho_{\mathrm{2h}}(r).
 \end{equation}
-Each of the densities in the previous equation is parametrized with a set of cosmological and baryonic feedback parameters. For any species $\mathrm{u}$, the cumilitive mass up to a radius $r$ is given By
+Each of the densities in the previous equation is parameterized with a set of cosmological and baryonic feedback parameters. For any species $\mathrm{u}$, the cumulative mass up to a radius $r$ is given by
 \begin{equation}
     M_{\mathrm{u}}(R) = 4\pi \int_0^R r^2 \rho_{\mathrm{u}} \, \mathrm{d}r = f_{\mathrm{u}} Y_{\mathrm{u}}(R),
 \end{equation}
-where $f_{\mathrm{u}}$ is the abundance of a component (relative to the total matter) and $Y_{\mathrm{u}}$ is normalized such that $Y_{\mathrm{u}}(\inf) = M_\mathrm{tot}$
-To qunatify the deviation $d(r)$ in a particle's position between its initial (gavitational effects only) position $r_\mathrm{bar, i}$ to its final (gravitional effects and baryonic feedback) position $r_\mathrm{bar, f}$, the radius $r_\mathrm{bar}$ as a function of the cumilitive mass $M_{\mathrm{bar}}$ is obtained
+where $f_{\mathrm{u}}$ is the abundance of a component (relative to the total matter) and $Y_{\mathrm{u}}$ is normalized such that $Y_{\mathrm{u}}(\infty) = M_\mathrm{tot}$
+To quantify the deviation $d(r)$ in a particle's position between its initial (gravitational effects only) position $r_\mathrm{bar, i}$ to its final (gravitational effects and baryonic feedback) position $r_\mathrm{bar, f}$, the radius $r_\mathrm{bar}$ as a function of the cumulative mass $M_{\mathrm{bar}}$ is obtained
 \begin{equation}
     r_{\mathrm{bar}} = \mathrm{inv}\left[ M_{\mathrm{bar}}(r) \right],
 \end{equation}
@@ -85,13 +85,13 @@ and the resultant deviation is written as
 \begin{equation}
     d(r) = r_{\mathrm{bar,f}} - r_{\mathrm{bar,i}}.
 \end{equation}
-The mapping from $r_{\mathrm{bar,i}}$ to $r_{\mathrm{bar,f}}$ is parameterized with the baryonic feedback paramters shown in Table \ref{tab:bfc_params}. In addition, Fig. \ref{meth_fig:bfc} shows how the BFC model changes the profiles of dark matter halos.
+The mapping from $r_{\mathrm{bar,i}}$ to $r_{\mathrm{bar,f}}$ is parameterized with the baryonic feedback parameters shown in Table \ref{tab:bfc_params}. In addition, Fig. \ref{meth_fig:bfc} shows how the BFC model changes the profiles of dark matter halos.
 
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/cover/bcm.png}
-    \caption{A plot showing how the BFC model modifies halo profiles (left) and the cumilitive mass (right). At small radius, the profile shifts up to account for star formation processes while it shiffts down on larger radius to account for AGN and supernova feedback. The figure is adopted from \citet{Schneider_Teyssier_2015}.}
+    \caption{A plot showing how the BFC model modifies halo profiles (left) and the cumulative mass (right). At small radii, the profile shifts up to account for star formation processes while it shifts down at larger radii to account for AGN and supernova feedback. The figure is adopted from \citet{Schneider_Teyssier_2015}.}
     \label{meth_fig:bfc}
 \end{figure}
 
@@ -117,11 +117,11 @@ $c_{\mathrm{iga}}$ & Cold gas fraction (see Eq. 2.12) & 0.0 \\
 \label{tab:bfc_params}
 \end{table}
 
-In this thesis, I use the halo gas profiles predicted by the BFC model to obatin a theoretical expectation of the gas power spectrum, which in turn is the electron power spectrum. I derive the 1-halo and the 2-halo terms using the Core Cosmology Library which is discussed in the next section. As an example of how baryonic feedbck modifies the power spcetrum, Fig. \ref{} shows how the power spectrum changes with changing values of $\log_{10} M_c$, one of the baryonic feedback parameters.
+In this thesis, I use the halo gas profiles predicted by the BFC model to obtain a theoretical expectation of the gas power spectrum, which in turn is the electron power spectrum. I derive the 1-halo and the 2-halo terms using the Core Cosmology Library which is discussed in the next section. As an example of how baryonic feedback modifies the power spectrum, Fig. \ref{} shows how the power spectrum changes with changing values of $\log_{10} M_c$, one of the baryonic feedback parameters.
 
 
 \subsection{The Core Cosmology Library (CCL)}
-The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enables fast and efficient calculations of basic cosmological observables with high accuracy. CCL implements a Boltzmann solver in order to obtain a prediction of the linear power spectrum on a grid of redshifts $z$ and scale $k$. It also provides a bicubic interpolator for accurate calculation of the power spectrum, starting from the initial grid points. In this thesis, I sample 30 grid points in $z$ and 150 points in $k$. These are enough grid points to ensure sub-percent accuracy as compared larger numbe of grid points. However, since the $\log P (k, z)$ is linearly related to  $\log k$ for both large and small values of $k$, it is possible to extrapolate the power spectrum in logarithmic space beyond the ranges specified in Table \ref{tab:sim_spec}. In addition, to obtain the non-linear power spectrum, CCL implements the halo model where the 1-halo and the 2-halo terms are calculated using the halo profiles obtained from the BFC model. The halo mass function and the halo bias are taken from \citet{tinker2008toward} and \citet{tinker2010large}, respectively. I consider only a linear bias model where the term $\beta$ from Eq. \ref{eq:halo_spectrum} is set to $0$. I show a plot of th epower spectrum for different redshfits in Fig. \ref{meth_fig:power_spectrum}.
+The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enables fast and efficient calculations of basic cosmological observables with high accuracy. CCL implements a Boltzmann solver in order to obtain a prediction of the linear power spectrum on a grid of redshifts $z$ and scale $k$. It also provides a bicubic interpolator for accurate calculation of the power spectrum, starting from the initial grid points. In this thesis, I sample 30 grid points in $z$ and 150 points in $k$. These are enough grid points to ensure sub-percent accuracy as compared to a larger number of grid points. However, since $\log P (k, z)$ is linearly related to $\log k$ for both large and small values of $k$, it is possible to extrapolate the power spectrum in logarithmic space beyond the ranges specified in Table \ref{tab:sim_spec}. In addition, to obtain the non-linear power spectrum, CCL implements the halo model where the 1-halo and the 2-halo terms are calculated using the halo profiles obtained from the BFC model. The halo mass function and the halo bias are taken from \citet{tinker2008toward} and \citet{tinker2010large}, respectively. I consider only a linear bias model where the term $\beta$ from Eq. \ref{eq:halo_spectrum} is set to $0$. I show a plot of the power spectrum for different redshifts in Fig. \ref{meth_fig:power_spectrum}.
 
 
 \begin{figure}
@@ -131,18 +131,18 @@ The Core Cosmology Library (CCL) \citep{chisari2019core} is a package that enabl
     \label{meth_fig:power_spectrum}
 \end{figure}
 
-In this thesis, I use CCL to obtain a non-linear prediction of the elctron power spectrum using the halo model where the integrals in Eqs. \ref{eq:1h} and \ref{eq:2h} are calculated using the halo profiles obtained from the BFC model. I use the resultant power spectrum to obtain an expectation of the electron angular power spectrum in bins of redshifts using the Limber approximation, which is described in the next section.
+In this thesis, I use CCL to obtain a non-linear prediction of the electron power spectrum using the halo model where the integrals in Eqs. \ref{eq:1h} and \ref{eq:2h} are calculated using the halo profiles obtained from the BFC model. I use the resultant power spectrum to obtain an expectation of the electron angular power spectrum in bins of redshifts using the Limber approximation, which is described in the next section.
 
 \subsection{The electron angular power spectrum} \label{meth_sec:angular_power_spectrum}
 To obtain the electron angular power spectra in bins of redshifts, I define the electron density contrast $\delta_\mathrm{e}^i$ in a redshift bin $i$ as
 \begin{equation}\label{eq:project_delta_e}
     \delta_\mathrm{e}^i(\mathbf{\hat{x}}) = \int W^i(z) \, \delta_\mathrm{e}(z, \mathbf{\hat{x}}) \, \mathrm{d}z,
-\end{equation} 
-with $W^i(z)$ is the normalized weight function of the redshift bin $i$. The general form of the weight funciton is a top-hat function multiplied by a weight factor
+\end{equation}
+with $W^i(z)$ the normalized weight function of the redshift bin $i$. The general form of the weight function is a top-hat function multiplied by a weight factor
 \begin{equation}
     W_i(z) = \begin{cases} f(z) & \text{if } z^{i}_\mathrm{min} \leq z < z^i_\mathrm{max}, \\ 0 & \text{otherwise,} \end{cases},
 \end{equation}
-where $z^{i}_\mathrm{min}$ and $z^{i}_\mathrm{max}$ are the minimum and the maximmum redshift of a shell $i$ and the form of the function $f(z)$ is chosen arbitrarly such as to account for the expansion of the Universe. I discuss the choice of $f$ in section \ref{meth_sec:glass}. The electron angular power spectrum $C_{\delta_e \delta_e}^{(ij)}(\ell)$ between two redshift bins $i$ and $j$ is given by 
+where $z^{i}_\mathrm{min}$ and $z^{i}_\mathrm{max}$ are the minimum and the maximum redshift of a shell $i$ and the form of the function $f(z)$ is chosen arbitrarily so as to account for the expansion of the Universe. I discuss the choice of $f$ in section \ref{meth_sec:glass}. The electron angular power spectrum $C_{\delta_e \delta_e}^{(ij)}(\ell)$ between two redshift bins $i$ and $j$ is given by
 \begin{align}
     C_{\delta_e \delta_e}^{(ij)}(\ell) &= \frac{2}{\pi} \int \mathrm{d}\chi \frac{\mathrm{d}z}{\mathrm{d}\chi}\, \frac{\mathrm{d}z}{\mathrm{d}\chi} \, W^{(i)}(z(\chi)) \int \mathrm{d}\chi' \frac{\mathrm{d}z}{\mathrm{d}\chi'}\, W^{(j)}(z(\chi')) \notag \\
     &\quad \int \mathrm{d}k \, k^2 \, P_\mathrm{e, nl}(k, z(\chi), z(\chi')) \, j_\ell(k\chi) \, j_\ell(k\chi'),
@@ -151,7 +151,7 @@ where this derivation follows similarly to the derivation of the covariance matr
 \begin{equation}
     C_{\delta_e \delta_e}^{(ij)}(\ell) = \int \mathrm{d}\chi \, \frac{\mathrm{d}z}{\mathrm{d}\chi} \,\frac{\mathrm{d}z}{\mathrm{d}\chi} \, \frac{W^{(i)}(z(\chi)) W^{(j)}(z(\chi))}{\chi^2} P_\mathrm{e, nl}\left(k = \frac{\ell + 1/2}{\chi}, z(\chi)\right).
 \end{equation}
-In this theis, I use th limber approximation to obtain the angular power psectrum since it is computationally effecient as compared to the non-Limber expression. At large values of $\ell$, the non-Limber expression converges to the Limber expression, as can be seen in Fig. \ref{meth_fig:cls}. $z_\mathrm{eff}$ refers ti the effective redshift of the bin which is given by
+In this thesis, I use the Limber approximation to obtain the angular power spectrum since it is computationally efficient as compared to the non-Limber expression. At large values of $\ell$, the non-Limber expression converges to the Limber expression, as can be seen in Fig. \ref{meth_fig:cls}. $z_\mathrm{eff}$ refers to the effective redshift of the bin which is given by
 \begin{equation}\label{eq:z_eff}
     z_\mathrm{eff} = \int z W^{(i)}(z) \, \mathrm{d}z
 \end{equation}
@@ -159,11 +159,11 @@ In this theis, I use th limber approximation to obtain the angular power psectru
 
 
 
-The choice of 29 redshift bin is validated by looking at the correlation betwen two neighboring shells. I define the ratio
+The choice of 29 redshift bins is validated by looking at the correlation between two neighbouring shells. I define the ratio
 \begin{equation}
     R = \frac{C_{\delta_e \delta_e}^{(i, i+1)}(\ell)}{\sqrt{C_{\delta_e \delta_e}^{(i, i)}(\ell) C_{\delta_e \delta_e}^{(i+1, i+1)}(\ell)}},
 \end{equation}
-which is a measure of the correlation between two neighboring shells. I find that for 29 redshift bins, the ratio $R$ is less than $0.1$ for all values of $\ell$, which means that the correlation between neighboring shells is small enough to be ignored in this work. I show the comparison in Fig. \ref{meth_fig:cls_shells_compared}. Since I perform the analysis on mock catalogs, I can ignore the correlation between neighboring shells which is the default when using the Limber approximation. For applicaiton on real data, the correlation between neighboring shells should be taken into consideration by using the non-Limber expression for the angular power spectrum. I show a comparison between the Limber and the non-Limber expressions in Fig. \ref{meth_fig:cls}.
+which is a measure of the correlation between two neighbouring shells. I find that for 29 redshift bins, the ratio $R$ is less than $0.1$ for all values of $\ell$, which means that the correlation between neighbouring shells is small enough to be ignored in this work. I show the comparison in Fig. \ref{meth_fig:cls_shells_compared}. Since I perform the analysis on mock catalogs, I can ignore the correlation between neighbouring shells which is the default when using the Limber approximation. For application on real data, the correlation between neighbouring shells should be taken into consideration by using the non-Limber expression for the angular power spectrum. I show a comparison between the Limber and the non-Limber expressions in Fig. \ref{meth_fig:cls}.
 
 
 
@@ -180,40 +180,40 @@ which is a measure of the correlation between two neighboring shells. I find tha
         \includegraphics[width=\textwidth]{figs/cls_non_limber.png}
         \caption{Non-Limber approximation.}
     \end{subfigure}
-    \caption{(a) The electron power spectrum in the Limber approximation for the redshift bins considered in this thesis. The color coding represents the effective redshift of every bin as calculated by Eq. \ref{eq:z_eff}. (b) A comparison between the Limber and the non-Limber approximations for the electron power spectrum. The two calculations agree for large values of $\ell$. Non-Limber integral is done via the Levin approximation using \cite{reischke2025pylevin}.}
+    \caption{(a) The electron power spectrum in the Limber approximation for the redshift bins considered in this thesis. The colour coding represents the effective redshift of every bin as calculated by Eq. \ref{eq:z_eff}. (b) A comparison between the Limber and the non-Limber approximations for the electron power spectrum. The two calculations agree for large values of $\ell$. The non-Limber integral is computed via the Levin approximation using \cite{reischke2025pylevin}.}
     \label{meth_fig:cls}
 \end{figure}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/cls_compare.png}
-    \caption{A plot showing the ratio $R$ between neighboring shells for 29 redshift bins. The ratio is less than $0.1$ for all values of $\ell$, which means that the correlation between neighboring shells is small enough to be ignored in this work. The spectra are obtained using the non-Limber expression of the power spectrum.}
+    \caption{A plot showing the ratio $R$ between neighbouring shells for 29 redshift bins. The ratio is less than $0.1$ for all values of $\ell$, which means that the correlation between neighbouring shells is small enough to be ignored in this work. The spectra are obtained using the non-Limber expression of the power spectrum.}
     \label{meth_fig:cls_shells_compared}
 \end{figure}
 
 \section{Simulating the dispersion measure signal} \label{meth_sec:sim_dm}
-Table \ref{tab:cosmo_params} and \ref{tab:bfc_params} contain the fiducial values of the cosmological and baryonic feedback parameters, which are used to obtain an expectaiton of the power spectrum. In addition, Table \ref{tab:sim_spec} contains the specifications of the simulation such as the number of redshift bins and the maximum multipole. In particular the choice of maximum mutlipole $\ell_\mathrm{max} = 4100$ is motivated by the fact that this scale corresponds to a length scale of $k \approx 10 \, h/\mathrm{Mpc}$ at a redshift of $z = 1$ which is the scale where baryonic feedback modifies the power spectrum \citep{Maraio_2025a}.
+Table \ref{tab:cosmo_params} and \ref{tab:bfc_params} contain the fiducial values of the cosmological and baryonic feedback parameters, which are used to obtain an expectation of the power spectrum. In addition, Table \ref{tab:sim_spec} contains the specifications of the simulation such as the number of redshift bins and the maximum multipole. In particular, the choice of maximum multipole $\ell_\mathrm{max} = 4100$ is motivated by the fact that this scale corresponds to a length scale of $k \approx 10 \, h/\mathrm{Mpc}$ at a redshift of $z = 1$ which is the scale where baryonic feedback modifies the power spectrum \citep{Maraio_2025a}.
 
 \subsection{Generating electron density maps}\label{meth_sec:glass}
-To generate electron density maps, I use The Generator for Large Scale Structure (GLASS) \citep{tessore2023glass} which is a package that generates lognormal maps of a cosmological field starting from a given angular power spectra. The GLASS package is used in this thesis to generate maps of electron density in bins of redshift starting from the electron angular power spectrum obtained in section \ref{meth_sec:angular_power_spectrum}. The GLASS package assumes that the cosmological field follows a lognormal distribution, which is not the case for a real cosmological field. However, the GLASS package preserves the two-point statistics of the cosmological field. 
+To generate electron density maps, I use the Generator for Large-Scale Structure (GLASS) \citep{tessore2023glass} which is a package that generates lognormal maps of a cosmological field starting from a given angular power spectrum. The GLASS package is used in this thesis to generate maps of electron density in bins of redshift starting from the electron angular power spectrum obtained in section \ref{meth_sec:angular_power_spectrum}. The GLASS package assumes that the cosmological field follows a lognormal distribution, which is not the case for a real cosmological field. However, the GLASS package preserves the two-point statistics of the cosmological field.
 
-For an arbitrary cosmological field $u$, the GLASS package assumes that the fiels follows a lognormal distribution with an underlying Gaussian field $g$ such that
+For an arbitrary cosmological field $u$, the GLASS package assumes that the field follows a lognormal distribution with an underlying Gaussian field $g$ such that
 \begin{equation}\label{eq:lognorma_gaussian}
     u = \lambda \left(e^g + 1\right)\,  \equiv g = \ln\left( \frac{u - 1}{\lambda} \right),
 \end{equation}
-where $\lambda$ is a parameter that can be chosen by noticing that the lower bound of a Gaussian field that represent density perturbation is $-1$, making $\lambda = 1$. The reason behind linking the field $f$ to a field $g$ is that sampling from a Gaussian distribution is computationally efficient as compared to a lognormal distribution. 
+where $\lambda$ is a parameter that can be chosen by noticing that the lower bound of a Gaussian field that represents density perturbations is $-1$, making $\lambda = 1$. The reason behind linking the field $u$ to a field $g$ is that sampling from a Gaussian distribution is computationally efficient as compared to a lognormal distribution.
 
 
-After feeding the electron power spectrum to the GLASS package, it converts the power spectra to 2-point correlations functions $C(\theta)$ of the field $f$. Then, it uses the relation between $f$ and $u$ to obtain the 2-point correlation function $G(\theta)$ of the underlying Gaussian field $g$. The 2-point correlation function of the Gaussian field $g$ is given by
+After feeding the electron power spectrum to the GLASS package, it converts the power spectra to 2-point correlation functions $C(\theta)$ of the field $u$. Then, it uses the relation between $u$ and $g$ to obtain the 2-point correlation function $G(\theta)$ of the underlying Gaussian field $g$. The 2-point correlation function of the Gaussian field $g$ is given by
 \begin{equation}
     G(\theta) = \ln\left( \frac{C(\theta)}{\lambda^2} + 1 \right).
 \end{equation}
-After that, $G(\theta)$ is converted to the angular electron power spectrum $G_\ell$ of the underlying Gaussian field $g$. Finally, the GLASS package samples from the Gaussian distribition with a pwoer spectrum $G_\ell$ to obtain a map of the underlying Gaussian field $g$, which is then converted to a map of the electron density field $u$ using Eq. \ref{eq:lognorma_gaussian}. The conversion between the power spectrum and the 2-point correaltion function is not trivial since it involves an infinite sum over the multipoles $\ell$ similar to \ref{eq:cosmological_covariance}, however, the GLASS package implements a solver to perform this conversion efficiently. I refer the reader to section 3.3 of \citet{tessore2023glass} for more details about the implementation of the GLASS package.
+After that, $G(\theta)$ is converted to the angular electron power spectrum $G_\ell$ of the underlying Gaussian field $g$. Finally, the GLASS package samples from the Gaussian distribution with a power spectrum $G_\ell$ to obtain a map of the underlying Gaussian field $g$, which is then converted to a map of the electron density field $u$ using Eq. \ref{eq:lognorma_gaussian}. The conversion between the power spectrum and the 2-point correlation function is not trivial since it involves an infinite sum over the multipoles $\ell$ similar to \ref{eq:cosmological_covariance}, however, the GLASS package implements a solver to perform this conversion efficiently. I refer the reader to section 3.3 of \citet{tessore2023glass} for more details about the implementation of the GLASS package.
 
-To use this package, I specify a weight function $W$ as desscribed in section \ref{meth_sec:angular_power_spectrum}. The choice of the weight function is motivated by the fact that the DM signal is a projection along the line of sight which mean that a comoving volume element at a redshift $z$ contributes to the DM signal with a weight that is proportional to the comoving volume element at that redshift. Therefore, I choose a weight function of the form
+To use this package, I specify a weight function $W$ as described in section \ref{meth_sec:angular_power_spectrum}. The choice of the weight function is motivated by the fact that the DM signal is a projection along the line of sight, which means that a comoving volume element at a redshift $z$ contributes to the DM signal with a weight that is proportional to the comoving volume element at that redshift. Therefore, I choose a weight function of the form
 \begin{equation}
     W^{(i)}(z) = \begin{cases} A^{(i)} \chi^2(z)/E(z) & \text{if } z_{i-1} \leq z < z_i, \\ 0 & \text{otherwise,} \end{cases}.
 \end{equation}
-with $A^{(i)}$ being a normalization constant calculated for each bin $i$ such that 
+with $A^{(i)}$ being a normalization constant calculated for each bin $i$ such that
 \begin{equation}
     \int W^{(i)}(z) \, \mathrm{d}z = 1.
 \end{equation}
@@ -223,22 +223,22 @@ with $A^{(i)}$ being a normalization constant calculated for each bin $i$ such t
     \caption{A plot showing the normalized weights for the 29 redshift bins. The weights are normalized such that $\int W^{(i)}(z) \, \mathrm{d}z = 1$ for each bin $i$.}
     \label{meth_fig:shells_weights}
 \end{figure}
-I choose a maximum value of redshift of $z_\mathrm{max} = 2.$ and a minimum value of redshift of $z_\mathrm{min} = 0.01$ since this is the range of detected FRBs by current surveys. I convert this redshift range into a range of comoving distance and divide the covmoving distance range into 29 shells, this is chosen such that it is similar to a similar work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a} that used 17 shells for sources up to maximum $z = 1$. Dividing in comoving distance rather than redshift ensures that the shells are of equal thickness in comoving space, which is more physically motivated since the DM signal is a projection along the line of sight. Fig. \ref{meth_fig:shells} shows a plot of the resulting shells in redshift space.
+I choose a maximum redshift of $z_\mathrm{max} = 2.$ and a minimum redshift of $z_\mathrm{min} = 0.01$ since this is the range of detected FRBs by current surveys. I convert this redshift range into a range of comoving distance and divide the comoving distance range into 29 shells; this is chosen such that it is comparable to a similar work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a} that used 17 shells for sources up to a maximum $z = 1$. Dividing in comoving distance rather than redshift ensures that the shells are of equal thickness in comoving space, which is more physically motivated since the DM signal is a projection along the line of sight. Fig. \ref{meth_fig:shells} shows a plot of the resulting shells in redshift space.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/shells.png}
-    \caption{A 2D plot shows maps of concentric shells of electron density in redshift space. The maps are obtained via the GLASS package. Notice that the contrast of a shell increases because of structure growth. The inner most shells represent the lowest red shift bin and the outter most shells represent the highest redshift bin.}
+    \caption{A 2D plot showing maps of concentric shells of electron density in redshift space. The maps are obtained via the GLASS package. Notice that the contrast of a shell increases due to structure growth. The innermost shells represent the lowest redshift bin and the outermost shells represent the highest redshift bin.}
     \label{meth_fig:shells}
 \end{figure}
 \subsection{Discretizing the dispersion measure contributions}
-To obtain a mock catalog of FRBs, I sample randomly on the sky and according to the source redshift distribution in redshift then sum the contribution from different shells. I use the source redshift distributio n predicted by the SKAO \citep{braun2015advancing}. Fig. \ref{meth_fig:source_redshift_distribution} shows the source redshift distribution used in this thesis. Since hte distribution extends beyond the maximum redshift of the shells, I reject the samples that have a redshfit higher than 2.0.
+To obtain a mock catalog of FRBs, I sample randomly on the sky and according to the source redshift distribution in redshift then sum the contribution from different shells. I use the source redshift distribution predicted by the SKAO \citep{braun2015advancing}. Fig. \ref{meth_fig:source_redshift_distribution} shows the source redshift distribution used in this thesis. Since the distribution extends beyond the maximum redshift of the shells, I reject the samples that have a redshift higher than 2.0.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\textwidth]{figs/source_z_dist.png}
-    \caption{A plot showing the normalized source redshift distribution used in this thesis as compared to the sampled distribution of a mock FRBs catalog. The distribution is predicted by the SKAO \citep{braun2015advancing}. The distribution extends beyond the maximum redshift of the shells, therefore, I reject the samples that have a redshfit higher than 2.0.}
+    \caption{A plot showing the normalized source redshift distribution used in this thesis as compared to the sampled distribution of a mock FRB catalog. The distribution is predicted by the SKAO \citep{braun2015advancing}. The distribution extends beyond the maximum redshift of the shells; therefore, I reject the samples that have a redshift higher than 2.0.}
     \label{meth_fig:source_redshift_distribution}
 \end{figure}
-To sum the contritbuion from each shell, I discretize Eq. \ref{eq:DM_inhomogeneous} by splitting the mean DM contribution from the perturbed contribution such that
+To sum the contribution from each shell, I discretize Eq. \ref{eq:DM_inhomogeneous} by splitting the mean DM contribution from the perturbed contribution such that
 \begin{equation}
     \mathrm{DM}(\mathbf{\hat{x}}, z) = \langle\mathrm{DM}\rangle(z) + \mathcal{D}(\hat{\mathbf{x}}, z),
 \end{equation}
@@ -250,16 +250,15 @@ The relationship between $\delta_{\mathrm{e}}(\hat{x}, z)$ and $\delta_{\mathrm{
 \begin{equation} \label{eq:delta_e_discrete}
 \delta_{\mathrm{e}}^{(i)}(\hat{x}) \approx W^{(i)}(\bar{z}_i) \delta_{\mathrm{e}}(\hat{x}, \bar{z}_i) (z_{i + 1} - z_{i}).
 \end{equation}
-Therefore, by discretizing Eq, \ref{eq:dm_perturbation} as 
+Therefore, by discretizing Eq. \ref{eq:dm_perturbation} as
 \begin{equation}
 \mathcal{D}(\hat{x}, z_\mathrm{FRB}) = \mathcal{A} \displaystyle\sum_{i = 1}^{n_\mathrm{shells}} \frac{1 + \bar{z}_i}{E(\bar{z}_i)} \bar{\delta}_\mathrm{e} (\hat{x}, \bar{z}_i) \, w_\mathrm{shell}^i(z_\mathrm{FRB}),
 \end{equation}
-where $w_\mathrm{shell}^i$ represent the weight a shell's contribution depending on the value of $z_\mathrm{FRB}$ as given by
+where $w_\mathrm{shell}^i$ represents the weight of a shell's contribution depending on the value of $z_\mathrm{FRB}$ as given by
 \begin{equation}\label{eq:cal_D_descrete}
-    w_\mathrm{shell}^i(z_\mathrm{FRB}) = \begin{cases} 1 & \text{, if } z_\mathrm{FRB} \geq z_\mathrm{max}^i , \\ z_\mathrm{FRB} - z_\mathrm{min}^i & \text{, if } z_\mathrm{min}^i \leq z_\mathrm{FRB} \geq z_\mathrm{max}^i\\ 0 & \text{, if } z_\mathrm{FRB} \leq z_\mathrm{min}^i \end{cases}
+    w_\mathrm{shell}^i(z_\mathrm{FRB}) = \begin{cases} 1 & \text{, if } z_\mathrm{FRB} \geq z_\mathrm{max}^i , \\ z_\mathrm{FRB} - z_\mathrm{min}^i & \text{, if } z_\mathrm{min}^i \leq z_\mathrm{FRB} \leq z_\mathrm{max}^i\\ 0 & \text{, if } z_\mathrm{FRB} \leq z_\mathrm{min}^i \end{cases}
 \end{equation}
-Combining Eqs. \ref{eq:delta_e_discrete} and \ref{eq:cal_D_descrete}, The final expression of $\mathcal{D}$ is 
-Do the same here 
+Combining Eqs. \ref{eq:delta_e_discrete} and \ref{eq:cal_D_descrete}, the final expression of $\mathcal{D}$ is
 
 \begin{equation}
     \mathcal{D}(\hat{x}, z_\mathrm{FRB}) =\mathcal{A} \sum_{i = 1}^{n_\mathrm{shells}} \frac{1 + \bar{z}_i}{E(\bar{z}_i)} \delta_{\mathrm{e}}^{(i)}(\hat{x}) \frac{w_\mathrm{shell}^i(z_\mathrm{FRB})}{W^{(i)}(\bar{z}_i)}
@@ -267,16 +266,16 @@ Do the same here
 
 where I redefine $w_\mathrm{shell}^i(z_\mathrm{FRB})$ as
 \begin{equation}\label{eq:cal_D_descrete_final}
-    w_\mathrm{shell}^i(z_\mathrm{FRB}) = \begin{cases} 1 & \text{, if } z_\mathrm{FRB} \geq z_\mathrm{max}^i , \\ \frac{z_\mathrm{FRB} - z_\mathrm{min}^i}{z_\mathrm{max}^i - z_\mathrm{min}^i} & \text{, if } z_\mathrm{min}^i \leq z_\mathrm{FRB} \geq z_\mathrm{max}^i\\ 0 & \text{, if } z_\mathrm{FRB} \leq z_\mathrm{min}^i \end{cases}
+    w_\mathrm{shell}^i(z_\mathrm{FRB}) = \begin{cases} 1 & \text{, if } z_\mathrm{FRB} \geq z_\mathrm{max}^i , \\ \frac{z_\mathrm{FRB} - z_\mathrm{min}^i}{z_\mathrm{max}^i - z_\mathrm{min}^i} & \text{, if } z_\mathrm{min}^i \leq z_\mathrm{FRB} \leq z_\mathrm{max}^i\\ 0 & \text{, if } z_\mathrm{FRB} \leq z_\mathrm{min}^i \end{cases}
 \end{equation}
 
-In total, I use the above formalism in summing hte contribution from different redshift shells which will evetually lead to the large-scale structure contribution $\mathrm{DM}_i$ of an FRB at redshift $z_\mathrm{FRB}^{i}$ and sky position $(g_l^i, g_b^i)$, yielding a catalog of FRBs.
+In total, I use the above formalism to sum the contribution from different redshift shells which will eventually yield the large-scale structure contribution $\mathrm{DM}_i$ of an FRB at redshift $z_\mathrm{FRB}^{i}$ and sky position $(g_l^i, g_b^i)$, yielding a catalog of FRBs.
 
 
-In the next section, I describe how to how to add systematic uncertainties on the level of a catalog.
+In the next section, I describe how to add systematic uncertainties on the level of a catalog.
 
 \section{Simulating the systematic uncertainties} \label{meth_sec:uncertainties}
-The simulation-based approach which I am using here allows asy integration of systematic uncertainties on the level of a catalog. It allows further use of the simulation pipeline described in Fig. \ref{meth_fig:simulation_flow} in applications of simulation-based inference. In this section, I describe how to contaminate catalogs with systematic uncertatinties. Table \ref{tab:systematics} describes the parameters of every systematic effect used in this thesis. Notice that the chosen range of each systemic is chosen to mirror a situation between an optimistic and pessimistic scenario. I discuss the choices of the fixed parameters and the chosen ranges below.
+The simulation-based approach which I am using here allows easy integration of systematic uncertainties on the level of a catalog. It allows further use of the simulation pipeline described in Fig. \ref{meth_fig:simulation_flow} in applications of simulation-based inference. In this section, I describe how to contaminate catalogs with systematic uncertainties. Table \ref{tab:systematics} describes the parameters of every systematic effect used in this thesis. Notice that the chosen range of each systematic is selected to mirror a situation between an optimistic and pessimistic scenario. I discuss the choices of the fixed parameters and the chosen ranges below.
 
 
 
@@ -297,9 +296,9 @@ $\eta$ & the ratio between a redshift measurement $z$ and its standard deviation
 $\mathrm{DM}_\mathrm{host, mean}$ & The underlying Gaussian mean of the lognormal distribution & $[50, 300]$\\
 $\sigma_\mathrm{LN}$ & The scale of the lognormal distribution& 0.76\\
 \hline
-\multicolumn{3}{c}{\textit{The Milkyway contribution}} \\
+\multicolumn{3}{c}{\textit{The Milky Way contribution}} \\
 \hline
-$\mathrm{DM}_\mathrm{MW}(\mathbf{\hat{x}})$ & The Milkyway contribution as a function of angular position $\mathbf{\hat{x}}$ & Given by the NPE2001 model \\
+$\mathrm{DM}_\mathrm{MW}(\mathbf{\hat{x}})$ & The Milky Way contribution as a function of angular position $\mathbf{\hat{x}}$ & Given by the NPE2001 model \\
 \hline
 \multicolumn{3}{c}{\textit{Selection effects}} \\
 \hline
@@ -318,92 +317,91 @@ $f$ & The fraction of FRBs with missing redshift. & [0.05, 0.4]\\
 
 
 
-
-\subsection{Milkyway contribution}
-Depending on the angular direciton, the measured $\mathrm{DM}_\mathrm{tot}$ receives a contribution from the MW. This contribution varies depending on the angular position of the FRB. Sources that are close to the galactic plane receive a contribution of order $\mathrm{DM}_\mathrm{MW} \sim 3000 \, \mathrm{pc}.\mathrm{cm}^{-3}$ and with high uncertainty. For larger latitutdes, the contribution is as low as $\mathrm{DM}_\mathrm{MW} \sim 10 \, \mathrm{pc}.\mathrm{cm}^{-3}$. Therefore, as a way to mititgate the impact of MW, it is possible to remove any sources that are located within a particular galactic cut to avoid. Howeverm due to the current sample size of FRBs, it is not duable to do this cut since it will decrease the signal-to-noise ratio due to reduced sample size. Nonetheless, in this thesis, I explore the possibility of imposing a galactic cut $\theta_\mathrm{cut}$ and study its impact on the resulting DM-$z$ relation. Fig. \ref{theory_fig:MW_map} shows a map of $\mathrm{DM}_\mathrm{MW}$ as predeicted by teh NPE2001 model. I study the impact of imposing a galactic cut for a range $\theta_\mathrm{cut} \in [0\,\mathrm{deg}, 60\,\mathrm{deg}]$.
+\subsection{Milky Way contribution}
+Depending on the angular direction, the measured $\mathrm{DM}_\mathrm{tot}$ receives a contribution from the MW. This contribution varies depending on the angular position of the FRB. Sources that are close to the galactic plane receive a contribution of order $\mathrm{DM}_\mathrm{MW} \sim 3000 \, \mathrm{pc}.\mathrm{cm}^{-3}$ with high uncertainty. At larger latitudes, the contribution is as low as $\mathrm{DM}_\mathrm{MW} \sim 10 \, \mathrm{pc}.\mathrm{cm}^{-3}$. Therefore, as a way to mitigate the impact of the MW, it is possible to remove any sources that are located within a particular galactic cut. However, due to the current sample size of FRBs, it is not feasible to apply this cut since it will decrease the signal-to-noise ratio due to the reduced sample size. Nonetheless, in this thesis, I explore the possibility of imposing a galactic cut $\theta_\mathrm{cut}$ and study its impact on the resulting DM-$z$ relation. Fig. \ref{theory_fig:MW_map} shows a map of $\mathrm{DM}_\mathrm{MW}$ as predicted by the NPE2001 model. I study the impact of imposing a galactic cut for a range $\theta_\mathrm{cut} \in [0\,\mathrm{deg}, 60\,\mathrm{deg}]$.
 
 
 
 
 \subsection{Host contribution}
-To study the impact of the host contribution, I use a lognormal model of the host contribution as described in section \ref{theory_sec:uncertainties} with parameters chosen as described in \ref{tab:systematics}. The range of mean host contribution $\mathrm{DM}_\mathrm{host, mean}$ is taken from the work by \citet{theis2024galaxy} on the host contribution using different hydrodynamical simulations. The value for the scale of the lognormal distribution $\sigma_\mathrm{LN}$ is the parameters inferred with simulation-based inference from 12 localised FRBs in the work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}. 
-In addition to these parameters, I consider a simple model for the evolution of the host contribution with redshfit such that
+To study the impact of the host contribution, I use a lognormal model of the host contribution as described in section \ref{theory_sec:uncertainties} with parameters chosen as described in \ref{tab:systematics}. The range of mean host contribution $\mathrm{DM}_\mathrm{host, mean}$ is taken from the work by \citet{theis2024galaxy} on the host contribution using different hydrodynamical simulations. The value for the scale of the lognormal distribution $\sigma_\mathrm{LN}$ is the parameter inferred with simulation-based inference from 12 localised FRBs in the work by \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}.
+In addition to these parameters, I consider a simple model for the evolution of the host contribution with redshift such that
 \begin{equation}\label{eq:dm_host}
     \mathrm{DM}_\mathrm{host}(z) = \frac{\mathrm{DM}_\mathrm{host}}{1 + z}
 \end{equation}
-with $z$ corresponding to the redshfit of the FRB. Assuming that the correlation between the $\mathrm{DM}$ and $\mathrm{DM}_\mathrm{host}$ is negligible, the covariance matrix receives an additional contribution 
+with $z$ corresponding to the redshift of the FRB. Assuming that the correlation between the $\mathrm{DM}$ and $\mathrm{DM}_\mathrm{host}$ is negligible, the covariance matrix receives an additional contribution
 \begin{equation}\label{eq:dm_host_cov}
     \langle \mathrm{DM}_{\mathrm{host}, i} \mathrm{DM}_{\mathrm{host}, j}\rangle =  \frac{\sigma^2_\mathrm{host}}{(1 + z_i)(1+ z_j)}
 \end{equation}
-with $\sigma^2_\mathrm{host}$ is the variance of the host contribution as defined in section \ref{theory_sec:uncertainties}.
+with $\sigma^2_\mathrm{host}$ the variance of the host contribution as defined in section \ref{theory_sec:uncertainties}.
 
 
 
 \subsection{Redshift uncertainty} \label{meth_sec:z_uncertainty}
-I simulate the imapct of redshift uncertainty by assuming that a redshift measuremnet $z_i$ is sampled from a Gaussian distribution with mean $z_i$ and standard deviation $\sigma_i = \eta z_i$, where $\eta_i$ is a number between $0$ and $1$. To propagate the error on the cosmological covariance, consider that $(z_i, z_j)  \sim \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma)$, with $\mathcal{N}$ is the normal distribution and
+I simulate the impact of redshift uncertainty by assuming that a redshift measurement $z_i$ is sampled from a Gaussian distribution with mean $z_i$ and standard deviation $\sigma_i = \eta z_i$, where $\eta_i$ is a number between $0$ and $1$. To propagate the error on the cosmological covariance, consider that $(z_i, z_j)  \sim \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma)$, with $\mathcal{N}$ the normal distribution and
 \begin{equation}
     \Sigma = \begin{bmatrix}
     \sigma_i^2 & 0 \\
-    0 & \sigma_j^2 
+    0 & \sigma_j^2
     \end{bmatrix}
 \end{equation}
-To propagate the error inthe covariance, I calcualte the expectation value $\langle \hat{C}_{ij} \rangle$, given as
+To propagate the error in the covariance, I calculate the expectation value $\langle \hat{C}_{ij} \rangle$, given as
 \begin{equation}
     \langle \hat{C}_{ij} \rangle = \int \mathcal{N}((\hat{z}_i, \hat{z}_j) , \Sigma) \, \, C_{ij} \, \,dz_i \, \, dz_j
 \end{equation}
-With Taylor's expansion around $(\hat{z}_i, \hat{z}_j)$ and setting $\Delta_{ij} = (z_i, z_j) - (\hat{z}_i, \hat{z}_j)$, the covariance matrix can be written
+With Taylor expansion around $(\hat{z}_i, \hat{z}_j)$ and setting $\Delta_{ij} = (z_i, z_j) - (\hat{z}_i, \hat{z}_j)$, the covariance matrix can be written
 \begin{equation}
     \langle \hat{C}_{ij} \rangle = \int \mathcal{N} \, \, \left(\hat{C}_{ij} + \nabla C_{ij}|_{(\hat{z}_i, \hat{z}_j)} \Delta_{ij} + \frac{1}{2} \Delta_{ij}^{T} \nabla^2 C_{ij}|_{(\hat{z}_i, \hat{z}_j)}\Delta_{ij} + .....\right)\, \,dz_i \, \, dz_j.
 \end{equation}
-Since the Gaussian distribution has vanaishing moments for moment larger than third order, the expression is simplified into
+Since the Gaussian distribution has vanishing moments for moments larger than third order, the expression is simplified into
 \begin{equation} \label{eq:cov_z_uncertainty}
     \langle \hat{C}_{ij} \rangle = \hat{C}_{ij} + \frac{1}{2} \, \, \sigma_{i}^2 \, \, \partial^2_{ii} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)} \, \, + \frac{1}{2} \, \, \sigma_{j}^2 \, \, \partial^2_{jj} \, C_{ij}|_{(\hat{z}_i, \hat{z}_j)}.
 \end{equation}
-Therefore, it is possible to account for the error in the covariance due to redshift uncertainty using the second derivative of the covariance with respect to redshift $z$. In chapter \ref{chap:results}, I will show the impact to redshift uncertainty relative to the case with correction covariance.
+Therefore, it is possible to account for the error in the covariance due to redshift uncertainty using the second derivative of the covariance with respect to redshift $z$. In chapter \ref{chap:results}, I will show the impact of redshift uncertainty relative to the case with the corrected covariance.
 
 
 
 
 \subsection{Selection effects}
-The parameters for the selection effect model shows in table \ref{tab:systematics} are well-motivated by the range of $\mathrm{DM}_\mathrm{max}$ from diffeerent surveys as shown in table \ref{tab:dmmax}. Meanwhile, I choose the smoothing scale to be comparable with the lower bound of the possible values of $\mathrm{DM}_\mathrm{max}$.
+The parameters for the selection effect model shown in table \ref{tab:systematics} are well-motivated by the range of $\mathrm{DM}_\mathrm{max}$ from different surveys as shown in table \ref{tab:dmmax}. Meanwhile, I choose the smoothing scale to be comparable with the lower bound of the possible values of $\mathrm{DM}_\mathrm{max}$.
 
-Since the sigmoid function modifies the PDF of the measured $\mathrm{DM}$, the sigmoid scaling acan salso be used in contaminating a mock catalog with no selection effect in the following way: obtain a weight for each value of the measured DM in a catalog, then generate $N_\mathrm{FRB}$ random number sampled uniformly between 0 and 1, after that, compare the sigmoid weight of each FRB with the random number and remove all FRBs with a random number larger than the sigmoid weight. This sequence of steps reweighs the PDF of the observed DM values according to the sigmoid function, yielding an FRBs catalog with the desired selection effect.
+Since the sigmoid function modifies the PDF of the measured $\mathrm{DM}$, the sigmoid scaling can also be used in contaminating a mock catalog with no selection effect in the following way: obtain a weight for each value of the measured DM in a catalog, then generate $N_\mathrm{FRB}$ random numbers sampled uniformly between 0 and 1, after that, compare the sigmoid weight of each FRB with the random number and remove all FRBs with a random number larger than the sigmoid weight. This sequence of steps reweights the PDF of the observed DM values according to the sigmoid function, yielding an FRB catalog with the desired selection effect.
 
 
 
 \subsection{Unlocalised hosts}
-I simulate unlocalised FRBs in a fashion similar to what is descibed in seciotn \ref{theory_sec:uncertainties}. To fill in missing redshift, I use the fiducial parameters in order to obtain an expectation of the unknown redshift $z_i = z(\mathrm{DM}_i)$ from the measured $\mathrm{DM}_i$. To propagate the error to the redshift space, I assume that $\mathrm{DM}$ follows a lognormal distribution with underlying Gaussian mean  $\mathrm{DM}_i$ and variance $\sigma^2(z_i)$, such that
+I simulate unlocalised FRBs in a fashion similar to what is described in section \ref{theory_sec:uncertainties}. To fill in missing redshifts, I use the fiducial parameters in order to obtain an expectation of the unknown redshift $z_i = z(\mathrm{DM}_i)$ from the measured $\mathrm{DM}_i$. To propagate the error to the redshift space, I assume that $\mathrm{DM}$ follows a lognormal distribution with underlying Gaussian mean  $\mathrm{DM}_i$ and variance $\sigma^2(z_i)$, such that
 \begin{equation}
     \mathrm{DM}_i \sim P(\mathrm{DM}; \mu^i, \sigma_{\mathrm{LN}, i}^2)
 \end{equation}
-with 
+with
 \begin{equation}
     \mu^i = \ln\left(\frac{\mathrm{DM}_{i}^{2}}{\sqrt{\sigma^2(z^i) + \mathrm{DM}_{i}^{2}}}\right) \, , \, \sigma_{\mathrm{LN}, i}^2 = \ln\left(1 + \frac{\sigma^2(z^i)}{\mathrm{DM}_{i}^{2}}\right)
 \end{equation}
-The lognormal assumption is valid in the case of this work since the $\mathrm{DM}$ contributions from the different shells are lognormal. After that, I sample $\mathrm{sample}$ from the distribution, and I use the same mean DM-$z$ relation to map the sampled DM to $z$-space. After that, I calculate the sample variance of the mapped redshifts $\sigma^2_{i}$, where $\sigma_i/\sqrt{n_{\mathrm{sample}}}$ is the error on the estimated redshift $z_i$.
+The lognormal assumption is valid in the case of this work since the $\mathrm{DM}$ contributions from the different shells are lognormal. After that, I draw samples from the distribution, and I use the same mean DM-$z$ relation to map the sampled DM to $z$-space. After that, I calculate the sample variance of the mapped redshifts $\sigma^2_{i}$, where $\sigma_i/\sqrt{n_{\mathrm{sample}}}$ is the error on the estimated redshift $z_i$.
 
-To propagate the error to the covarirance, I use the same formalism introduced in section \ref{meth_sec:z_uncertainty}, only as an approximation, since the underlying PDF of the estimated redshift is not a Gaussian distribution. For the values of $\sigma_{ii}$, if the FRB has an undefined host, the redshift uncertainty is calculated with the method introduced before. Meanwhile, if the redshift is exact, then I set the value of $\sigma_{ii} = 0$. In this theis, I aim to disentangle the different systematic uncertainties. In reality, These effects could be degenerate in the way they impact the measured DM or the covariance. I discuss that futher in chapter \ref{chap:discuss}. 
+To propagate the error to the covariance, I use the same formalism introduced in section \ref{meth_sec:z_uncertainty}, only as an approximation, since the underlying PDF of the estimated redshift is not a Gaussian distribution. For the values of $\sigma_{ii}$, if the FRB has an undefined host, the redshift uncertainty is calculated with the method introduced above. Meanwhile, if the redshift is exact, then I set the value of $\sigma_{ii} = 0$. In this thesis, I aim to disentangle the different systematic uncertainties. In reality, these effects could be degenerate in the way they impact the measured DM or the covariance. I discuss this further in chapter \ref{chap:discuss}.
 
 
-\section{Quantifying the deviation form the mean DM-$z$ relation}
+\section{Quantifying the deviation from the mean DM-$z$ relation}
 This section is based on Statistical Methods in Cosmology lecture given by Licia Verde \citep{verde2010statistical}.
-To qunatity the impact of systematic uncertainty on the DM-$z$ relation, I compare a fiducial catalog with a contaminated catalog using the $\chi^2$ test. In particular, the maximum $\chi^2$ estimator is a method to infer model parameters from data by comparing the difference between data $d$ the mean predicted by the model parameters $\mu(\theta)$ given some weight for every point. In a flat geometry, the $\chi^2$ can be written as 
+To quantify the impact of systematic uncertainty on the DM-$z$ relation, I compare a fiducial catalog with a contaminated catalog using the $\chi^2$ test. In particular, the maximum $\chi^2$ estimator is a method to infer model parameters from data by comparing the difference between data $d$ and the mean predicted by the model parameters $\mu(\theta)$ given some weight for every point. In a flat geometry, the $\chi^2$ can be written as
 \begin{equation}
     \chi^2 = \sum_{i} w_i(d_i - \mu_i(\theta))^2.
 \end{equation}
-If data points are correalted, the $\chi^2$ can be written in terms of the weights $w_{ij}$ such that
+If data points are correlated, the $\chi^2$ can be written in terms of the weights $w_{ij}$ such that
 \begin{equation}
     \chi^2 = \sum_{ij} (d_i - \mu_i(\theta))w_{ij}(d_j - \mu_j(\theta)).
 \end{equation}
-It can be shown that the minimum variane $\chi^2$ estimator is the estimator with $w_{ij}$ being the inverse of the data covariance matrix $C_{ij}$, making the final expression of the $\chi^2$
+It can be shown that the minimum variance $\chi^2$ estimator is the estimator with $w_{ij}$ being the inverse of the data covariance matrix $C_{ij}$, making the final expression of the $\chi^2$
 \begin{equation}
     \chi^2 = \sum_{ij} (d_i - \mu_i(\theta))C_{ij}^{-1}(d_j - \mu_j(\theta)).
 \end{equation}
-The $\chi^2$ can be used to quantify the inconsitency between a model and data in the following way. First, in the neighborhood of the true model parameters, the data vector follows a Gaussian distribution, and therefore $\chi^2$ follows a $\chi^2$-distribution with mean $\langle \chi^2 \rangle = \nu $ where $\nu$ is the number of degrees of freedom. In this case, $\nu = N_\mathrm{FRBs}$ since I do not use the data in inferring any parametr. I define the reduced $\chi^2$ as 
+The $\chi^2$ can be used to quantify the inconsistency between a model and data in the following way. First, in the neighbourhood of the true model parameters, the data vector follows a Gaussian distribution, and therefore $\chi^2$ follows a $\chi^2$-distribution with mean $\langle \chi^2 \rangle = \nu $ where $\nu$ is the number of degrees of freedom. In this case, $\nu = N_\mathrm{FRBs}$ since I do not use the data in inferring any parameter. I define the reduced $\chi^2$ as
 \begin{equation}
     \chi^2_\nu = \frac{\chi^2}{\nu}
 \end{equation}
-Therefore, for a model that describes data $\chi^2_\nu$ should be consistent with 1. In this thesis, I quantify the deviation of the $\chi^2_\nu$ calculated using a contaminated FRBs catalog from $\chi^2_{\nu, \mathrm{true}}$, calculated using the fiducial catalog. For example, it is possible to distinguish between two cases of deviation
+Therefore, for a model that describes data, $\chi^2_\nu$ should be consistent with 1. In this thesis, I quantify the deviation of $\chi^2_\nu$ calculated using a contaminated FRB catalog from $\chi^2_{\nu, \mathrm{true}}$, calculated using the fiducial catalog. For example, it is possible to distinguish between two cases of deviation
 \begin{itemize}
     \item $\chi^2_\nu > 1$, meaning that the covariance matrix is underestimated or the mean predicted by the model is overestimated.
     \item $\chi^2_\nu < 1$, meaning that the covariance matrix is overestimated or the mean predicted by the model is underestimated.
@@ -412,7 +410,7 @@ Therefore, for a model that describes data $\chi^2_\nu$ should be consistent wit
 
 To calculate the $\chi^2$, the covariance matrix is needed. In the next section, I describe how to efficiently calculate the covariance matrix.
 \subsection{The numerical implementation of the cosmological covariance matrix}
-The cosmological covariance of FRBs was introduced in section \ref{theory_sec:FRBs}. For a sample size of $10\,000$ FRBs, calculating the cosmological covariance is non-trivial with libraries such as \texttt{numpy}. Therefore, I use the \texttt{jax} library in order to accelerate the calculations of the covariance matrix. \texttt{jax} is a \texttt{python} package originally intended for machine learning applicaitons. Nonetheless, \texttt{jax} includes parallelization functionalities to paralelize matrix computations on Graphic Processing Units (GPUs) in addition to dynamical for-loops. I exploit the functionalies of the \texttt{jax} package to accelerate the calculation of the covariance matrix. The code for the covariance calculation is written as follows
+The cosmological covariance of FRBs was introduced in section \ref{theory_sec:FRBs}. For a sample size of $10\,000$ FRBs, calculating the cosmological covariance is non-trivial with libraries such as \texttt{numpy}. Therefore, I use the \texttt{jax} library in order to accelerate the calculations of the covariance matrix. \texttt{jax} is a \texttt{python} package originally intended for machine learning applications. Nonetheless, \texttt{jax} includes parallelization functionalities to parallelize matrix computations on Graphic Processing Units (GPUs) in addition to dynamic for-loops. I exploit the functionalities of the \texttt{jax} package to accelerate the calculation of the covariance matrix. The code for the covariance calculation is written as follows
 
 \begin{lstlisting}[style=python, caption={Angular covariance via Limber approximation.}]
 def compute_covariance_4_vmap(
@@ -483,26 +481,26 @@ def compute_covariance_4_vmap(
     return large_angle_filter * (S + eps * jnp.eye(S.shape[0]))
 \end{lstlisting}
 
-Using the \texttt{jax.vmap} property it is possible to calcualte multiple covariance at a time which is useful when calcualting hte derivative of the covariance matrix with respect to a model parameter using forward difference method.
+Using the \texttt{jax.vmap} property it is possible to calculate multiple covariances at a time which is useful when calculating the derivative of the covariance matrix with respect to a model parameter using the forward difference method.
 
 \section{Simulation-based inference} \label{meth_sec:sbi}
-To forecast the bias in parameter estimation, I use simulation based inference (SBI) method. A review of simulation baed inference can be found in \citet{cranmer2020frontier} and SBI lecture by Noemi Anau Montel \footnote{\href{https://wwwmpa.mpa-garching.mpg.de/~komatsu/lecturenotes/Noemi_Anau_Montel_on_SBI.pdf}{The Postdoc lecture by Noemi Anau Montel}} given at the Postdoc Lecture Series at the Max Planck Institute for Astrophysics. SBI is a method to infer the parameter of a model by compared an observed data vector $d$ with  a data vector obtained from a forward simulation. It is an extension of Baysian inference in which the parameter posterior is constrained by performing Monte Carlo Markov Chain (MCMC) to obtain the parameter's posterior distribution. If the prior of the model parameter is $P(\theta)$ and the likelihood of data given the parameter is $P(d|\theta)$ then the posterior distribution of the parameters given data $P(\theta|d)$ is written by Bayes rule
+To forecast the bias in parameter estimation, I use simulation-based inference (SBI). A review of simulation-based inference can be found in \citet{cranmer2020frontier} and in the SBI lecture by Noemi Anau Montel \footnote{\href{https://wwwmpa.mpa-garching.mpg.de/~komatsu/lecturenotes/Noemi_Anau_Montel_on_SBI.pdf}{The Postdoc lecture by Noemi Anau Montel}} given at the Postdoc Lecture Series at the Max Planck Institute for Astrophysics. SBI is a method to infer the parameters of a model by comparing an observed data vector $d$ with a data vector obtained from a forward simulation. It is an extension of Bayesian inference in which the parameter posterior is constrained by performing Monte Carlo Markov Chain (MCMC) to obtain the parameter's posterior distribution. If the prior of the model parameter is $P(\theta)$ and the likelihood of data given the parameter is $P(d|\theta)$ then the posterior distribution of the parameters given data $P(\theta|d)$ is written by Bayes' rule
 \begin{equation}
     P(\theta|d) \sim P(d|\theta) \, P(\theta).
 \end{equation}
-In traditional cosmological application, there are two consideration. First, by invoking the central limit theorem (CLT)\footnote{Central limit theorem (CLT) states that the probability distribution function of indepedent and identically distributed random variables approaches a Gaussian distribution as the number of sampled variables approaches infinity if the true probability distribution funciton has a finite variance.}, $P(d|\theta)$ can be assumed to be a multivariate Gaussian. However, this is not necessairly true if the conditions of CLT are not fullfilled, leaving the problem with intractable likelihood. 
+In traditional cosmological applications, there are two considerations. First, by invoking the central limit theorem (CLT)\footnote{The central limit theorem (CLT) states that the probability distribution function of independent and identically distributed random variables approaches a Gaussian distribution as the number of sampled variables approaches infinity if the true probability distribution function has a finite variance.}, $P(d|\theta)$ can be assumed to be a multivariate Gaussian. However, this is not necessarily true if the conditions of CLT are not fulfilled, leaving the problem with an intractable likelihood.
 
-To solve this problem, Approximate Baysian Computation (ABC) can be used to obtain posterior sample without a tractable likelihood and using a forward model. By defining a distance caliber between an the a data vector $\mathbf{x_0}$ and a data vector form the forward model $\mathbf{x}$ such that
+To solve this problem, Approximate Bayesian Computation (ABC) can be used to obtain posterior samples without a tractable likelihood and using a forward model. By defining a distance measure between a data vector $\mathbf{x_0}$ and a data vector from the forward model $\mathbf{x}$ such that
 \begin{equation}
     d(\mathbf{x}, \mathbf{x_0}) = ||\mathbf{x} - \mathbf{x_0}||.
 \end{equation}
-The samples from the approximate posterior are drawn with rejection sampling using an acceptance tolerance rate $\epsilon$ such that accepted samples satify $d(\mathbf{x}, \mathbf{x_0}) < \epsilon$, and the posterior is given By
+The samples from the approximate posterior are drawn with rejection sampling using an acceptance tolerance rate $\epsilon$ such that accepted samples satisfy $d(\mathbf{x}, \mathbf{x_0}) < \epsilon$, and the posterior is given by
 \begin{equation}
     p_{\mathrm{ABC}}(\Theta \mid \boldsymbol{x}) = \frac{\int_{d(\boldsymbol{x}_0, \boldsymbol{x}) < \epsilon} \mathrm{d}\boldsymbol{x} \, p(\boldsymbol{x} \mid \Theta) p(\Theta)}{\int_{d(\boldsymbol{x}_0, \boldsymbol{x}) < \epsilon} \mathrm{d}\boldsymbol{x} \, p(\boldsymbol{x})}
 \end{equation}
-is guarenteed to converge to the true posterior distributiuon. However, the sampling efficiency of this method is very low, especially if the problem involves wide priors and large parameter space. Therefore, machine learning (ML) methods are used to learn the posterior distribution of the observed data. Nonetheless, with high dimensional data such as that of FRBs, both ML and ABC methods fail to converge quickly. Therefore, the need for a summary statics that retains the cosmological information is necessairy. I describe below how to use the simulation pipeline desceibed in section \ref{meth_sec:sim_dm} to perform simulation based inference of the cosmological and the baryonic feedback paraemters. Table \ref{tab:priors} shows the free parameters along with theor priors. I choose wide enough priors to show the resultant bias in parameter estimation when systematic uncertainties are not taken into consideration in the forward model. In addition, Fig. \ref{meth_fig:inference_flow} shows a schematic representation of the used inference pipeline. Among the baryonic feedback aparameters, I chose $\log_{10} M_\mathrm{c}$ since the gas power spectrum is most sensitive to this parameter, as you can see in the appendix.
+which is guaranteed to converge to the true posterior distribution. However, the sampling efficiency of this method is very low, especially if the problem involves wide priors and a large parameter space. Therefore, machine learning (ML) methods are used to learn the posterior distribution of the observed data. Nonetheless, with high-dimensional data such as that of FRBs, both ML and ABC methods fail to converge quickly. Therefore, a summary statistic that retains the cosmological information is necessary. I describe below how to use the simulation pipeline described in section \ref{meth_sec:sim_dm} to perform simulation-based inference of the cosmological and baryonic feedback parameters. Table \ref{tab:priors} shows the free parameters along with their priors. I choose wide enough priors to show the resultant bias in parameter estimation when systematic uncertainties are not taken into consideration in the forward model. In addition, Fig. \ref{meth_fig:inference_flow} shows a schematic representation of the inference pipeline used. Among the baryonic feedback parameters, I chose $\log_{10} M_\mathrm{c}$ since the gas power spectrum is most sensitive to this parameter, as shown in the appendix.
 
-To perform simuation-based inferece with the FRBs catalog, the observed data vector $\mathbf{x_0}$ is the list of observed DM with dimensionality of $10\, 000$. This a high dimrnsional problem which is computtional prohibitive. Therefore, I use a summary statistic of lower dimension to avoid the curse of dimensionality. In section \ref{meth_sec:compression}, I describe the choice for the summary static which I use in this thesis.
+To perform simulation-based inference with the FRB catalog, the observed data vector $\mathbf{x_0}$ is the list of observed DM with dimensionality of $10\, 000$. This is a high-dimensional problem which is computationally prohibitive. Therefore, I use a summary statistic of lower dimension to avoid the curse of dimensionality. In section \ref{meth_sec:compression}, I describe the choice for the summary statistic which I use in this thesis.
 \begin{table}[h]
 \centering
 \begin{tabular}{c p{6cm} c}
@@ -525,71 +523,67 @@ $\log_{10} M_{\mathrm{c}}$ & Pivot mass for the mass dependent slope of the gas 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/snpe.png}
-    \caption{A flowchat of the inference pipeline with the sequential neural posterior estimator (SNPE) method. The details of this method are described in section \ref{meth_sec:snpe}. In total, the inference conststis of multiple infernec round with the prior used in the first round correponding to the initial parameter prior, while the prior used for later rounds is the learned posterior distribution from the preceeding round. This concentrate the sampes around the area of high posterior with each round.}
+    \caption{A flowchart of the inference pipeline with the sequential neural posterior estimator (SNPE) method. The details of this method are described in section \ref{meth_sec:snpe}. In total, the inference consists of multiple inference rounds with the prior used in the first round corresponding to the initial parameter prior, while the prior used for later rounds is the learned posterior distribution from the preceding round. This concentrates the samples around the area of high posterior with each round.}
     \label{meth_fig:inference_flow}
 \end{figure}
 
 
 
 \subsection{Data Compression}\label{meth_sec:compression}
-Following \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}, I use score compression introduced in \citet{alsing2018generalized} which is a model-dependent compression of a data vector with dimensionality $N_\mathrm{FRBs}$ into a summary static with dimensionality equals to the number of model parameters $N_\mathrm{params}$. If the likelihood of data given the paremeter is $L(d| \theta)$, then $L$ can be expanded around fiducial parameters $\theta_\ast$ up to second order as
+Following \citet{Konar_Reischke_Hagstotz_Nicola_Hildebrandt_2025a}, I use score compression introduced in \citet{alsing2018generalized} which is a model-dependent compression of a data vector with dimensionality $N_\mathrm{FRBs}$ into a summary statistic with dimensionality equal to the number of model parameters $N_\mathrm{params}$. If the likelihood of data given the parameter is $L(d| \theta)$, then $L$ can be expanded around fiducial parameters $\theta_\ast$ up to second order as
 \begin{equation}
     L(d| \theta) = L(d| \theta_\ast) + (d_i - \mu_i(\theta))^T \nabla L|_{\theta_\ast} + (d_i - \mu_i(\theta))^T \nabla^2 L|_{\theta_\ast} (d_i - \mu_i(\theta)).
 \end{equation}
-The second term in this expression is actually the first term that is data dependent through the gradiant of the likelihood $\nabla L|_{\theta_\ast}$, therefore, this quantity can be used as a summary statistic. This quantity is called the score and is therefore given by
+The second term in this expression is the first term that is data-dependent through the gradient of the likelihood $\nabla L|_{\theta_\ast}$; therefore, this quantity can be used as a summary statistic. This quantity is called the score and is given by
 \begin{equation}
     \mathbf{t} = \nabla L|_{\theta_\ast}.
 \end{equation}
-The score is a linear compression scheme since  it represent the first order of the likelihood's Taylore's expansion. The full expressino of the score is give by 
+The score is a linear compression scheme since it represents the first order of the likelihood's Taylor expansion. The full expression of the score is given by
 \begin{equation}
     \mathbf{t} = \nabla \boldsymbol{\mu}_*^{\mathrm{T}} \mathbf{C}_*^{-1} (\mathbf{d} - \boldsymbol{\mu}_*) + \frac{1}{2} (\mathbf{d} - \boldsymbol{\mu}_*)^{\mathrm{T}} \mathbf{C}_*^{-1} \nabla \mathbf{C}_* \, \mathbf{C}_*^{-1} (\mathbf{d} - \boldsymbol{\mu}_*) \notag  - \frac{1}{2} \mathrm{tr}(\mathbf{C}_*^{-1} \nabla \mathbf{C}_*).
 \end{equation}
-It can be proven that the covariane matrix associated with $t$ is exactly the Fisher information matrix
+It can be proven that the covariance matrix associated with $t$ is exactly the Fisher information matrix
 \begin{equation}
     \text{cov}_{\ast}(\mathbf{t}, \mathbf{t}) = \mathbf{F_\ast}
 \end{equation}
-Therefore, the score $\mathbf{t}$ satisfies the Cramér-Rao bound for a lossless compression \citep{rao1945information}. Even though the score compression is a lossless compression, it is not necessairly sensitive to all the properties in the original data vector.
+Therefore, the score $\mathbf{t}$ satisfies the Cramér-Rao bound for a lossless compression \citep{rao1945information}. Even though the score compression is lossless, it is not necessarily sensitive to all the properties in the original data vector.
 
 \subsection{Neural Posterior Estimator} \label{meth_sec:snpe}
-Instead of using ABC for inference, traning a neural network to learn the posterior distribution of model parameter is more efficient and computationally affordable way for SBI \citep{papamakarios2016fast}. There are multiple versions of the inference algorithm but it all boils down to producing a large number of simulation pairs $\{\theta, \mathbf{x}\}$ and training a neural network to learn the conditional probability distribution of the model parameter $\theta$ given an observation with a compression statistic $\mathbf{t}(\mathbf{x})$ as $P(\theta| \mathbf{t})$, then obtaining the posterior distribution given a measurement $\mathbf{t}_0 = \mathbf{t} (\mathbf{x}_0)$ as $P(\theta| \mathbf{t} = \mathbf{t}_0)$. A posterior estimator that uses a neural network as an embedding to learn the posterior distribution of model parameters is called nueral posterior estimator (NPE) $q^\mathrm{NPE}_{\Phi}(\theta|\mathbf{x})$, with $\Phi$ being the parameters of the neural networks. One of the most important considerations in constructing an NPE is that this estimator should eventually have the same properties of a probability distribution. Therefore, one possible way of formulating an NPE is to map a random variable $z$ with $z \sum \mathcal{N}(z;0, 1)$ to a point in the parameter space $\theta$ where this map is bijective, differetiable, and parameterized with a set of hyperparameters $\Phi$ such that
+Instead of using ABC for inference, training a neural network to learn the posterior distribution of model parameters is a more efficient and computationally affordable approach for SBI \citep{papamakarios2016fast}. There are multiple versions of the inference algorithm but they all reduce to producing a large number of simulation pairs $\{\theta, \mathbf{x}\}$ and training a neural network to learn the conditional probability distribution of the model parameter $\theta$ given an observation with a compression statistic $\mathbf{t}(\mathbf{x})$ as $P(\theta| \mathbf{t})$, then obtaining the posterior distribution given a measurement $\mathbf{t}_0 = \mathbf{t} (\mathbf{x}_0)$ as $P(\theta| \mathbf{t} = \mathbf{t}_0)$. A posterior estimator that uses a neural network as an embedding to learn the posterior distribution of model parameters is called a neural posterior estimator (NPE) $q^\mathrm{NPE}_{\Phi}(\theta|\mathbf{x})$, with $\Phi$ being the parameters of the neural network. One of the most important considerations in constructing an NPE is that this estimator should eventually have the same properties of a probability distribution. Therefore, one possible way of formulating an NPE is to map a random variable $z$ with $z \sim \mathcal{N}(z;0, 1)$ to a point in the parameter space $\theta$ where this map is bijective, differentiable, and parameterized with a set of hyperparameters $\Phi$ such that
 \begin{equation} \label{eq:nf}
     \theta = f_\Phi (z).
 \end{equation}
-The map $f_\Phi$ can take many forms, and the ensemble of these forms are label as normalizing flows \citep{rezende2015variational} since it maps a normal (Gaussian) distribution to the target distribution. In this thesis, I use Masked Autoregressive Flows \citep{papamakarios2017masked}, an advanced version of normalizing flows, which will be discussed in section \ref{meth_sec:maf}.
+The map $f_\Phi$ can take many forms, and the ensemble of these forms are labeled as normalizing flows \citep{rezende2015variational} since it maps a normal (Gaussian) distribution to the target distribution. In this thesis, I use Masked Autoregressive Flows \citep{papamakarios2017masked}, an advanced version of normalizing flows, which will be discussed in section \ref{meth_sec:maf}.
 
-The purpose of training in general is to reduce the dissimilarity between between the true posterior and the estimated posterior. This is equivalent to minimizing the expectation value of the Killback-Leibler divergence defined as 
+The purpose of training in general is to reduce the dissimilarity between the true posterior and the estimated posterior. This is equivalent to minimizing the expectation value of the Kullback-Leibler divergence defined as
 \begin{equation}
     D_{\mathrm{KL}}(P(x) \| q(x)) = \int \mathrm{d}x \, P(x) \ln \left( \frac{P(x)}{q(x)} \right).
 \end{equation}
-By taking the expectation value of the expression above, the loss function of the inference problem is given by 
+By taking the expectation value of the expression above, the loss function of the inference problem is given by
 \begin{equation}
     \mathcal{L}^{\mathrm{NPE}}[\Phi] = - \mathop{\mathbb{E}}_{\boldsymbol{x}, \Theta \sim p(\boldsymbol{x}, \Theta)} \ln q_{\Phi}^{\mathrm{NPE}}(\Theta \mid \boldsymbol{x})
 \end{equation}
 
-\subsubsection{Masked Autoregressive Flows}\label{meth_sec:maf}
-In this thesis, the choice of the architechture and depth of the chosen neural network is hypertuned through multiple training runs which leads to a converging training chain. After many tests, I use Masked Autoregressive Flows (MAF) which is a type of normilizing flows where an initial simple distribution (a Gaussian distribution for example) is mapped into a more complicated distribution through a sequence of bijective mappings in the following way
-if $x_i$ is a random variable whose probability distributiuon given its predecessors $\mathbf{x}_{1:i - 1}$ is given By
+\subsubsection{Masked Autoregressive Flows \& Mixed Density Netwrok}\label{meth_sec:maf}
+In this thesis, the choice of the architecture and depth of the neural network is hypertuned through multiple training runs which leads to a converging training chain. After many tests, I use Masked Autoregressive Flows (MAF) which is a type of normalizing flows where an initial simple distribution (a Gaussian distribution for example) is mapped into a more complicated distribution through a sequence of bijective mappings in the following way.
+If $x_i$ is a random variable whose probability distribution given its predecessors $\mathbf{x}_{1:i - 1}$ is given by
 \begin{equation} \label{eq:maf_dist}
     p(x_i \mid \mathbf{x}_{1:i-1}) = \mathcal{N}\!\left(x_i \mid \mu_i, (\exp \alpha_i)^2\right) \quad \text{where} \quad \mu_i = f_{\mu_i}(\mathbf{x}_{1:i-1}) \quad \text{and} \quad \alpha_i = f_{\alpha_i}(\mathbf{x}_{1:i-1}),
 \end{equation}
-where instead of mapping one variable to another through a bijective map as in Eq. \ref{eq:nf}, I map the preceeding variable to the distribution paremters of the proceeding variable $\mu_i$ and $\alpha_i$. $f_{\mu_i}$ and $f_{\alpha_i}$ are unconstrained scalar funcitons that computes the mean and the log-standard deviation of the distribution which the traning process aims to constrain. Eq. \ref{eq:maf_dist} descibes the flow on the level of the distribution. On the level of the random variables, it is possible to sample form the distribution by following the sequence
+where instead of mapping one variable to another through a bijective map as in Eq. \ref{eq:nf}, I map the preceding variable to the distribution parameters of the succeeding variable $\mu_i$ and $\alpha_i$. $f_{\mu_i}$ and $f_{\alpha_i}$ are unconstrained scalar functions that compute the mean and the log-standard deviation of the distribution which the training process aims to constrain. Eq. \ref{eq:maf_dist} describes the flow on the level of the distribution. On the level of the random variables, it is possible to sample from the distribution by following the sequence
 \begin{equation}\label{eq:maf_var}
     x_i = u_i \exp \alpha_i + \mu_i \quad \text{where} \quad \mu_i = f_{\mu_i}(\mathbf{x}_{1:i-1}), \quad \alpha_i = f_{\alpha_i}(\mathbf{x}_{1:i-1}) \quad \text{and} \quad u_i \sim \mathcal{N}(0, 1).
 \end{equation}
 
-The functions $f_{\mu_i}$ and $f_{\alpha_i}$ can take any form that is bijective and differentiable with a signature of non-linearity to capture complicated features in data. The sequence of mapping in Eq. \ref{eq:maf_var} are called transformations. In addition, each map $f$ has a number of hidden features which correpsonds to the width of the neural network and number of block which correponds to the depth of the neural netwrok. After many tests, the optimal architecture to be used in this thesis truned to be  10 transformations, 50 hidden features, and 2 blocks for each individual map. The caliber to choose the optimal architechture is that the inferred posterior passes the coverage test which I will descibe below.
+The functions $f_{\mu_i}$ and $f_{\alpha_i}$ can take any form that is bijective and differentiable with a degree of non-linearity to capture complicated features in data. The sequence of mappings in Eq. \ref{eq:maf_var} are called transformations. In addition, each map $f$ has a number of hidden features which corresponds to the width of the neural network and a number of blocks which corresponds to the depth of the neural network. In thesis, I use MAF to infer the model parameters from a contaminated catalog with missing redshifts and from the fiducial catalog.
+
+
+Mixed Density Netowrks (MDN) applied to neural posterior estimation was introduced by \citet{papamakarios2016fast}. The architecture of this netwrok is simpler that MAF where the posterior is estimated as a sum of normal distribution, each with a mean and standard deviation which the learning process optimizes. In this thesis, I use MDN in inferring the model paremeters for the case of redshift uncertainty
+
 
 \subsubsection{The truncated sequential neural posterior estimator}
-In practice, it is possible to sample a large number of points in the parameter space and forward model the correponding observation. In case the prior range is wide, the number of required simulation for inference is large causing a computational bottleneck especially if perfoming one simulation is compulationally expensive as in the case of this thesis. To reduce the number of required simulation, I use the sequential neiral posterior estimator (SNPE) whose algorithm is descibed by the schematic plot in Fig. \ref{meth_fig:inference_flow}. The main improvement in this algorithm constitute in learning the posterior distribution sequentially by shrinking the prior range from one round to another where each new round uses the high density regions of the inferred posterior from the preceeding round as a prior. This method is called the truncated sequential neural posterior estimator (TSNPE ) \citep{deistler2022truncated} since the original prior is truncated at the high posterior region. In this thesis, the posterior is leanring by iterating for a number of rounds that correponds to 6000 simulations in total.
+In practice, it is possible to sample a large number of points in the parameter space and forward model the corresponding observation. If the prior range is wide, the number of required simulations for inference is large, causing a computational bottleneck especially if performing one simulation is computationally expensive as in the case of this thesis. To reduce the number of required simulations, I use the sequential neural posterior estimator (SNPE) whose algorithm is described by the schematic plot in Fig. \ref{meth_fig:inference_flow}. The main improvement in this algorithm consists of learning the posterior distribution sequentially by shrinking the prior range from one round to another where each new round uses the high-density regions of the inferred posterior from the preceding round as a prior. This method is called the truncated sequential neural posterior estimator (TSNPE) \citep{deistler2022truncated} since the original prior is truncated at the high posterior region. In this thesis, the posterior is learned by iterating for a number of rounds that corresponds to 6000 simulations in total.
 
 \subsubsection{The coverage tests}
-
-
-
-
-
-
-
-
-
-
+Given the nature of the neural posterior estimator, the complexity and architecture of the neural network is arbitrary. Therefore, there is a possibility that the inferred posteior be underfitted, signalling that the model is not complex enough, overfitted, signalling that the model is more complex than needed, or confident, signalling a successfull inference. The underfitted and overfitted posterior appear repsectively as wide or narrow poseriors. In this work, I perform the Tests
+of Accuracy with Random Points (TARP) \citep{lemos2023sampling}. The test aims to 

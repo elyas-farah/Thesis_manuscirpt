@@ -2390,6 +2390,56 @@
       \field{title}{Dark energy survey year 3 results: Multi-probe modeling strategy and validation}
       \field{year}{2021}
     \endentry
+    \entry{lemos2023sampling}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=95d014c161bce384d9457ee2048b5054}{%
+           family={Lemos},
+           familyi={L\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0ffe4756a90f23da04fa83c753df008}{%
+           family={Coogan},
+           familyi={C\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d972ad7fca7d16b1fd70802c39ff58ee}{%
+           family={Hezaveh},
+           familyi={H\bibinitperiod},
+           given={Yashar},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bde13b8c122b13b23e222c8a5ed5aa3d}{%
+           family={Perreault-Levasseur},
+           familyi={P\bibinithyphendelim L\bibinitperiod},
+           given={Laurence},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{9036234663672c3515afed3aa67ca490}
+      \strng{fullhash}{591edb7556f13a89e2b94931c568aec9}
+      \strng{fullhashraw}{591edb7556f13a89e2b94931c568aec9}
+      \strng{bibnamehash}{591edb7556f13a89e2b94931c568aec9}
+      \strng{authorbibnamehash}{591edb7556f13a89e2b94931c568aec9}
+      \strng{authornamehash}{9036234663672c3515afed3aa67ca490}
+      \strng{authorfullhash}{591edb7556f13a89e2b94931c568aec9}
+      \strng{authorfullhashraw}{591edb7556f13a89e2b94931c568aec9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Machine Learning}
+      \field{title}{Sampling-based accuracy testing of posterior estimators for general inference}
+      \field{year}{2023}
+      \field{pages}{19256\bibrangedash 19273}
+      \range{pages}{18}
+    \endentry
     \entry{lesgourgues2011cosmic}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=b1d70423463e64684eea42af7f584996}{%
