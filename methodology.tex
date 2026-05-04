@@ -585,5 +585,22 @@ Mixed Density Netowrks (MDN) applied to neural posterior estimation was introduc
 In practice, it is possible to sample a large number of points in the parameter space and forward model the corresponding observation. If the prior range is wide, the number of required simulations for inference is large, causing a computational bottleneck especially if performing one simulation is computationally expensive as in the case of this thesis. To reduce the number of required simulations, I use the sequential neural posterior estimator (SNPE) whose algorithm is described by the schematic plot in Fig. \ref{meth_fig:inference_flow}. The main improvement in this algorithm consists of learning the posterior distribution sequentially by shrinking the prior range from one round to another where each new round uses the high-density regions of the inferred posterior from the preceding round as a prior. This method is called the truncated sequential neural posterior estimator (TSNPE) \citep{deistler2022truncated} since the original prior is truncated at the high posterior region. In this thesis, the posterior is learned by iterating for a number of rounds that corresponds to 6000 simulations in total.
 
 \subsubsection{The coverage tests}
-Given the nature of the neural posterior estimator, the complexity and architecture of the neural network is arbitrary. Therefore, there is a possibility that the inferred posteior be underfitted, signalling that the model is not complex enough, overfitted, signalling that the model is more complex than needed, or confident, signalling a successfull inference. The underfitted and overfitted posterior appear repsectively as wide or narrow poseriors. In this work, I perform the Tests
-of Accuracy with Random Points (TARP) \citep{lemos2023sampling}. The test aims to 
+Given the nature of the neural posterior estimator, the complexity and architecture of the neural network is arbitrary. Therefore, there is a possibility that the inferred posteior be underfitted, signalling that the model is not complex enough, overfitted, signalling that the model is more complex than needed, or calibrated, signalling a successfull inference. The underfitted and overfitted posterior appear repsectively as wide or narrow poseriors. In this work, I perform the Tests
+of Accuracy with Random Points (TARP) \citep{lemos2023sampling}. The test aims to assess the coverage of the posterior in the parameter space by drawing many parameeter samples $\theta^{\ast}$ from the prior and forward model these sampels to obtain a set of observations $\mathbf{x}^\ast$. Then, the observations are invoked in the trained posterior. After that, N points are drown from each posterior yielding a set of points $\{\theta_i\}$. By comparing the distance between the parameters sampled from the prior and the inferred parameters, it is possible to assess whether the neural model is calibrated, overconfident, or underconfident. 
+
+Rigourously, this is done by calculating the credibility level $\alpha$ of each observation defined As
+
+\begin{equation}
+    \alpha = \frac{1}{N} \sum_{i = 1}^{N} \mathbf{1} \left[d(\theta_i , \theta_r) < d(\theta^{\ast} , \theta_r) \right]
+\end{equation}
+where $\theta_r$ is a point randomly sampled from the prior, $d(., .)$ is the distance betweeen two points in the parameter space, and $\mathbf{1}[.]$ is the indicator funciton, taking the value 1 if $(.)$ is true and the value 0 if $(.)$ is false. Furthermore, the set of values $\alpha$ from each prior smaple are binned into $M$ bins to calculate the expected coverage probability (ECP) such that
+\begin{equation}
+\mathrm{ECP}(\alpha) =  \frac{1}{N} \sum_{j = 1}^{M} \mathbf{1} \left[\alpha_j \leq \alpha  \right]
+\end{equation}
+
+By plotting $\alpha$ against $\mathrm{ECP}$, the follownig can be concluded
+\begin{itemize}
+    \item if the $\mathrm{ECP}-\alpha$ curve is above the curve where $\mathrm{ECP}= \alpha$, the model is underconfident, and the constrained posterior is wider than the true posterior. 
+    \item if the $\mathrm{ECP}-\alpha$ curve is below the curve where $\mathrm{ECP}= \alpha$, the model is overconfident, and the constrained posterior is narrower than the true posterior. 
+    \item if the $\mathrm{ECP}-\alpha$ curve is consistent with the curve where $\mathrm{ECP}= \alpha$, the model is calibrated.
+\end{itemize}
